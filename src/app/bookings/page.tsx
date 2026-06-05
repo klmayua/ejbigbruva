@@ -186,7 +186,7 @@ export default function Page() {
 </div>
 </div>
 <div className="relative">
-<div className="aspect-[4/5] rounded-3xl overflow-hidden glass-01 p-4 transition-all duration-700 opacity-100 translate-y-0">
+<div className="aspect-[4/5] rounded-3xl overflow-hidden glass-01 p-4 transition-all duration-700 opacity-100 translate-y-0 relative">
 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" alt="Execution detail" className="w-full h-full object-cover rounded-2xl opacity-40 grayscale" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 flex items-center justify-center">
 <div className="p-8 glass-01 rounded-2xl text-center max-w-xs transform rotate-3 transition-all duration-700 opacity-100 translate-y-0">
