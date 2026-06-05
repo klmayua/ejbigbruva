@@ -1,65 +1,15 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
@@ -67,7 +17,7 @@ export default function Page() {
 <nav className="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-md border-b border-on-surface/10">
 <div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
 <div className="flex items-center gap-4">
-<img alt="BIGBRUVA Logo" className="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKDUJTaZQMpdDOC2D3t7osqjlQOQxKaophIXE6loxPxOQzHL14Sd6mRLxwQH_9wp6_MTNIAld3Xgqf8WEUqZjJEP2ew47rJcn1W7j3XliCqL3Fn3nGotPP4sc6NKw2m6wiUN3oE4CbxLvR5wAX3wNA4iv-pu2LVJamUp_O8z3KIQBmsubc1yvrcxtRynp2YgtxKFsaRKSPfBoJKsBmfsW0yVSW36cxWu8dHK4dqv3dWYjL7WHkBo2ralFMQ69j_6eKNeKEj1x9lrc" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKDUJTaZQMpdDOC2D3t7osqjlQOQxKaophIXE6loxPxOQzHL14Sd6mRLxwQH_9wp6_MTNIAld3Xgqf8WEUqZjJEP2ew47rJcn1W7j3XliCqL3Fn3nGotPP4sc6NKw2m6wiUN3oE4CbxLvR5wAX3wNA4iv-pu2LVJamUp_O8z3KIQBmsubc1yvrcxtRynp2YgtxKFsaRKSPfBoJKsBmfsW0yVSW36cxWu8dHK4dqv3dWYjL7WHkBo2ralFMQ69j_6eKNeKEj1x9lrc" alt="BIGBRUVA Logo" className="h-10 w-auto" width={160} height={80} style={{ objectFit: 'contain' }} />
 <span className="font-headline-md text-headline-md uppercase tracking-widest text-on-surface dark:text-on-surface">BIGBRUVA</span>
 </div>
 <div className="hidden md:flex gap-8 items-center">
@@ -143,7 +93,7 @@ export default function Page() {
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
 <div className="group relative overflow-hidden rounded-lg">
-<img alt="Ejike Ebidilo in Traditional Attire" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" />
+<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo in Traditional Attire" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">TRADITIONAL PORTRAIT</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -153,7 +103,7 @@ export default function Page() {
 </div>
 
 <div className="group relative overflow-hidden rounded-lg">
-<img alt="Ejike Ebidilo Studio Close-up" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" />
+<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo Studio Close-up" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">STUDIO PROFILE</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -163,7 +113,7 @@ export default function Page() {
 </div>
 
 <div className="group relative overflow-hidden rounded-lg">
-<img alt="Ejike Ebidilo Executive Lounge" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" />
+<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo Executive Lounge" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">EXECUTIVE PORTRAIT</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -173,7 +123,7 @@ export default function Page() {
 </div>
 
 <div className="group relative overflow-hidden rounded-lg">
-<img alt="Ejike Ebidilo Casual Modern" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" />
+<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo Casual Modern" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">CASUAL SOPHISTICATION</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -281,24 +231,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="bg-surface-container-lowest border-t border-secondary/20 py-16 px-margin-desktop">
-<div className="flex flex-col items-center justify-center space-y-8 w-full max-w-container-max mx-auto">
-<div className="flex flex-col items-center">
 
-<div className="mt-4 flex flex-col items-center"></div>
-</div>
-<nav className="flex flex-wrap justify-center gap-x-12 gap-y-4">
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/legacy">Legacy Archive</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/">Privacy Policy</a>
-<a className="text-secondary hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/press">Press Kit</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/media">Media Inquiries</a>
-</nav>
-<div className="editorial-line w-24"></div>
-<p className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant text-center opacity-60">
-                © 2024 BIGBRUVA. THE ORIGINAL BIG BROTHER. ALL RIGHTS RESERVED.
-            </p>
-</div>
-</footer>
     </>
   );
 }

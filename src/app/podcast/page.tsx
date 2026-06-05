@@ -1,96 +1,25 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-primary-container/70 backdrop-blur-md border-b border-outline-variant/10">
-<div className="flex items-center gap-8">
-<span className="font-headline-md text-headline-md tracking-tighter text-secondary uppercase">BIGBRUVA</span>
-<div className="hidden md:flex gap-6">
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/">Home</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/legacy">Legacy</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/media">Media</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/marketplace">Marketplace</a>
-<a className="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1" href="/">EJlive</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/ejs-circle">EJ's Circle</a>
-</div>
-</div>
-<div className="flex items-center gap-6">
-<div className="hidden lg:flex items-center bg-surface-container-lowest/50 rounded-full px-4 py-1.5 border border-outline-variant/20">
-<span className="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
-<input className="bg-transparent border-none focus:ring-0 text-label-sm w-32 placeholder:text-on-surface-variant/50" placeholder="Search archive..." type="text"/>
-</div>
-<button className="bg-secondary text-on-secondary-fixed font-label-md px-6 py-2 rounded-full hover:opacity-90 transition-opacity active:scale-95">
-                Join The Circle
-            </button>
-</div>
-</nav>
+
 
 <header className="relative min-h-[90vh] flex flex-col justify-end pt-32 pb-20 px-margin-desktop">
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
-<img alt="EJ official portrait" className="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyTNQhzYW6z08KigKIXf2R0SHlJjtCSndnLWqTC3IVJa57-SgIlWpdOTolNK6DYTgtKQHofxkTEEYsHClr3LlmyH3Ls2aNaKr_oQP6Q3OtJZQAEA-C8neU7U0dd6MwRTsSggKxbx9vSakmrukw9lH8OCZV5Tl9zTgJSnDt9q1lRCZTlpPLqnA4evtJY3rL7ylwMMPMxiZwA7IpGZ1OTTzVtv2BbrArQdE5YRh8OlEIsOll2l84ZPMbPfAyvL_4I5wZXvllSnlRiU"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyTNQhzYW6z08KigKIXf2R0SHlJjtCSndnLWqTC3IVJa57-SgIlWpdOTolNK6DYTgtKQHofxkTEEYsHClr3LlmyH3Ls2aNaKr_oQP6Q3OtJZQAEA-C8neU7U0dd6MwRTsSggKxbx9vSakmrukw9lH8OCZV5Tl9zTgJSnDt9q1lRCZTlpPLqnA4evtJY3rL7ylwMMPMxiZwA7IpGZ1OTTzVtv2BbrArQdE5YRh8OlEIsOll2l84ZPMbPfAyvL_4I5wZXvllSnlRiU" alt="EJ official portrait" className="w-full h-full object-cover object-top" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="relative z-20 max-w-2xl">
 <div className="flex items-center gap-2 mb-4">
@@ -124,7 +53,7 @@ export default function Page() {
 
 <div className="md:col-span-4 group relative overflow-hidden rounded-xl bg-primary-container aspect-[4/5] p-8 flex flex-col justify-end">
 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-700"></div>
-<img className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro shot of an antique leather-bound journal and a gold fountain pen sitting on a dark oak desk in a study filled with books. The atmosphere is quiet, scholarly, and authoritative, echoing the deep navy and royal gold color palette of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkIg8EXlc4f4_gJGQLDFgaxF9UnBkB-UlHG-K1wTuBPTWLhiTOL9u194JpMlqHeEXO4xu_mESi-fLNQyjnU9oCaMxrkZtQ6UHRulJVSSiDJ6r8AkxaNRRr79RJTl-Y_VqElnJsCYy2vgePh9ac9wYOtyjBtw81pjRJ1mm3rw4WXgPyoFy4WwG634x-DLegu7yveK4D78chazMT3WC66o4jHWd0tuDcrwAR4wynRyAW19-wdbGybNl-N_sHJbOJUbmiA52gFKV57wk"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkIg8EXlc4f4_gJGQLDFgaxF9UnBkB-UlHG-K1wTuBPTWLhiTOL9u194JpMlqHeEXO4xu_mESi-fLNQyjnU9oCaMxrkZtQ6UHRulJVSSiDJ6r8AkxaNRRr79RJTl-Y_VqElnJsCYy2vgePh9ac9wYOtyjBtw81pjRJ1mm3rw4WXgPyoFy4WwG634x-DLegu7yveK4D78chazMT3WC66o4jHWd0tuDcrwAR4wynRyAW19-wdbGybNl-N_sHJbOJUbmiA52gFKV57wk" alt="A macro shot of an antique leather-bound journal and a gold fountain pen sitting on a dark oak desk in a study filled with books. The atmosphere is quiet, scholarly, and authoritative, echoing the deep navy and royal gold color palette of the brand." className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="relative z-10">
 <span className="material-symbols-outlined text-secondary text-4xl mb-4">auto_stories</span>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Wisdom</h3>
@@ -139,7 +68,7 @@ export default function Page() {
 
 <div className="group relative overflow-hidden rounded-xl bg-primary-container p-8 flex flex-col justify-center border border-outline-variant/10">
 <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-transparent z-10"></div>
-<img className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist abstract representation of financial growth with subtle golden lines rising against a dark navy textured background. The lighting is low-key with high-contrast accents, suggesting exclusivity, luxury, and the sophisticated 'Midnight Sovereign' aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5mZ9S_pL9eaN6SPgEQ6ppuN-_FDgT5NMH4EqG_pNWKDFrWPh7zzjaGP6GQDpXFJXlvdvtDz_LVxoHIx5BuAn8LRDMSiX-3IcKuBW6z-1Xl_V9-BfbC3CNXdW2hKjZwMsFyRmUyHnCeNILN61f1rTFIaFZT92_qW8raku9ADsreGbwjQgzpSP0OZLIFrKfjSI0iD6CVZ-gSdPjsLFdrU5c3PIujJSmFlC1niY8_UQsI6KwKtXRQcEgBNapB8dchL4ABVdyRUSa1Ig"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5mZ9S_pL9eaN6SPgEQ6ppuN-_FDgT5NMH4EqG_pNWKDFrWPh7zzjaGP6GQDpXFJXlvdvtDz_LVxoHIx5BuAn8LRDMSiX-3IcKuBW6z-1Xl_V9-BfbC3CNXdW2hKjZwMsFyRmUyHnCeNILN61f1rTFIaFZT92_qW8raku9ADsreGbwjQgzpSP0OZLIFrKfjSI0iD6CVZ-gSdPjsLFdrU5c3PIujJSmFlC1niY8_UQsI6KwKtXRQcEgBNapB8dchL4ABVdyRUSa1Ig" alt="Minimalist abstract representation of financial growth with subtle golden lines rising against a dark navy textured background. The lighting is low-key with high-contrast accents, suggesting exclusivity, luxury, and the sophisticated 'Midnight Sovereign' aesthetic." className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="relative z-20 max-w-md">
 <span className="material-symbols-outlined text-secondary text-4xl mb-4">account_balance</span>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Wealth</h3>
@@ -152,7 +81,7 @@ export default function Page() {
 
 <div className="group relative overflow-hidden rounded-xl bg-primary-container p-8 flex flex-col justify-center border border-outline-variant/10">
 <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-transparent z-10"></div>
-<img className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dramatic, high-contrast black and white photograph of a professional athlete's silhouette during training, highlighted by subtle royal gold atmospheric lighting. The mood is powerful and disciplined, aligning with the premium fitness and wellness theme of the EJlive brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuMxuYO_1INxGt3h4li7HK-9nTAJLHN1VuwKMYZ6jik1yYpopqewKWvq8EKynM0WrqhEPGkObIBwOcUIFq-ICcTUTvKVdJ_DMcAOQUlMV5L3TQWPeBaCoOWlNuGTH0LOmeAJJw5JbdsoWjMGddLtgJ7kznd_LhBZNMT-srTT7i6MnKogU49qgB5WHlmsWhMHrdjPoMblzj41nPxkZAJzkhcj--FHAb9_yE7u7B17q1QyhG3fj5CWWpgwV7YtDTupGOQ4kSdRpTY5k"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuMxuYO_1INxGt3h4li7HK-9nTAJLHN1VuwKMYZ6jik1yYpopqewKWvq8EKynM0WrqhEPGkObIBwOcUIFq-ICcTUTvKVdJ_DMcAOQUlMV5L3TQWPeBaCoOWlNuGTH0LOmeAJJw5JbdsoWjMGddLtgJ7kznd_LhBZNMT-srTT7i6MnKogU49qgB5WHlmsWhMHrdjPoMblzj41nPxkZAJzkhcj--FHAb9_yE7u7B17q1QyhG3fj5CWWpgwV7YtDTupGOQ4kSdRpTY5k" alt="A dramatic, high-contrast black and white photograph of a professional athlete's silhouette during training, highlighted by subtle royal gold atmospheric lighting. The mood is powerful and disciplined, aligning with the premium fitness and wellness theme of the EJlive brand." className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="relative z-20 max-w-md">
 <span className="material-symbols-outlined text-secondary text-4xl mb-4">fitness_center</span>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-2">Health</h3>
@@ -184,7 +113,7 @@ export default function Page() {
 
 <div className="group bg-primary-container/30 border border-outline-variant/10 rounded-xl overflow-hidden hover:border-secondary/30 transition-all duration-300 flex flex-col">
 <div className="aspect-video relative overflow-hidden">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated digital rendering of a justice scale in gold against a deep navy blue background. The lighting is elegant and directional, creating a mood of authority and prestige. This visual represents the 'Wealth Archival' and 'Wisdom' pillars of the podcast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMImdumhQamKYU8VdZr5z6l0JsYCEDcueo5zhdVIkJPWv_xrQ2iJWK231X4nLSdDiW1P_DumcmVSfF_xH-WkgtvdGXwSBaxBa387YJS8_lxEx-o4VFJYvCaSBof4RXbNa1TCVBPnoFTn_Qss4zLtozzrkqhTObLXugoo8rxVP0pQaTjDP3WL1jzRDxZ4CQIqglT_ua-XLt7tOiOoD4B48RV5Ifekr7D0e1MW2BWm_1IxTUjj6OZ5vybdTVsCXOL5KkpQ-FbobxiJs"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMImdumhQamKYU8VdZr5z6l0JsYCEDcueo5zhdVIkJPWv_xrQ2iJWK231X4nLSdDiW1P_DumcmVSfF_xH-WkgtvdGXwSBaxBa387YJS8_lxEx-o4VFJYvCaSBof4RXbNa1TCVBPnoFTn_Qss4zLtozzrkqhTObLXugoo8rxVP0pQaTjDP3WL1jzRDxZ4CQIqglT_ua-XLt7tOiOoD4B48RV5Ifekr7D0e1MW2BWm_1IxTUjj6OZ5vybdTVsCXOL5KkpQ-FbobxiJs" alt="A sophisticated digital rendering of a justice scale in gold against a deep navy blue background. The lighting is elegant and directional, creating a mood of authority and prestige. This visual represents the 'Wealth Archival' and 'Wisdom' pillars of the podcast." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
 <div className="bg-secondary p-4 rounded-full text-on-secondary-fixed">
 <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
@@ -209,7 +138,7 @@ export default function Page() {
 
 <div className="group bg-primary-container/30 border border-outline-variant/10 rounded-xl overflow-hidden hover:border-secondary/30 transition-all duration-300 flex flex-col">
 <div className="aspect-video relative overflow-hidden">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cinematic, low-light photograph of a person practicing mindfulness in a luxury mountain retreat at dusk. The palette is dominated by deep blues and cold greys, punctuated by the warm glow of a gold candle flame. The image communicates elite health and mental clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2mYCbf3lKKzZpsQ22yE1yu_ILkE9Ue9kWpDObzg2yAqEm2AP59fQiyMdkEEexHJ6_2yAN89bhkN7hKaeJ3aaKtCMwyXt9HlNyEhRqUJJ-oXH4PjJNrBf6XVMyEP6OZWpOTqymcotJ2vjvy7aZxrhDmQJmDwisKx8O-FMdV2zpP2N72kTeu4cujwvUp9UuC5hZRxKf9bjdIccMQd6CpV8ggzZxGpB1Dhd3U4tWz9KMeU7vWktjnVYaipCV3W_WG8nK3jXP8Crlcv4"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2mYCbf3lKKzZpsQ22yE1yu_ILkE9Ue9kWpDObzg2yAqEm2AP59fQiyMdkEEexHJ6_2yAN89bhkN7hKaeJ3aaKtCMwyXt9HlNyEhRqUJJ-oXH4PjJNrBf6XVMyEP6OZWpOTqymcotJ2vjvy7aZxrhDmQJmDwisKx8O-FMdV2zpP2N72kTeu4cujwvUp9UuC5hZRxKf9bjdIccMQd6CpV8ggzZxGpB1Dhd3U4tWz9KMeU7vWktjnVYaipCV3W_WG8nK3jXP8Crlcv4" alt="A cinematic, low-light photograph of a person practicing mindfulness in a luxury mountain retreat at dusk. The palette is dominated by deep blues and cold greys, punctuated by the warm glow of a gold candle flame. The image communicates elite health and mental clarity." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
 <div className="bg-secondary p-4 rounded-full text-on-secondary-fixed">
 <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
@@ -234,7 +163,7 @@ export default function Page() {
 
 <div className="group bg-primary-container/30 border border-outline-variant/10 rounded-xl overflow-hidden hover:border-secondary/30 transition-all duration-300 flex flex-col">
 <div className="aspect-video relative overflow-hidden">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An artistic high-end capture of a chess board in mid-game, with the king piece in focus, carved from dark marble and accented with gold leaf. The background is softly blurred with deep navy studio lighting. This symbolizes the strategic wisdom and institutional management of the EJlive brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM3UPtKuoH17V9b3xoduioQP96wSxVMueFLNX4BLhsvcM54ob9HA9eD2ptg4J3Omt3HnWrFlqxcNg5LJgo9tc0URgEw1kjt4KdYiYc-On9ZFNyKo7UFSxpifRIT3nyKdD5U31_zsczkFkH4aigwlG8RB6CuK-yeUQXo5FoXQSTOwS-BaFyHQYUBhwuc4Bt42YRTTwNA4rH0mxIFUC4dYJIkbnftWFvtz-CTrKcsbY0Fj_IqOL06SptESXLrg60d9uPbrbl5qJF2rM"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM3UPtKuoH17V9b3xoduioQP96wSxVMueFLNX4BLhsvcM54ob9HA9eD2ptg4J3Omt3HnWrFlqxcNg5LJgo9tc0URgEw1kjt4KdYiYc-On9ZFNyKo7UFSxpifRIT3nyKdD5U31_zsczkFkH4aigwlG8RB6CuK-yeUQXo5FoXQSTOwS-BaFyHQYUBhwuc4Bt42YRTTwNA4rH0mxIFUC4dYJIkbnftWFvtz-CTrKcsbY0Fj_IqOL06SptESXLrg60d9uPbrbl5qJF2rM" alt="An artistic high-end capture of a chess board in mid-game, with the king piece in focus, carved from dark marble and accented with gold leaf. The background is softly blurred with deep navy studio lighting. This symbolizes the strategic wisdom and institutional management of the EJlive brand." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
 <div className="bg-secondary p-4 rounded-full text-on-secondary-fixed">
 <span className="material-symbols-outlined text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
@@ -300,22 +229,7 @@ export default function Page() {
 </div>
 </section>
 
-<footer className="bg-surface-container-lowest border-t border-outline-variant/10">
-<div className="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto">
-<div className="mb-8 md:mb-0">
-<span className="font-headline-lg text-headline-lg text-secondary opacity-20 uppercase tracking-widest">BIGBRUVA</span>
-</div>
-<div className="flex flex-col items-center md:items-end gap-4">
-<div className="flex gap-8 mb-4">
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/">Archival Terms</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/legacy">Legacy Privacy</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/">Sovereign Rights</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/contact">Contact</a>
-</div>
-<p className="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2024 BIGBRUVA Institutional. All Rights Reserved.</p>
-</div>
-</div>
-</footer>
+
 
     </>
   );

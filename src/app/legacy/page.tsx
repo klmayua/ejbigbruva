@@ -1,90 +1,24 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<nav className="fixed top-0 w-full bg-surface-container-lowest/80 backdrop-blur-md flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 border-b border-white/5">
-<div className="h-12 w-auto flex items-center justify-center">
-<img alt="BIGBRUVA Crest" className="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-</div>
-<div className="hidden lg:flex gap-8 items-center">
-<a className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/">Home</a>
-<a className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/about">About</a>
-<a className="font-label-md text-label-md text-secondary border-b border-secondary pb-1" href="/legacy">Legacy</a>
-<a className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/media">Media</a>
-<a className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/voice">Voice</a>
-<a className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/events">Events</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="bg-secondary text-on-secondary px-6 py-2 font-label-md text-label-md rounded hover:opacity-90 transition-all">Contact</button>
-<span className="material-symbols-outlined text-on-surface cursor-pointer lg:hidden" data-icon="menu">menu</span>
-</div>
-</nav>
+
 
 <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
 <div className="absolute inset-0 z-0">
-<img alt="Ejike Ebidilo in Agbada" className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthJtVmtofKYEHiaLHXe2WuFYXRvbF-yJ_sWL6edRJEmQt6AW-fNIFLuEZxdLuChdV0p8B_5PdYp4j9hIGPiPZDVHDFVksazvBII0mlm3SqT-cMyYdlcOAfnt7Rv5NYHMvYeSXGrQSolKAifjlAGYHyimhL3GzISJv1TGF7D8R-BWYgT8EdCBdh_zCKR2X5gWZcEuFOQ4yxqMIQKSdcPcsuy6jwona-4t6YGIKXFaHfelPH0JozaUsydwcLxQbMWthFNssoldWN1c"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthJtVmtofKYEHiaLHXe2WuFYXRvbF-yJ_sWL6edRJEmQt6AW-fNIFLuEZxdLuChdV0p8B_5PdYp4j9hIGPiPZDVHDFVksazvBII0mlm3SqT-cMyYdlcOAfnt7Rv5NYHMvYeSXGrQSolKAifjlAGYHyimhL3GzISJv1TGF7D8R-BWYgT8EdCBdh_zCKR2X5gWZcEuFOQ4yxqMIQKSdcPcsuy6jwona-4t6YGIKXFaHfelPH0JozaUsydwcLxQbMWthFNssoldWN1c" alt="Ejike Ebidilo in Agbada" className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest"></div>
 </div>
 <div className="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
@@ -247,18 +181,7 @@ export default function Page() {
 </div>
 </section>
 
-<footer className="bg-surface-container-lowest border-t border-white/5 py-24 px-margin-mobile md:px-margin-desktop text-center">
-<div className="mb-12 flex justify-center">
-<img alt="BIGBRUVA Official Crest" className="h-40 w-auto object-contain brightness-90 grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-</div>
-<div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
-<a className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="/legacy">LEGACY</a>
-<a className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="/press">PRESS</a>
-<a className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="/">PRIVACY</a>
-<a className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="/">TERMS</a>
-</div>
-<p className="font-label-sm text-label-sm text-on-surface/30 uppercase tracking-widest">© 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.</p>
-</footer>
+
 
 <button className="fixed bottom-8 right-8 bg-secondary text-on-secondary w-14 h-14 rounded shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[100] group">
 <span className="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform" data-icon="chat_bubble" style={{ fontVariationSettings: "'FILL' 1" }}>chat_bubble</span>

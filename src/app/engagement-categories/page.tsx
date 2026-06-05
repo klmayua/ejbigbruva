@@ -1,72 +1,22 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
 <nav className="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-on-surface/10 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto left-1/2 -translate-x-1/2">
 <div className="flex items-center gap-4">
-<img alt="BIGBRUVA Crest" className="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcn11yaDzPsDiJx8AvmDfeEDvMGh-O9gkGeo5iieJz8OvTK_PzPIJPRvz3KxHFJ0FcF2dQsFIsxyFFrw8M3srAILL1V6MUzZGRkAYMKqJQd9J0miyZOFDiAOgl_SkmQphtMopPfkMhWIo7j7wrshnCCv2dz-5c6Gg0Hsyz_ijhP9RRNMBCZGJ4kFzvMOOdVxkTYZbvDkzEmiBMAosomGr0iNSTtB1UE_99aUL84qLOULtanh4Y6iBtMHA2yaLw6hbMNjF9Mm9pOf4" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcn11yaDzPsDiJx8AvmDfeEDvMGh-O9gkGeo5iieJz8OvTK_PzPIJPRvz3KxHFJ0FcF2dQsFIsxyFFrw8M3srAILL1V6MUzZGRkAYMKqJQd9J0miyZOFDiAOgl_SkmQphtMopPfkMhWIo7j7wrshnCCv2dz-5c6Gg0Hsyz_ijhP9RRNMBCZGJ4kFzvMOOdVxkTYZbvDkzEmiBMAosomGr0iNSTtB1UE_99aUL84qLOULtanh4Y6iBtMHA2yaLw6hbMNjF9Mm9pOf4" alt="BIGBRUVA Crest" className="h-12 w-12 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
 <span className="font-headline-md text-headline-md uppercase tracking-widest text-on-surface">BIGBRUVA</span>
 </div>
 <div className="hidden md:flex items-center space-x-8">
@@ -87,7 +37,7 @@ export default function Page() {
 <section className="relative h-[80vh] flex items-center px-margin-desktop overflow-hidden">
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-r from-[#121413] via-[#121413]/60 to-transparent z-10"></div>
-<img alt="Hero Image" className="w-full h-full object-cover object-top opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPQROOtZ9sZToGRTaQP4UUBSblYZD5YxnzGTUvJfC-qcyQmZEbkcNc9NRHaxspmM_90Lvii4So4ywNQop3-RUHy7_BQkGmmHHhTLkPYUR_t8LDr6WGpDyP-VDLWaw08pNFUG8SDOKSM0zBryz6IWYEDeKnTiDxjSjmDRIhlvuUXVRkW0MdioLmXWFxRNifrbKJQ5GpXUk-KtsHl8S5VAtFnkS8APND9I3l9U95ZH_z7zAO4I9XV41wH_mo2bgo4XwO15kvc1yBpmQ" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPQROOtZ9sZToGRTaQP4UUBSblYZD5YxnzGTUvJfC-qcyQmZEbkcNc9NRHaxspmM_90Lvii4So4ywNQop3-RUHy7_BQkGmmHHhTLkPYUR_t8LDr6WGpDyP-VDLWaw08pNFUG8SDOKSM0zBryz6IWYEDeKnTiDxjSjmDRIhlvuUXVRkW0MdioLmXWFxRNifrbKJQ5GpXUk-KtsHl8S5VAtFnkS8APND9I3l9U95ZH_z7zAO4I9XV41wH_mo2bgo4XwO15kvc1yBpmQ" alt="Hero Image" className="w-full h-full object-cover object-top opacity-60" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="relative z-20 max-w-3xl">
 <span className="font-label-md text-label-md text-secondary uppercase tracking-[0.3em] mb-4 block">Institutional Engagements</span>
@@ -177,26 +127,12 @@ export default function Page() {
 </section>
 
 <section className="h-[60vh] relative">
-<img alt="Atmospheric Shot" className="w-full h-full object-cover grayscale opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-NctS94O-v_SPgyVCUzwqomvKzY6gwcJdJI0HCeTnV3jIkf_eccqR8fK8dNBCV3fYs0mdrjVpqoc3YiQmTvXzV14ngrtrPGTeIo00ECGQ1KbPzItRRTw8GBsZ94CyVCzvxkYrOcNddUJA8uyb9lZ-984dV1kPu8GaluuUadYZZL79aWN8XZG90qNmOyG1y0v4g_8dEBXinRL8qnGN0-x_GRfhq69V57iz6FXCG4rmhQXMobleLZzHQx6xGLGoOPC6HAK6sY7qlrA" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-NctS94O-v_SPgyVCUzwqomvKzY6gwcJdJI0HCeTnV3jIkf_eccqR8fK8dNBCV3fYs0mdrjVpqoc3YiQmTvXzV14ngrtrPGTeIo00ECGQ1KbPzItRRTw8GBsZ94CyVCzvxkYrOcNddUJA8uyb9lZ-984dV1kPu8GaluuUadYZZL79aWN8XZG90qNmOyG1y0v4g_8dEBXinRL8qnGN0-x_GRfhq69V57iz6FXCG4rmhQXMobleLZzHQx6xGLGoOPC6HAK6sY7qlrA" alt="Atmospheric Shot" className="w-full h-full object-cover grayscale opacity-30" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
 </section>
 </main>
 
-<footer className="bg-surface-container-lowest border-t border-secondary/20 w-full py-16 px-margin-desktop flex flex-col items-center justify-center space-y-8">
-<div className="mb-8">
-<img alt="BIGBRUVA Official Crest" className="h-32 w-32 object-contain brightness-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" />
-</div>
 
-<div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy Archive</a>
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/">Privacy Policy</a>
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press Kit</a>
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media Inquiries</a>
-</div>
-<div className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant text-center opacity-50">
-            © 2024 BIGBRUVA. THE ORIGINAL BIG BROTHER. ALL RIGHTS RESERVED.
-        </div>
-</footer>
     </>
   );
 }

@@ -1,90 +1,20 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-primary-container/70 backdrop-blur-md border-b border-outline-variant/10">
-<div className="font-headline-md text-headline-md tracking-tighter text-secondary uppercase">
-            BIGBRUVA
-        </div>
-<div className="hidden md:flex items-center gap-gutter">
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/">Home</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/legacy">Legacy</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/media">Media</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/marketplace">Marketplace</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/">EJlive</a>
-<a className="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1" href="/ejs-circle">EJ's Circle</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="hidden lg:block bg-secondary text-on-secondary-container px-6 py-2 rounded-lg font-label-md hover:scale-105 transition-transform">
-                Join The Circle
-            </button>
-<div className="w-10 h-10 rounded-full border border-secondary/30 overflow-hidden">
-<img alt="EJ Official Crest Logo" className="w-full h-full object-cover" data-alt="A dignified close-up portrait of a mature man in a sharp navy suit, representing the institutional leadership of BIGBRUVA. The lighting is low-key and dramatic, reflecting a premium dark-mode aesthetic with subtle golden rim lighting. The atmosphere is one of sovereign authority and quiet confidence, set against a deep navy blue background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB1dFiflShMjA2auiBugDP9tWezQEa5pn1J85PD2ZcR_AGWXjlO9xjQKnBTiBUzgjgPoFo-iaRriHOHlcDmKT8xyHP1aBJrEtKaXCzgyaFS2Z9ZI7fmmwihDW1SLZZdZm3GMp_Wta-TmlmjB_2dDEpNQzCtvAB1_JqIvPYe6tik0Op9mG7GwMq-BGYZZ6XISdPMuvEGYseEGvB2vAjEhO1FhDkX6SiPeiljtn3sQXtqMYxzu1I2LQE7kvt_bu9MtWXj_XZ8YcRii4"/>
-</div>
-</div>
-</nav>
+
 <main className="pt-32 pb-24">
 
 <section className="relative px-margin-desktop max-w-container-max mx-auto mb-32">
@@ -111,7 +41,7 @@ export default function Page() {
 </div>
 <div className="lg:w-1/2 relative">
 <div className="relative z-10 aspect-[2/3] w-full max-w-[500px] mx-auto rounded-2xl overflow-hidden border border-secondary/20 shadow-2xl">
-<img alt="EJ Agbada 01" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuy0CFtoE9DY-Yl2RLWmytXbM9KK9D3uOn0jZu5K9xHoWGSsp5iXaGeS2O-oZgiYkrJWxvQgsrXRO8zvOF7mUVgSW0fnOweRhspvCBDwf5pUkTOlvIk3Uh885vDhNK4qlnNp4gwIaVxnZfCRk0azKWC2dvFk2l7XR5BPsXk5wrBucR9Xnbxxu34DjazKMTqTOTpX9EC7hQP-x9TVUN7gbUe9LXlSC_BCjDq1tNDxD4LIjMXZLSzrzuF9oCXwFu6CjyZHEkG67rtKo"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuy0CFtoE9DY-Yl2RLWmytXbM9KK9D3uOn0jZu5K9xHoWGSsp5iXaGeS2O-oZgiYkrJWxvQgsrXRO8zvOF7mUVgSW0fnOweRhspvCBDwf5pUkTOlvIk3Uh885vDhNK4qlnNp4gwIaVxnZfCRk0azKWC2dvFk2l7XR5BPsXk5wrBucR9Xnbxxu34DjazKMTqTOTpX9EC7hQP-x9TVUN7gbUe9LXlSC_BCjDq1tNDxD4LIjMXZLSzrzuF9oCXwFu6CjyZHEkG67rtKo" alt="EJ Agbada 01" className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-[#0c0f0e] via-transparent to-transparent opacity-60"></div>
 </div>
 
@@ -284,7 +214,7 @@ export default function Page() {
 </div>
 
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
-<img alt="Institutional background" className="w-full h-full object-cover" data-alt="A macro close-up of high-quality navy blue pinstripe suit fabric, showcasing the intricate weave and sophisticated texture. The lighting is soft and directional, highlighting the subtle sheen of the premium material. The overall image carries a sense of bespoke tailoring, professional luxury, and traditional institutional power, perfectly matching a dark-mode sovereign aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhoiuz0ZKnOe9tYMYLUi_B_7JYe0N-WPQeXIFI_7fItbHNqayaVBWtAtsnx8o9iXJLf9NmTFDJ6MXUBUU95ztYGgMncVUNYdVvSXeT2JckhaK0bj2r2sHlGVskN_SXD3qEPxJBUrjQu6fJRY9RSJjZ-ZftXP67v_j674r26G-MN_x0y0SAmdhxJWWb1dPLhncz-UcdU0gli2teJfV2U39FmPj8atNfJ3tgPUxr7bQO7x5jogoHg4SSPVbz1IaMEeZfbV7bKJYyYDE"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhoiuz0ZKnOe9tYMYLUi_B_7JYe0N-WPQeXIFI_7fItbHNqayaVBWtAtsnx8o9iXJLf9NmTFDJ6MXUBUU95ztYGgMncVUNYdVvSXeT2JckhaK0bj2r2sHlGVskN_SXD3qEPxJBUrjQu6fJRY9RSJjZ-ZftXP67v_j674r26G-MN_x0y0SAmdhxJWWb1dPLhncz-UcdU0gli2teJfV2U39FmPj8atNfJ3tgPUxr7bQO7x5jogoHg4SSPVbz1IaMEeZfbV7bKJYyYDE" alt="Institutional background" className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 </div>
 </section>
@@ -293,7 +223,7 @@ export default function Page() {
 <div className="relative rounded-3xl overflow-hidden py-24 text-center">
 <div className="absolute inset-0 bg-[#082e73] opacity-90"></div>
 <div className="absolute inset-0">
-<img alt="Executive space" className="w-full h-full object-cover" data-alt="A wide-angle shot of a minimalist, high-end executive boardroom in a skyscraper at night. The city lights twinkle outside massive floor-to-ceiling windows. Inside, the furniture is sleek and dark, with subtle reflections on polished surfaces. The scene is dominated by deep navy blues and blacks, with small, warm golden lights creating a sense of exclusive, high-stakes decision-making and sovereign authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3MRo4r1m7QNx5bWEQaMNO_XdApM6dZbqpkkL9NJ2tq4HNWlKLw28FcfEn0J2LKMvHnyUqfKTSPAiqyXvcS1R9a_kSg-YDqc6g4lA9VEA1eAer2EWfFofFnPn-gEt9wluEvN6xED_iGmj1tcTEbBn_nA-8yRhP6hso6Pjn5z6p0_nxqKB8uSQKmAeUrm8sMemEojKrLylIse9ZXbRRxDrTbhrhj8DxMXf0SjPS7qWxOrI31bzCYyopjXlQhJhUv1Y3IutzyvSlxmA"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3MRo4r1m7QNx5bWEQaMNO_XdApM6dZbqpkkL9NJ2tq4HNWlKLw28FcfEn0J2LKMvHnyUqfKTSPAiqyXvcS1R9a_kSg-YDqc6g4lA9VEA1eAer2EWfFofFnPn-gEt9wluEvN6xED_iGmj1tcTEbBn_nA-8yRhP6hso6Pjn5z6p0_nxqKB8uSQKmAeUrm8sMemEojKrLylIse9ZXbRRxDrTbhrhj8DxMXf0SjPS7qWxOrI31bzCYyopjXlQhJhUv1Y3IutzyvSlxmA" alt="Executive space" className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="relative z-10 max-w-3xl mx-auto px-6">
 <h2 className="font-display-lg text-display-lg text-secondary mb-8">Ready to step into <br/>The Circle?</h2>

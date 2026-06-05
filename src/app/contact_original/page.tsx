@@ -1,89 +1,20 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<header className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md dark:bg-primary/70 border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
-<div className="flex items-center gap-4">
-<img alt="Official Crest Logo" className="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" />
-<span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-</div>
-<nav className="hidden md:flex gap-8 items-center">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/">Home</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/about">About</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/media">Media</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/voice">Voice</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/events">Events</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/gallery">Gallery</a>
-</nav>
-<div className="flex items-center gap-6">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/community">Community</a>
-<a className="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md" href="/contact">Contact</a>
-<span className="material-symbols-outlined text-secondary cursor-pointer" data-icon="newspaper">newspaper</span>
-</div>
-</header>
+
 <main className="pt-32 pb-24 max-w-container-max mx-auto px-margin-desktop">
 
 <section className="mb-24 text-center">
@@ -214,7 +145,7 @@ export default function Page() {
 
 <footer className="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-16 px-margin-desktop border-t border-secondary/20">
 <div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-<div className="mb-12 flex justify-center"><img alt="BIGBRUVA Official Crest" className="h-48 w-48 object-contain opacity-80 hover:opacity-100 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA" /></div>
+<div className="mb-12 flex justify-center"><Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA" alt="BIGBRUVA Official Crest" className="h-48 w-48 object-contain opacity-80 hover:opacity-100 transition-all duration-500" width={160} height={80} style={{ objectFit: 'contain' }} /></div>
 
 <div className="flex flex-wrap justify-center gap-8 mb-12">
 <a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/community">Community</a>

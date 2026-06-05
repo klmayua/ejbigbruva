@@ -1,85 +1,20 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 glass-header border-b border-outline-variant/10">
-<div className="flex items-center gap-8">
-<span className="font-headline-md text-headline-md tracking-tighter text-secondary uppercase">BIGBRUVA</span>
-<div className="hidden md:flex gap-6">
-<a className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="/">Home</a>
-<a className="text-secondary border-b-2 border-secondary pb-1 font-label-md text-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="/media">Media</a>
-<a className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="/marketplace">Marketplace</a>
-<a className="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="/">EJlive</a>
-</div>
-</div>
-<div className="flex items-center gap-4">
-<button className="material-symbols-outlined text-on-surface-variant hover:text-secondary">search</button>
-<button className="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-lg font-label-md text-label-md active:opacity-80 transition-opacity">Join The Circle</button>
-</div>
-</nav>
+
 <main className="pt-24 pb-20">
 
 <section className="px-margin-mobile md:px-margin-desktop mb-20 max-w-container-max mx-auto">
@@ -122,7 +57,7 @@ export default function Page() {
 
 <article className="legacy-card bg-surface-container-lowest p-6 rounded-xl flex flex-col h-full">
 <div className="relative aspect-video mb-6 overflow-hidden rounded-lg">
-<img className="w-full h-full object-cover" data-alt="A macro photography shot of an antique fountain pen resting on a dark, leather-bound journal with gold leaf edges. The lighting is moody and dramatic, emphasizing the rich textures and the deep navy and gold color palette. The composition is clean and focused, evoking a sense of timeless wisdom and sophisticated scholarship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkjjge62Xqxr-eCjBJgweBa-EuAzk70F9zJwi2MO4EARU3HSSlAXA4XYna3tBfHlD7feI7YAsFy9jn4GXLEEnSX0ncJ_5F3a4_eQ9tpxPbuyG2plRnSM9aKznZ3uKg-zMmd50nSDoLtp_Mw4KzZwjIPi1YAPYio-70Ejx2pEdoUiRzAcuC8Rs2png9W7MiN5P74XrT2Sj1J2xohkyjJ-e5PrAkFo6drn-a8QXaBOWi0W0Uu3KwXsP_DvwUOohC8aQ78Flx7qe472w"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkjjge62Xqxr-eCjBJgweBa-EuAzk70F9zJwi2MO4EARU3HSSlAXA4XYna3tBfHlD7feI7YAsFy9jn4GXLEEnSX0ncJ_5F3a4_eQ9tpxPbuyG2plRnSM9aKznZ3uKg-zMmd50nSDoLtp_Mw4KzZwjIPi1YAPYio-70Ejx2pEdoUiRzAcuC8Rs2png9W7MiN5P74XrT2Sj1J2xohkyjJ-e5PrAkFo6drn-a8QXaBOWi0W0Uu3KwXsP_DvwUOohC8aQ78Flx7qe472w" alt="A macro photography shot of an antique fountain pen resting on a dark, leather-bound journal with gold leaf edges. The lighting is moody and dramatic, emphasizing the rich textures and the deep navy and gold color palette. The composition is clean and focused, evoking a sense of timeless wisdom and sophisticated scholarship." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="flex justify-between items-center mb-4">
 <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Wisdom</span>
@@ -137,7 +72,7 @@ export default function Page() {
 
 <article className="legacy-card bg-surface-container-lowest p-6 rounded-xl flex flex-col h-full">
 <div className="relative aspect-video mb-6 overflow-hidden rounded-lg">
-<img className="w-full h-full object-cover" data-alt="A high-end modern bathroom with dark marble walls and gold fixtures, featuring a pristine steam shower and soft ambient lighting. The scene is tranquil and luxurious, focusing on wellness and self-care. The colors are dominated by charcoal and deep navy with warm metallic accents, suggesting a space of elite rejuvenation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnq9XX3BWL43PV59lMinOtnuaKQFyDW0WDJrwtH6TVfyyJbSVP2bL1SsmQ56p32bsBZ3q2vRWh5S1qgPHg_Q-5hv7K-gc3rChY45wzMFX-ryfHxjqMTUQtXH5yr1OYybthRs_nbtawA7ex4iWrqdvx8OGQ4HPYkn-ZP6Gw2vSrgtwncivTSlYAbS4yKyMrxtJdVmA70O3fOkQn_H_gO4I8lGPmbrOlVZ2bj5jG0zrItOiVu4FXw-_5gBxEjQwEuN5tS5lSEtZ7lz0"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnq9XX3BWL43PV59lMinOtnuaKQFyDW0WDJrwtH6TVfyyJbSVP2bL1SsmQ56p32bsBZ3q2vRWh5S1qgPHg_Q-5hv7K-gc3rChY45wzMFX-ryfHxjqMTUQtXH5yr1OYybthRs_nbtawA7ex4iWrqdvx8OGQ4HPYkn-ZP6Gw2vSrgtwncivTSlYAbS4yKyMrxtJdVmA70O3fOkQn_H_gO4I8lGPmbrOlVZ2bj5jG0zrItOiVu4FXw-_5gBxEjQwEuN5tS5lSEtZ7lz0" alt="A high-end modern bathroom with dark marble walls and gold fixtures, featuring a pristine steam shower and soft ambient lighting. The scene is tranquil and luxurious, focusing on wellness and self-care. The colors are dominated by charcoal and deep navy with warm metallic accents, suggesting a space of elite rejuvenation." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="flex justify-between items-center mb-4">
 <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Health</span>
@@ -152,7 +87,7 @@ export default function Page() {
 
 <article className="legacy-card bg-surface-container-lowest p-6 rounded-xl flex flex-col h-full border-secondary/20 border">
 <div className="relative aspect-video mb-6 overflow-hidden rounded-lg">
-<img className="w-full h-full object-cover" data-alt="A minimalist architectural shot of a sleek, dark office building reflecting the golden sunset in its large glass windows. The lines are sharp and geometric, symbolizing precision and corporate power. The overall mood is authoritative and prosperous, with a palette of deep blues and vibrant evening golds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvBfQ_FVy_SWMzsLj3epBuS0SNksvjpCiM-w62ChVMVtHiK28jt9saGsiSwrWB8VWuEvcOYMDGBQiP95e6QB-lk53o-oBB0ftyXMK1rdsHk9KWc4s1KOR3OO_Y6XKPy3OxMaoDboTJZD4mA0EHScc66G1i8B-myGwC0Y4_1VX9hX6IvuwEs7cyKrGkaXRTGSFfSASwZeryShpRATuS_PJ6jaUrt3MSeh4IkCwb-sbsnJaOo7kHpf4rnVFlwVsShVeauG8NBJz4ezs"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvBfQ_FVy_SWMzsLj3epBuS0SNksvjpCiM-w62ChVMVtHiK28jt9saGsiSwrWB8VWuEvcOYMDGBQiP95e6QB-lk53o-oBB0ftyXMK1rdsHk9KWc4s1KOR3OO_Y6XKPy3OxMaoDboTJZD4mA0EHScc66G1i8B-myGwC0Y4_1VX9hX6IvuwEs7cyKrGkaXRTGSFfSASwZeryShpRATuS_PJ6jaUrt3MSeh4IkCwb-sbsnJaOo7kHpf4rnVFlwVsShVeauG8NBJz4ezs" alt="A minimalist architectural shot of a sleek, dark office building reflecting the golden sunset in its large glass windows. The lines are sharp and geometric, symbolizing precision and corporate power. The overall mood is authoritative and prosperous, with a palette of deep blues and vibrant evening golds." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="flex justify-between items-center mb-4">
 <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Wealth</span>
@@ -167,7 +102,7 @@ export default function Page() {
 
 <article className="legacy-card bg-surface-container-lowest p-6 rounded-xl flex flex-col h-full">
 <div className="relative aspect-video mb-6 overflow-hidden rounded-lg">
-<img className="w-full h-full object-cover" data-alt="Close-up of a high-end mechanical watch movement with intricate gears and gold-plated components visible through a sapphire glass back. The lighting highlights the meticulous craftsmanship and precision engineering. The aesthetic is industrial yet incredibly refined, emphasizing the value of time and enduring quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnJjyRA2n_HO9W9dcCEsTPtaRMabs9tUpdFaYwI02X0R1f7hAx5z1xSL7koAzqfGSh0Ugd8cYmU3DUgdrsNltUzJvIV5CmPjNrfS2BsG9U_n9gMa0oq8WBgdqwUWOn5VxcgGgAJufa9kedbslPuEegM9MHyw8ahdlUgoUGZv3yjEIgkNEVzDIWUKX4GpExtWj9o_0e_fpOsVSPRiAte2Hh8ExreKNxD1jwWkLVSETCoAGSRCB70aTaIeCWH3rf9_Rpq7q6qTPRWI"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnJjyRA2n_HO9W9dcCEsTPtaRMabs9tUpdFaYwI02X0R1f7hAx5z1xSL7koAzqfGSh0Ugd8cYmU3DUgdrsNltUzJvIV5CmPjNrfS2BsG9U_n9gMa0oq8WBgdqwUWOn5VxcgGgAJufa9kedbslPuEegM9MHyw8ahdlUgoUGZv3yjEIgkNEVzDIWUKX4GpExtWj9o_0e_fpOsVSPRiAte2Hh8ExreKNxD1jwWkLVSETCoAGSRCB70aTaIeCWH3rf9_Rpq7q6qTPRWI" alt="Close-up of a high-end mechanical watch movement with intricate gears and gold-plated components visible through a sapphire glass back. The lighting highlights the meticulous craftsmanship and precision engineering. The aesthetic is industrial yet incredibly refined, emphasizing the value of time and enduring quality." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="flex justify-between items-center mb-4">
 <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Wisdom</span>
@@ -182,7 +117,7 @@ export default function Page() {
 
 <article className="legacy-card bg-surface-container-lowest p-6 rounded-xl flex flex-col h-full">
 <div className="relative aspect-video mb-6 overflow-hidden rounded-lg">
-<img className="w-full h-full object-cover" data-alt="A serene landscape of a misty mountain range at dawn, with layers of deep blue and purple peaks fading into a soft golden horizon. The atmosphere is contemplative and expansive, suggesting a sense of peace and legacy. The image is clean and high-contrast, perfectly aligning with a luxury minimalist design system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCovG3VC3gfXAM3fhAiTfr0dDvFhKjbaXLgifkEQiAMxhfX5IZ2rl6m7bkM4nB8Hek0CvI05zahxPBrYpJATnVRbS-YTQAAeTEZBd19fp7NUgMDZPBa5oUNadPs5hZuNlv2DvcfikhmCvAR2YfVKJkvcsizgy4-iu_Q_V09HEYWeXUDnOP8Ol0BLCGPkd3VayzZUGCs6xa2O7-6jdhRtpu-ICxfHP-5nqciScW6Mv8co35n4szkm3SgEYofIPsemjOXL2Ww1TL-aG0"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCovG3VC3gfXAM3fhAiTfr0dDvFhKjbaXLgifkEQiAMxhfX5IZ2rl6m7bkM4nB8Hek0CvI05zahxPBrYpJATnVRbS-YTQAAeTEZBd19fp7NUgMDZPBa5oUNadPs5hZuNlv2DvcfikhmCvAR2YfVKJkvcsizgy4-iu_Q_V09HEYWeXUDnOP8Ol0BLCGPkd3VayzZUGCs6xa2O7-6jdhRtpu-ICxfHP-5nqciScW6Mv8co35n4szkm3SgEYofIPsemjOXL2Ww1TL-aG0" alt="A serene landscape of a misty mountain range at dawn, with layers of deep blue and purple peaks fading into a soft golden horizon. The atmosphere is contemplative and expansive, suggesting a sense of peace and legacy. The image is clean and high-contrast, perfectly aligning with a luxury minimalist design system." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="flex justify-between items-center mb-4">
 <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Health</span>
@@ -197,7 +132,7 @@ export default function Page() {
 
 <article className="legacy-card bg-surface-container-lowest p-6 rounded-xl flex flex-col h-full">
 <div className="relative aspect-video mb-6 overflow-hidden rounded-lg">
-<img className="w-full h-full object-cover" data-alt="An abstract arrangement of gold bullion bars stacked neatly against a dark navy velvet background. The lighting is soft but emphasizes the metallic luster of the gold, creating a powerful image of stability and absolute wealth. The composition is asymmetrical and modern, suitable for a prestige editorial archive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpK8C54SBJIKsgGN-1DD1IjA1JtFowXFhpRV_w19g-8sesLiQRXQjN-eWKeyWzUGUqFDY32deyJrZONKhEdDDKc7UWFacA8ot8uvEvHiM6mCZKtK-1y5Y0OVGGrV1LrLf_AkF8SaR6b4vTxCUgSJX4dpilaiZTOXGmMepC9Ml_A5zgDrywueA07bNa5AqzZIIB7oQ7WnrR2NhvbSeP055-rPGPJy9_CwGhHwlEziqOGMoXP7XW90PRqB7V6jVNHEsYd79zKw7KgLY"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpK8C54SBJIKsgGN-1DD1IjA1JtFowXFhpRV_w19g-8sesLiQRXQjN-eWKeyWzUGUqFDY32deyJrZONKhEdDDKc7UWFacA8ot8uvEvHiM6mCZKtK-1y5Y0OVGGrV1LrLf_AkF8SaR6b4vTxCUgSJX4dpilaiZTOXGmMepC9Ml_A5zgDrywueA07bNa5AqzZIIB7oQ7WnrR2NhvbSeP055-rPGPJy9_CwGhHwlEziqOGMoXP7XW90PRqB7V6jVNHEsYd79zKw7KgLY" alt="An abstract arrangement of gold bullion bars stacked neatly against a dark navy velvet background. The lighting is soft but emphasizes the metallic luster of the gold, creating a powerful image of stability and absolute wealth. The composition is asymmetrical and modern, suitable for a prestige editorial archive." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div className="flex justify-between items-center mb-4">
 <span className="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Wealth</span>

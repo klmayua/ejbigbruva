@@ -1,93 +1,25 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<nav className="fixed top-0 z-50 w-full glass-panel border-b border-outline-variant dark:border-secondary-fixed-dim/20">
-<div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<div className="flex items-center gap-4">
-<img alt="BIGBRUVA Logo" className="h-10 w-10 object-contain" src="/images/EJ_Agbada_02.jpeg" />
-<span className="font-display-lg text-headline-md tracking-tighter text-secondary dark:text-secondary-fixed">BIGBRUVA</span>
-</div>
-<div className="hidden md:flex gap-8 items-center">
-<a className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/">Home</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/about">About</a>
-<a className="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary" href="/media">Media</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/legacy">Legacy</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/events">Events</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="hidden lg:block bg-secondary text-on-secondary px-6 py-2 font-label-md text-label-md rounded-lg hover:brightness-110 transition-all active:scale-95">Explore Legacy</button>
-<span className="material-symbols-outlined text-secondary cursor-pointer md:hidden">menu</span>
-</div>
-</div>
-</nav>
-<main className="relative pt-20">
+
+<main className="relative">
 
 <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
-<img alt="Featured Documentary Background" className="w-full h-full object-cover object-top filter brightness-75" src="/images/EJ_casual_02.jpeg" />
+<Image src="/images/EJ_casual_02.jpeg" alt="Featured Documentary Background" className="w-full h-full object-cover object-top filter brightness-75" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 hero-gradient"></div>
 </div>
 <div className="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-20 max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
@@ -139,7 +71,7 @@ export default function Page() {
 <p className="text-on-surface-variant mb-4">2023 • Feature Film</p>
 </div>
 <p className="text-on-surface-variant text-sm italic mb-4">"A masterclass in restraint and emotional depth. Ebidilo anchors this desert epic with a presence that rivals the landscape itself." — Global Cinema Weekly</p>
-<img className="w-full h-32 object-cover rounded-lg" data-alt="A cinematic still of a wide, dramatic desert landscape under a deep navy sky, featuring a silhouetted figure standing on a sand dune. The lighting is high-contrast with moonlight reflections, creating a moody, editorial aesthetic consistent with a prestige film production. Royal gold accents highlight the film's title typography in the corner." src="/images/EJ_casual_03.jpeg" />
+<Image src="/images/EJ_casual_03.jpeg" alt="A cinematic still of a wide, dramatic desert landscape under a deep navy sky, featuring a silhouetted figure standing on a sand dune. The lighting is high-contrast with moonlight reflections, creating a moody, editorial aesthetic consistent with a prestige film production. Royal gold accents highlight the film's title typography in the corner." className="w-full h-32 object-cover rounded-lg" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 </div>
 
@@ -158,7 +90,7 @@ export default function Page() {
 <p className="text-on-surface-variant mb-4">2021 • Political Thriller</p>
 </div>
 <p className="text-on-surface-variant text-sm italic mb-4">Defining the intersection of global finance and morality through a high-stakes dramatic lens.</p>
-<img className="w-full h-32 object-cover rounded-lg" data-alt="A sleek, modern glass skyscraper at dusk with deep navy and steel blue tones. The architectural design is minimalist and imposing, reflecting city lights like stars. The overall mood is sophisticated and authoritative, embodying a corporate political thriller vibe with a high-end editorial finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdStkgSmnC7EIEPB57B5qDtIENTZx_w9QaFUo3XuP7z2ZhZgYy9wLk0zn0a26tILItukiNjTAdp1m10Fgj_lAb7JSzvto8m427TKuKRZyaI74GNVagttEtMdRAOC5GudLsi743tt296VwXD56824l0WaitzVUEOLh4RJknANAbSjCRmFU_3eGFd-hs66uH7-WjpsdYNuPCNQSFo6s_k59eVM5ctRJPiPze96yYLZlvS10pDwBbS8I_aW2g8R0294tPYepT6kKrfNg" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdStkgSmnC7EIEPB57B5qDtIENTZx_w9QaFUo3XuP7z2ZhZgYy9wLk0zn0a26tILItukiNjTAdp1m10Fgj_lAb7JSzvto8m427TKuKRZyaI74GNVagttEtMdRAOC5GudLsi743tt296VwXD56824l0WaitzVUEOLh4RJknANAbSjCRmFU_3eGFd-hs66uH7-WjpsdYNuPCNQSFo6s_k59eVM5ctRJPiPze96yYLZlvS10pDwBbS8I_aW2g8R0294tPYepT6kKrfNg" alt="A sleek, modern glass skyscraper at dusk with deep navy and steel blue tones. The architectural design is minimalist and imposing, reflecting city lights like stars. The overall mood is sophisticated and authoritative, embodying a corporate political thriller vibe with a high-end editorial finish." className="w-full h-32 object-cover rounded-lg" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 </div>
 </div>
@@ -182,7 +114,7 @@ export default function Page() {
 
 <div className="group relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 hover:border-secondary/50 transition-all">
 <div className="aspect-video relative overflow-hidden">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional television studio set with warm mahogany wood and dark navy acoustic panels. Soft gold ambient lighting illuminates the stage. Two high-end armchairs face each other, suggesting an intimate and intellectual talk show interview. The style is premium broadcast media, focused on sophisticated cultural dialogue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTq7Pgo9qBMXxHws10nMNTO-UPsnRVzOMK31ZJmCgDuNvr6JftcudtgAhMgJBt1WZxZx2G1ZODR8CksirpvAppfHmZlaymfYyGd5WAOoU_1gd9FjfhwPR0-9jRnSeVDC69kM2dzCN74hJsxUTGMPePJQJuira-SMdcvMyweZjhU9G16_oF2lxmsAWwa1aJoRtBnbcJ7vIYpa5jMdc5UMguJztfn-ws5UVxFmeJUFt84-cskHXJIvaNy36nWR69NAnhGCB9vq0TFM" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuADTq7Pgo9qBMXxHws10nMNTO-UPsnRVzOMK31ZJmCgDuNvr6JftcudtgAhMgJBt1WZxZx2G1ZODR8CksirpvAppfHmZlaymfYyGd5WAOoU_1gd9FjfhwPR0-9jRnSeVDC69kM2dzCN74hJsxUTGMPePJQJuira-SMdcvMyweZjhU9G16_oF2lxmsAWwa1aJoRtBnbcJ7vIYpa5jMdc5UMguJztfn-ws5UVxFmeJUFt84-cskHXJIvaNy36nWR69NAnhGCB9vq0TFM" alt="A professional television studio set with warm mahogany wood and dark navy acoustic panels. Soft gold ambient lighting illuminates the stage. Two high-end armchairs face each other, suggesting an intimate and intellectual talk show interview. The style is premium broadcast media, focused on sophisticated cultural dialogue." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-tighter text-secondary">Series Regular</div>
 </div>
 <div className="p-6">
@@ -196,7 +128,7 @@ export default function Page() {
 
 <div className="group relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 hover:border-secondary/50 transition-all">
 <div className="aspect-video relative overflow-hidden">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up shot of a vintage-style television broadcast camera in a dimly lit studio. Dust motes dance in a spotlight of royal gold light. The background is a blurred dark navy studio space. The aesthetic is nostalgic yet high-definition, representing the legacy of television production and archival media." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF_lQVNSEwF_28jVj252Hz0Wd-cM8p-0FC9NeE8v5qs-pHTPpSa-B-esps8HocWa2dGhYsmI2MuP44Siwv1jroUlBzhYWdrleFZ4qVWCcB4TrI51xyrT0jpS805CibERJm7K1A7iwc6-Uwf3icAyD_ghbpM3vUJUFcscMybkjvFf-Mwu1x2GoC6UUqi_xd1srvo0BdzVVYgErokWmW1sNMrb7B3PB23ZMqxCiry7BIrOKCuEB1JP2zJWscGPdc45HHiwDJ8uOGjpY" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF_lQVNSEwF_28jVj252Hz0Wd-cM8p-0FC9NeE8v5qs-pHTPpSa-B-esps8HocWa2dGhYsmI2MuP44Siwv1jroUlBzhYWdrleFZ4qVWCcB4TrI51xyrT0jpS805CibERJm7K1A7iwc6-Uwf3icAyD_ghbpM3vUJUFcscMybkjvFf-Mwu1x2GoC6UUqi_xd1srvo0BdzVVYgErokWmW1sNMrb7B3PB23ZMqxCiry7BIrOKCuEB1JP2zJWscGPdc45HHiwDJ8uOGjpY" alt="A close-up shot of a vintage-style television broadcast camera in a dimly lit studio. Dust motes dance in a spotlight of royal gold light. The background is a blurred dark navy studio space. The aesthetic is nostalgic yet high-definition, representing the legacy of television production and archival media." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-tighter text-secondary">Guest Spot</div>
 </div>
 <div className="p-6">
@@ -210,7 +142,7 @@ export default function Page() {
 
 <div className="group relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 hover:border-secondary/50 transition-all">
 <div className="aspect-video relative overflow-hidden">
-<img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern, high-tech control room for a media production company. Dozens of glowing monitors display various cinematic clips in a dark room. The light from the screens casts a cool blue and royal gold glow onto the control desk. The mood is one of professional expertise, precision, and the forefront of digital media technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBypWEr6H6ZR-J3vrO8P61_hY-_7saUyccEmXQPuhn5OX3piCTbIs0zLTuu9cpXzIUxWrDXXdZMBvZfw8YMiJ_8MQoMWA2hoPBLxzTAwr7CLHHN7xN8qlVNu3xHFDmLBUyGrf5Wxeh4ElBKIQ1IC3qyZq2PH4XLU2YMmDGyMm8WoWC0aiwjvnUwDD7iIXl7B-9PRIS3crohXdAXWf92IkJAujevzmXg4RvtUy737O6qYd3y_hRgA2xyvSlbO7_x6OWZzDlXC4FYsw" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBypWEr6H6ZR-J3vrO8P61_hY-_7saUyccEmXQPuhn5OX3piCTbIs0zLTuu9cpXzIUxWrDXXdZMBvZfw8YMiJ_8MQoMWA2hoPBLxzTAwr7CLHHN7xN8qlVNu3xHFDmLBUyGrf5Wxeh4ElBKIQ1IC3qyZq2PH4XLU2YMmDGyMm8WoWC0aiwjvnUwDD7iIXl7B-9PRIS3crohXdAXWf92IkJAujevzmXg4RvtUy737O6qYd3y_hRgA2xyvSlbO7_x6OWZzDlXC4FYsw" alt="A modern, high-tech control room for a media production company. Dozens of glowing monitors display various cinematic clips in a dark room. The light from the screens casts a cool blue and royal gold glow onto the control desk. The mood is one of professional expertise, precision, and the forefront of digital media technology." className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] uppercase tracking-tighter text-secondary">Voice Contribution</div>
 </div>
 <div className="p-6">
@@ -301,48 +233,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="bg-primary dark:bg-surface-container-highest border-t border-secondary-fixed/30 pt-20 pb-12">
-<div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div className="flex flex-col md:flex-row justify-between items-start gap-gutter mb-20">
-<div className="max-w-md">
-<div className="mb-6 flex items-center gap-4"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Crest" className="h-16 w-16 object-contain brightness-110 filter" /><span className="font-display-lg text-headline-xl text-secondary-fixed dark:text-secondary tracking-tighter">BIGBRUVA</span></div>
-<p className="text-on-primary dark:text-on-surface-variant font-body-md">Dedicated to curating intellectual depth and the ongoing evolution of cultural influence through the power of cinematic storytelling.</p>
-</div>
-<div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-<div className="space-y-4">
-<h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Navigation</h5>
-<ul className="space-y-2">
-<li className=""><a className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/press">Press</a></li>
-<li className=""><a className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/contact">Contact</a></li>
-<li className=""><a className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/">Archive Access</a></li>
-</ul>
-</div>
-<div className="space-y-4">
-<h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Legal</h5>
-<ul className="space-y-2">
-<li className=""><a className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/">Privacy Policy</a></li>
-<li className=""><a className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/">Terms of Service</a></li>
-</ul>
-</div>
-<div className="space-y-4 col-span-2 md:col-span-1">
-<h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Connect</h5>
-<div className="flex gap-4">
-<span className="material-symbols-outlined text-secondary-fixed cursor-pointer hover:scale-110 transition-transform">public</span>
-<span className="material-symbols-outlined text-secondary-fixed cursor-pointer hover:scale-110 transition-transform">play_circle</span>
-<span className="material-symbols-outlined text-secondary-fixed cursor-pointer hover:scale-110 transition-transform">podcasts</span>
-</div>
-</div>
-</div>
-</div>
-<div className="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-<p className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant text-center md:text-left">© 2024 BIGBRUVA. All Rights Reserved. Curating Intellectual Depth and Cultural Influence.</p>
-<div className="flex items-center gap-2">
-<span className="text-[10px] text-on-surface-variant">THE SOVEREIGN SERIES</span>
-<div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
-</div>
-</div>
-</div>
-</footer>
+
     </>
   );
 }

@@ -1,65 +1,15 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
@@ -67,7 +17,7 @@ export default function Page() {
 <nav className="bg-surface/70 backdrop-blur-md dark:bg-surface/70 docked full-width top-0 sticky z-50 border-b border-on-surface/10">
 <div className="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
 <div className="flex items-center gap-4">
-<img alt="BIGBRUVA Crest" className="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP7m8tXkL6i-7U39wR4eePQJ8OyU6HHEsPhAIfa7qzQj-kNl4_V-ytJBVglKsgVHHZTB7phx4IlHQNFvjVNupVAcLFLpAKQ-gpbsO1YZN5yxdmsrV1D_12mYmu31awVigQJ9GYWHWlMnFY46MO52Xanhj-iZbypzkdEy9-D-edZVEyXST5CmE1RoCpxKsVozBlLvwUyPgyWy5Hr80cOI1PuFPgSm4o7Rn8no19AldyA0sC5YiPZT3LuK1w7TO8dj_0b4MUdLiq-3Y" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP7m8tXkL6i-7U39wR4eePQJ8OyU6HHEsPhAIfa7qzQj-kNl4_V-ytJBVglKsgVHHZTB7phx4IlHQNFvjVNupVAcLFLpAKQ-gpbsO1YZN5yxdmsrV1D_12mYmu31awVigQJ9GYWHWlMnFY46MO52Xanhj-iZbypzkdEy9-D-edZVEyXST5CmE1RoCpxKsVozBlLvwUyPgyWy5Hr80cOI1PuFPgSm4o7Rn8no19AldyA0sC5YiPZT3LuK1w7TO8dj_0b4MUdLiq-3Y" alt="BIGBRUVA Crest" className="h-10 w-10 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
 <span className="text-headline-md font-headline-md font-bold text-secondary dark:text-secondary tracking-tighter">BIGBRUVA</span>
 </div>
 <div className="hidden md:flex items-center gap-8">
@@ -244,7 +194,7 @@ export default function Page() {
 <footer className="bg-surface-container-lowest dark:bg-surface-container-lowest full-width border-t border-secondary/10">
 <div className="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
 <div className="flex flex-col items-center md:items-start gap-4">
-<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Official Crest" className="h-16 w-auto object-contain mb-2" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Official Crest" className="h-16 w-auto object-contain mb-2" width={160} height={80} style={{ objectFit: 'contain' }} />
 <p className="text-body-md font-body-md text-secondary-fixed-dim max-w-xs text-center md:text-left">Architecting institutional influence through strategic excellence and narrative authority.</p>
 </div>
 <div className="flex flex-wrap justify-center gap-8">

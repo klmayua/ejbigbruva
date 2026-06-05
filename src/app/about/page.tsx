@@ -1,121 +1,28 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<aside className="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col w-80 bg-surface-container-lowest border-r border-outline-variant/10">
-<div className="px-8 py-10">
-<div className="w-full mb-8">
-<img alt="BIGBRUVA Crest" className="h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-</div>
-<p className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-[0.25em] opacity-60">Ejike Ebidilo Institutional</p>
-</div>
-<nav className="flex-1 px-4 space-y-1">
-<a className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/">
-<span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">home</span>
-<span className="font-label-md">Home</span>
-</a>
-<a className="flex items-center px-4 py-3 bg-primary-container/40 text-secondary rounded-xl font-bold transition-all duration-200 ease-in-out" href="/about">
-<span className="material-symbols-outlined mr-4">person_celebrate</span>
-<span className="font-label-md">About</span>
-</a>
-<a className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/legacy">
-<span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">history_edu</span>
-<span className="font-label-md">Legacy</span>
-</a>
-<a className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/media">
-<span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">video_library</span>
-<span className="font-label-md">Media</span>
-</a>
-<a className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/voice">
-<span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">record_voice_over</span>
-<span className="font-label-md">Voice</span>
-</a>
-<a className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/events">
-<span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">event</span>
-<span className="font-label-md">Events</span>
-</a>
-</nav>
-<div className="p-8">
-<button className="w-full py-4 bg-secondary text-on-secondary-fixed font-bold rounded-xl active:scale-95 transition-all shadow-lg shadow-secondary/10">
-            Join Community
-        </button>
-</div>
-</aside>
 
-<header className="lg:hidden fixed top-0 w-full z-50 glass-header border-b border-outline-variant/10 bg-surface-container-lowest/80 flex justify-between items-center px-margin-mobile py-4">
-<div className="h-10">
-<img alt="BIGBRUVA Crest" className="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-</div>
-<button className="material-symbols-outlined text-secondary text-3xl">menu</button>
-</header>
 
-<main className="lg:ml-80 min-h-screen">
+
+
+<main className="min-h-screen pt-20">
 
 <section className="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img alt="Ejike Ebidilo Casual Portrait" className="w-full h-full object-cover object-center scale-105" src="/images/EJ_casual_01.jpeg"/>
+<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo Casual Portrait" className="w-full h-full object-cover object-center scale-105" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-4xl opacity-0 translate-y-8 transition-all duration-1000" id="hero-content">
@@ -237,29 +144,7 @@ export default function Page() {
 </div>
 </section>
 
-<footer className="flex flex-col items-center justify-center py-24 px-margin-desktop text-center w-full border-t border-outline-variant/10 bg-surface-container-lowest">
-<div className="mb-12">
-<img alt="BIGBRUVA Crest" className="h-32 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-</div>
-<div className="flex flex-wrap justify-center gap-8 mb-12">
-<a className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</a>
-<a className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press</a>
-<a className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/">Privacy Policy</a>
-<a className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/">Terms</a>
-</div>
-<p className="font-body-md text-on-surface-variant/40">© 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.</p>
-<div className="mt-8 flex gap-4">
-<a className="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="/">
-<span className="material-symbols-outlined text-lg">public</span>
-</a>
-<a className="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="/ejs-circle">
-<span className="material-symbols-outlined text-lg">play_circle</span>
-</a>
-<a className="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="/podcast">
-<span className="material-symbols-outlined text-lg">podcasts</span>
-</a>
-</div>
-</footer>
+
 </main>
 
 <button className="fixed bottom-8 right-8 lg:right-12 z-50 w-16 h-16 bg-secondary text-on-secondary-fixed rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-all group overflow-hidden">

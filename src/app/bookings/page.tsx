@@ -1,65 +1,15 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
@@ -67,7 +17,7 @@ export default function Page() {
 <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-md border-b border-outline-variant/20">
 <div className="flex justify-between items-center w-full px-margin-desktop py-unit-3 max-w-container-max mx-auto">
 <div className="flex items-center gap-4">
-<img alt="BIGBRUVA Institutional Logo" className="h-10 w-10 object-contain" src="/images/EJ_Agbada_02.jpeg" />
+<Image src="/images/EJ_Agbada_02.jpeg" alt="BIGBRUVA Institutional Logo" className="h-10 w-10 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
 <span className="font-display-lg text-headline-md tracking-tighter text-primary">BIGBRUVA</span>
 </div>
 <div className="hidden md:flex items-center gap-8">
@@ -86,7 +36,7 @@ export default function Page() {
 
 <header className="relative min-h-[85vh] flex items-end pt-32 pb-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img alt="BIGBRUVA Portrait" className="w-full h-full object-cover object-top filter brightness-75 contrast-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" alt="BIGBRUVA Portrait" className="w-full h-full object-cover object-top filter brightness-75 contrast-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 hero-gradient"></div>
 </div>
 <div className="relative z-10 max-w-container-max mx-auto w-full">
@@ -255,7 +205,7 @@ export default function Page() {
 </div>
 <div className="relative">
 <div className="aspect-[4/5] rounded-3xl overflow-hidden glass-panel p-4 transition-all duration-700 opacity-100 translate-y-0">
-<img alt="Execution detail" className="w-full h-full object-cover rounded-2xl opacity-40 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" alt="Execution detail" className="w-full h-full object-cover rounded-2xl opacity-40 grayscale" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 flex items-center justify-center">
 <div className="p-8 glass-panel rounded-2xl text-center max-w-xs transform rotate-3 transition-all duration-700 opacity-100 translate-y-0">
 <span className="material-symbols-outlined text-secondary text-5xl mb-4">verified</span>
@@ -357,39 +307,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="bg-primary-container pt-24 pb-12 border-t border-secondary/20">
-<div className="max-w-container-max mx-auto px-margin-desktop">
-<div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
-<div className="max-w-md"><img alt="BIGBRUVA Official Crest" className="h-24 w-24 mb-8 object-contain filter brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA" /><p className="text-on-primary-container text-body-md">Curating Intellectual Depth and Cultural Influence across the global landscape. A voice for legacy, a vision for the future.</p></div>
-<div className="grid grid-cols-2 gap-16">
-<div className="space-y-4">
-<h4 className="text-primary font-bold uppercase tracking-widest text-label-sm">Navigation</h4>
-<ul className="space-y-3">
-<li className=""><a className="text-tertiary-fixed hover:text-secondary transition-colors" href="/press">Press</a></li>
-<li className=""><a className="text-tertiary-fixed hover:text-secondary transition-colors" href="/">Archive Access</a></li>
-<li className=""><a className="text-tertiary-fixed hover:text-secondary transition-colors" href="/media">Media</a></li>
-</ul>
-</div>
-<div className="space-y-4">
-<h4 className="text-primary font-bold uppercase tracking-widest text-label-sm">Legal</h4>
-<ul className="space-y-3">
-<li className=""><a className="text-tertiary-fixed hover:text-secondary transition-colors" href="/">Privacy Policy</a></li>
-<li className=""><a className="text-tertiary-fixed hover:text-secondary transition-colors" href="/">Terms of Service</a></li>
-<li className=""><a className="text-tertiary-fixed hover:text-secondary transition-colors" href="/contact">Contact</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div className="border-t border-secondary/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-<p className="text-label-sm text-tertiary-fixed-dim">© 2024 BIGBRUVA. All Rights Reserved. Curating Intellectual Depth and Cultural Influence.</p>
-<div className="flex gap-8">
-<a className="material-symbols-outlined text-primary hover:text-secondary transition-all" href="/">public</a>
-<a className="material-symbols-outlined text-primary hover:text-secondary transition-all" href="/">hub</a>
-<a className="material-symbols-outlined text-primary hover:text-secondary transition-all" href="/podcast">podcasts</a>
-</div>
-</div>
-</div>
-</footer>
+
     </>
   );
 }

@@ -1,127 +1,27 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<nav className="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
-<div className="flex items-center">
-<img alt="BIGBRUVA Logo" className="h-12 md:h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-</div>
-<div className="hidden md:flex gap-8 items-center">
-<a className="font-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/">Home</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="px-6 py-2 bg-secondary text-on-secondary font-label-md rounded-lg hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg">Contact</button>
-<span className="material-symbols-outlined text-secondary cursor-pointer md:hidden" data-icon="menu">menu</span>
-</div>
-</nav>
 
-<aside className="fixed left-0 top-0 h-full w-72 z-40 hidden xl:flex flex-col bg-surface-container-lowest border-r border-outline-variant/10 shadow-2xl">
-<div className="p-8 border-b border-outline-variant/10">
-<img alt="BIGBRUVA Logo" className="w-32 h-auto mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-<p className="font-label-sm text-on-surface-variant tracking-wider uppercase opacity-70">Ejike Ebidilo Institutional</p>
-</div>
-<div className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
-<div className="flex items-center gap-4 p-3 bg-secondary/10 text-secondary rounded-lg font-semibold transition-all duration-200">
-<span className="material-symbols-outlined" data-icon="home">home</span>
-<span className="font-label-md">Home</span>
-</div>
-<div className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-<span className="material-symbols-outlined" data-icon="person_celebration">person_celebrate</span>
-<span className="font-label-md">About</span>
-</div>
-<div className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-<span className="material-symbols-outlined" data-icon="history_edu">history_edu</span>
-<span className="font-label-md">Legacy</span>
-</div>
-<div className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-<span className="material-symbols-outlined" data-icon="video_library">video_library</span>
-<span className="font-label-md">Media</span>
-</div>
-<div className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-<span className="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
-<span className="font-label-md">Voice</span>
-</div>
-<div className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-<span className="material-symbols-outlined" data-icon="event">event</span>
-<span className="font-label-md">Events</span>
-</div>
-</div>
-<div className="p-8">
-<button className="w-full py-3 bg-secondary text-on-secondary font-bold rounded-lg transition-transform hover:brightness-110 active:scale-95 shadow-xl">Join Community</button>
-</div>
-</aside>
-<main className="xl:pl-72 pt-16">
+
+
+<main className="pt-20">
 
 <section className="relative min-h-[90vh] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img alt="Ejike Ebidilo in traditional Agbada" className="w-full h-full object-cover object-center" src="/images/EJ_Agbada_01.jpeg"/>
+<Image src="/images/EJ_Agbada_01.jpeg" alt="Ejike Ebidilo in traditional Agbada" className="w-full h-full object-cover object-center" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 hero-gradient"></div>
 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 </div>
@@ -195,7 +95,7 @@ export default function Page() {
 </div>
 <div className="md:col-span-5 relative">
 <div className="aspect-[3/4] bg-surface-container overflow-hidden rounded shadow-2xl relative">
-<img alt="Ejike Ebidilo in a casual portrait" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="/images/EJ_casual_01.jpeg"/>
+<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo in a casual portrait" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute bottom-6 left-6 p-6 glass-panel max-w-[260px] rounded shadow-xl">
 <p className="font-label-sm text-secondary italic mb-2 tracking-tight">Internal Monologue</p>
 <p className="font-body-md text-on-surface">"The voice is the soul's first draft of reality."</p>
@@ -228,7 +128,7 @@ export default function Page() {
 
 <div className="group cursor-pointer">
 <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
-<img alt="Vintage portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="/images/EJ_Agbada_01.jpeg"/>
+<Image src="/images/EJ_Agbada_01.jpeg" alt="Vintage portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
 <span className="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
 </div>
@@ -250,7 +150,7 @@ export default function Page() {
 
 <div className="group cursor-pointer">
 <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
-<img alt="Creative session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="/images/EJ_casual_01.jpeg"/>
+<Image src="/images/EJ_casual_01.jpeg" alt="Creative session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
 <span className="material-symbols-outlined text-white text-5xl" data-icon="auto_stories">auto_stories</span>
 </div>
@@ -261,25 +161,7 @@ export default function Page() {
 </div>
 </section>
 
-<footer className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10 text-center">
-<div className="mb-12">
-<img alt="BIGBRUVA Crest" className="h-40 md:h-56 w-auto mx-auto object-contain mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-<div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
-<a className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/">Privacy Policy</a>
-<a className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/">Terms of Service</a>
-</div>
-<div className="flex justify-center gap-10 mb-10">
-<span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110" data-icon="public">public</span>
-<span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110" data-icon="podcasts">podcasts</span>
-<span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110" data-icon="video_library">video_library</span>
-</div>
-<p className="font-label-sm text-on-surface-variant/40 tracking-widest uppercase">
-                    © 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.
-                </p>
-</div>
-</footer>
+
 </main>
 
     </>

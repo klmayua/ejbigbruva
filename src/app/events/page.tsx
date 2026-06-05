@@ -1,96 +1,25 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
-<header className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md dark:bg-primary/70 border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
-<div className="flex items-center gap-4">
-<img alt="BIGBRUVA Logo" className="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" />
-<span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-</div>
-<nav className="hidden md:flex items-center gap-8">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/">Home</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/about">About</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/media">Media</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/voice">Voice</a>
-<a className="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md" href="/events">Events</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/gallery">Gallery</a>
-</nav>
-<div className="flex items-center gap-6">
-<span className="material-symbols-outlined text-secondary cursor-pointer">newspaper</span>
-<div className="flex gap-4">
-<a className="text-on-surface-variant hover:text-secondary font-label-md uppercase tracking-wider" href="/community">Community</a>
-<a className="bg-secondary text-on-secondary px-6 py-2 font-label-md uppercase tracking-widest hover:bg-secondary-fixed transition-all" href="/contact">Contact</a>
-</div>
-</div>
-</header>
+
 <main className="pt-24">
 
 <section className="relative h-[90vh] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<img alt="Hero" className="w-full h-full object-cover grayscale opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU" alt="Hero" className="w-full h-full object-cover grayscale opacity-40" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
 </div>
 <div className="relative z-10 px-margin-desktop max-w-4xl">
@@ -185,7 +114,7 @@ export default function Page() {
 
 <section className="py-24 px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
 <div className="absolute -right-20 top-0 opacity-5">
-<img alt="Logo Watermark" className="w-[800px] h-[800px] object-contain rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" alt="Logo Watermark" className="w-[800px] h-[800px] object-contain rotate-12" width={160} height={80} style={{ objectFit: 'contain' }} />
 </div>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 relative z-10">
 
@@ -243,25 +172,25 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4">
 <div className="h-80 overflow-hidden relative group">
-<img alt="Gallery Image" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A black and white high-contrast editorial photograph of a prestigious cultural event in a grand hall. Men in exquisite traditional Agbada attire are engaged in deep intellectual conversation. The lighting is dramatic and moody, emphasizing textures of the fabric and the solemnity of the occasion within a luxury dark navy and gold aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU" alt="Gallery Image" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 <span className="material-symbols-outlined text-white text-5xl">zoom_in</span>
 </div>
 </div>
 <div className="h-80 overflow-hidden relative group">
-<img alt="Gallery 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A wide cinematic shot of a modern academic symposium stage with deep navy backdrops and elegant gold accents. The podium is illuminated by a sharp spotlight, casting soft shadows across the pristine architectural space. The atmosphere is quiet, authoritative, and sophisticated, reflecting a premium institutional brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPaQ4TPeOAZLgywglnZXOW9db--ESN0UdG29J6f-wyMCd9-T1BWZv4HARDM03GWr8YzRhVjAY3U9HJT3e3pBEhAJiEtAr22aPJNFGxW9QGOJKIz-VHaaQapfS24xioRUseFePqPD9v_Iqs0sAo39oEfHbwQDLZxPE9sKDFREqnpB865WMXmqjE98jIaARiZmFUCzibLSxK2G5OGaS1nWVco1n5t_-N1wEaJSsTozg6PEWCwJUuyYAt1gyjSpuS1c6LMwgzMd7V_2U" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPaQ4TPeOAZLgywglnZXOW9db--ESN0UdG29J6f-wyMCd9-T1BWZv4HARDM03GWr8YzRhVjAY3U9HJT3e3pBEhAJiEtAr22aPJNFGxW9QGOJKIz-VHaaQapfS24xioRUseFePqPD9v_Iqs0sAo39oEfHbwQDLZxPE9sKDFREqnpB865WMXmqjE98jIaARiZmFUCzibLSxK2G5OGaS1nWVco1n5t_-N1wEaJSsTozg6PEWCwJUuyYAt1gyjSpuS1c6LMwgzMd7V_2U" alt="Gallery 2" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 <span className="material-symbols-outlined text-white text-5xl">zoom_in</span>
 </div>
 </div>
 <div className="h-80 overflow-hidden relative group">
-<img alt="Gallery 3" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="An intimate close-up of a gala dinner table setting featuring gold-rimmed glassware, navy velvet linens, and soft ivory candlelight. The scene is set in a high-end luxury venue with a historical feel. The composition is elegant and minimalist, focusing on the refined details of a prestigious institutional dinner party." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF-GOXdZH4wLMq3BJ2D_iuqEnNbN_UzfZnvMguWXaAdgGgsOAwqS1vybxSeLKjHt-p7tXjaZGvliiecHlYSS1LQeIObAnLA8yZKK9eV6rNB78EqqC8K-8UxFFW48DbmMES4C6kBH_UngcZddL0grHf5e_GoLeqT2OWcuh-P4TtGkZ2w4CrK1gNPAmo_KpB-K0EPX5SJulUfFrAVZErKDIm8X2Jc8e4uw_ynhH_Kb3x5TGvlLXeuWn62UlkbhrfvlkkHEo16ijhERM" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF-GOXdZH4wLMq3BJ2D_iuqEnNbN_UzfZnvMguWXaAdgGgsOAwqS1vybxSeLKjHt-p7tXjaZGvliiecHlYSS1LQeIObAnLA8yZKK9eV6rNB78EqqC8K-8UxFFW48DbmMES4C6kBH_UngcZddL0grHf5e_GoLeqT2OWcuh-P4TtGkZ2w4CrK1gNPAmo_KpB-K0EPX5SJulUfFrAVZErKDIm8X2Jc8e4uw_ynhH_Kb3x5TGvlLXeuWn62UlkbhrfvlkkHEo16ijhERM" alt="Gallery 3" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 <span className="material-symbols-outlined text-white text-5xl">zoom_in</span>
 </div>
 </div>
 <div className="h-80 overflow-hidden relative group">
-<img alt="Gallery 4" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated press conference environment with multiple microphones set on a dark navy table. In the background, a large gold-embossed logo of an institution is visible against a matte black wall. The lighting is professional and focused, capturing a moment of serious cultural and political discourse in a high-fashion digital editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZ7XTZF0ThfRDQrTS8yQ1mWshSz3qdGipldpHgu58NMoMccb9wn_7lQ58GGKB0m0XGUoccbW0HylrTDhzGDs4YyksQG3Fe6MAoCCQm3A_h5IJDvYF-xihSdNyptc7koCjNPmAiSMEHf83vjcHVbJasPvduMZnL0CIiSiOSOYOiR0x8foMc_Jb8w3H4FG2FMy0Ptb85KuUZIzjxj7benOJtqjNa9qaOxpLotrUFbt3794bQXj0d6p0i6cXmNtcrGGVceESH-b0sjY" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZ7XTZF0ThfRDQrTS8yQ1mWshSz3qdGipldpHgu58NMoMccb9wn_7lQ58GGKB0m0XGUoccbW0HylrTDhzGDs4YyksQG3Fe6MAoCCQm3A_h5IJDvYF-xihSdNyptc7koCjNPmAiSMEHf83vjcHVbJasPvduMZnL0CIiSiOSOYOiR0x8foMc_Jb8w3H4FG2FMy0Ptb85KuUZIzjxj7benOJtqjNa9qaOxpLotrUFbt3794bQXj0d6p0i6cXmNtcrGGVceESH-b0sjY" alt="Gallery 4" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
 <span className="material-symbols-outlined text-white text-5xl">zoom_in</span>
 </div>
@@ -321,7 +250,7 @@ export default function Page() {
 <footer className="bg-surface-container-lowest py-16 px-margin-desktop border-t border-secondary/20 w-full">
 <div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
 
-<div className="mb-12 flex justify-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Crest" className="h-32 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500" /></div>
+<div className="mb-12 flex justify-center"><Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Crest" className="h-32 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500" width={160} height={80} style={{ objectFit: 'contain' }} /></div>
 <nav className="flex flex-wrap justify-center gap-12 mb-12">
 <a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="/community">Community</a>
 <a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="/press">Press</a>

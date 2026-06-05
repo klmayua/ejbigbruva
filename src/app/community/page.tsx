@@ -1,72 +1,22 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
       
 <nav className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
 <div className="flex items-center gap-4">
-<img alt="Official Crest Logo" className="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" alt="Official Crest Logo" className="h-12 w-12 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
 <span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
 </div>
 <div className="hidden md:flex items-center gap-8">
@@ -97,7 +47,7 @@ export default function Page() {
 </div>
 
 <div className="absolute -right-20 -top-20 opacity-10">
-<img alt="Background Crest" className="w-[600px] h-[600px] grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" alt="Background Crest" className="w-[600px] h-[600px] grayscale" width={160} height={80} style={{ objectFit: 'contain' }} />
 </div>
 </section>
 
@@ -213,7 +163,7 @@ export default function Page() {
 </div>
 </div>
 <div className="relative h-[600px] bento-card overflow-hidden opacity-0 translate-y-10 transition-all duration-700">
-<img className="w-full h-full object-cover" data-alt="An expansive, high-tech archival storage facility with rows of glowing server racks integrated with traditional wooden storage boxes. The lighting is a moody deep navy with gold laser-like lines mapping the space, representing the fusion of ancient legacy and futuristic technology. The scene feels vast, institutional, and highly secure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWMHXrCShC2BPNM8oWZ199BYhOD_16nRv8-F9Axunh3oLZTha0hgxSttYHUZqWIVKlecYSvrjcgY1udJfuu-s5ia2VJrMRXl8exW751gXPpSUCM5SwacvqvOWDHr1QGJDcwzFSW0tndX3Hyk-YfiPgDd9HKC5wwsyJUrUMwVIwWqJ5HMMueYXfIJXadlT-jem77dtJl2-qYHLlrnAMlLTkdYOP9Bpqc_A8u-IsmP_cX-y_aGKt_S25N99Z2ty5zopE-IObYakpRmY" />
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWMHXrCShC2BPNM8oWZ199BYhOD_16nRv8-F9Axunh3oLZTha0hgxSttYHUZqWIVKlecYSvrjcgY1udJfuu-s5ia2VJrMRXl8exW751gXPpSUCM5SwacvqvOWDHr1QGJDcwzFSW0tndX3Hyk-YfiPgDd9HKC5wwsyJUrUMwVIwWqJ5HMMueYXfIJXadlT-jem77dtJl2-qYHLlrnAMlLTkdYOP9Bpqc_A8u-IsmP_cX-y_aGKt_S25N99Z2ty5zopE-IObYakpRmY" alt="An expansive, high-tech archival storage facility with rows of glowing server racks integrated with traditional wooden storage boxes. The lighting is a moody deep navy with gold laser-like lines mapping the space, representing the fusion of ancient legacy and futuristic technology. The scene feels vast, institutional, and highly secure." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 <div className="absolute bottom-8 left-8 right-8 p-6 glass-panel">
 <h5 className="font-label-md text-secondary uppercase mb-2">Active Mission</h5>
@@ -251,7 +201,7 @@ export default function Page() {
 
 <footer className="w-full py-16 px-margin-desktop bg-surface-container-lowest border-t border-secondary/20">
 <div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-<div className="mb-8 flex justify-center"><img alt="BIGBRUVA Official Crest" className="h-32 md:h-48 w-auto object-contain transition-all duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" /></div>
+<div className="mb-8 flex justify-center"><Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Official Crest" className="h-32 md:h-48 w-auto object-contain transition-all duration-700 hover:scale-105" width={160} height={80} style={{ objectFit: 'contain' }} /></div>
 
 <div className="flex flex-wrap justify-center gap-10 mb-12">
 <a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/community">Community</a>

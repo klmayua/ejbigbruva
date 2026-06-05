@@ -1,65 +1,15 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
+import useReveal from '@/hooks/useReveal';
+import useParallax from '@/hooks/useParallax';
 import Link from 'next/link';
 
 export default function Page() {
-  useEffect(() => {
-    // Intersection Observer for scroll reveal animations
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-8', 'translate-y-10');
-          entry.target.classList.add('opacity-100', 'translate-y-0');
-        }
-      });
-    }, observerOptions);
-
-    // Initial hero reveal
-    const hero = document.getElementById('hero-content');
-    if (hero) {
-      setTimeout(() => {
-        hero.classList.remove('opacity-0', 'translate-y-8');
-        hero.classList.add('opacity-100', 'translate-y-0');
-      }, 300);
-    }
-
-    // Section reveal elements
-    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
-      if (!el.id) {
-        el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
-        revealObserver.observe(el);
-      }
-    });
-
-    // Mobile menu toggle logic
-    const menuBtn = document.querySelector('nav .material-symbols-outlined[data-icon="menu"], header button.material-symbols-outlined, nav span.material-symbols-outlined:last-child');
-    const aside = document.querySelector('aside');
-    if (menuBtn && aside) {
-      const toggleMenu = () => {
-        aside.classList.toggle('hidden');
-        aside.classList.toggle('flex');
-      };
-      menuBtn.addEventListener('click', toggleMenu);
-      return () => menuBtn.removeEventListener('click', toggleMenu);
-    }
-
-    // Simple Parallax scroll logic for hero image
-    const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const heroImage = document.querySelector('section img');
-      if (heroImage instanceof HTMLElement) {
-        heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useReveal();
+  useParallax();
+  
 
   return (
     <>
@@ -70,7 +20,7 @@ export default function Page() {
 <div className="px-2 pt-4">
 <div className="flex items-center gap-3">
 <div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-secondary/20">
-<img alt="EJ Institutional Seal" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB3Lt9iqfL6PElZQ79UR_ezLrzB-44hz5F2Sqc4VDIiGrP8J8P6gn76BPkVMdrcMVpdLKEdRGKkRvez1kmoKLmV8uo1V35ltGvDVyggWMhyfjnNRXZy0nyXNcEhzTLsvUa5sQP1DNH-cxnOfoLDVleqbUYUr5VMTJbN3PwRN4mrfZ6cbGWyTh9Nk07B0DnqjjLYZU8IjfvkweNz7RYHtA6IgFtWhud73M9IN8WATj42TXAoNgoI_r-XKaeCwj07Gjfb4-YVcrwYZU"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB3Lt9iqfL6PElZQ79UR_ezLrzB-44hz5F2Sqc4VDIiGrP8J8P6gn76BPkVMdrcMVpdLKEdRGKkRvez1kmoKLmV8uo1V35ltGvDVyggWMhyfjnNRXZy0nyXNcEhzTLsvUa5sQP1DNH-cxnOfoLDVleqbUYUr5VMTJbN3PwRN4mrfZ6cbGWyTh9Nk07B0DnqjjLYZU8IjfvkweNz7RYHtA6IgFtWhud73M9IN8WATj42TXAoNgoI_r-XKaeCwj07Gjfb4-YVcrwYZU" alt="EJ Institutional Seal" className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 <div>
 <h1 className="font-headline-md text-headline-md text-secondary leading-none">BIGBRUVA</h1>
@@ -141,7 +91,7 @@ export default function Page() {
                     Join The Circle
                 </button>
 <div className="w-10 h-10 rounded-full border-2 border-secondary p-0.5">
-<img alt="EJ Profile" className="w-full h-full object-cover rounded-full" data-alt="A sophisticated close-up portrait of an authoritative leader with a sharp, distinguished appearance, set against a dark, dramatic navy background. The lighting is moody and premium, highlighting refined features and a look of quiet confidence. The aesthetic is high-end editorial, fitting for a global institutional management platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnpzog0FwEy88AZYurgd7UvQCkNDy_3eH1x9_q2-rB0TAahXXO0UOGILo7NOC3Z63wPmmZdX4-0zuwAdgmivbg3B2TyZ1WNRWLR6anOmJFXLi-ZWGyI6zeIFMhYk3jcEjYQOpj39kAL0qWBur4jjs5F_9IDKkMdC_puOjBxwczXauMMs4qnNMm71SWW-RUWwhKhk2mSb-PlnyrXlgNOaNpsXF9iKCz4LhjidTFUy61Tcl9GyisCbFIjaFGKy2rsQcwKgH8uhZzIE"/>
+<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcnpzog0FwEy88AZYurgd7UvQCkNDy_3eH1x9_q2-rB0TAahXXO0UOGILo7NOC3Z63wPmmZdX4-0zuwAdgmivbg3B2TyZ1WNRWLR6anOmJFXLi-ZWGyI6zeIFMhYk3jcEjYQOpj39kAL0qWBur4jjs5F_9IDKkMdC_puOjBxwczXauMMs4qnNMm71SWW-RUWwhKhk2mSb-PlnyrXlgNOaNpsXF9iKCz4LhjidTFUy61Tcl9GyisCbFIjaFGKy2rsQcwKgH8uhZzIE" alt="EJ Profile" className="w-full h-full object-cover rounded-full" fill sizes="(max-width: 768px) 100vw, 50vw" />
 </div>
 </div>
 </header>
