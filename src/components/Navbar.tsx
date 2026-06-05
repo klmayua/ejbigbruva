@@ -4,19 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/legacy', label: 'Legacy' },
-  { href: '/media', label: 'Media' },
-  { href: '/voice', label: 'Voice' },
-  { href: '/events', label: 'Events' },
-  { href: '/gallery', label: 'Gallery' },
-  { href: '/community', label: 'Community' },
-  { href: '/press', label: 'Press' },
-  { href: '/contact', label: 'Contact' }
-];
+import { navLinks } from '@/lib/navigation';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,21 +16,21 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 glass-02 border-b border-outline-variant/10">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10">
         <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-          {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-4 group cursor-pointer">
-            <div className="relative w-10 h-10">
+          {/* Logo & Brand - Logo top-left only as per brief */}
+          <Link href="/" className="flex items-center gap-3 md:gap-4 group cursor-pointer flex-nowrap shrink-0">
+            <div className="relative w-10 h-10 md:w-12 md:h-12 shrink-0">
               <Image 
-                alt="BIGBRUVA Crest" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
+                alt="BIGBRUVA Logo" 
+                src="/images/EjBigBruva_Logo_Full_No_bg.png"
                 fill
-                sizes="40px"
+                sizes="48px"
                 className="object-contain transition-transform group-hover:scale-105"
                 priority
               />
             </div>
-            <span className="font-display-lg text-headline-md tracking-tighter text-secondary dark:text-secondary-fixed transition-colors group-hover:text-secondary-fixed">
+            <span className="font-display-lg text-headline-md tracking-tighter text-secondary dark:text-secondary-fixed transition-colors group-hover:text-secondary-fixed whitespace-nowrap">
               BIGBRUVA
             </span>
           </Link>

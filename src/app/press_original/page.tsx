@@ -14,26 +14,7 @@ export default function Page() {
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md dark:bg-primary/70 border-b border-soft-ivory/10 px-margin-desktop py-base flex justify-between items-center transition-all duration-300">
-<div className="flex items-center gap-4">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" alt="BIGBRUVA LOGO" className="h-10 w-auto" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-</div>
-<div className="hidden lg:flex items-center gap-8">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/">Home</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/about">About</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/media">Media</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/voice">Voice</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/events">Events</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/gallery">Gallery</a>
-</div>
-<div className="flex items-center gap-6">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/community">Community</a>
-<a className="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md text-label-md" href="/press">Press</a>
-<a className="bg-secondary text-on-secondary px-6 py-2 rounded-sm font-label-md text-label-md hover:bg-secondary-fixed transition-all duration-300" href="/contact">Contact</a>
-</div>
-</nav>
+
 <main className="pt-32 pb-24">
 
 <section className="max-w-container-max mx-auto px-margin-desktop mb-24">
@@ -178,22 +159,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="w-full py-16 px-margin-desktop bg-surface-container-lowest border-t border-secondary/20">
-<div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA" alt="BIGBRUVA Official Crest" className="w-32 md:w-40 mb-8 opacity-90 hover:opacity-100 transition-opacity duration-500" width={160} height={80} style={{ objectFit: 'contain' }} />
 
-<div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="/community">Community</a>
-<a className="text-secondary font-bold font-label-md text-label-md" href="/press">Press</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="/contact">Contact</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="/">Privacy Policy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" href="/">Terms of Service</a>
-</div>
-<p className="text-on-surface-variant/60 font-body-md text-label-md tracking-widest">
-                © 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.
-            </p>
-</div>
-</footer>
     </>
   );
 }

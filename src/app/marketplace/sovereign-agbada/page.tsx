@@ -21,7 +21,7 @@ export default function Page() {
 <div className="lg:col-span-7 flex flex-col gap-6">
 <div className="relative aspect-[2/3] w-full overflow-hidden">
 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhO5-CCfbP7SAB4pPlPH5ooM3R0KyV-CEyzp4eu6aiNRxj4_hXa2aNHfabn0beqKRFLqeMO6RUvCXUEUSTyzI8E1Ye3pVk-QuS_uMLrWzpsboyxo4NGxf7wWXFKV-CudkZpdqtVRTTiFgINCY8BR7htIlTIy_vSAWy2KM7N-YkSA0ZgbeSgtVMXfnBhe0fZ-_oYX39wEcRUqBo-nYZ0HTLSr4kcPh87DstRgLVi34G4vtBqnGQA1O7i6dhj4LJqnwxCezQvIDFbSw" alt="Limited Edition Agbada Series - Statesman White" className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
-<div className="absolute top-6 left-6 glass-panel px-4 py-2">
+<div className="absolute top-6 left-6 glass-01 px-4 py-2">
 <p className="text-label-sm font-label-sm text-secondary uppercase tracking-widest">Archive Reference: EJ_Agbada_01</p>
 </div>
 </div>
@@ -52,7 +52,7 @@ export default function Page() {
 <p className="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
                             The Statesman White Agbada is a testament to generational sovereignty and the quiet power of tradition. Crafted for the modern diplomat, this piece merges high-fashion silhouette with ancestral weight.
                         </p>
-<div className="glass-panel p-6 space-y-4">
+<div className="glass-01 p-6 space-y-4">
 <h3 className="text-label-md font-label-md text-secondary uppercase tracking-widest">Fabric Particulars</h3>
 <ul className="space-y-3">
 <li className="flex items-center gap-3">

@@ -19,7 +19,7 @@ export default function Page() {
 
 <section className="relative min-h-[90vh] flex items-end overflow-hidden">
 <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
-<Image src="/images/EJ_casual_02.jpeg" alt="Featured Documentary Background" className="w-full h-full object-cover object-top filter brightness-75" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<Image src="/images/EJ_casual_02.jpeg" alt="Featured Documentary Background" className="w-full h-full object-cover object-top filter brightness-75" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 25%' }} />
 <div className="absolute inset-0 hero-gradient"></div>
 </div>
 <div className="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-20 max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
@@ -36,7 +36,7 @@ export default function Page() {
 <span className="material-symbols-outlined fill-current" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
                             Watch: Origins of Excellence
                         </button>
-<button className="flex items-center gap-2 glass-panel text-on-surface px-8 py-4 rounded-lg font-bold border border-outline hover:bg-surface-variant transition-all">
+<button className="flex items-center gap-2 glass-01 text-on-surface px-8 py-4 rounded-lg font-bold border border-outline hover:bg-surface-variant transition-all">
 <span className="material-symbols-outlined">info</span>
                             Film Details
                         </button>
@@ -62,7 +62,7 @@ export default function Page() {
 <p className="text-on-surface-variant mb-2">Lead Role: Commander Diallo</p>
 <span className="bg-surface-container-high px-3 py-1 rounded text-xs text-on-surface-variant">2023 • Feature Film</span>
 </div>
-<div className="relative z-10 w-12 h-12 rounded-full glass-panel border border-secondary flex items-center justify-center mb-4 md:mb-0">
+<div className="relative z-10 w-12 h-12 rounded-full glass-01 border border-secondary flex items-center justify-center mb-4 md:mb-0">
 <span className="text-secondary font-bold">23</span>
 </div>
 <div className="w-full md:w-5/12 text-left bg-surface-container px-6 py-6 rounded-xl border border-outline-variant group-hover:border-secondary transition-colors">
@@ -71,7 +71,7 @@ export default function Page() {
 <p className="text-on-surface-variant mb-4">2023 • Feature Film</p>
 </div>
 <p className="text-on-surface-variant text-sm italic mb-4">"A masterclass in restraint and emotional depth. Ebidilo anchors this desert epic with a presence that rivals the landscape itself." — Global Cinema Weekly</p>
-<Image src="/images/EJ_casual_03.jpeg" alt="A cinematic still of a wide, dramatic desert landscape under a deep navy sky, featuring a silhouetted figure standing on a sand dune. The lighting is high-contrast with moonlight reflections, creating a moody, editorial aesthetic consistent with a prestige film production. Royal gold accents highlight the film's title typography in the corner." className="w-full h-32 object-cover rounded-lg" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<Image src="/images/EJ_casual_03.jpeg" alt="A cinematic still of a wide, dramatic desert landscape under a deep navy sky, featuring a silhouetted figure standing on a sand dune. The lighting is high-contrast with moonlight reflections, creating a moody, editorial aesthetic consistent with a prestige film production. Royal gold accents highlight the film's title typography in the corner." className="w-full h-32 object-cover rounded-lg" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 20%' }} />
 </div>
 </div>
 
@@ -81,7 +81,7 @@ export default function Page() {
 <p className="text-on-surface-variant mb-2">Executive Producer / Lead</p>
 <span className="bg-surface-container-high px-3 py-1 rounded text-xs text-on-surface-variant">2021 • Political Thriller</span>
 </div>
-<div className="relative z-10 w-12 h-12 rounded-full glass-panel border border-secondary flex items-center justify-center mb-4 md:mb-0">
+<div className="relative z-10 w-12 h-12 rounded-full glass-01 border border-secondary flex items-center justify-center mb-4 md:mb-0">
 <span className="text-secondary font-bold">21</span>
 </div>
 <div className="w-full md:w-5/12 text-left bg-surface-container px-6 py-6 rounded-xl border border-outline-variant group-hover:border-secondary transition-colors">
@@ -188,7 +188,7 @@ export default function Page() {
 </div>
 <div className="relative">
 <div className="absolute -inset-4 bg-secondary/10 blur-3xl rounded-full"></div>
-<div className="relative glass-panel rounded-2xl p-8 border border-secondary/20 aspect-square flex items-center justify-center">
+<div className="relative glass-01 rounded-2xl p-8 border border-secondary/20 aspect-square flex items-center justify-center">
 
 <div className="text-center z-10">
 <span className="material-symbols-outlined text-secondary text-8xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>graphic_eq</span>
@@ -208,22 +208,22 @@ export default function Page() {
 <div className="h-px w-24 bg-secondary mx-auto mt-4"></div>
 </div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div className="text-center p-8 glass-panel rounded-xl hover:scale-105 transition-transform">
+<div className="text-center p-8 glass-01 rounded-xl hover:scale-105 transition-transform">
 <span className="material-symbols-outlined text-secondary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>military_tech</span>
 <h4 className="font-bold text-on-surface">Pan-African Film Festival</h4>
 <p className="text-xs text-on-surface-variant mt-2">Best Supporting Actor - 2022</p>
 </div>
-<div className="text-center p-8 glass-panel rounded-xl hover:scale-105 transition-transform">
+<div className="text-center p-8 glass-01 rounded-xl hover:scale-105 transition-transform">
 <span className="material-symbols-outlined text-secondary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>rewarded_ads</span>
 <h4 className="font-bold text-on-surface">Cannes Indie Shorts</h4>
 <p className="text-xs text-on-surface-variant mt-2">Narrator of the Year - 2021</p>
 </div>
-<div className="text-center p-8 glass-panel rounded-xl hover:scale-105 transition-transform">
+<div className="text-center p-8 glass-01 rounded-xl hover:scale-105 transition-transform">
 <span className="material-symbols-outlined text-secondary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
 <h4 className="font-bold text-on-surface">British Documentary Awards</h4>
 <p className="text-xs text-on-surface-variant mt-2">Emerging Producer Finalist</p>
 </div>
-<div className="text-center p-8 glass-panel rounded-xl hover:scale-105 transition-transform">
+<div className="text-center p-8 glass-01 rounded-xl hover:scale-105 transition-transform">
 <span className="material-symbols-outlined text-secondary text-5xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
 <h4 className="font-bold text-on-surface">The Heritage Guild</h4>
 <p className="text-xs text-on-surface-variant mt-2">Lifetime Cultural Impact Award</p>

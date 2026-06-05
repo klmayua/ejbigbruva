@@ -46,7 +46,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
 
-<div className="md:col-span-8 group relative overflow-hidden glass-panel p-10 rounded shadow-2xl">
+<div className="md:col-span-8 group relative overflow-hidden glass-01 p-10 rounded shadow-2xl">
 <div className="flex justify-between items-start mb-12">
 <span className="font-label-sm text-label-sm text-secondary border border-secondary/30 px-3 py-1">HISTORIC EVENT</span>
 <span className="font-display-lg text-headline-md text-on-surface/10">2014</span>
@@ -61,7 +61,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="md:col-span-4 glass-panel p-10 rounded border-l-4 border-secondary flex flex-col justify-between">
+<div className="md:col-span-4 glass-01 p-10 rounded border-l-4 border-secondary flex flex-col justify-between">
 <div>
 <span className="material-symbols-outlined text-secondary text-4xl mb-8" data-icon="workspace_premium">workspace_premium</span>
 <h3 className="font-headline-md text-headline-md text-on-surface mb-4">Pioneer Award</h3>
@@ -74,7 +74,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="md:col-span-4 glass-panel p-10 rounded flex flex-col items-center text-center">
+<div className="md:col-span-4 glass-01 p-10 rounded flex flex-col items-center text-center">
 <div className="w-16 h-16 rounded border border-secondary/20 flex items-center justify-center mb-8">
 <span className="material-symbols-outlined text-secondary text-3xl" data-icon="forum">forum</span>
 </div>
@@ -116,7 +116,7 @@ export default function Page() {
 </div>
 <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary gold-glow z-20 hidden md:block"></div>
 <div className="md:pl-16 order-1 md:order-2">
-<div className="aspect-video glass-panel rounded flex items-center justify-center border border-white/5">
+<div className="aspect-video glass-01 rounded flex items-center justify-center border border-white/5">
 <span className="material-symbols-outlined text-secondary/20 text-6xl" data-icon="podcasts">podcasts</span>
 </div>
 </div>
@@ -124,7 +124,7 @@ export default function Page() {
 
 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div className="md:pr-16 order-1">
-<div className="aspect-video glass-panel rounded flex items-center justify-center border border-white/5">
+<div className="aspect-video glass-01 rounded flex items-center justify-center border border-white/5">
 <span className="material-symbols-outlined text-secondary/20 text-6xl" data-icon="public">public</span>
 </div>
 </div>
@@ -144,7 +144,7 @@ export default function Page() {
 </div>
 <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary gold-glow z-20 hidden md:block"></div>
 <div className="md:pl-16 order-1 md:order-2">
-<div className="aspect-video glass-panel rounded flex items-center justify-center border border-white/5">
+<div className="aspect-video glass-01 rounded flex items-center justify-center border border-white/5">
 <span className="material-symbols-outlined text-secondary/20 text-6xl" data-icon="auto_awesome">auto_awesome</span>
 </div>
 </div>

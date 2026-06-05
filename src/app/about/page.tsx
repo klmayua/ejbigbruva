@@ -22,7 +22,7 @@ export default function Page() {
 
 <section className="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
 <div className="absolute inset-0 z-0">
-<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo Casual Portrait" className="w-full h-full object-cover object-center scale-105" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo Casual Portrait" className="w-full h-full object-cover object-center scale-105" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 20%' }} />
 <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
 </div>
 <div className="relative z-10 max-w-4xl opacity-0 translate-y-8 transition-all duration-1000" id="hero-content">

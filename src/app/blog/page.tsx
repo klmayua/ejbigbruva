@@ -181,18 +181,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto border-t border-outline-variant/10 bg-surface-container-lowest">
-<div className="mb-8 md:mb-0">
-<span className="font-headline-lg text-headline-lg text-secondary opacity-20 block mb-2">BIGBRUVA</span>
-<p className="text-on-surface-variant font-label-sm text-label-sm">© 2024 BIGBRUVA Institutional. All Rights Reserved.</p>
-</div>
-<div className="flex gap-8">
-<a className="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary underline transition-all" href="/">Archival Terms</a>
-<a className="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary underline transition-all" href="/legacy">Legacy Privacy</a>
-<a className="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary underline transition-all" href="/">Sovereign Rights</a>
-<a className="text-on-surface-variant font-label-sm text-label-sm hover:text-secondary underline transition-all" href="/contact">Contact</a>
-</div>
-</footer>
+
 
 
 <button className="fixed bottom-8 right-8 w-16 h-16 bg-secondary text-on-secondary-fixed rounded-full shadow-2xl flex items-center justify-center group hover:scale-110 active:scale-90 transition-all z-40">

@@ -14,25 +14,7 @@ export default function Page() {
   return (
     <>
       
-<nav className="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-md border-b border-outline-variant/20">
-<div className="flex justify-between items-center w-full px-margin-desktop py-unit-3 max-w-container-max mx-auto">
-<div className="flex items-center gap-4">
-<Image src="/images/EJ_Agbada_02.jpeg" alt="BIGBRUVA Institutional Logo" className="h-10 w-10 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="font-display-lg text-headline-md tracking-tighter text-primary">BIGBRUVA</span>
-</div>
-<div className="hidden md:flex items-center gap-8">
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/">Home</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/about">About</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media</a>
-<a className="font-label-sm text-label-sm text-secondary font-bold border-b-2 border-secondary" href="/">Inquiries</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="hidden md:block px-6 py-2 bg-secondary text-on-secondary text-label-md font-label-md rounded-lg hover:bg-secondary-container transition-all active:scale-95">Explore Legacy</button>
-<span className="material-symbols-outlined text-primary cursor-pointer md:hidden">menu</span>
-</div>
-</div>
-</nav>
+
 
 <header className="relative min-h-[85vh] flex items-end pt-32 pb-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
 <div className="absolute inset-0 z-0">
@@ -63,7 +45,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter transition-all duration-700 opacity-100 translate-y-0">
 
-<div className="md:col-span-7 group glass-panel p-10 rounded-2xl flex flex-col justify-between min-h-[350px] transition-all hover:border-secondary/40 duration-700 opacity-100 translate-y-0">
+<div className="md:col-span-7 group glass-01 p-10 rounded-2xl flex flex-col justify-between min-h-[350px] transition-all hover:border-secondary/40 duration-700 opacity-100 translate-y-0">
 <div>
 <span className="material-symbols-outlined text-4xl text-secondary mb-6">mic_external_on</span>
 <h3 className="font-headline-md text-headline-md mb-4">Keynote Speaking</h3>
@@ -100,7 +82,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="md:col-span-7 group glass-panel p-10 rounded-2xl flex flex-col justify-between min-h-[350px] transition-all duration-700 opacity-100 translate-y-0">
+<div className="md:col-span-7 group glass-01 p-10 rounded-2xl flex flex-col justify-between min-h-[350px] transition-all duration-700 opacity-100 translate-y-0">
 <div>
 <span className="material-symbols-outlined text-4xl text-secondary mb-6">record_voice_over</span>
 <h3 className="font-headline-md text-headline-md mb-4">Voiceover Commissions</h3>
@@ -204,10 +186,10 @@ export default function Page() {
 </div>
 </div>
 <div className="relative">
-<div className="aspect-[4/5] rounded-3xl overflow-hidden glass-panel p-4 transition-all duration-700 opacity-100 translate-y-0">
+<div className="aspect-[4/5] rounded-3xl overflow-hidden glass-01 p-4 transition-all duration-700 opacity-100 translate-y-0">
 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" alt="Execution detail" className="w-full h-full object-cover rounded-2xl opacity-40 grayscale" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 flex items-center justify-center">
-<div className="p-8 glass-panel rounded-2xl text-center max-w-xs transform rotate-3 transition-all duration-700 opacity-100 translate-y-0">
+<div className="p-8 glass-01 rounded-2xl text-center max-w-xs transform rotate-3 transition-all duration-700 opacity-100 translate-y-0">
 <span className="material-symbols-outlined text-secondary text-5xl mb-4">verified</span>
 <h5 className="font-headline-md mb-2">Excellence Guaranteed</h5>
 <p className="text-label-sm text-on-surface-variant">Every engagement is curated to be a definitive moment in institutional history.</p>

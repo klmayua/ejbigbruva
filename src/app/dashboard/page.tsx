@@ -14,66 +14,7 @@ export default function Page() {
   return (
     <>
       
-<aside className="hidden md:flex flex-col h-screen w-64 fixed left-0 bg-surface-container-lowest border-r border-outline-variant/10 py-base px-4 z-50">
-<div className="flex flex-col gap-6 h-full">
 
-<div className="px-2 pt-4">
-<div className="flex items-center gap-3">
-<div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-secondary/20">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB3Lt9iqfL6PElZQ79UR_ezLrzB-44hz5F2Sqc4VDIiGrP8J8P6gn76BPkVMdrcMVpdLKEdRGKkRvez1kmoKLmV8uo1V35ltGvDVyggWMhyfjnNRXZy0nyXNcEhzTLsvUa5sQP1DNH-cxnOfoLDVleqbUYUr5VMTJbN3PwRN4mrfZ6cbGWyTh9Nk07B0DnqjjLYZU8IjfvkweNz7RYHtA6IgFtWhud73M9IN8WATj42TXAoNgoI_r-XKaeCwj07Gjfb4-YVcrwYZU" alt="EJ Institutional Seal" className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
-</div>
-<div>
-<h1 className="font-headline-md text-headline-md text-secondary leading-none">BIGBRUVA</h1>
-<p className="font-label-sm text-label-sm text-on-surface-variant opacity-70">Sovereign Management</p>
-</div>
-</div>
-</div>
-
-<button className="w-full bg-secondary text-on-secondary-fixed py-3 px-4 rounded-xl font-label-md flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all">
-<span className="material-symbols-outlined" style={{ fontVariationSettings: "'wght' 600" }}>add</span>
-                New Broadcast
-            </button>
-
-<nav className="flex-1 mt-4 space-y-1">
-
-<a className="flex items-center gap-3 px-4 py-3 text-on-secondary-container bg-secondary-container rounded-xl font-bold transition-transform active:scale-95" href="/dashboard">
-<span className="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span className="font-label-md text-label-md">Dashboard</span>
-</a>
-<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all" href="/podcast">
-<span className="material-symbols-outlined" data-icon="mic">mic</span>
-<span className="font-label-md text-label-md">Podcast Admin</span>
-</a>
-<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all" href="/blog">
-<span className="material-symbols-outlined" data-icon="edit_note">edit_note</span>
-<span className="font-label-md text-label-md">Blog Manager</span>
-</a>
-<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all" href="/ejs-circle">
-<span className="material-symbols-outlined" data-icon="groups">groups</span>
-<span className="font-label-md text-label-md">Circle Analytics</span>
-</a>
-<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all" href="/">
-<span className="material-symbols-outlined" data-icon="account_balance">account_balance</span>
-<span className="font-label-md text-label-md">Wealth Archival</span>
-</a>
-<a className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-xl transition-all" href="/">
-<span className="material-symbols-outlined" data-icon="settings">settings</span>
-<span className="font-label-md text-label-md">Settings</span>
-</a>
-</nav>
-
-<div className="border-t border-outline-variant/10 pt-4 pb-4 space-y-1">
-<a className="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-secondary transition-colors" href="/">
-<span className="material-symbols-outlined" data-icon="help">help</span>
-<span className="font-label-md text-label-md">Support</span>
-</a>
-<a className="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-secondary transition-colors" href="/">
-<span className="material-symbols-outlined" data-icon="logout">logout</span>
-<span className="font-label-md text-label-md">Logout</span>
-</a>
-</div>
-</div>
-</aside>
 
 <main className="flex-1 md:ml-64 relative min-h-screen overflow-y-auto bg-surface-container-lowest">
 
@@ -207,66 +148,11 @@ export default function Page() {
 </div>
 </div>
 
-<aside className="lg:col-span-4 space-y-gutter">
 
-<div className="glass-card rounded-xl p-6 border-l-4 border-l-secondary">
-<h4 className="font-headline-md text-headline-md text-on-surface mb-6">Quick Actions</h4>
-<div className="space-y-4">
-<button className="w-full flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-high rounded-xl border border-outline-variant/10 transition-all">
-<div className="flex items-center gap-3">
-<span className="material-symbols-outlined text-secondary" data-icon="sensors">sensors</span>
-<span className="font-label-md">New Broadcast</span>
-</div>
-<span className="material-symbols-outlined text-on-surface-variant">chevron_right</span>
-</button>
-<button className="w-full flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-high rounded-xl border border-outline-variant/10 transition-all">
-<div className="flex items-center gap-3">
-<span className="material-symbols-outlined text-secondary" data-icon="post_add">post_add</span>
-<span className="font-label-md">Post Article</span>
-</div>
-<span className="material-symbols-outlined text-on-surface-variant">chevron_right</span>
-</button>
-<button className="w-full flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface-container-high rounded-xl border border-outline-variant/10 transition-all">
-<div className="flex items-center gap-3">
-<span className="material-symbols-outlined text-secondary" data-icon="calendar_month">calendar_month</span>
-<span className="font-label-md">Schedule Gathering</span>
-</div>
-<span className="material-symbols-outlined text-on-surface-variant">chevron_right</span>
-</button>
 </div>
 </div>
 
-<div className="relative h-64 rounded-xl overflow-hidden border border-outline-variant/10">
 
-<div className="absolute inset-0 bg-gradient-to-t from-[#041635] to-transparent p-6 flex flex-col justify-end">
-<h5 className="font-headline-md text-secondary">Archive Engine</h5>
-<p className="font-label-sm text-white/80">Processing Sovereign Records: 4.2TB/s</p>
-</div>
-</div>
-
-<div className="bg-primary-container p-6 rounded-xl border border-secondary/20">
-<div className="flex items-center gap-3 mb-2">
-<span className="material-symbols-outlined text-secondary">info</span>
-<p className="font-label-md text-on-primary-container font-bold uppercase tracking-widest">Sovereign Alert</p>
-</div>
-<p className="font-body-md text-on-surface-variant">Server migration in Sector 7 scheduled for 02:00 UTC. Ensure all circle archival data is synced.</p>
-</div>
-</aside>
-</div>
-</div>
-
-<footer className="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto border-t border-outline-variant/10 bg-surface-container-lowest">
-<div className="mb-6 md:mb-0">
-<h3 className="font-headline-lg text-headline-lg text-secondary opacity-20">BIGBRUVA</h3>
-<p className="font-label-sm text-label-sm text-on-surface-variant mt-2">© 2024 BIGBRUVA Institutional. All Rights Reserved.</p>
-</div>
-<div className="flex gap-8">
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/">Archival Terms</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/legacy">Legacy Privacy</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/">Sovereign Rights</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/contact">Contact</a>
-</div>
-</footer>
 </main>
 
 <div className="fixed inset-0 pointer-events-none opacity-10 z-0">

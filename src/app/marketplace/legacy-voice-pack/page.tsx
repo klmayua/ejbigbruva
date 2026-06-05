@@ -32,7 +32,7 @@ export default function Page() {
 
 <div className="col-span-12 lg:col-span-8 space-y-16">
 
-<div className="glass-panel p-8 rounded-lg">
+<div className="glass-01 p-8 rounded-lg">
 <div className="flex items-center gap-6 mb-8">
 <button className="w-16 h-16 rounded-full bg-secondary text-on-secondary flex items-center justify-center hover:scale-105 transition-transform" id="play-btn">
 <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
@@ -98,78 +98,11 @@ export default function Page() {
 </div>
 </div>
 
-<aside className="col-span-12 lg:col-span-4">
-<div className="sticky top-32 space-y-8">
 
-<div className="bg-surface-container-high p-8 border border-secondary/10 relative">
-<div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-<div className="bg-secondary text-on-secondary text-[10px] font-bold uppercase rotate-45 translate-x-4 translate-y-2 py-1 text-center w-24">Premium</div>
-</div>
-<h3 className="font-headline-md text-headline-md text-white mb-6">Investment Summary</h3>
-<div className="space-y-4 mb-8">
-<label className="block p-4 border border-secondary/20 bg-background/50 cursor-pointer hover:border-secondary transition-colors group">
-<input defaultChecked className="hidden peer" name="license" type="radio"/>
-<div className="flex justify-between items-center">
-<span className="font-label-md text-label-md text-on-surface-variant group-hover:text-white transition-colors">Individual License</span>
-<span className="font-body-lg text-body-lg text-secondary">$450.00</span>
-</div>
-</label>
-<label className="block p-4 border border-secondary/20 bg-background/50 cursor-pointer hover:border-secondary transition-colors group">
-<input className="hidden peer" name="license" type="radio"/>
-<div className="flex justify-between items-center">
-<span className="font-label-md text-label-md text-on-surface-variant group-hover:text-white transition-colors">Institutional License</span>
-<span className="font-body-lg text-body-lg text-secondary">$1,200.00</span>
-</div>
-</label>
-<label className="block p-4 border border-secondary/20 bg-background/50 cursor-pointer hover:border-secondary transition-colors group">
-<input className="hidden peer" name="license" type="radio"/>
-<div className="flex justify-between items-center">
-<span className="font-label-md text-label-md text-on-surface-variant group-hover:text-white transition-colors">Global Broadcast</span>
-<span className="font-body-lg text-body-lg text-secondary">$3,500.00</span>
-</div>
-</label>
-</div>
-<div className="space-y-4">
-<button className="w-full bg-secondary text-on-secondary font-bold font-label-md text-label-md py-4 uppercase tracking-widest hover:brightness-110 transition-all">Purchase Now</button>
-<button className="w-full border border-secondary text-secondary font-bold font-label-md text-label-md py-4 uppercase tracking-widest hover:bg-secondary/10 transition-all">Consult for Enterprise</button>
-</div>
-<div className="mt-8 pt-8 border-t border-white/5 space-y-3">
-<div className="flex items-center gap-3 text-on-surface-variant opacity-70">
-<span className="material-symbols-outlined text-sm">verified_user</span>
-<span className="text-xs uppercase tracking-tighter">Lifetime Institutional Rights</span>
-</div>
-<div className="flex items-center gap-3 text-on-surface-variant opacity-70">
-<span className="material-symbols-outlined text-sm">cloud_download</span>
-<span className="text-xs uppercase tracking-tighter">Instant Secure Access</span>
-</div>
-</div>
-</div>
-
-<div className="relative h-48 rounded-lg overflow-hidden glass-panel flex items-center justify-center p-8 group">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM" alt="Crest Accent" className="w-24 opacity-20 grayscale group-hover:scale-110 transition-transform duration-1000" width={160} height={80} style={{ objectFit: 'contain' }} />
-<div className="absolute inset-0 flex items-center justify-center">
-<p className="font-display-lg text-[20px] text-secondary tracking-[0.4em] uppercase">Bigbruva Quality</p>
-</div>
-</div>
-</div>
-</aside>
 </section>
 </main>
 
-<footer className="relative w-full py-16 bg-background dark:bg-background border-t border-secondary/10 mt-20">
-<div className="flex flex-col items-center gap-base max-w-container-max mx-auto px-margin-desktop">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM" alt="BIGBRUVA Footer Crest" className="w-24 h-24 opacity-20 mb-8" width={160} height={80} style={{ objectFit: 'contain' }} />
-<nav className="flex flex-wrap justify-center gap-8 mb-8">
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="/">Privacy Policy</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="/">Terms of Service</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="/">Licensing</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="/">Archive Access</a>
-</nav>
-<p className="font-body-md text-body-md text-on-surface-variant opacity-60 text-center max-w-2xl">
-                © 2024 BIGBRUVA (Ejike Ebidilo). All Rights Reserved. Institutional Seal of Legacy. Our audio assets are protected by cryptographic provenance and international copyright law.
-            </p>
-</div>
-</footer>
+
     </>
   );
 }

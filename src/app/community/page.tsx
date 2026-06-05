@@ -14,27 +14,7 @@ export default function Page() {
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
-<div className="flex items-center gap-4">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" alt="Official Crest Logo" className="h-12 w-12 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-</div>
-<div className="hidden md:flex items-center gap-8">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/">Home</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/about">About</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/media">Media</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/voice">Voice</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/events">Events</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/gallery">Gallery</a>
-</div>
-<div className="flex items-center gap-6">
-<span className="material-symbols-outlined text-secondary cursor-pointer">newspaper</span>
-<a className="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md" href="/community">Community</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/press">Press</a>
-<button className="bg-secondary text-on-secondary px-6 py-2 rounded-DEFAULT font-label-md hover:bg-secondary-fixed transition-all uppercase tracking-widest">Contact</button>
-</div>
-</nav>
+
 <main className="pt-32">
 
 <section className="px-margin-desktop py-20 relative overflow-hidden">
@@ -94,7 +74,7 @@ export default function Page() {
 <h2 className="font-headline-lg text-center mb-16 uppercase tracking-widest text-secondary">Audience Voices</h2>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-<div className="glass-panel p-8 flex flex-col gap-6">
+<div className="glass-01 p-8 flex flex-col gap-6">
 <span className="material-symbols-outlined text-secondary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
 <p className="italic text-on-surface font-body-lg leading-relaxed">"BIGBRUVA isn't just an archive; it's a living organism of history. The Community projects have redefined how we view our collective legacy in the modern age."</p>
 <div className="flex items-center gap-4 mt-4">
@@ -106,7 +86,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="glass-panel p-8 flex flex-col gap-6 border-t-2 border-t-secondary">
+<div className="glass-01 p-8 flex flex-col gap-6 border-t-2 border-t-secondary">
 <span className="material-symbols-outlined text-secondary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
 <p className="italic text-on-surface font-body-lg leading-relaxed">"Joining this network was the most significant move for my career in voice. The mentorship here is unparalleled in its depth and institutional rigor."</p>
 <div className="flex items-center gap-4 mt-4">
@@ -118,7 +98,7 @@ export default function Page() {
 </div>
 </div>
 
-<div className="glass-panel p-8 flex flex-col gap-6">
+<div className="glass-01 p-8 flex flex-col gap-6">
 <span className="material-symbols-outlined text-secondary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
 <p className="italic text-on-surface font-body-lg leading-relaxed">"A bastion of truth and a lighthouse for community-led progress. The BIGBRUVA archive serves as our definitive source of historical integrity."</p>
 <div className="flex items-center gap-4 mt-4">
@@ -165,7 +145,7 @@ export default function Page() {
 <div className="relative h-[600px] bento-card overflow-hidden opacity-0 translate-y-10 transition-all duration-700">
 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWMHXrCShC2BPNM8oWZ199BYhOD_16nRv8-F9Axunh3oLZTha0hgxSttYHUZqWIVKlecYSvrjcgY1udJfuu-s5ia2VJrMRXl8exW751gXPpSUCM5SwacvqvOWDHr1QGJDcwzFSW0tndX3Hyk-YfiPgDd9HKC5wwsyJUrUMwVIwWqJ5HMMueYXfIJXadlT-jem77dtJl2-qYHLlrnAMlLTkdYOP9Bpqc_A8u-IsmP_cX-y_aGKt_S25N99Z2ty5zopE-IObYakpRmY" alt="An expansive, high-tech archival storage facility with rows of glowing server racks integrated with traditional wooden storage boxes. The lighting is a moody deep navy with gold laser-like lines mapping the space, representing the fusion of ancient legacy and futuristic technology. The scene feels vast, institutional, and highly secure." className="w-full h-full object-cover" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<div className="absolute bottom-8 left-8 right-8 p-6 glass-panel">
+<div className="absolute bottom-8 left-8 right-8 p-6 glass-01">
 <h5 className="font-label-md text-secondary uppercase mb-2">Active Mission</h5>
 <p className="text-on-surface">The Archive Preservation Project is currently 78% funded. Join the movement.</p>
 </div>
@@ -199,20 +179,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="w-full py-16 px-margin-desktop bg-surface-container-lowest border-t border-secondary/20">
-<div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-<div className="mb-8 flex justify-center"><Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Official Crest" className="h-32 md:h-48 w-auto object-contain transition-all duration-700 hover:scale-105" width={160} height={80} style={{ objectFit: 'contain' }} /></div>
 
-<div className="flex flex-wrap justify-center gap-10 mb-12">
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/community">Community</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/press">Press</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/contact">Contact</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Privacy Policy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Terms of Service</a>
-</div>
-<p className="font-body-md text-label-md text-on-surface-variant">© 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.</p>
-</div>
-</footer>
 
     </>
   );

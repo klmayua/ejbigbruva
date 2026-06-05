@@ -33,7 +33,7 @@ export default function Page() {
 <button className="bg-secondary text-on-secondary-fixed px-8 py-4 text-label-md font-label-md font-bold uppercase tracking-wider flex items-center gap-2">
                             Explore Archive <span className="material-symbols-outlined">arrow_forward</span>
 </button>
-<button className="glass-panel text-on-surface px-8 py-4 text-label-md font-label-md font-bold uppercase tracking-wider border border-secondary/20">
+<button className="glass-01 text-on-surface px-8 py-4 text-label-md font-label-md font-bold uppercase tracking-wider border border-secondary/20">
                             Request Dossier
                         </button>
 </div>
@@ -161,37 +161,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
-<div className="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
-<div className="flex flex-col items-center md:items-start gap-4">
-<div className="flex items-center gap-3">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM" alt="BIGBRUVA Crest" className="h-8 w-8 object-contain opacity-80" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="text-headline-md font-headline-md text-secondary">BIGBRUVA</span>
-</div>
-<p className="text-label-sm font-label-sm text-secondary-fixed-dim max-w-xs text-center md:text-left">
-                    © 2024 BIGBRUVA Institutional. All Rights Reserved. Part of the Ebidilo Group.
-                </p>
-</div>
-<nav className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-<a className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/">Privacy Protocol</a>
-<a className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/">Terms of Engagement</a>
-<a className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/">Strategic Partnerships</a>
-<a className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media Kit</a>
-<a className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Contact Registry</a>
-</nav>
-<div className="flex gap-6">
-<a className="text-secondary-fixed-dim hover:text-secondary transition-colors" href="/">
-<span className="material-symbols-outlined">public</span>
-</a>
-<a className="text-secondary-fixed-dim hover:text-secondary transition-colors" href="/">
-<span className="material-symbols-outlined">share</span>
-</a>
-<a className="text-secondary-fixed-dim hover:text-secondary transition-colors" href="/">
-<span className="material-symbols-outlined">shield</span>
-</a>
-</div>
-</div>
-</footer>
+
     </>
   );
 }

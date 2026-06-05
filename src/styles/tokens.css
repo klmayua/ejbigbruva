@@ -1,0 +1,85 @@
+@theme {
+  /* Colors */
+  --color-on-tertiary-container: #8699d0;
+  --color-primary: #b2c5ff;
+  --color-inverse-on-surface: #2f3130;
+  --color-surface: #121413;
+  --color-outline-variant: #444651;
+  --color-inverse-surface: #e2e3e1;
+  --color-primary-fixed-dim: #b2c5ff;
+  --color-on-primary-fixed-variant: #254388;
+  --color-surface-dim: #121413;
+  --color-on-error-container: #ffdad6;
+  --color-secondary-fixed: #ffe088;
+  --color-on-tertiary-fixed-variant: #314576;
+  --color-on-primary-fixed: #001848;
+  --color-surface-tint: #b2c5ff;
+  --color-on-tertiary-fixed: #001847;
+  --color-background: #121413;
+  --color-tertiary: #b2c5ff;
+  --color-on-primary-container: #7d99e3;
+  --color-tertiary-fixed: #dae2ff;
+  --color-inverse-primary: #3f5ca2;
+  --color-on-secondary-fixed: #241a00;
+  --color-primary-container: #082e73;
+  --color-on-background: #e2e3e1;
+  --color-on-primary: #042c71;
+  --color-surface-container-high: #282a29;
+  --color-secondary: #e9c349;
+  --color-outline: #8e909c;
+  --color-surface-container-highest: #333534;
+  --color-on-surface-variant: #c4c6d2;
+  --color-error: #ffb4ab;
+  --color-secondary-fixed-dim: #e9c349;
+  --color-secondary-container: #af8d11;
+  --color-on-secondary-container: #342800;
+  --color-on-error: #690005;
+  --color-surface-variant: #333534;
+  --color-on-surface: #e2e3e1;
+  --color-surface-container-lowest: #0c0f0e;
+  --color-tertiary-fixed-dim: #b2c5ff;
+  --color-primary-fixed: #dae2ff;
+  --color-surface-container: #1e201f;
+  --color-surface-bright: #383a38;
+  --color-error-container: #93000a;
+  --color-surface-container-low: #1a1c1b;
+  --color-on-tertiary: #192e5e;
+  --color-tertiary-container: #1b3060;
+  --color-on-secondary-fixed-variant: #574500;
+  --color-on-secondary: #3c2f00;
+
+  /* Spacing */
+  --spacing-margin-desktop: 64px;
+  --spacing-base: 8px;
+  --spacing-margin-mobile: 20px;
+  --spacing-gutter: 24px;
+  --spacing-container-max: 1280px;
+
+  /* Font Families */
+  --font-headline-lg: "Libre Caslon Text", serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-label-sm: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-display-lg: "Libre Caslon Text", serif;
+  --font-display-lg-mobile: "Libre Caslon Text", serif;
+  --font-label-md: "Inter", sans-serif;
+  --font-headline-md: "Libre Caslon Text", serif;
+
+  /* Font Sizes */
+  --font-size-headline-lg: 32px;
+  --font-size-body-md: 16px;
+  --font-size-label-sm: 12px;
+  --font-size-body-lg: 18px;
+  --font-size-display-lg: 64px;
+  --font-size-display-lg-mobile: 40px;
+  --font-size-label-md: 14px;
+  --font-size-headline-md: 24px;
+
+  /* Border Radius */
+  --radius-DEFAULT: 0.25rem;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}

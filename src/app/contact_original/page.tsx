@@ -26,7 +26,7 @@ export default function Page() {
 
 <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24">
 
-<div className="md:col-span-4 glass-panel p-base p-8 flex flex-col justify-between group hover:border-secondary/40 transition-all duration-500" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<div className="md:col-span-4 glass-01 p-base p-8 flex flex-col justify-between group hover:border-secondary/40 transition-all duration-500" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <div>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="stadium">stadium</span>
 <h3 className="font-headline-md mb-4 uppercase tracking-wider">Media Requests</h3>
@@ -39,7 +39,7 @@ export default function Page() {
 </a>
 </div>
 
-<div className="md:col-span-4 glass-panel p-8 flex flex-col justify-between group hover:border-secondary/40 transition-all duration-500" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<div className="md:col-span-4 glass-01 p-8 flex flex-col justify-between group hover:border-secondary/40 transition-all duration-500" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <div>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="mic_external_on">mic_external_on</span>
 <h3 className="font-headline-md mb-4 uppercase tracking-wider">Speaking</h3>
@@ -52,7 +52,7 @@ export default function Page() {
 </a>
 </div>
 
-<div className="md:col-span-4 glass-panel p-8 flex flex-col justify-between group hover:border-secondary/40 transition-all duration-500" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<div className="md:col-span-4 glass-01 p-8 flex flex-col justify-between group hover:border-secondary/40 transition-all duration-500" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <div>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="handshake">handshake</span>
 <h3 className="font-headline-md mb-4 uppercase tracking-wider">Partnerships</h3>
@@ -65,7 +65,7 @@ export default function Page() {
 </a>
 </div>
 
-<div className="md:col-span-8 glass-panel p-12" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<div className="md:col-span-8 glass-01 p-12" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <h2 className="font-headline-lg mb-8 text-secondary uppercase tracking-widest">General Enquiries</h2>
 <form className="space-y-12">
 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -99,7 +99,7 @@ export default function Page() {
 </div>
 
 <div className="md:col-span-4 flex flex-col gap-gutter">
-<div className="glass-panel p-8 flex-1" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<div className="glass-01 p-8 flex-1" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <h3 className="font-headline-md mb-6 uppercase tracking-wider text-secondary">Follow</h3>
 <div className="space-y-6">
 <a className="flex items-center justify-between text-on-surface-variant hover:text-secondary transition-all pb-4 border-b border-soft-ivory/10" href="/">
@@ -120,7 +120,7 @@ export default function Page() {
 </a>
 </div>
 </div>
-<div className="glass-panel p-8 flex flex-col justify-center items-center text-center" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<div className="glass-01 p-8 flex flex-col justify-center items-center text-center" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <span className="material-symbols-outlined text-secondary/40 text-6xl mb-4" data-icon="location_on">location_on</span>
 <p className="font-label-md tracking-widest text-secondary/70 uppercase mb-2">The Vault</p>
 <p className="font-body-md text-on-surface opacity-80 leading-relaxed">
@@ -130,7 +130,7 @@ export default function Page() {
 </div>
 </div>
 
-<section className="w-full h-96 relative overflow-hidden glass-panel" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+<section className="w-full h-96 relative overflow-hidden glass-01" style={{ opacity: "1", transform: "translateY(0px)", transition: "0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}>
 <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
 <div className="text-center z-10 p-12 bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/20 max-w-lg">
 <h4 className="font-display-lg text-headline-md text-secondary uppercase mb-4">Visit the Archive</h4>
@@ -143,22 +143,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-16 px-margin-desktop border-t border-secondary/20">
-<div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-<div className="mb-12 flex justify-center"><Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA" alt="BIGBRUVA Official Crest" className="h-48 w-48 object-contain opacity-80 hover:opacity-100 transition-all duration-500" width={160} height={80} style={{ objectFit: 'contain' }} /></div>
 
-<div className="flex flex-wrap justify-center gap-8 mb-12">
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/community">Community</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/press">Press</a>
-<a className="text-secondary font-bold font-label-md" href="/contact">Contact</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Privacy Policy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Terms of Service</a>
-</div>
-<p className="font-body-md text-label-md text-on-surface-variant/50 max-w-xl">
-                © 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.
-            </p>
-</div>
-</footer>
     </>
   );
 }

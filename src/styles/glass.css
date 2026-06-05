@@ -1,0 +1,63 @@
+/* 4-Level Glassmorphism System */
+
+.glass-01 {
+  background: rgba(8, 46, 115, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(233, 195, 73, 0.08);
+}
+
+.glass-02 {
+  background: rgba(8, 46, 115, 0.12);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(233, 195, 73, 0.12);
+}
+
+.glass-03 {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-premium {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+/* Fallback/Legacy panel style from Stitch */
+.glass-panel {
+  background: rgba(26, 28, 27, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(233, 195, 73, 0.15);
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, #121413 30%, transparent 100%);
+}
+
+/* Masonry Gallery System */
+.masonry-grid {
+  columns: 1;
+  column-gap: 2rem;
+}
+@media (min-width: 768px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+}

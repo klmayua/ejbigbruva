@@ -14,24 +14,7 @@ export default function Page() {
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-on-surface/10 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto left-1/2 -translate-x-1/2">
-<div className="flex items-center gap-4">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcn11yaDzPsDiJx8AvmDfeEDvMGh-O9gkGeo5iieJz8OvTK_PzPIJPRvz3KxHFJ0FcF2dQsFIsxyFFrw8M3srAILL1V6MUzZGRkAYMKqJQd9J0miyZOFDiAOgl_SkmQphtMopPfkMhWIo7j7wrshnCCv2dz-5c6Gg0Hsyz_ijhP9RRNMBCZGJ4kFzvMOOdVxkTYZbvDkzEmiBMAosomGr0iNSTtB1UE_99aUL84qLOULtanh4Y6iBtMHA2yaLw6hbMNjF9Mm9pOf4" alt="BIGBRUVA Crest" className="h-12 w-12 object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="font-headline-md text-headline-md uppercase tracking-widest text-on-surface">BIGBRUVA</span>
-</div>
-<div className="hidden md:flex items-center space-x-8">
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/">Home</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/about">About</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/legacy">Legacy</a>
-<a className="font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary pb-1" href="/media">Media</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/voice">Voice</a>
-<a className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/events">Events</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all">Gallery</button>
-<button className="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-bold hover:scale-95 transition-all">Contact</button>
-</div>
-</nav>
+
 <main className="pt-24">
 
 <section className="relative h-[80vh] flex items-center px-margin-desktop overflow-hidden">
@@ -68,28 +51,28 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
-<div className="service-card glass-panel p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
+<div className="service-card glass-01 p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6">podium</span>
 <h3 className="font-headline-md text-headline-md mb-2">Keynote Speaking</h3>
 <p className="font-label-sm text-label-sm text-on-surface-variant mb-6 uppercase tracking-wider">Institutional Focus</p>
 <p className="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Visionary discourse for global summits and corporate annuals.</p>
 </div>
 
-<div className="service-card glass-panel p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
+<div className="service-card glass-01 p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6">groups</span>
 <h3 className="font-headline-md text-headline-md mb-2">Panel Moderation</h3>
 <p className="font-label-sm text-label-sm text-on-surface-variant mb-6 uppercase tracking-wider">Industry Leadership</p>
 <p className="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Strategic dialogue facilitation with high-level stakeholders.</p>
 </div>
 
-<div className="service-card glass-panel p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
+<div className="service-card glass-01 p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6">workspace_premium</span>
 <h3 className="font-headline-md text-headline-md mb-2">Brand Ambassadorship</h3>
 <p className="font-label-sm text-label-sm text-on-surface-variant mb-6 uppercase tracking-wider">Prestige Partnerships</p>
 <p className="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Long-term alignment with Tier-1 luxury and financial entities.</p>
 </div>
 
-<div className="service-card glass-panel p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
+<div className="service-card glass-01 p-8 rounded-lg cursor-pointer transition-all hover:border-secondary group" onClick={() => {}}>
 <span className="material-symbols-outlined text-secondary text-4xl mb-6">mic</span>
 <h3 className="font-headline-md text-headline-md mb-2">Voiceover Commissions</h3>
 <p className="font-label-sm text-label-sm text-on-surface-variant mb-6 uppercase tracking-wider">Deep Timbre Narration</p>

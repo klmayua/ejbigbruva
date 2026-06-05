@@ -61,7 +61,7 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-<div className="glass-panel p-10 rounded-2xl flex flex-col items-center text-center group hover:scale-[1.02] transition-all duration-500">
+<div className="glass-01 p-10 rounded-2xl flex flex-col items-center text-center group hover:scale-[1.02] transition-all duration-500">
 <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20 group-hover:bg-secondary/20 transition-colors">
 <span className="material-symbols-outlined text-secondary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>auto_stories</span>
 </div>
@@ -71,7 +71,7 @@ export default function Page() {
                         </p>
 </div>
 
-<div className="glass-panel p-10 rounded-2xl flex flex-col items-center text-center group hover:scale-[1.02] transition-all duration-500">
+<div className="glass-01 p-10 rounded-2xl flex flex-col items-center text-center group hover:scale-[1.02] transition-all duration-500">
 <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20 group-hover:bg-secondary/20 transition-colors">
 <span className="material-symbols-outlined text-secondary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>fitness_center</span>
 </div>
@@ -81,7 +81,7 @@ export default function Page() {
                         </p>
 </div>
 
-<div className="glass-panel p-10 rounded-2xl flex flex-col items-center text-center group hover:scale-[1.02] transition-all duration-500">
+<div className="glass-01 p-10 rounded-2xl flex flex-col items-center text-center group hover:scale-[1.02] transition-all duration-500">
 <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-8 border border-secondary/20 group-hover:bg-secondary/20 transition-colors">
 <span className="material-symbols-outlined text-secondary text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>account_balance</span>
 </div>
@@ -243,18 +243,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="w-full py-12 px-margin-desktop flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto border-t border-outline-variant/10 bg-surface-container-lowest">
-<div className="mb-8 md:mb-0">
-<div className="font-headline-lg text-headline-lg text-secondary opacity-20 mb-2">BIGBRUVA</div>
-<p className="font-label-sm text-label-sm text-on-surface-variant">© 2024 BIGBRUVA Institutional. All Rights Reserved.</p>
-</div>
-<div className="flex flex-wrap justify-center gap-gutter">
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/">Archival Terms</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/legacy">Legacy Privacy</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/">Sovereign Rights</a>
-<a className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary underline transition-all" href="/contact">Contact</a>
-</div>
-</footer>
+
     </>
   );
 }

@@ -14,26 +14,7 @@ export default function Page() {
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-md border-b border-on-surface/10">
-<div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto h-20">
-<div className="flex items-center gap-4">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKDUJTaZQMpdDOC2D3t7osqjlQOQxKaophIXE6loxPxOQzHL14Sd6mRLxwQH_9wp6_MTNIAld3Xgqf8WEUqZjJEP2ew47rJcn1W7j3XliCqL3Fn3nGotPP4sc6NKw2m6wiUN3oE4CbxLvR5wAX3wNA4iv-pu2LVJamUp_O8z3KIQBmsubc1yvrcxtRynp2YgtxKFsaRKSPfBoJKsBmfsW0yVSW36cxWu8dHK4dqv3dWYjL7WHkBo2ralFMQ69j_6eKNeKEj1x9lrc" alt="BIGBRUVA Logo" className="h-10 w-auto" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="font-headline-md text-headline-md uppercase tracking-widest text-on-surface dark:text-on-surface">BIGBRUVA</span>
-</div>
-<div className="hidden md:flex space-x-8">
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/">Home</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/about">About</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/media">Media</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/voice">Voice</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="/events">Events</a>
-<a className="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="/contact">Contact</a>
-</div>
-<div className="flex gap-4">
-<button className="bg-secondary text-on-secondary px-6 py-2 font-label-md text-label-md uppercase tracking-widest transition-transform active:scale-95">Gallery</button>
-</div>
-</div>
-</nav>
+
 
 <header className="pt-40 pb-20 px-margin-desktop max-w-container-max mx-auto">
 <div className="max-w-3xl">
@@ -154,21 +135,7 @@ export default function Page() {
 </section>
 </main>
 
-<footer className="w-full py-16 px-margin-desktop bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/20">
-<div className="flex flex-col items-center justify-center space-y-8 w-full max-w-container-max mx-auto">
-<div className="h-32 w-auto mb-4 flex items-center justify-center">https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs</div>
 
-<nav className="flex flex-wrap justify-center gap-8">
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy Archive</a>
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/">Privacy Policy</a>
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press Kit</a>
-<a className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media Inquiries</a>
-</nav>
-<p className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant text-center border-t border-outline-variant/30 pt-8 w-full">
-        © 2024 BIGBRUVA. THE ORIGINAL BIG BROTHER. ALL RIGHTS RESERVED.
-      </p>
-</div>
-</footer>
     </>
   );
 }

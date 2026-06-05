@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { navLinks } from '@/lib/navigation';
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12">
                 <Image 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
+                  src="/images/EjBigBruva_Logo_Full_No_bg.png" 
                   alt="BIGBRUVA Crest" 
                   fill
                   sizes="48px"
@@ -37,18 +38,11 @@ export default function Footer() {
             <div className="space-y-4">
               <h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Explore</h5>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">Home</Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">About</Link>
-                </li>
-                <li>
-                  <Link href="/legacy" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">Legacy</Link>
-                </li>
-                <li>
-                  <Link href="/media" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">Media</Link>
-                </li>
+                {navLinks.slice(0, 5).map(link => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">{link.label}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -56,12 +50,11 @@ export default function Footer() {
             <div className="space-y-4">
               <h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Institutional</h5>
               <ul className="space-y-2">
-                <li>
-                  <Link href="/press" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">Press</Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">Contact</Link>
-                </li>
+                {navLinks.slice(5).map(link => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">{link.label}</Link>
+                  </li>
+                ))}
                 <li>
                   <Link href="#" className="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors">Privacy Policy</Link>
                 </li>

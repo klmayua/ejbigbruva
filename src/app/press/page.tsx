@@ -14,25 +14,7 @@ export default function Page() {
   return (
     <>
       
-<nav className="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-md border-b border-on-surface/10">
-<div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
-<div className="flex items-center gap-4">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKDUJTaZQMpdDOC2D3t7osqjlQOQxKaophIXE6loxPxOQzHL14Sd6mRLxwQH_9wp6_MTNIAld3Xgqf8WEUqZjJEP2ew47rJcn1W7j3XliCqL3Fn3nGotPP4sc6NKw2m6wiUN3oE4CbxLvR5wAX3wNA4iv-pu2LVJamUp_O8z3KIQBmsubc1yvrcxtRynp2YgtxKFsaRKSPfBoJKsBmfsW0yVSW36cxWu8dHK4dqv3dWYjL7WHkBo2ralFMQ69j_6eKNeKEj1x9lrc" alt="BIGBRUVA Logo" className="h-10 w-auto" width={160} height={80} style={{ objectFit: 'contain' }} />
-<span className="font-headline-md text-headline-md uppercase tracking-widest text-on-surface dark:text-on-surface">BIGBRUVA</span>
-</div>
-<div className="hidden md:flex gap-8 items-center">
-<a className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/">Home</a>
-<a className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/about">About</a>
-<a className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/media">Media</a>
-<a className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/voice">Voice</a>
-<a className="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="/press">Press</a>
-</div>
-<div className="flex items-center gap-4">
-<button className="font-label-md text-label-md text-secondary border border-secondary px-6 py-2 hover:bg-secondary hover:text-background transition-all">Media Kit</button>
-</div>
-</div>
-</nav>
+
 <main className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 
 <header className="mb-20 text-center">
@@ -45,7 +27,7 @@ export default function Page() {
 </header>
 
 <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24 transition-all duration-1000 opacity-100 translate-y-0">
-<div className="md:col-span-8 glass-panel p-10 rounded-lg flex flex-col justify-between">
+<div className="md:col-span-8 glass-01 p-10 rounded-lg flex flex-col justify-between">
 <div>
 <h2 className="font-headline-lg text-headline-lg mb-4 text-secondary">Official Biography</h2>
 <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
@@ -69,7 +51,7 @@ export default function Page() {
 <span className="material-symbols-outlined">folder_zip</span> Download Bundle
                     </button>
 </div>
-<div className="glass-panel p-8 rounded-lg border-l-4 border-secondary">
+<div className="glass-01 p-8 rounded-lg border-l-4 border-secondary">
 <h3 className="font-label-md text-label-md text-secondary uppercase mb-4 tracking-widest">Brand Colors</h3>
 <div className="flex gap-2">
 <div className="w-12 h-12 rounded-full bg-[#0c0f0e] border border-outline shadow-inner" title="Midnight Navy"></div>
@@ -92,8 +74,8 @@ export default function Page() {
 </div>
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 
-<div className="group relative overflow-hidden rounded-lg">
-<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo in Traditional Attire" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<div className="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<Image src="/images/EJ_Agbada_01.jpeg" alt="Ejike Ebidilo in Traditional Attire" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectPosition: 'center 20%' }} />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">TRADITIONAL PORTRAIT</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -102,8 +84,8 @@ export default function Page() {
 </div>
 </div>
 
-<div className="group relative overflow-hidden rounded-lg">
-<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo Studio Close-up" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<div className="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo Studio Close-up" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectPosition: 'center 20%' }} />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">STUDIO PROFILE</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -112,8 +94,8 @@ export default function Page() {
 </div>
 </div>
 
-<div className="group relative overflow-hidden rounded-lg">
-<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo Executive Lounge" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<div className="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<Image src="/images/EJ_Agbada_02.jpeg" alt="Ejike Ebidilo Executive Lounge" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectPosition: 'center 20%' }} />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">EXECUTIVE PORTRAIT</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -122,8 +104,8 @@ export default function Page() {
 </div>
 </div>
 
-<div className="group relative overflow-hidden rounded-lg">
-<Image src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg" alt="Ejike Ebidilo Casual Modern" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<div className="group relative overflow-hidden rounded-lg aspect-[3/4]">
+<Image src="/images/EJ_casual_02.jpeg" alt="Ejike Ebidilo Casual Modern" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" fill sizes="(max-width: 768px) 100vw, 50vw" style={{ objectPosition: 'center 20%' }} />
 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
 <p className="font-label-sm text-label-sm text-secondary mb-1">CASUAL SOPHISTICATION</p>
 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2">
@@ -148,7 +130,7 @@ export default function Page() {
 </div>
 <div className="space-y-6">
 
-<article className="glass-panel group p-8 rounded-lg flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-high transition-cubic cursor-pointer transition-all duration-1000 opacity-100 translate-y-0">
+<article className="glass-01 group p-8 rounded-lg flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-high transition-cubic cursor-pointer transition-all duration-1000 opacity-100 translate-y-0">
 <div className="md:w-32 flex-shrink-0">
 <p className="font-label-md text-label-md text-secondary">NOV 14, 2024</p>
 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Global Event</p>
@@ -163,7 +145,7 @@ export default function Page() {
 </div>
 </article>
 
-<article className="glass-panel group p-8 rounded-lg flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-high transition-cubic cursor-pointer transition-all duration-1000 opacity-100 translate-y-0">
+<article className="glass-01 group p-8 rounded-lg flex flex-col md:flex-row gap-8 items-start hover:bg-surface-container-high transition-cubic cursor-pointer transition-all duration-1000 opacity-100 translate-y-0">
 <div className="md:w-32 flex-shrink-0">
 <p className="font-label-md text-label-md text-secondary">OCT 22, 2024</p>
 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Foundation</p>
@@ -210,7 +192,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="glass-panel p-16 rounded-xl text-center border-t-4 border-secondary overflow-hidden relative transition-all duration-1000 opacity-100 translate-y-0">
+<section className="glass-01 p-16 rounded-xl text-center border-t-4 border-secondary overflow-hidden relative transition-all duration-1000 opacity-100 translate-y-0">
 <div className="absolute -top-10 -right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
 <h2 className="font-headline-lg text-headline-lg mb-6">Media Inquiries</h2>

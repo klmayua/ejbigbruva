@@ -18,6 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
+      <head>
+        {/* Load icons directly in head to prevent rendering delays or font loading issues */}
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" 
+          rel="stylesheet" 
+        />
+      </head>
       <body className="antialiased bg-background text-on-background font-body-md min-h-screen flex flex-col overflow-x-hidden">
         <Navbar />
         <main className="flex-1 w-full relative">

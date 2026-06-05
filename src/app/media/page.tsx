@@ -187,19 +187,7 @@ export default function Page() {
 </div>
 </main>
 
-<footer className="flex flex-col items-center py-24 px-margin-mobile md:px-margin-desktop text-center bg-surface-container-lowest border-t border-outline-variant/10">
-<div className="mb-12">
-<Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" alt="BIGBRUVA Official Crest" className="h-40 md:h-56 w-auto object-contain" width={160} height={80} style={{ objectFit: 'contain' }} />
-</div>
-<nav className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/legacy">Legacy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/press">Press Room</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Archives</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Privacy Policy</a>
-<a className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/">Terms of Service</a>
-</nav>
-<p className="font-body-md text-on-surface-variant opacity-40 text-sm tracking-wide">© 2024 BIGBRUVA - EJIKE EBIDILO INSTITUTIONAL. ALL RIGHTS RESERVED.</p>
-</footer>
+
     </>
   );
 }
