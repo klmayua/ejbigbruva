@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact BIGBRUVA | The Original Big Brother</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#444651",
+            "secondary": "#e9c349",
+            "on-tertiary-fixed-variant": "#314576",
+            "inverse-surface": "#e2e3e1",
+            "surface-variant": "#333534",
+            "primary": "#b2c5ff",
+            "surface-container-low": "#1a1c1b",
+            "inverse-primary": "#3f5ca2",
+            "surface-container-high": "#282a29",
+            "tertiary-container": "#1b3060",
+            "tertiary-fixed": "#dae2ff",
+            "tertiary": "#b2c5ff",
+            "on-error-container": "#ffdad6",
+            "background": "#121413",
+            "error-container": "#93000a",
+            "tertiary-fixed-dim": "#b2c5ff",
+            "on-tertiary-container": "#8699d0",
+            "on-primary-container": "#7d99e3",
+            "on-secondary-fixed-variant": "#574500",
+            "on-secondary-fixed": "#241a00",
+            "on-background": "#e2e3e1",
+            "on-primary-fixed": "#001848",
+            "on-secondary-container": "#342800",
+            "surface-bright": "#383a38",
+            "secondary-container": "#af8d11",
+            "surface": "#121413",
+            "surface-container": "#1e201f",
+            "primary-container": "#082e73",
+            "on-error": "#690005",
+            "inverse-on-surface": "#2f3130",
+            "surface-container-highest": "#333534",
+            "secondary-fixed": "#ffe088",
+            "surface-dim": "#121413",
+            "error": "#ffb4ab",
+            "on-surface-variant": "#c4c6d2",
+            "secondary-fixed-dim": "#e9c349",
+            "surface-tint": "#b2c5ff",
+            "primary-fixed": "#dae2ff",
+            "surface-container-lowest": "#0c0f0e",
+            "primary-fixed-dim": "#b2c5ff",
+            "on-tertiary": "#192e5e",
+            "on-surface": "#e2e3e1",
+            "on-secondary": "#3c2f00",
+            "on-primary": "#042c71",
+            "on-tertiary-fixed": "#001847",
+            "on-primary-fixed-variant": "#254388",
+            "outline": "#8e909c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-desktop": "64px",
+            "gutter": "24px",
+            "margin-mobile": "20px",
+            "base": "8px",
+            "container-max": "1280px"
+          },
+          "fontFamily": {
+            "headline-md": ["Libre Caslon Text"],
+            "body-lg": ["Inter"],
+            "display-lg-mobile": ["Libre Caslon Text"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Libre Caslon Text"],
+            "label-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "display-lg": ["Libre Caslon Text"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: #041635; /* Background Navy override from Style Guidance */
+      color: #e2e3e1;
+    }
+    .glass-card {
+      background: rgba(30, 32, 31, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(233, 195, 73, 0.15); /* Royal Gold at 15% opacity */
+    }
+    .text-input {
+      background-color: #121413;
+      border: none;
+      border-bottom: 2px solid #e2e3e1;
+      border-radius: 0;
+      transition: border-color 0.3s ease;
+    }
+    .text-input:focus {
+      outline: none;
+      border-color: #e9c349;
+      box-shadow: none;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 dark:bg-surface/70 backdrop-blur-md border-b border-on-surface/10">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-4">
+<img alt="BIGBRUVA Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKDUJTaZQMpdDOC2D3t7osqjlQOQxKaophIXE6loxPxOQzHL14Sd6mRLxwQH_9wp6_MTNIAld3Xgqf8WEUqZjJEP2ew47rJcn1W7j3XliCqL3Fn3nGotPP4sc6NKw2m6wiUN3oE4CbxLvR5wAX3wNA4iv-pu2LVJamUp_O8z3KIQBmsubc1yvrcxtRynp2YgtxKFsaRKSPfBoJKsBmfsW0yVSW36cxWu8dHK4dqv3dWYjL7WHkBo2ralFMQ69j_6eKNeKEj1x9lrc">
+<span class="font-headline-md text-headline-md uppercase tracking-widest text-on-surface dark:text-on-surface">BIGBRUVA</span>
+</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Legacy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Media</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Voice</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md text-label-md" href="#">Events</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-secondary px-6 py-2 font-label-md text-label-md uppercase tracking-widest transition-transform active:scale-95">Gallery</button>
+</div>
+</div>
+</nav>
+<!-- Hero Header -->
+<header class="pt-40 pb-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<h1 class="font-display-lg text-display-lg mb-4 text-on-surface leading-tight">Institutional Inquiries</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">The office of BIGBRUVA manages all global media, speaking engagements, and official partnerships for Ejike Ebidilo.</p>
+</div>
+</header>
+<main class="px-margin-desktop max-w-container-max mx-auto pb-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Cards Column (4 Cols) -->
+<div class="lg:col-span-5 space-y-gutter">
+<!-- Media Requests Card -->
+<div class="glass-card p-10 flex flex-col h-full group hover:border-secondary transition-colors duration-500">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl">movie</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Media Requests</h3>
+</div>
+<p class="text-on-surface-variant font-body-md mb-8 flex-grow">For press interviews, broadcast appearances, and digital features. Our media team ensures rapid vetting and official statements.</p>
+<a class="text-secondary font-label-md text-label-md uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="mailto:media@bigbruva.com">
+            media@bigbruva.com <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Speaking Engagements Card -->
+<div class="glass-card p-10 flex flex-col group hover:border-secondary transition-colors duration-500">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl">mic</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Speaking &amp; Events</h3>
+</div>
+<p class="text-on-surface-variant font-body-md mb-8">Official bookings for keynote addresses, corporate leadership seminars, and high-profile public appearances.</p>
+<a class="text-secondary font-label-md text-label-md uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="mailto:bookings@bigbruva.com">
+            bookings@bigbruva.com <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<!-- Partnerships Card -->
+<div class="glass-card p-10 flex flex-col group hover:border-secondary transition-colors duration-500">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl">handshake</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Partnerships</h3>
+</div>
+<p class="text-on-surface-variant font-body-md mb-8">Strategic alliances with institutions that align with the BIGBRUVA legacy of excellence and authority.</p>
+<a class="text-secondary font-label-md text-label-md uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="mailto:partnerships@bigbruva.com">
+            partnerships@bigbruva.com <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Contact Form Column (7 Cols) -->
+<div class="lg:col-span-7">
+<div class="glass-card p-12 h-full">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-12">Submit Formal Inquiry</h2>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Full Name</label>
+<input class="text-input text-on-surface py-3" placeholder="Johnathan Sterling" type="text">
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Professional Email</label>
+<input class="text-input text-on-surface py-3" placeholder="sterling@corp.com" type="email">
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Organization / Department</label>
+<input class="text-input text-on-surface py-3" placeholder="Global Media Group" type="text">
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Inquiry Type</label>
+<select class="text-input text-on-surface py-3 appearance-none bg-transparent">
+<option class="bg-surface">Media Request</option>
+<option class="bg-surface">Speaking Engagement</option>
+<option class="bg-surface">Strategic Partnership</option>
+<option class="bg-surface">Institutional Inquiry</option>
+<option class="bg-surface">Legacy Archive Access</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Detailed Message</label>
+<textarea class="text-input text-on-surface py-3 resize-none" placeholder="Briefly describe the nature of your request, proposed dates, and relevant context..." rows="4"></textarea>
+</div>
+<div class="pt-8">
+<button class="bg-secondary text-on-secondary px-12 py-4 font-label-md text-label-md uppercase tracking-widest font-bold hover:scale-[1.02] active:scale-95 transition-transform w-full md:w-auto shadow-xl" type="submit">
+                Submit Documentation
+              </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Social Links Institutional Banner -->
+<section class="mt-gutter">
+<div class="glass-card py-12 px-10 flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Digital Presence</h4>
+<p class="text-on-surface-variant font-body-md">Connect with the official BIGBRUVA ecosystem across global networks.</p>
+</div>
+<div class="flex gap-10">
+<a class="group" href="#">
+<div class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-secondary">public</span>
+</div>
+</a>
+<a class="group" href="#">
+<div class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-secondary">rss_feed</span>
+</div>
+</a>
+<a class="group" href="#">
+<div class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-secondary">share</span>
+</div>
+</a>
+<a class="group" href="#">
+<div class="w-14 h-14 rounded-full border border-outline-variant flex items-center justify-center group-hover:border-secondary transition-colors">
+<span class="material-symbols-outlined text-on-surface group-hover:text-secondary">podcasts</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-16 px-margin-desktop bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/20">
+<div class="flex flex-col items-center justify-center space-y-8 w-full max-w-container-max mx-auto">
+<div class="h-32 w-auto mb-4 flex items-center justify-center">https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs</div>
+
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="#">Legacy Archive</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="#">Press Kit</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="#">Media Inquiries</a>
+</nav>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant text-center border-t border-outline-variant/30 pt-8 w-full">
+        © 2024 BIGBRUVA. THE ORIGINAL BIG BROTHER. ALL RIGHTS RESERVED.
+      </p>
+</div>
+</footer>
+<script>
+    // Micro-interaction for form labels
+    document.querySelectorAll('.text-input').forEach(input => {
+      input.addEventListener('focus', () => {
+        const label = input.previousElementSibling;
+        if (label) label.style.color = '#e9c349';
+      });
+      input.addEventListener('blur', () => {
+        const label = input.previousElementSibling;
+        if (label) label.style.color = '';
+      });
+    });
+
+    // Simple scroll effect for top nav
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('shadow-2xl');
+      } else {
+        nav.classList.remove('shadow-2xl');
+      }
+    });
+  </script>
+
+
+</body></html>
