@@ -69,33 +69,38 @@ export default function Page() {
       `}} />
 
       {/* TopNavBar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-48px)] max-w-[1200px] h-[72px] flex justify-between items-center px-8 rounded-full bg-[#080a0c]/78 backdrop-blur-[20px] border border-[#d4af37]/15 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
-        <div className="flex items-center">
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[90vw] md:w-[78vw] max-w-[1240px] h-[80px] flex justify-between items-center px-8 rounded-full bg-[#050505]/82 backdrop-blur-[16px] border border-[#d4af37]/18 shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
+        <div className="flex items-center pl-7 md:pl-8">
           <Link href="/">
             <img 
               alt="BIGBRUVA Logo" 
-              className="h-10 md:h-12 w-auto object-contain cursor-pointer" 
+              className="h-[44px] w-auto object-contain cursor-pointer" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
             />
           </Link>
         </div>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link className="font-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/">Home</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
+        <div className="hidden md:flex gap-[36px] items-center">
+          <Link className="font-sans text-[16px] font-medium text-secondary border-b-2 border-secondary pb-2 cursor-pointer transition-all" href="/">Home</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
         </div>
         <div className="flex items-center">
-          <Link href="/contact" className="px-6 py-2.5 bg-secondary text-on-secondary font-label-md rounded-full hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg flex items-center gap-2 text-center text-sm font-bold shrink-0">
-            <span className="material-symbols-outlined text-[18px] leading-none" data-icon="calendar_today">calendar_today</span>
+          <Link href="/contact" className="h-[50px] px-[28px] bg-gradient-to-r from-[#e9c349] via-[#d4af37] to-[#af8d11] text-[#3c2f00] font-sans text-[14px] font-bold tracking-[0.05em] rounded-full hover:brightness-110 hover:-translate-y-[1px] active:translate-y-0 transition-all cursor-pointer shadow-lg flex items-center gap-[10px] shrink-0">
+            <svg className="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
             Book a Conversation
           </Link>
         </div>
       </nav>
-
-      <main className="w-full pt-16">
+ 
+      <main className="w-full relative">
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
