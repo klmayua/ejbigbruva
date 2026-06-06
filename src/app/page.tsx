@@ -39,12 +39,9 @@ export default function Page() {
         body > footer { display: none !important; }
         
         body {
-            background-color: #121413 !important;
+            background-color: #050505 !important;
             color: #e2e3e1;
             scroll-behavior: smooth;
-        }
-        .hero-gradient-overlay {
-            background: linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%) !important;
         }
         ::-webkit-scrollbar {
             width: 8px;
@@ -76,43 +73,66 @@ export default function Page() {
         .mic-pulse-glow {
           animation: mic-pulse 2.4s infinite ease-in-out;
         }
+        
+        .portrait-mask-final {
+          -webkit-mask-image: 
+            linear-gradient(to right, transparent 0px, black 340px),
+            linear-gradient(to top, transparent 0px, black 260px),
+            linear-gradient(to bottom, transparent 0px, black 60px);
+          -webkit-mask-composite: source-in;
+          
+          mask-image: 
+            linear-gradient(to right, transparent 0px, black 340px),
+            linear-gradient(to top, transparent 0px, black 260px),
+            linear-gradient(to bottom, transparent 0px, black 60px);
+          mask-composite: intersect;
+        }
       `}} />
 
       {/* Floating Pill TopNavBar */}
       <nav 
-        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[1080px] h-[70px] px-8 rounded-full flex justify-between items-center transition-all duration-300"
+        className="absolute top-[28px] left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-[1120px] h-[88px] rounded-full flex justify-between items-center transition-all duration-300"
         style={{
-          backgroundColor: 'rgba(8,8,8,0.78)',
-          backdropFilter: 'blur(22px)',
-          WebkitBackdropFilter: 'blur(22px)',
-          border: '1px solid rgba(212,175,55,0.15)',
-          boxShadow: '0 12px 40px rgba(0,0,0,0.5)'
+          backgroundColor: 'rgba(8,8,8,0.82)',
+          backdropFilter: 'blur(24px)',
+          WebkitBackdropFilter: 'blur(24px)',
+          border: '1px solid rgba(212,175,55,0.22)',
+          boxShadow: '0 0 40px rgba(212,175,55,0.08), inset 0 1px 0 rgba(255,255,255,0.04)'
         }}
       >
-        <div className="flex items-center">
+        {/* Logo left positioned */}
+        <div className="flex items-center pl-[34px]">
           <Link href="/">
             <img 
               alt="BIGBRUVA Logo" 
-              className="h-[46px] w-auto object-contain cursor-pointer" 
+              className="w-[62px] h-auto object-contain cursor-pointer" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
             />
           </Link>
         </div>
-        <div className="hidden md:flex gap-10 items-center">
-          <Link className="font-sans text-[16px] font-medium text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/">Home</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
+        
+        {/* Center Navigation Links */}
+        <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-[42px]">
+          <div className="flex flex-col items-center">
+            <Link className="font-sans text-[18px] font-medium text-secondary cursor-pointer transition-all" href="/">Home</Link>
+            <div className="w-[32px] h-[2px] bg-secondary mt-1 rounded-full" />
+          </div>
+          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
+          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
+          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
+          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
+          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
         </div>
-        <div className="flex items-center">
+
+        {/* Right CTA */}
+        <div className="flex items-center pr-[18px]">
           <Link 
             href="/contact" 
-            className="h-[50px] px-[28px] text-[#121413] font-semibold rounded-full flex items-center justify-center gap-2 hover:-translate-y-[2px] hover:brightness-105 active:scale-95 transition-all duration-300"
+            className="h-[56px] px-[30px] text-[#0A0A0A] font-bold rounded-full flex items-center justify-center gap-2 hover:-translate-y-[2px] hover:brightness-105 active:scale-95 transition-all duration-300"
             style={{
-              backgroundColor: '#d4af37',
-              boxShadow: '0 10px 30px rgba(212,175,55,0.22)'
+              background: 'linear-gradient(to right, #D4AF37, #E8C85A)',
+              boxShadow: '0 0 25px rgba(212,175,55,0.25)',
+              letterSpacing: '0.04em'
             }}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -123,7 +143,7 @@ export default function Page() {
         </div>
       </nav>
 
-      {/* Mobile Menu Slide-down Overlay */}
+      {/* Mobile Menu Overlay */}
       <div 
         className={`fixed inset-0 z-40 bg-surface/98 backdrop-blur-2xl transition-all duration-500 ease-in-out flex flex-col justify-center items-center md:hidden ${
           mobileMenuOpen 
@@ -144,91 +164,153 @@ export default function Page() {
 
       <main>
         {/* Full-Bleed Editorial Hero Section */}
-        <section className="relative h-screen w-full overflow-hidden bg-black flex items-end">
-          {/* Portrait Image Container (z-0) with mask fades */}
-          <div className="absolute right-[6%] bottom-0 w-[46%] max-w-[680px] h-full pointer-events-none z-0 translate-x-[80px] translate-y-[20px]">
+        <section className="relative h-screen min-h-[900px] w-full overflow-hidden bg-[#050505]">
+          {/* Blue Glow Backlight (z-1, behind portrait) */}
+          <div 
+            className="absolute right-[-100px] bottom-[-200px] pointer-events-none rounded-full"
+            style={{
+              width: '900px',
+              height: '900px',
+              backgroundColor: '#0077FF',
+              opacity: 0.28,
+              filter: 'blur(140px)',
+              zIndex: 1
+            }}
+          />
+
+          {/* Portrait Image Container (z-10) with mask fades */}
+          <div className="absolute right-0 bottom-0 w-[48%] max-w-[760px] pointer-events-none z-10 portrait-mask-final">
             <img 
               alt="Ejike Ebidilo Portrait" 
-              className="w-full h-full object-contain object-bottom select-none pointer-events-none filter contrast-[1.13] brightness-[0.93]" 
+              className="w-full h-auto object-contain select-none pointer-events-none filter contrast-[1.08] brightness-[1.02]" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
-            {/* Left fade: 260px wide, black to transparent */}
+            {/* Fallback overlays to ensure seamless blend even without mask compositing */}
+            {/* Left fade: 340px wide */}
             <div 
-              className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none" 
+              className="absolute left-0 top-0 bottom-0 z-20 pointer-events-none" 
               style={{
-                width: '260px',
-                background: 'linear-gradient(to right, #000000 0%, transparent 100%)'
+                width: '340px',
+                background: 'linear-gradient(to right, #050505 0%, transparent 100%)'
               }}
             />
-            {/* Bottom fade: 280px high, transparent to black */}
+            {/* Bottom fade: 260px high */}
             <div 
-              className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none" 
+              className="absolute left-0 right-0 bottom-0 z-20 pointer-events-none" 
               style={{
-                height: '280px',
-                background: 'linear-gradient(to top, #000000 0%, transparent 100%)'
+                height: '260px',
+                background: 'linear-gradient(to top, #050505 0%, transparent 100%)'
               }}
             />
-            {/* Right fade: 140px wide, transparent to black */}
+            {/* Top fade: 60px high */}
             <div 
-              className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none" 
+              className="absolute left-0 right-0 top-0 z-20 pointer-events-none" 
               style={{
-                width: '140px',
-                background: 'linear-gradient(to left, #000000 0%, transparent 100%)'
+                height: '60px',
+                background: 'linear-gradient(to bottom, #050505 0%, transparent 100%)'
               }}
             />
           </div>
 
-          {/* Left-to-Right Linear Blend Overlay (z-10) */}
-          <div className="absolute inset-0 z-10 hero-gradient-overlay pointer-events-none"></div>
+          {/* Left Atmosphere Gradient Overlay (z-10) */}
+          <div 
+            className="absolute left-0 top-0 bottom-0 pointer-events-none z-10"
+            style={{
+              width: '55%',
+              background: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 35%, rgba(0,0,0,0) 100%)'
+            }}
+          />
+
+          {/* Cinematic Vignette Overlay (z-10) */}
+          <div 
+            className="absolute inset-0 pointer-events-none z-10"
+            style={{
+              background: 'radial-gradient(circle, transparent 30%, rgba(0,0,0,0.6) 100%)',
+              opacity: 0.25
+            }}
+          />
           
           {/* Content Block (z-20) */}
-          <div className="absolute left-[8%] top-[50%] -translate-y-[50%] -mt-[170px] w-full max-w-[700px] z-20 px-margin-mobile md:px-0 pb-[80px]">
+          <div className="absolute left-4 md:left-[85px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[700px] z-20 px-margin-mobile md:px-0">
             {/* Trust Indicator replaces existing dot */}
-            <div className="flex items-center gap-3 mb-6 max-w-[560px]">
+            <div className="flex items-center gap-[18px] mb-[30px]">
               <div 
-                className="flex items-center justify-center w-[30px] h-[30px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
-                style={{ flexShrink: 0 }}
+                className="flex items-center justify-center w-[38px] h-[38px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
+                style={{ 
+                  flexShrink: 0,
+                  boxShadow: '0 0 30px rgba(34,197,94,0.45)'
+                }}
               >
-                <svg className="w-[18px] h-[18px]" style={{ color: '#22C55E' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-[22px] h-[22px]" style={{ color: '#22C55E' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5.5 10a.5.5 0 0 0-1 0 4.5 4.5 0 0 1-9 0 .5.5 0 0 0-1 0 5.5 5.5 0 0 0 5 5.48V19h-3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-3v-1.52a5.5 5.5 0 0 0 5-5.48z"/>
                 </svg>
               </div>
-              <span className="font-sans text-[14px] font-semibold text-on-surface-variant uppercase tracking-[0.18em] leading-none">
-                40+ YEARS VOICING EXCELLENCE
+              
+              {/* Green active waveform display */}
+              <svg className="w-[44px] h-[22px]" style={{ color: '#22C55E', opacity: 0.7 }} fill="currentColor" viewBox="0 0 44 22" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="6" width="3" height="10" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.1s' }} />
+                <rect x="10" y="2" width="3" height="18" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
+                <rect x="18" y="8" width="3" height="6" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+                <rect x="26" y="4" width="3" height="14" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.2s' }} />
+                <rect x="34" y="0" width="3" height="22" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.4s' }} />
+                <rect x="42" y="7" width="3" height="8" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
+              </svg>
+
+              <span className="font-sans text-[16px] font-semibold text-white uppercase tracking-[0.18em] leading-none">
+                <span className="text-[#22C55E]">20+ YEARS </span>
+                VOICING EXCELLENCE
               </span>
             </div>
             
             {/* Headline */}
             <h1 
-              className="relative -top-[40px] font-display-lg text-[42px] md:text-[60px] lg:text-[78px] font-medium max-w-[700px] mb-6"
+              className="font-serif font-medium max-w-[700px] mb-0 mt-0 leading-[0.9] tracking-[-0.04em]"
               style={{
-                lineHeight: '0.92',
-                letterSpacing: '-0.04em',
+                fontFamily: "'Libre Caslon Text', serif"
               }}
             >
-              <span className="text-white block">THE ORIGINAL</span>
-              <span className="text-secondary block">BIG BROTHER.</span>
+              <span className="text-white block text-[48px] md:text-[80px] lg:text-[108px]">THE</span>
+              <span className="text-white block text-[48px] md:text-[80px] lg:text-[108px]">ORIGINAL</span>
+              <span className="text-secondary block text-[48px] md:text-[80px] lg:text-[108px]">BIG</span>
+              <span className="text-secondary block text-[48px] md:text-[80px] lg:text-[108px]">BROTHER.</span>
             </h1>
             
             {/* Descriptor */}
-            <p className="font-sans text-[18px] md:text-[22px] lg:text-[26px] font-medium text-on-background mt-[24px] leading-relaxed max-w-[560px]">
-              Broadcaster • Storyteller • Mentor
+            <p className="font-sans text-[18px] md:text-[22px] lg:text-[26px] font-medium text-white mt-[28px] leading-relaxed">
+              Broadcaster <span className="text-secondary">•</span> Storyteller <span className="text-secondary">•</span> Mentor
             </p>
             
             {/* Voice of Generations */}
-            <p className="font-sans text-[24px] md:text-[32px] lg:text-[42px] font-bold text-secondary mt-[16px] leading-tight max-w-[560px]">
+            <p className="font-sans text-[20px] md:text-[24px] lg:text-[28px] font-bold text-secondary mt-[22px] leading-tight">
               Voice of Generations
             </p>
+
+            {/* Divider */}
+            <div className="w-[42px] h-[2px] bg-secondary mt-[18px] mb-[28px]" />
             
             {/* CTAs */}
-            <div className="flex flex-wrap gap-[18px] mt-[40px] max-w-[560px]">
-              <Link href="/contact" className="h-[56px] px-8 bg-secondary text-on-secondary font-label-md text-label-md rounded-full flex items-center justify-center gap-3 hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-secondary/20">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <div className="flex flex-wrap gap-[18px] mt-[34px]">
+              <Link 
+                href="/contact" 
+                className="h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-[#0A0A0A] font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg"
+                style={{
+                  background: 'linear-gradient(to right, #D4AF37, #E8C85A)',
+                  boxShadow: '0 0 35px rgba(212,175,55,0.30)'
+                }}
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                 </svg>
                 Book a Conversation
               </Link>
-              <Link href="/media" className="h-[56px] px-8 border-2 border-secondary text-secondary font-label-md text-label-md rounded-full flex items-center justify-center gap-3 hover:bg-secondary/10 active:scale-95 transition-all">
+              <Link 
+                href="/media" 
+                className="h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-white font-semibold border transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37]/8 active:scale-95"
+                style={{
+                  border: '1px solid rgba(212,175,55,0.70)',
+                  backgroundColor: 'transparent'
+                }}
+              >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M8 5v14l11-7z"></path>
                 </svg>
