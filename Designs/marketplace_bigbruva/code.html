@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Sovereign Collection | BIGBRUVA Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "outline-variant": "#444651",
+                "secondary": "#e9c349",
+                "on-secondary-fixed": "#241a00",
+                "on-primary": "#042c71",
+                "on-secondary": "#3c2f00",
+                "error-container": "#93000a",
+                "inverse-on-surface": "#2f3130",
+                "surface-bright": "#383a38",
+                "tertiary-fixed-dim": "#b2c5ff",
+                "surface-container-highest": "#333534",
+                "surface-container-low": "#1a1c1b",
+                "on-primary-fixed-variant": "#254388",
+                "primary-fixed-dim": "#b2c5ff",
+                "on-secondary-fixed-variant": "#574500",
+                "primary": "#b2c5ff",
+                "on-primary-fixed": "#001848",
+                "secondary-container": "#af8d11",
+                "surface-variant": "#333534",
+                "surface-container": "#1e201f",
+                "primary-fixed": "#dae2ff",
+                "on-tertiary-container": "#8699d0",
+                "tertiary": "#b2c5ff",
+                "surface-container-high": "#282a29",
+                "on-tertiary-fixed-variant": "#314576",
+                "on-error": "#690005",
+                "on-tertiary-fixed": "#001847",
+                "tertiary-container": "#1b3060",
+                "on-background": "#e2e3e1",
+                "on-primary-container": "#7d99e3",
+                "background": "#121413",
+                "on-secondary-container": "#342800",
+                "inverse-surface": "#e2e3e1",
+                "inverse-primary": "#3f5ca2",
+                "outline": "#8e909c",
+                "surface-tint": "#b2c5ff",
+                "surface-dim": "#121413",
+                "on-surface-variant": "#c4c6d2",
+                "on-error-container": "#ffdad6",
+                "primary-container": "#082e73",
+                "tertiary-fixed": "#dae2ff",
+                "surface": "#121413",
+                "surface-container-lowest": "#0c0f0e",
+                "secondary-fixed": "#ffe088",
+                "on-tertiary": "#192e5e",
+                "error": "#ffb4ab",
+                "secondary-fixed-dim": "#e9c349",
+                "on-surface": "#e2e3e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "container-max": "1280px",
+                "margin-mobile": "20px",
+                "margin-desktop": "64px",
+                "base": "8px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "label-md": ["Inter"],
+                "display-lg-mobile": ["Libre Caslon Text"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "headline-lg": ["Libre Caslon Text"],
+                "label-sm": ["Inter"],
+                "headline-md": ["Libre Caslon Text"],
+                "display-lg": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #121413;
+            color: #e2e3e1;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(18, 20, 19, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(233, 195, 73, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, #121413 0%, rgba(18, 20, 19, 0.4) 50%, rgba(18, 20, 19, 0) 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-filter {
+            border-bottom: 2px solid #e9c349;
+            color: #e9c349;
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface/70 backdrop-blur-md dark:bg-surface/70 docked full-width top-0 sticky z-50 border-b border-on-surface/10">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="BIGBRUVA Crest" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM"/>
+<span class="text-headline-md font-headline-md font-bold text-secondary dark:text-secondary tracking-tighter">BIGBRUVA</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Portfolio</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md" href="#">Institutional</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Management</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-label-md font-label-md text-secondary border border-secondary/30 px-6 py-2 hover:bg-secondary/10 transition-all duration-300">Consult with Management</button>
+<button class="text-label-md font-label-md bg-secondary text-on-secondary-fixed px-6 py-2 hover:brightness-110 transition-all active:scale-95 duration-200">Proceed to Booking</button>
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[80vh] min-h-[600px] flex items-end pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-fashion portrait of an elegant figure standing in a minimalist concrete architectural space with dramatic sunlight streaming through vertical gaps. The atmosphere is sophisticated and authoritative, with deep shadows and warm highlight tones reflecting a luxury brand aesthetic. The composition emphasizes grandeur and exclusive access within a modern digital prestige environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_h1mPW9svPqfwsOX0sYgbICAdnzIORdrJJ8Yg_jdm1zyoGGgFY3oUMahNIX9O38o55HNw9Mw9bGlS41T-cBIFz9Hr90Fe4G_6W7AUeGN4NkdaSOe7WJMXHcwlyGMBTPyYcIG1HNEI5eYdD8BGMfu78_RPkkVn9PksglrjMEUfCpjZn1rZ15fL2I9BkaxFhBuKuoT31FPqOYJln76DwOfdfpZgeA0Fd4R0QoneGa1Y_K2rJas2_kdvHk5iT3yusp2H7wdpHCY7n9k"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-2xl">
+<span class="text-secondary text-label-md font-label-md tracking-widest mb-4 block">EXCLUSIVELY CURATED</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">The Sovereign Collection</h1>
+<p class="text-body-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+                        Access an elite archive of cultural artifacts and institutional assets. Curated with precision for the discerning global citizen.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-on-secondary-fixed px-8 py-4 text-label-md font-label-md font-bold uppercase tracking-wider flex items-center gap-2">
+                            Explore Archive <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="glass-panel text-on-surface px-8 py-4 text-label-md font-label-md font-bold uppercase tracking-wider border border-secondary/20">
+                            Request Dossier
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Navigation & Filters -->
+<section class="bg-surface-container-low py-8 border-b border-on-surface/5 sticky top-[73px] z-40">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex gap-8 overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+<button class="text-label-md font-label-md active-filter whitespace-nowrap">All Collections</button>
+<button class="text-label-md font-label-md text-on-surface-variant hover:text-secondary transition-colors whitespace-nowrap">Digital Archives</button>
+<button class="text-label-md font-label-md text-on-surface-variant hover:text-secondary transition-colors whitespace-nowrap">Limited Editions</button>
+<button class="text-label-md font-label-md text-on-surface-variant hover:text-secondary transition-colors whitespace-nowrap">Media Licensing</button>
+<button class="text-label-md font-label-md text-on-surface-variant hover:text-secondary transition-colors whitespace-nowrap">Institutional Assets</button>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+<span>Price</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+<div class="w-[1px] h-4 bg-outline-variant"></div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Exclusivity</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="group relative flex flex-col h-full bg-surface-container border border-on-surface/5 transition-all duration-500 hover:border-secondary/30">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fidelity close-up of professional audio equipment in a dark, moody studio. Gold-plated microphones and vintage soundboards are softly illuminated by warm amber spotlights. The aesthetic is extremely premium, focusing on craftsmanship and high-end media production, perfectly capturing the essence of a legacy voice archive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIAS73r5oHNVG-zaIKXQYZakAEnuRIw0wQ1yprHLatV0Lc76gfjSvDsN4VcOn9taVQm6P5G9R-PV07OW32ovodRzlfc9q3EQf1uljxlAhNNKnRrfhKIWz2Wk9fcYmnfmYRQNxnkeA01YVM9Dz9cmrY38_Gc7WnGQAkUptudsh7uWe7jlOU6UTMZlDEuzpUeHDyxbJSVKXmjMw7EpQUYw0Q-PgIn-lDEAcriFRVljBVk97brCj3W2t-ayHdpkhER6_6zrcxSJn5Foc"/>
+<div class="absolute top-4 right-4 bg-secondary/90 text-on-secondary-fixed text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">Limited Release</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-2">Digital Archives</span>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-secondary transition-colors">Legacy Voice Pack</h3>
+<p class="text-body-md text-on-surface-variant text-sm mb-6 line-clamp-2">The complete vocal synthesis profile of the primary orator. Certified for institutional broadcast.</p>
+<div class="mt-auto flex justify-between items-center pt-6 border-t border-on-surface/5">
+<span class="font-bold text-secondary text-lg">$12,500</span>
+<button class="w-10 h-10 rounded-full border border-secondary/20 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary-fixed transition-all duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col h-full bg-surface-container border border-on-surface/5 transition-all duration-500 hover:border-secondary/30">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Exquisite detailed shot of traditional West African Agbada embroidery, featuring heavy gold thread patterns on deep navy blue luxury silk. The texture is rich and tactile, showcasing master craftsmanship. The lighting highlights the intricate sheen of the metallic threads, conveying a sense of heritage and high-end fashion exclusivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb52fV9hMaQuaY4vFp7_c7lHmBV2vip38n6voAJ_Gac2e4DCViX6EbfAlV2ClMHvtkc2WbXQhXGp9bY-8e-iUdLZezwEKD-V967sftBtALIPhHABG_1RbRCc6fw76THB1AbJE_AY2o4vTI_xh-bDh-rqbcMWj87hqoGkTGSYP8RUMu6sQGU1PrCgelbQpaXLkKiBbzSILtb_LmWBay3DFyapAMcnMOwUx5jSKNkPVuN65eBvC9PezgqoP-8f59FPT5ZFUdQ9JQ4S4"/>
+<div class="absolute top-4 right-4 bg-on-surface text-background text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">1 of 10</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-2">Limited Editions</span>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-secondary transition-colors">Limited Edition Agbada Series</h3>
+<p class="text-body-md text-on-surface-variant text-sm mb-6 line-clamp-2">Hand-woven ceremonial attire featuring bespoke gold-thread embroidery. Signed by the artisan.</p>
+<div class="mt-auto flex justify-between items-center pt-6 border-t border-on-surface/5">
+<span class="font-bold text-secondary text-lg">$4,200</span>
+<button class="w-10 h-10 rounded-full border border-secondary/20 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary-fixed transition-all duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col h-full bg-surface-container border border-on-surface/5 transition-all duration-500 hover:border-secondary/30">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A vintage cinematic film reel and professional editing console in a dark archive room. The scene is lit with a subtle blue rim light and warm yellow overhead glow, emphasizing the weight and history of institutional media. The focus is sharp on the metallic texture of the film canister, representing exclusive documentary licensing rights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADoQr8aA3HuZ9QbV2N3-JtRtuCX59japQIyN-OaGvll64hERFRDyDoJz5XfbuetXLmLjoEC8VJiCwMPdQPywu4bN5ypYbO1nGSmFutRYe1LkvnFj-HBWIIgY1mqryrIEnk8yf2NEWEsgJ-RgZLaRoQw5kDGQCm_kRMfOcP-qyKLpgzNJrLmU5jQJTYjuYm0aS2XTrC9l9e7CvXnZQMr-UDGEYlPWaGQd5W3fwiJJVDVrfC9hGmixFNQfgJWilYb3fiw71Juo3Ku2Y"/>
+<div class="absolute top-4 right-4 bg-secondary/90 text-on-secondary-fixed text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">Institutional</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-2">Media Licensing</span>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-secondary transition-colors">Documentary Licensing Rights</h3>
+<p class="text-body-md text-on-surface-variant text-sm mb-6 line-clamp-2">Global distribution rights for the 'Empire Rising' documentary series. High-fidelity master copies.</p>
+<div class="mt-auto flex justify-between items-center pt-6 border-t border-on-surface/5">
+<span class="font-bold text-secondary text-lg">Contact for Price</span>
+<button class="w-10 h-10 rounded-full border border-secondary/20 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary-fixed transition-all duration-300">
+<span class="material-symbols-outlined">mail</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col h-full bg-surface-container border border-on-surface/5 transition-all duration-500 hover:border-secondary/30">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end gallery wall featuring a large, framed black and white photograph of a powerful architectural landscape. The frame is minimal and black, and a discreet gold signature is visible in the corner. Professional gallery lighting casts soft shadows, highlighting the premium paper quality and the exclusive nature of this signed photographic print." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwTl7VMYpFXiQoxAmhWiSF8RYetli7Sw2pIdCbDAgAl2M-RqgP0TPczoqn7dI7U1krv8Mc0AHG_S0IkJBJlVfHWSC8dMBaqy-u280RreCS149NEfxggGaTNX8aPLj50ZcMzYgSn5zhygiBA3omKhHfuEqcp5itlGg24U-1ehM82TkBmGEzDU05XV6egjrvNOAqvgLMRZbfRwvEvTdTppWKKaRVWxkwKPtQgfA8X8CRjR1CqP-gNP2YnpEd4QnRqjGO9hDtYsk_a1s"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-[0.2em] mb-2">Limited Editions</span>
+<h3 class="font-headline-md text-headline-md mb-2 group-hover:text-secondary transition-colors">Signed Photographic Prints</h3>
+<p class="text-body-md text-on-surface-variant text-sm mb-6 line-clamp-2">A set of three museum-grade prints capturing the inner sanctuary of the Bruva headquarters.</p>
+<div class="mt-auto flex justify-between items-center pt-6 border-t border-on-surface/5">
+<span class="font-bold text-secondary text-lg">$1,850</span>
+<button class="w-10 h-10 rounded-full border border-secondary/20 flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary-fixed transition-all duration-300">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<button class="border border-outline-variant px-12 py-4 text-label-md font-label-md uppercase tracking-widest hover:border-secondary hover:text-secondary transition-all duration-300">
+                    Load More Acquisitions
+                </button>
+</div>
+</section>
+<!-- Newsletter / Institutional Access -->
+<section class="bg-surface-container-highest py-24 px-margin-mobile md:px-margin-desktop text-center overflow-hidden relative">
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+<div class="max-w-3xl mx-auto relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-6">Request Private Access</h2>
+<p class="text-on-surface-variant text-body-lg mb-10">Institutional partners and verified patrons may request access to the Vault—a restricted collection of tier-one historical data and primary artifacts.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+<input class="flex-grow bg-background border-0 border-b-2 border-on-surface/20 px-4 py-4 focus:ring-0 focus:border-secondary transition-colors text-on-surface" placeholder="Institutional Email Address" type="email"/>
+<button class="bg-secondary text-on-secondary-fixed px-8 py-4 font-bold uppercase tracking-wider whitespace-nowrap">Apply for Clearance</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="flex items-center gap-3">
+<img alt="BIGBRUVA Crest" class="h-8 w-8 object-contain opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM"/>
+<span class="text-headline-md font-headline-md text-secondary">BIGBRUVA</span>
+</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim max-w-xs text-center md:text-left">
+                    © 2024 BIGBRUVA Institutional. All Rights Reserved. Part of the Ebidilo Group.
+                </p>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Protocol</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Engagement</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Strategic Partnerships</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Media Kit</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Registry</a>
+</nav>
+<div class="flex gap-6">
+<a class="text-secondary-fixed-dim hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-secondary-fixed-dim hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-secondary-fixed-dim hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">shield</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for scrolling effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+
+        // Hover effect for cards to tilt slightly (lightweight)
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                card.style.transform = `perspective(1000px) rotateY(${dx / 30}deg) rotateX(${-dy / 30}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+            });
+        });
+    </script>
+</body></html>

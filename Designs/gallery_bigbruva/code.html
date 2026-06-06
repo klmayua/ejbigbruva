@@ -1,0 +1,296 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery | BIGBRUVA INSTITUTIONAL ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#b2c5ff",
+                    "surface-tint": "#b2c5ff",
+                    "surface-container-low": "#1a1c1b",
+                    "on-primary-fixed-variant": "#254388",
+                    "inverse-surface": "#e2e3e1",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#dae2ff",
+                    "outline": "#8e909c",
+                    "on-primary-container": "#7d99e3",
+                    "error": "#ffb4ab",
+                    "surface-container-highest": "#333534",
+                    "tertiary-container": "#1b3060",
+                    "on-surface": "#e2e3e1",
+                    "tertiary-fixed-dim": "#b2c5ff",
+                    "secondary-fixed": "#ffe088",
+                    "primary-container": "#082e73",
+                    "surface-bright": "#383a38",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-variant": "#333534",
+                    "on-primary": "#042c71",
+                    "on-secondary-container": "#342800",
+                    "inverse-on-surface": "#2f3130",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-primary-fixed": "#001848",
+                    "surface-container-high": "#282a29",
+                    "on-tertiary-fixed": "#001847",
+                    "on-secondary-fixed-variant": "#574500",
+                    "error-container": "#93000a",
+                    "on-tertiary-container": "#8699d0",
+                    "primary-fixed": "#dae2ff",
+                    "surface-container": "#1e201f",
+                    "surface-container-lowest": "#0c0f0e",
+                    "tertiary": "#b2c5ff",
+                    "surface": "#121413",
+                    "inverse-primary": "#3f5ca2",
+                    "surface-dim": "#121413",
+                    "outline-variant": "#444651",
+                    "on-secondary": "#3c2f00",
+                    "secondary-container": "#af8d11",
+                    "on-background": "#e2e3e1",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-tertiary-fixed-variant": "#314576",
+                    "on-tertiary": "#192e5e",
+                    "on-surface-variant": "#c4c6d2",
+                    "background": "#121413",
+                    "secondary": "#e9c349",
+                    "on-error": "#690005"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "base": "8px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Libre Caslon Text"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "headline-md": ["Libre Caslon Text"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #041635; /* Midnight Sovereign Navy Base */
+            color: #e2e3e1;
+        }
+        .glass-panel {
+            background: rgba(4, 22, 53, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(233, 195, 73, 0.15); /* Royal Gold Stroke */
+        }
+        .masonry-grid {
+            columns: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) { .masonry-grid { columns: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { columns: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+
+        .gold-border-focus:focus-within {
+            border-bottom: 2px solid #e9c349;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md dark:bg-primary/70 border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
+<div class="flex items-center gap-4">
+<img alt="Official Crest Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754">
+<span class="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Legacy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Media</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Voice</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-bold" href="#">Gallery</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex gap-6 items-center">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Community</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Press</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Contact</a>
+</div>
+<span class="material-symbols-outlined text-secondary cursor-pointer">newspaper</span>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<header class="mb-16 text-center md:text-left">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-4 uppercase tracking-tighter">The Visual Archive</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">A curated collection documenting the evolution, cultural impact, and private moments of BIGBRUVA Institutional Archive. From state agbadas to casual editorial portraits.</p>
+</header>
+<!-- Category Filter -->
+<div class="flex flex-wrap gap-4 mb-12 overflow-x-auto pb-4 scrollbar-hide no-scrollbar">
+<button class="px-6 py-2 bg-secondary text-on-secondary font-label-md uppercase tracking-widest border border-secondary transition-all">All Collections</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Portraits</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Behind The Scenes</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Broadcasting</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Events</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Community</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Editorial</button>
+<button class="px-6 py-2 border border-secondary/30 text-secondary font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">Lifestyle</button>
+</div>
+<!-- Masonry Gallery -->
+<div class="masonry-grid">
+<!-- Item 1: Portraits -->
+<div class="masonry-item group relative overflow-hidden bg-primary-container/20 border border-on-surface-variant/10 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Institutional Portrait" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end">
+<span class="text-secondary font-label-sm uppercase tracking-widest mb-1">Portraits</span>
+<h3 class="font-headline-md text-on-surface">The Sovereign Agbada</h3>
+</div>
+</div>
+<!-- Item 2: Lifestyle -->
+<div class="masonry-item group relative overflow-hidden bg-primary-container/20 border border-on-surface-variant/10 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Casual Institutional Portrait" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDndsixHjhANHIuI883kfVDOBOzVqzWn_A9sdtc-aj_q1WzwtctGPBKKuAfxkQVDZSRLDEHXjYE3aHca4sQoGIMexkXZkAyieY7rWzBgrm43lAywRyonTh9lb1cGM4yKOje3hRGmkV8AQZqfY8D849XDxg4s37Ehfkkm1JocASoFnfUv06gUUjvw-VuAXDPtnO0H0Jv_lCXYwba1mKXdS2jcToqV2mo3WXJjkqaLbXaH08qIoe_ukGiqEAiLtqKfjpWJxRsgiCYL5k">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end">
+<span class="text-secondary font-label-sm uppercase tracking-widest mb-1">Lifestyle</span>
+<h3 class="font-headline-md text-on-surface">Midday Reflection</h3>
+</div>
+</div>
+<!-- Item 3: Editorial -->
+<div class="masonry-item group relative overflow-hidden bg-primary-container/20 border border-on-surface-variant/10 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Editorial Fashion Shot" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4SmKl9IzEfPh4xrlgA6lBW4woTU6QLkn9rMvbmVz0_cZrjuDmz8WlO9oE3oCTtJ5n2MAfVXWSaFb-xuGM3datV1a_mKDa969RUAFQ-bjPyHyq-xdXl1byOCpsCl5uUd6vUrY4r-DbSjIC6GYPdo40a_TBoT2zyXcCj5QK3Q3ITX7QmLLb59w_EdMY1R4utylUEtJ5W5xylav7WNoFVWRHg1gh-FqngqjqpTJ9PKBEjAqU_ObzqjgUbU7_oWMER9kf8Vl88BenR_s">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end">
+<span class="text-secondary font-label-sm uppercase tracking-widest mb-1">Editorial</span>
+<h3 class="font-headline-md text-on-surface">Modern Heritage</h3>
+</div>
+</div>
+<!-- Item 4: Events -->
+<div class="masonry-item group relative overflow-hidden bg-primary-container/20 border border-on-surface-variant/10 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Ceremonial Event Agbada" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIKiafyRs74NLvS13hgJQ6be6WE2jgI-jw_zgFwUjXWWGmBTsikqoqlSWPE6RaLaIQFoPOutTzjtz9cYhI6iT9kKVIQakx6z7Bo8pzkXbQN60DEdmQTQ9mJ_QzWoVH5NlH2ZZnj1R-sI1a5Y5aQ6n1PLwatzDBkH3TDKNtYoXvHtpVHFM6_zCE1M0FcAoXu9d5DIwsPFI0WhQMC4uflMqOvb7T-d9hzVL0b27efcn0NKXfB9l2HkxjDjUo-DQ2tr7Dmr91FHp2GzU">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end">
+<span class="text-secondary font-label-sm uppercase tracking-widest mb-1">Events</span>
+<h3 class="font-headline-md text-on-surface">State Gathering</h3>
+</div>
+</div>
+<!-- Item 5: Community -->
+<div class="masonry-item group relative overflow-hidden bg-primary-container/20 border border-on-surface-variant/10 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Community Interaction Shot" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 ease-in-out scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRsGXlQa5y3evRUsCH1vJQzivIo-2mlZuKjZRSsZ_wqozSVkK87BozAxk_YhZgIZjRVWOIVpfxvtMMrSTNneasKno4ZF9chYzmXlgd014QcThABZOJHIHdX42m1MCbC8Iy8TcKfXuAPae98SSI7LMzttvuylQt_cjdTpvbKNLNzgbXDwgphjq8T2gnGPEs1VM6sju65RDCCHWiTIbaQujnATuoDtH4g-yZQ3InxPcorC7XB_i6-oORH7b4cCAmCXNvrXTfS2O4Nk4">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 flex flex-col justify-end">
+<span class="text-secondary font-label-sm uppercase tracking-widest mb-1">Community</span>
+<h3 class="font-headline-md text-on-surface">Institutional Ties</h3>
+</div>
+</div>
+<!-- Item 6: Behind The Scenes (Placeholder/Concept for Grid balance) -->
+<div class="masonry-item glass-panel p-12 flex flex-col items-center justify-center text-center aspect-[3/4] transition-all duration-1000 opacity-100 translate-y-0">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">photo_camera</span>
+<h4 class="font-headline-md text-secondary mb-4 uppercase">Behind the Scenes</h4>
+<p class="text-on-surface-variant font-body-md mb-8">Access restricted clips and exclusive production stills from the upcoming institutional documentary.</p>
+<button class="px-8 py-3 bg-secondary text-on-secondary font-label-md uppercase tracking-widest">Inquire Access</button>
+</div>
+</div>
+<!-- Featured Section: BENTO GRID STYLE -->
+<div class="mt-32 grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[600px]">
+<div class="md:col-span-2 bg-primary-container/30 relative overflow-hidden p-12 flex flex-col justify-between border border-secondary/10 group">
+
+<div class="relative z-10">
+<span class="font-label-sm text-secondary uppercase tracking-widest">Documentary Feature</span>
+<h2 class="font-display-lg text-headline-lg mt-4 leading-tight uppercase">Legacy In Motion</h2>
+</div>
+<div class="relative z-10">
+<p class="text-on-surface-variant mb-6 max-w-sm">Experience the narrative journey through our interactive visual medium. Cinematic storytelling at its peak.</p>
+<a class="flex items-center gap-4 text-secondary uppercase font-label-md tracking-widest group-hover:gap-6 transition-all" href="#">
+                        Explore Media <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-2 grid grid-cols-2 gap-gutter">
+<div class="bg-surface-container-high border border-on-surface-variant/5 p-8 flex flex-col justify-center items-center text-center">
+<span class="font-display-lg text-display-lg text-secondary/30">12</span>
+<p class="font-label-md uppercase tracking-widest text-on-surface-variant mt-2">Active Exhibits</p>
+</div>
+<div class="bg-secondary/10 border border-secondary/20 p-8 flex flex-col justify-center items-center text-center">
+<span class="font-display-lg text-display-lg text-secondary/30">07</span>
+<p class="font-label-md uppercase tracking-widest text-on-surface-variant mt-2">Collections</p>
+</div>
+<div class="col-span-2 bg-surface-container-lowest border border-soft-ivory/10 p-8 flex justify-between items-center">
+<div>
+<h4 class="font-headline-md uppercase">Request Archive High-Res</h4>
+<p class="text-on-surface-variant font-label-sm mt-1">Institutional Use &amp; Press Licensing</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-4xl">cloud_download</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/20 w-full py-16 px-margin-desktop">
+<div class="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto"><div class="mb-12 w-64 h-64 mx-auto transition-all duration-700 hover:scale-105">
+  <img alt="BIGBRUVA Official Crest" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA">
+</div>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-12">
+  <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Community</a>
+  <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Press</a>
+  <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Contact</a>
+  <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Privacy Policy</a>
+  <a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Terms of Service</a>
+</div>
+<p class="font-body-md text-label-md text-on-surface-variant tracking-widest opacity-50 uppercase">
+  © 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.
+</p></div>
+</footer>
+<script>
+        // Smooth reveal for masonry items
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.masonry-item');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            items.forEach(item => {
+                item.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
+                observer.observe(item);
+            });
+        });
+    </script>
+
+
+</body></html>
