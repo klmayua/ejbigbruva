@@ -4,8 +4,15 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { navLinks } from '@/lib/navigation';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname && pathname.startsWith('/dashboard')) {
+    return null;
+  }
+
   return (
     <footer className="glass-02 border-t border-outline-variant/10 pt-20 pb-12 w-full mt-auto relative z-10">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">

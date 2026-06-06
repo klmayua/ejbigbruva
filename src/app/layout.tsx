@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BodyTheme from "@/components/BodyTheme";
 
 export const metadata: Metadata = {
   title: "BIGBRUVA | Ejike Ebidilo Institutional Portal",
@@ -26,6 +27,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased bg-background text-on-background font-body-md min-h-screen flex flex-col overflow-x-hidden">
+        <BodyTheme />
         <Navbar />
         <main className="flex-1 w-full relative">
           {children}

@@ -13,12 +13,54 @@ export default function Page() {
 
   return (
     <>
-      
+      {/* Desktop Side Navigation */}
+      <aside className="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col w-80 bg-surface-container-lowest border-r border-outline-variant/10">
+        <div className="px-8 py-10">
+          <div className="relative w-32 h-16 mb-4">
+            <Image 
+              alt="BIGBRUVA Crest" 
+              src="/images/EjBigBruva_Logo_Full_No_bg.png" 
+              fill
+              className="object-contain object-left"
+              sizes="128px"
+            />
+          </div>
+          <p className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-[0.25em] opacity-60">Ejike Ebidilo Institutional</p>
+        </div>
+        <nav className="flex-1 px-4 space-y-1">
+          <Link href="/" className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">home</span>
+            <span className="font-label-md">Home</span>
+          </Link>
+          <Link href="/about" className="flex items-center px-4 py-3 bg-primary-container/40 text-secondary rounded-xl font-bold transition-all duration-200 ease-in-out">
+            <span className="material-symbols-outlined mr-4">person_celebrate</span>
+            <span className="font-label-md">About</span>
+          </Link>
+          <Link href="/legacy" className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">history_edu</span>
+            <span className="font-label-md">Legacy</span>
+          </Link>
+          <Link href="/media" className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">video_library</span>
+            <span className="font-label-md">Media</span>
+          </Link>
+          <Link href="/voice" className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">record_voice_over</span>
+            <span className="font-label-md">Voice</span>
+          </Link>
+          <Link href="/events" className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">event</span>
+            <span className="font-label-md">Events</span>
+          </Link>
+        </nav>
+        <div className="p-8">
+          <Link href="/community" className="w-full py-4 bg-secondary text-on-secondary font-bold rounded-xl active:scale-95 transition-all shadow-lg shadow-secondary/10 block text-center">
+            Join Community
+          </Link>
+        </div>
+      </aside>
 
-
-
-
-<main className="min-h-screen pt-20">
+      <main className="lg:ml-80 pt-16 min-h-screen">
 
 <section className="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
 <div className="absolute inset-0 z-0">

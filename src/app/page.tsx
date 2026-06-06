@@ -13,11 +13,54 @@ export default function Page() {
 
   return (
     <>
-      
+      {/* SideNavBar (Hidden on Mobile/Tablet) */}
+      <aside className="fixed left-0 top-0 h-full w-72 z-40 hidden xl:flex flex-col bg-surface-container-lowest border-r border-outline-variant/10 shadow-2xl">
+        <div className="p-8 border-b border-outline-variant/10">
+          <div className="relative w-32 h-16 mb-4">
+            <Image 
+              alt="BIGBRUVA Logo" 
+              src="/images/EjBigBruva_Logo_Full_No_bg.png" 
+              fill
+              className="object-contain object-left"
+              sizes="128px"
+            />
+          </div>
+          <p className="font-label-sm text-on-surface-variant tracking-wider uppercase opacity-70">Ejike Ebidilo Institutional</p>
+        </div>
+        <div className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
+          <Link href="/" className="flex items-center gap-4 p-3 bg-secondary/10 text-secondary rounded-lg font-semibold transition-all duration-200">
+            <span className="material-symbols-outlined">home</span>
+            <span className="font-label-md">Home</span>
+          </Link>
+          <Link href="/about" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
+            <span className="material-symbols-outlined">person_celebrate</span>
+            <span className="font-label-md">About</span>
+          </Link>
+          <Link href="/legacy" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
+            <span className="material-symbols-outlined">history_edu</span>
+            <span className="font-label-md">Legacy</span>
+          </Link>
+          <Link href="/media" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
+            <span className="material-symbols-outlined">video_library</span>
+            <span className="font-label-md">Media</span>
+          </Link>
+          <Link href="/voice" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
+            <span className="material-symbols-outlined">record_voice_over</span>
+            <span className="font-label-md">Voice</span>
+          </Link>
+          <Link href="/events" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
+            <span className="material-symbols-outlined">event</span>
+            <span className="font-label-md">Events</span>
+          </Link>
+        </div>
+        <div className="p-8">
+          <Link href="/community" className="w-full py-3 bg-secondary text-on-secondary font-bold rounded-lg transition-transform hover:brightness-110 active:scale-95 shadow-xl block text-center">
+            Join Community
+          </Link>
+        </div>
+      </aside>
 
-
-
-<main className="pt-20">
+      <main className="xl:pl-72 pt-16">
 
 <section className="relative min-h-[90vh] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">

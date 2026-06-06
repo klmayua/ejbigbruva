@@ -14,6 +14,10 @@ export default function Navbar() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  if (pathname && pathname.startsWith('/dashboard')) {
+    return null;
+  }
+
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10">
