@@ -66,6 +66,18 @@ export default function Page() {
         ::-webkit-scrollbar-thumb:hover {
             background: #444651;
         }
+        @keyframes slow-wave-0 {
+            0% { height: 15px; }
+            100% { height: 50px; }
+        }
+        @keyframes slow-wave-1 {
+            0% { height: 25px; }
+            100% { height: 60px; }
+        }
+        @keyframes slow-wave-2 {
+            0% { height: 10px; }
+            100% { height: 45px; }
+        }
       `}} />
 
       {/* TopNavBar */}
@@ -102,39 +114,51 @@ export default function Page() {
  
       <main className="w-full relative">
         {/* Hero Section */}
-        <section className="relative min-h-[95vh] flex items-start pt-[18vh] md:pt-[22vh] pb-20 overflow-hidden">
+        <section className="relative min-h-[95vh] flex items-start pt-[35vh] md:pt-[38vh] pb-20 overflow-hidden">
           <div className="absolute inset-0 z-[1]">
             <img 
               alt="Ejike Ebidilo in traditional Agbada" 
               className="w-full h-full object-cover" 
               src="/images/EJ_Agbada_01.jpeg" 
-              style={{ objectPosition: 'center 20%', filter: 'contrast(1.12) saturate(1.04) brightness(0.96)' }}
+              style={{ objectPosition: 'center 20%', filter: 'brightness(0.88) contrast(1.18) saturate(1.04)' }}
             />
-            <div className="absolute inset-0 z-[2]" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)' }}></div>
-            <div className="absolute inset-0 z-[3]" style={{ background: 'radial-gradient(circle at 60% 40%, rgba(214,170,56,0.08) 0%, transparent 70%)' }}></div>
-            <div className="absolute inset-0 z-[4] bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            <div className="absolute inset-0 z-[2]" style={{ background: 'linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.72) 20%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.15) 65%, rgba(0,0,0,0.00) 100%)' }}></div>
+            <div className="absolute inset-0 z-[3] opacity-60 blur-[120px]" style={{ background: 'radial-gradient(circle at 60% 40%, rgba(214,170,56,0.08) 0%, transparent 70%)' }}></div>
+            <div className="absolute inset-0 z-[4]" style={{ background: 'linear-gradient(180deg, rgba(12,15,14,0.00) 0%, rgba(12,15,14,0.25) 50%, #0c0f0e 100%)' }}></div>
           </div>
-          <div className="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[720px]">
-            <div className="backdrop-blur-[18px] bg-black/18 border border-[#ffd700]/08 rounded-[32px] p-8 md:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
-              <h1 className="font-display-lg text-[40px] md:text-[56px] font-medium text-on-background mb-10 leading-[1.1] tracking-tight">
-                THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
-              </h1>
-              <p className="font-headline-md text-[20px] md:text-[26px] text-on-surface-variant mb-8 leading-[1.4]">
-                Broadcaster. Storyteller. Mentor. <br/>
-                <span className="text-on-background font-bold">Voice of Generations.</span>
-              </p>
-              <p className="font-body-lg text-[17px] md:text-[20px] text-on-surface-variant/80 max-w-[520px] mb-10 leading-[1.8]">
-                For over four decades, Ejike Ebidilo has been the resonance behind Nigeria's most iconic broadcasts, shaping the cultural conversation and mentoring the architects of modern media.
-              </p>
-              <div className="flex flex-wrap gap-6">
-                <button className="h-[58px] px-8 bg-secondary text-on-secondary font-bold rounded-[16px] hover:brightness-110 hover:-translate-y-[2px] active:translate-y-0 active:scale-95 transition-all shadow-xl flex items-center justify-center">
-                  The Legacy
-                </button>
-                <button className="h-[58px] px-8 border border-secondary/40 text-secondary bg-black/20 backdrop-blur-md font-bold rounded-[16px] hover:bg-secondary/10 hover:-translate-y-[2px] active:translate-y-0 active:scale-95 transition-all flex items-center justify-center">
-                  Latest Media
-                </button>
-              </div>
+          <div className="relative z-10 px-margin-mobile md:pl-[80px] max-w-[560px]">
+            <h1 className="font-display-lg text-[42px] md:text-[60px] font-medium text-on-background mb-10 leading-[1.05] tracking-tight">
+              THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
+            </h1>
+            <p className="font-headline-md text-[20px] md:text-[28px] text-on-surface-variant mb-8 leading-[1.4]">
+              Broadcaster. Storyteller. Mentor. <br/>
+              <span className="text-on-background font-bold">Voice of Generations.</span>
+            </p>
+            <p className="font-body-lg text-[18px] md:text-[22px] text-on-surface-variant/80 max-w-[520px] mb-10 leading-[1.8]">
+              For over four decades, Ejike Ebidilo has been the resonance behind Nigeria's most iconic broadcasts, shaping the cultural conversation and mentoring the architects of modern media.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <button className="h-[58px] px-[34px] bg-secondary text-[#121413] font-semibold rounded-full hover:brightness-110 hover:-translate-y-[2px] active:translate-y-0 active:scale-95 transition-all shadow-xl flex items-center justify-center">
+                The Legacy
+              </button>
+              <button className="h-[58px] px-[34px] border border-[#d6aa38]/35 text-secondary bg-black/35 backdrop-blur-[8px] font-semibold rounded-full hover:brightness-110 hover:-translate-y-[2px] active:translate-y-0 active:scale-95 transition-all flex items-center justify-center">
+                Latest Media
+              </button>
             </div>
+          </div>
+          {/* Animated gold audio-wave motif */}
+          <div className="absolute bottom-12 right-12 z-10 flex items-end gap-1.5 h-[60px] opacity-20 pointer-events-none select-none">
+            {[20, 45, 30, 60, 40, 25, 50, 35, 55, 30].map((height, i) => (
+              <div 
+                key={i} 
+                className="w-[3px] bg-secondary rounded-full"
+                style={{
+                  height: `${height}px`,
+                  animation: `slow-wave-${i % 3} ${4 + (i % 3) * 1.2}s ease-in-out infinite alternate`,
+                  animationDelay: `${i * 0.15}s`
+                }}
+              />
+            ))}
           </div>
           {/* Vertical Text */}
           <div className="absolute right-margin-desktop bottom-1/4 hidden xl:block">
