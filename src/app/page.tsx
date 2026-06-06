@@ -163,21 +163,21 @@ export default function Page() {
           </Link>
         </div>
       </nav>
- 
-      <main className="w-full relative">
+
+      <main>
         {/* Editorial Hero Section */}
         <section className="relative h-screen w-full flex items-end overflow-hidden bg-surface-container-lowest">
           <div className="absolute inset-0 z-0">
             <img 
               alt="Ejike Ebidilo Institutional Portrait" 
               className="w-full h-full object-cover object-[70%_20%]" 
-              src="/images/EJ_Agbada_01.jpeg" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
             <div className="absolute inset-0 hero-vignette"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
           </div>
           <div className="relative z-10 px-margin-mobile md:px-margin-desktop w-full pb-16 md:pb-24">
-            <div className="glass-panel w-full md:w-[580px] p-8 md:p-10 rounded-xl shadow-2xl">
+            <div className="glass-panel w-full md:w-[580px] p-8 md:p-10 rounded-xl shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
               <span className="font-label-sm text-secondary tracking-[0.3em] uppercase mb-4 block">Institutional Identity</span>
               <h1 className="font-display-lg text-4xl md:text-5xl text-on-background mb-4 leading-tight">
                 THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
@@ -235,10 +235,10 @@ export default function Page() {
                 A Life Behind The <br/> <span className="text-secondary italic">Microphone.</span>
               </h2>
               <div className="space-y-6 font-body-lg text-on-surface-variant/90 leading-relaxed max-w-2xl">
-                <p>
+                <p className="">
                   From the early days of radio waves reaching across the federation to the digital frontier of global streaming, Ejike's voice has been a constant companion to millions.
                 </p>
-                <p>
+                <p className="">
                   His approach to storytelling transcends mere reporting; it is an art form rooted in deep empathy, linguistic precision, and an unwavering commitment to the truth. Whether narrating a nation's history or guiding a new talent, the "Big Brother" archetype is felt in every syllable.
                 </p>
               </div>
@@ -254,7 +254,7 @@ export default function Page() {
                 <img 
                   alt="Ejike Ebidilo in a casual portrait" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                  src="/images/EJ_casual_01.jpeg" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
                 />
                 <div className="absolute bottom-6 left-6 p-6 glass-panel max-w-[260px] rounded shadow-xl">
                   <p className="font-label-sm text-secondary italic mb-2 tracking-tight">Internal Monologue</p>
@@ -293,9 +293,9 @@ export default function Page() {
             <div className="group cursor-pointer">
               <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
                 <img 
-                  alt="The Golden Era Interviews cover portrait" 
+                  alt="Vintage portrait" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="/images/EJ_casual_02.jpeg" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioAxOCtb2-qp6zChX8Z-QBswqAv35CSL1gIfCgs0QO6d84m1xGsf3wVoUqOUIKuez69eIrkos3_SiqVF37TfJ1zPeqHDFQ-x2iEQx0jlWZ_-f1ne5-OPWiIsBpSmUzQHo8kL3e9YkmxDJlOohajdDa0hQVVkJZAo6WqZcTtVuF_SjaX_qZ9gVxj3H7sjytVVEbV3hB4lbPJW-MV5J0fCMyt622sOvAlPRPm3o3cq1FYPADrXGMCMp9z2IYkbScV9ls9LhwRNWR6s" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
@@ -319,9 +319,9 @@ export default function Page() {
             <div className="group cursor-pointer">
               <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
                 <img 
-                  alt="Beyond the Script creative session portrait" 
+                  alt="Creative session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="/images/EJ_casual_03.jpeg" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="auto_stories">auto_stories</span>
