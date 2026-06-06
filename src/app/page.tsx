@@ -182,9 +182,9 @@ export default function Page() {
           <div 
             className="absolute bottom-0 pointer-events-none z-10 portrait-mask-final"
             style={{
-              width: '760px',
-              right: '-40px',
-              height: '105%'
+              width: '820px',
+              right: '140px',
+              height: '113%'
             }}
           >
             <img 
@@ -246,7 +246,7 @@ export default function Page() {
           />
           
           {/* Content Block (z-20) */}
-          <div className="absolute left-4 md:left-[180px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
+          <div className="absolute left-4 md:left-[300px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
             {/* Trust Indicator above headline */}
             <div className="flex items-center gap-[18px] mb-[24px] max-w-[560px]">
               <div 
