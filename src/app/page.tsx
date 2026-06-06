@@ -69,13 +69,15 @@ export default function Page() {
       `}} />
 
       {/* TopNavBar */}
-      <nav className="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-48px)] max-w-[1200px] h-[72px] flex justify-between items-center px-8 rounded-full bg-[#080a0c]/78 backdrop-blur-[20px] border border-[#d4af37]/15 shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
         <div className="flex items-center">
-          <img 
-            alt="BIGBRUVA Logo" 
-            className="h-12 md:h-16 w-auto object-contain" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
-          />
+          <Link href="/">
+            <img 
+              alt="BIGBRUVA Logo" 
+              className="h-10 md:h-12 w-auto object-contain cursor-pointer" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
+            />
+          </Link>
         </div>
         <div className="hidden md:flex gap-8 items-center">
           <Link className="font-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/">Home</Link>
@@ -85,9 +87,11 @@ export default function Page() {
           <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
           <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
         </div>
-        <div className="flex items-center gap-4">
-          <Link href="/contact" className="px-6 py-2 bg-secondary text-on-secondary font-label-md rounded-lg hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg block text-center">Contact</Link>
-          <span className="material-symbols-outlined text-secondary cursor-pointer md:hidden" data-icon="menu">menu</span>
+        <div className="flex items-center">
+          <Link href="/contact" className="px-6 py-2.5 bg-secondary text-on-secondary font-label-md rounded-full hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg flex items-center gap-2 text-center text-sm font-bold shrink-0">
+            <span className="material-symbols-outlined text-[18px] leading-none" data-icon="calendar_today">calendar_today</span>
+            Book a Conversation
+          </Link>
         </div>
       </nav>
 
