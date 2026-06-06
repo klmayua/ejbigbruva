@@ -44,12 +44,12 @@ export default function Page() {
             scroll-behavior: smooth;
         }
         .glass-panel {
-            background: rgba(26, 28, 27, 0.7) !important;
-            backdrop-filter: blur(12px) !important;
-            border: 1px solid rgba(233, 195, 73, 0.15) !important;
+            background: rgba(18, 20, 19, 0.65) !important;
+            backdrop-filter: blur(16px) !important;
+            border: 1px solid rgba(233, 195, 73, 0.2) !important;
         }
-        .hero-gradient {
-            background: linear-gradient(to right, #121413 30%, transparent 100%) !important;
+        .hero-vignette {
+            background: radial-gradient(circle at 70% 30%, transparent 20%, rgba(18, 20, 19, 0.8) 100%) !important;
         }
         .vertical-text {
             writing-mode: vertical-rl;
@@ -121,87 +121,41 @@ export default function Page() {
         </div>
       </div>
 
-      {/* SideNavBar (Hidden on Mobile/Tablet) */}
-      <aside className="fixed left-0 top-0 h-full w-72 z-40 hidden xl:flex flex-col bg-surface-container-lowest border-r border-outline-variant/10 shadow-2xl">
-        <div className="p-8 border-b border-outline-variant/10">
-          <Link href="/">
-            <img 
-              alt="BIGBRUVA Logo" 
-              className="w-32 h-auto mb-4 cursor-pointer" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
-            />
-          </Link>
-          <p className="font-label-sm text-on-surface-variant tracking-wider uppercase opacity-70">Ejike Ebidilo Institutional</p>
-        </div>
-        <div className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
-          <Link href="/" className="flex items-center gap-4 p-3 bg-secondary/10 text-secondary rounded-lg font-semibold transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined">home</span>
-            <span className="font-label-md">Home</span>
-          </Link>
-          <Link href="/about" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined">person_celebrate</span>
-            <span className="font-label-md">About</span>
-          </Link>
-          <Link href="/legacy" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined">history_edu</span>
-            <span className="font-label-md">Legacy</span>
-          </Link>
-          <Link href="/media" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined">video_library</span>
-            <span className="font-label-md">Media</span>
-          </Link>
-          <Link href="/voice" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined">record_voice_over</span>
-            <span className="font-label-md">Voice</span>
-          </Link>
-          <Link href="/events" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined">event</span>
-            <span className="font-label-md">Events</span>
-          </Link>
-        </div>
-        <div className="p-8">
-          <Link href="/community" className="w-full py-3 bg-secondary text-on-secondary font-bold rounded-lg transition-transform hover:brightness-110 active:scale-95 shadow-xl block text-center">
-            Join Community
-          </Link>
-        </div>
-      </aside>
-
-      <main className="xl:pl-72 pt-16">
+      <main>
         {/* Editorial Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        <section className="relative h-screen w-full flex items-end overflow-hidden bg-surface-container-lowest">
           <div className="absolute inset-0 z-0">
             <img 
-              alt="Ejike Ebidilo in traditional Agbada" 
-              className="w-full h-full object-cover object-center" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioAxOCtb2-qp6zChX8Z-QBswqAv35CSL1gIfCgs0QO6d84m1xGsf3wVoUqOUIKuez69eIrkos3_SiqVF37TfJ1zPeqHDFQ-x2iEQx0jlWZ_-f1ne5-OPWiIsBpSmUzQHo8kL3e9YkmxDJlOohajdDa0hQVVkJZAo6WqZcTtVuF_SjaX_qZ9gVxj3H7sjytVVEbV3hB4lbPJW-MV5J0fCMyt622sOvAlPRPm3o3cq1FYPADrXGMCMp9z2IYkbScV9ls9LhwRNWR6s"
+              alt="Ejike Ebidilo Institutional Portrait" 
+              className="w-full h-full object-cover object-[70%_20%]" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
-            <div className="absolute inset-0 hero-gradient"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            <div className="absolute inset-0 hero-vignette"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
           </div>
-          <div className="relative z-10 px-margin-mobile md:px-margin-desktop max-w-4xl py-20">
-            <span className="font-label-md text-secondary tracking-[0.2em] uppercase mb-6 block">Institutional Identity</span>
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-8 leading-tight">
-              THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
-            </h1>
-            <p className="font-headline-md text-headline-md text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
-              Broadcaster. Storyteller. Mentor. <br/>
-              <span className="text-on-background font-bold">Voice of Generations.</span>
-            </p>
-            <p className="font-body-lg text-body-lg text-on-surface-variant/80 max-w-xl mb-12">
-              For over four decades, Ejike Ebidilo has been the resonance behind Nigeria's most iconic broadcasts, shaping the cultural conversation and mentoring the architects of modern media.
-            </p>
-            <div className="flex flex-wrap gap-6">
-              <Link href="/legacy" className="px-8 py-4 bg-secondary text-on-secondary font-bold rounded hover:-translate-y-1 transition-all shadow-xl block text-center">
-                The Legacy
-              </Link>
-              <Link href="/media" className="px-8 py-4 border border-secondary/40 text-secondary font-bold rounded hover:bg-secondary/10 transition-all block text-center">
-                Latest Media
-              </Link>
+          <div className="relative z-10 px-margin-mobile md:px-margin-desktop w-full pb-16 md:pb-24">
+            <div className="glass-panel w-full md:w-[580px] p-8 md:p-10 rounded-xl shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+              <span className="font-label-sm text-secondary tracking-[0.3em] uppercase mb-4 block">Institutional Identity</span>
+              <h1 className="font-display-lg text-4xl md:text-5xl text-on-background mb-4 leading-tight">
+                THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
+              </h1>
+              <p className="font-body-md text-on-surface-variant/90 mb-6 leading-relaxed">
+                Broadcaster. Storyteller. Mentor. <span className="text-on-background font-semibold">Voice of Generations.</span> 
+                For over four decades, resonance behind Nigeria's most iconic broadcasts.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/legacy" className="px-8 py-3 bg-secondary text-on-secondary font-bold text-sm rounded hover:-translate-y-0.5 transition-all shadow-lg inline-block text-center">
+                  The Legacy
+                </Link>
+                <Link href="/media" className="px-8 py-3 border border-secondary/40 text-secondary font-bold text-sm rounded hover:bg-secondary/10 transition-all inline-block text-center">
+                  Latest Media
+                </Link>
+              </div>
             </div>
           </div>
-          {/* Vertical Text */}
-          <div className="absolute right-margin-desktop bottom-1/4 hidden xl:block">
-            <div className="vertical-text font-label-sm text-secondary/40 tracking-[0.6em] uppercase pointer-events-none select-none">
+          {/* Side Signature / Date */}
+          <div className="absolute right-margin-desktop bottom-24 hidden xl:block z-10">
+            <div className="vertical-text font-label-sm text-secondary/30 tracking-[0.8em] uppercase pointer-events-none select-none">
               EJIKE EBIDILO • SINCE 1978
             </div>
           </div>
@@ -238,10 +192,10 @@ export default function Page() {
                 A Life Behind The <br/> <span className="text-secondary italic">Microphone.</span>
               </h2>
               <div className="space-y-6 font-body-lg text-on-surface-variant/90 leading-relaxed max-w-2xl">
-                <p>
+                <p className="">
                   From the early days of radio waves reaching across the federation to the digital frontier of global streaming, Ejike's voice has been a constant companion to millions.
                 </p>
-                <p>
+                <p className="">
                   His approach to storytelling transcends mere reporting; it is an art form rooted in deep empathy, linguistic precision, and an unwavering commitment to the truth. Whether narrating a nation's history or guiding a new talent, the "Big Brother" archetype is felt in every syllable.
                 </p>
               </div>
@@ -257,7 +211,7 @@ export default function Page() {
                 <img 
                   alt="Ejike Ebidilo in a casual portrait" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
                 />
                 <div className="absolute bottom-6 left-6 p-6 glass-panel max-w-[260px] rounded shadow-xl">
                   <p className="font-label-sm text-secondary italic mb-2 tracking-tight">Internal Monologue</p>
@@ -298,7 +252,7 @@ export default function Page() {
                 <img 
                   alt="Vintage portrait" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioAxOCtb2-qp6zChX8Z-QBswqAv35CSL1gIfCgs0QO6d84m1xGsf3wVoUqOUIKuez69eIrkos3_SiqVF37TfJ1zPeqHDFQ-x2iEQx0jlWZ_-f1ne5-OPWiIsBpSmUzQHo8kL3e9YkmxDJlOohajdDa0hQVVkJZAo6WqZcTtVuF_SjaX_qZ9gVxj3H7sjytVVEbV3hB4lbPJW-MV5J0fCMyt622sOvAlPRPm3o3cq1FYPADrXGMCMp9z2IYkbScV9ls9LhwRNWR6s"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioAxOCtb2-qp6zChX8Z-QBswqAv35CSL1gIfCgs0QO6d84m1xGsf3wVoUqOUIKuez69eIrkos3_SiqVF37TfJ1zPeqHDFQ-x2iEQx0jlWZ_-f1ne5-OPWiIsBpSmUzQHo8kL3e9YkmxDJlOohajdDa0hQVVkJZAo6WqZcTtVuF_SjaX_qZ9gVxj3H7sjytVVEbV3hB4lbPJW-MV5J0fCMyt622sOvAlPRPm3o3cq1FYPADrXGMCMp9z2IYkbScV9ls9LhwRNWR6s" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl">play_circle</span>
@@ -324,7 +278,7 @@ export default function Page() {
                 <img 
                   alt="Creative session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl">auto_stories</span>
@@ -342,7 +296,7 @@ export default function Page() {
             <img 
               alt="BIGBRUVA Crest" 
               className="h-40 md:h-56 w-auto mx-auto object-contain mb-8" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
             />
             <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
               <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
