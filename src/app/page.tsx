@@ -76,14 +76,14 @@ export default function Page() {
         
         .portrait-mask-final {
           -webkit-mask-image: 
-            linear-gradient(to right, transparent 0px, black 320px, black calc(100% - 100px), transparent 100%),
-            linear-gradient(to top, transparent 0px, black 260px),
+            linear-gradient(to right, transparent 0px, black 300px, black calc(100% - 100px), transparent 100%),
+            linear-gradient(to top, transparent 0px, black 240px),
             linear-gradient(to bottom, transparent 0px, black 60px);
           -webkit-mask-composite: source-in;
           
           mask-image: 
-            linear-gradient(to right, transparent 0px, black 320px, black calc(100% - 100px), transparent 100%),
-            linear-gradient(to top, transparent 0px, black 260px),
+            linear-gradient(to right, transparent 0px, black 300px, black calc(100% - 100px), transparent 100%),
+            linear-gradient(to top, transparent 0px, black 240px),
             linear-gradient(to bottom, transparent 0px, black 60px);
           mask-composite: intersect;
         }
@@ -182,10 +182,9 @@ export default function Page() {
           <div 
             className="absolute bottom-0 pointer-events-none z-10 portrait-mask-final"
             style={{
-              width: '52%',
-              maxWidth: '840px',
-              right: '-120px',
-              height: 'auto'
+              width: '760px',
+              right: '-40px',
+              height: '105%'
             }}
           >
             <img 
@@ -194,19 +193,19 @@ export default function Page() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
             {/* Fallback overlays to ensure seamless blend even without mask compositing */}
-            {/* Left fade: 320px wide */}
+            {/* Left fade: 300px wide */}
             <div 
               className="absolute left-0 top-0 bottom-0 z-20 pointer-events-none" 
               style={{
-                width: '320px',
+                width: '300px',
                 background: 'linear-gradient(to right, #050505 0%, transparent 100%)'
               }}
             />
-            {/* Bottom fade: 260px high */}
+            {/* Bottom fade: 240px high */}
             <div 
               className="absolute left-0 right-0 bottom-0 z-20 pointer-events-none" 
               style={{
-                height: '260px',
+                height: '240px',
                 background: 'linear-gradient(to top, #050505 0%, transparent 100%)'
               }}
             />
@@ -247,9 +246,9 @@ export default function Page() {
           />
           
           {/* Content Block (z-20) */}
-          <div className="absolute left-4 md:left-[185px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
+          <div className="absolute left-4 md:left-[180px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
             {/* Trust Indicator above headline */}
-            <div className="flex items-center gap-[18px] mb-[28px] max-w-[560px]">
+            <div className="flex items-center gap-[18px] mb-[24px] max-w-[560px]">
               <div 
                 className="flex items-center justify-center w-[36px] h-[36px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
                 style={{ 
