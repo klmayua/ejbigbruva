@@ -4,6 +4,21 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Page() {
+  const [scrolled, setScrolled] = React.useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const cursorHighlight = document.createElement('div');
@@ -78,29 +93,78 @@ export default function Page() {
             0% { height: 10px; }
             100% { height: 45px; }
         }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #e9c349 !important;
+            transform: translateY(-1px);
+            text-shadow: 0 0 10px rgba(233, 195, 73, 0.3);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #e9c349;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .nav-link-active {
+            position: relative;
+            color: #e9c349 !important;
+        }
+        .nav-link-active::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #e9c349;
+        }
+        .cta-gold {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .cta-gold:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(233, 195, 73, 0.25);
+            filter: brightness(1.15);
+        }
+        .cta-gold:active {
+            transform: translateY(0) scale(0.98);
+        }
       `}} />
 
       {/* TopNavBar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[90vw] md:w-[78vw] max-w-[1240px] h-[80px] flex justify-between items-center px-8 rounded-full bg-[#050505]/82 backdrop-blur-[16px] border border-[#d4af37]/18 shadow-[0_12px_40px_rgba(0,0,0,0.35)]">
+      <nav className={`fixed left-1/2 -translate-x-1/2 z-[100] w-[90vw] md:w-[78vw] max-w-[1240px] flex justify-between items-center px-8 rounded-full bg-[#050505]/82 backdrop-blur-[16px] border border-[#d4af37]/18 shadow-[0_12px_40px_rgba(0,0,0,0.35)] transition-all duration-300 ${scrolled ? 'top-3 h-[68px]' : 'top-6 h-[80px]'}`}>
         <div className="flex items-center pl-7 md:pl-8">
           <Link href="/">
             <img 
               alt="BIGBRUVA Logo" 
-              className="h-[44px] w-auto object-contain cursor-pointer" 
+              className={`w-auto object-contain cursor-pointer transition-all duration-300 ${scrolled ? 'h-[36px]' : 'h-[44px]'}`} 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
             />
           </Link>
         </div>
         <div className="hidden md:flex gap-[36px] items-center">
-          <Link className="font-sans text-[16px] font-medium text-secondary border-b-2 border-secondary pb-2 cursor-pointer transition-all" href="/">Home</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
+          <Link className="font-sans text-[16px] font-medium nav-link-active cursor-pointer" href="/">Home</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant nav-link cursor-pointer" href="/about">About</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant nav-link cursor-pointer" href="/legacy">Legacy</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant nav-link cursor-pointer" href="/media">Media</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant nav-link cursor-pointer" href="/voice">Voice</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant nav-link cursor-pointer" href="/events">Events</Link>
         </div>
         <div className="flex items-center">
-          <Link href="/contact" className="h-[50px] px-[28px] bg-gradient-to-r from-[#e9c349] via-[#d4af37] to-[#af8d11] text-[#3c2f00] font-sans text-[14px] font-bold tracking-[0.05em] rounded-full hover:brightness-110 hover:-translate-y-[1px] active:translate-y-0 transition-all cursor-pointer shadow-lg flex items-center gap-[10px] shrink-0">
+          <Link href="/contact" className={`bg-gradient-to-r from-[#e9c349] via-[#d4af37] to-[#af8d11] text-[#3c2f00] font-sans text-[14px] font-bold tracking-[0.05em] rounded-full transition-all cursor-pointer shadow-lg flex items-center gap-[10px] shrink-0 cta-gold ${scrolled ? 'h-[44px] px-[22px]' : 'h-[50px] px-[28px]'}`}>
             <svg className="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
               <line x1="16" y1="2" x2="16" y2="6"></line>
@@ -114,7 +178,7 @@ export default function Page() {
  
       <main className="w-full relative">
         {/* Hero Section */}
-        <section className="relative min-h-[95vh] flex items-start pt-[35vh] md:pt-[38vh] pb-20 overflow-hidden">
+        <section className="relative min-h-[95vh] flex items-start pt-[35vh] md:pt-[38vh] pb-10 overflow-hidden">
           <div className="absolute inset-0 z-[1]">
             <img 
               alt="Ejike Ebidilo in traditional Agbada" 
@@ -169,7 +233,7 @@ export default function Page() {
         </section>
 
         {/* Legacy Numbers Section */}
-        <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+        <section className="py-12 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-gutter border-y border-outline-variant/20 py-20">
             <div className="text-center group">
               <div className="font-display-lg text-headline-lg md:text-display-lg text-secondary mb-2 group-hover:scale-110 transition-transform duration-500">45+</div>
@@ -230,93 +294,169 @@ export default function Page() {
         </section>
 
         {/* Quote Section */}
-        <section className="py-40 bg-surface-container-low overflow-hidden relative">
+        <section className="py-20 md:py-24 bg-surface-container-low overflow-hidden relative">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(214,170,56,0.03)_0%,transparent_70%)] pointer-events-none"></div>
           <div className="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
-            <span className="material-symbols-outlined text-secondary text-7xl mb-12 opacity-50" data-icon="format_quote">format_quote</span>
-            <blockquote className="font-display-lg text-headline-lg md:text-display-lg text-on-background mb-12 italic leading-tight">
+            <span className="material-symbols-outlined text-secondary text-5xl mb-6 opacity-30 block" data-icon="format_quote">format_quote</span>
+            <blockquote className="font-display-lg text-[22px] md:text-[32px] text-on-background mb-8 italic leading-snug max-w-4xl mx-auto">
               "Great broadcasting isn't about the volume of your voice, but the depth of the silence you command between your words."
             </blockquote>
-            <div className="h-1 w-24 bg-secondary mx-auto mb-8"></div>
-            <cite className="font-label-md text-secondary tracking-[0.3em] uppercase not-italic">Ejike Ebidilo, 2024</cite>
+            <div className="h-0.5 w-16 bg-secondary/40 mx-auto mb-6"></div>
+            <cite className="font-label-sm text-secondary/70 tracking-[0.3em] uppercase not-italic text-xs">Ejike Ebidilo, 2024</cite>
           </div>
         </section>
 
         {/* Legacy Media Grid */}
-        <section className="py-32 px-margin-mobile md:px-margin-desktop">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <section className="pt-16 pb-10 px-margin-mobile md:px-margin-desktop">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-6">
             <div>
-              <span className="font-label-md text-secondary mb-4 block uppercase tracking-widest">Media Repository</span>
-              <h2 className="font-headline-lg text-on-background">Echoes of Influence</h2>
+              <span className="font-label-md text-secondary mb-2 block uppercase tracking-widest text-xs font-semibold">
+                Media Repository <span className="text-on-surface-variant/40 ml-2 font-normal text-sm">(142 Archived Items)</span>
+              </span>
+              <h2 className="font-headline-lg text-[28px] md:text-[36px] text-on-background mb-4 font-bold tracking-tight">Echoes of Influence</h2>
+              <p className="font-sans text-[15px] text-on-surface-variant/75 max-w-2xl leading-relaxed">
+                A curated selection of Ejike Ebidilo's broadcast legacy, historic masterclasses, and keynote addresses spanning four decades of media excellence.
+              </p>
             </div>
-            <button className="font-label-md text-on-surface-variant hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1 uppercase tracking-widest">View All Archives</button>
+            <Link href="/media" className="font-label-md text-on-surface-variant hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1 uppercase tracking-widest text-xs font-semibold outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded">View All Archives</Link>
           </div>
+
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-x-8 gap-y-3 border-b border-outline-variant/10 pb-4 mb-10 text-[15px] font-semibold text-on-surface-variant">
+            <span className="text-secondary relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bottom-[-17px] after:left-0 after:bg-secondary cursor-pointer">All Broadcasts</span>
+            <span className="hover:text-secondary cursor-pointer transition-colors pb-1">Podcasts</span>
+            <span className="hover:text-secondary cursor-pointer transition-colors pb-1">Interviews</span>
+            <span className="hover:text-secondary cursor-pointer transition-colors pb-1">Masterclasses</span>
+            <span className="hover:text-secondary cursor-pointer transition-colors pb-1">Monographs</span>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Media Item 1 */}
-            <div className="group cursor-pointer">
+            <div className="group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg">
               <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
                 <img 
-                  alt="Vintage portrait" 
+                  alt="Ejike Ebidilo casual portrait" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="/images/EJ_Agbada_01.jpeg" 
+                  src="/images/EJ_casual_02.jpeg" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
                 </div>
               </div>
-              <h3 className="font-headline-md text-on-background mb-2">The Golden Era Interviews</h3>
-              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Archived Audio • 1994</p>
+              <h3 className="font-headline-md text-on-background mb-2 group-hover:text-secondary transition-colors text-lg md:text-xl font-semibold">The Golden Era Interviews</h3>
+              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest text-xs">Archived Audio • 1994</p>
             </div>
             {/* Media Item 2 */}
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/5] bg-surface-container-highest mb-6 overflow-hidden relative rounded-lg flex items-center justify-center border border-outline-variant/10">
-                <span className="material-symbols-outlined text-secondary/10 text-9xl group-hover:scale-110 transition-transform duration-1000" data-icon="mic">mic</span>
+            <div className="group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg">
+              <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
+                <img 
+                  alt="Ejike Ebidilo Agbada portrait" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+                  src="/images/EJ_Agbada_02.jpeg" 
+                />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="podcasts">podcasts</span>
                 </div>
               </div>
-              <h3 className="font-headline-md text-on-background mb-2">Voice of Generations</h3>
-              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Monograph • 2023</p>
+              <h3 className="font-headline-md text-on-background mb-2 group-hover:text-secondary transition-colors text-lg md:text-xl font-semibold">Voice of Generations</h3>
+              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest text-xs">Monograph • 2023</p>
             </div>
             {/* Media Item 3 */}
-            <div className="group cursor-pointer">
+            <div className="group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg">
               <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
                 <img 
-                  alt="Creative session" 
+                  alt="Ejike Ebidilo recording session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="/images/EJ_casual_01.jpeg" 
+                  src="/images/EJ_casual_03.jpeg" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="auto_stories">auto_stories</span>
                 </div>
               </div>
-              <h3 className="font-headline-md text-on-background mb-2">Beyond the Script</h3>
-              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Masterclass • Ongoing</p>
+              <h3 className="font-headline-md text-on-background mb-2 group-hover:text-secondary transition-colors text-lg md:text-xl font-semibold">Beyond the Script</h3>
+              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest text-xs">Masterclass • Ongoing</p>
             </div>
           </div>
         </section>
 
         {/* Footer Section */}
-        <footer className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10 text-center">
-          <div className="mb-12">
-            <img 
-              alt="BIGBRUVA Crest" 
-              className="h-40 md:h-56 w-auto mx-auto object-contain mb-8" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
-            />
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press</Link>
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</Link>
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</Link>
+        <footer className="pt-16 pb-12 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-16">
+            {/* Column 1: Brand & Logo */}
+            <div className="md:col-span-4 flex flex-col items-start gap-4">
+              <Link href="/" className="outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg">
+                <img 
+                  alt="BIGBRUVA Crest Logo" 
+                  className="h-16 w-auto object-contain" 
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
+                />
+              </Link>
+              <p className="text-on-surface-variant/70 text-sm max-w-xs mt-2 leading-relaxed font-sans">
+                Recreating the institutional identity and audio broadcasting legacy of Ejike Ebidilo.
+              </p>
             </div>
-            <div className="flex justify-center gap-10 mb-10">
-              <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110" data-icon="public">public</span>
-              <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110" data-icon="podcasts">podcasts</span>
-              <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110" data-icon="video_library">video_library</span>
+
+            {/* Column 2: Navigation */}
+            <div className="md:col-span-2">
+              <h4 className="text-secondary font-bold text-sm uppercase tracking-wider mb-4 font-sans">Navigation</h4>
+              <div className="flex flex-col gap-3 font-sans">
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/about">About</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/legacy">Legacy</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/media">Media</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/voice">Voice</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/events">Events</Link>
+              </div>
             </div>
-            <p className="font-label-sm text-on-surface-variant/40 tracking-widest uppercase">
+
+            {/* Column 3: Media */}
+            <div className="md:col-span-2">
+              <h4 className="text-secondary font-bold text-sm uppercase tracking-wider mb-4 font-sans">Media</h4>
+              <div className="flex flex-col gap-3 font-sans">
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/podcast">Podcasts</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/media">Interviews</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/media">Archives</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/press">Press</Link>
+              </div>
+            </div>
+
+            {/* Column 4: Contact */}
+            <div className="md:col-span-2">
+              <h4 className="text-secondary font-bold text-sm uppercase tracking-wider mb-4 font-sans">Contact</h4>
+              <div className="flex flex-col gap-3 font-sans">
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/bookings">Booking</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/bookings">Speaking</Link>
+                <Link className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded" href="/contact">Collaborations</Link>
+              </div>
+            </div>
+
+            {/* Column 5: Social */}
+            <div className="md:col-span-2">
+              <h4 className="text-secondary font-bold text-sm uppercase tracking-wider mb-4 font-sans">Social</h4>
+              <div className="flex flex-col gap-3 font-sans">
+                <a target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded flex items-center gap-2" href="https://twitter.com">
+                  <span className="material-symbols-outlined text-[18px] leading-none" data-icon="public">public</span>
+                  Twitter
+                </a>
+                <a target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded flex items-center gap-2" href="https://youtube.com">
+                  <span className="material-symbols-outlined text-[18px] leading-none" data-icon="video_library">video_library</span>
+                  YouTube
+                </a>
+                <a target="_blank" rel="noopener noreferrer" className="text-on-surface-variant hover:text-secondary text-sm transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded flex items-center gap-2" href="https://spotify.com">
+                  <span className="material-symbols-outlined text-[18px] leading-none" data-icon="podcasts">podcasts</span>
+                  Spotify
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <p className="font-label-sm text-on-surface-variant/40 tracking-widest uppercase text-xs">
               © 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.
             </p>
+            <div className="flex gap-6 text-xs text-on-surface-variant/40 font-sans">
+              <Link className="hover:text-secondary transition-colors" href="/contact">Privacy Policy</Link>
+              <Link className="hover:text-secondary transition-colors" href="/contact">Terms of Service</Link>
+            </div>
           </div>
         </footer>
       </main>
