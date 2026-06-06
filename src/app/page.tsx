@@ -178,43 +178,25 @@ export default function Page() {
  
       <main className="w-full relative">
         {/* Hero Section */}
-        <section className="relative min-h-[92vh] flex items-center justify-start py-20 md:py-24 overflow-hidden">
-          <div className="absolute inset-0 z-[1] overflow-hidden">
-            {/* Centered Portrait Image */}
-            <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-full md:w-[70%] z-[1]">
-              <img 
-                alt="Ejike Ebidilo in traditional Agbada" 
-                className="w-full h-full object-cover" 
-                src="/images/EJ_Agbada_01.jpeg" 
-                style={{ objectPosition: 'center 20%', filter: 'brightness(0.85) contrast(1.18) saturate(1.04)' }}
-              />
-              {/* Internal vignette for image edge smoothing */}
-              <div className="absolute inset-0 z-[2] pointer-events-none shadow-[inset_0_0_80px_rgba(0,0,0,0.5)]"></div>
-            </div>
-
-            {/* Horizontal & Vertical Fading Overlays */}
-            <div className="absolute inset-y-0 left-0 w-full md:w-[45%] z-[2] pointer-events-none bg-gradient-to-r from-[#121413] via-[#121413]/90 to-transparent"></div>
-            <div className="absolute inset-y-0 right-0 w-full md:w-[45%] z-[2] pointer-events-none bg-gradient-to-l from-[#121413] via-[#121413]/90 to-transparent"></div>
-            <div className="absolute inset-x-0 top-0 h-[20vh] z-[2] pointer-events-none bg-gradient-to-b from-[#121413] to-transparent"></div>
-            <div className="absolute inset-x-0 bottom-0 h-[25vh] z-[2] pointer-events-none bg-gradient-to-t from-[#0c0f0e] via-[#0c0f0e]/40 to-transparent"></div>
-
-            {/* Subtle background glow */}
-            <div className="absolute top-[30%] left-[10%] w-[350px] h-[350px] rounded-full bg-secondary/3 blur-[90px] pointer-events-none z-[3]"></div>
-            <div className="absolute inset-0 z-[4] pointer-events-none shadow-[inset_0_0_100px_rgba(0,0,0,0.6)]"></div>
+        <section className="relative min-h-[92vh] flex items-center justify-start py-20 px-margin-mobile md:px-margin-desktop bg-[#0c0f0e]">
+          {/* Matted Centered Portrait Stage */}
+          <div className="absolute left-1/2 -translate-x-1/2 top-[5vh] w-[90vw] md:w-[80vw] lg:w-[85vw] max-w-[1140px] h-[84vh] z-[1] rounded-[32px] overflow-hidden border border-[#ffe088]/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <img 
+              alt="Ejike Ebidilo in traditional Agbada" 
+              className="w-full h-full object-cover object-top" 
+              src="/images/EJ_Agbada_01.jpeg" 
+              style={{ filter: 'brightness(0.88) contrast(1.18) saturate(1.04)' }}
+            />
+            {/* Clean bottom stage blend fade gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0c0f0e] via-transparent to-transparent z-[2]"></div>
           </div>
 
-          {/* Floating Glass Story Card */}
-          <div className="relative z-10 px-margin-mobile md:pl-[8vw] max-w-full md:max-w-[620px] mt-[10vh] md:mt-[6vh]">
-            <div className="backdrop-blur-[24px] bg-[#161817]/85 border border-[#e9c349]/20 rounded-[28px] p-8 md:p-10 shadow-[0_24px_50px_rgba(0,0,0,0.5)] flex flex-col items-start w-full">
-              <h1 className="font-display-lg text-[36px] md:text-[46px] font-medium text-on-background mb-5 leading-[1.1] tracking-tight text-left">
-                THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
-              </h1>
-              
-              <p className="font-headline-md text-[18px] md:text-[24px] text-on-surface-variant mb-4 leading-[1.4] text-left">
-                Broadcaster. Storyteller. Mentor. <br/>
-                <span className="text-on-background font-bold">Voice of Generations.</span>
-              </p>
+          {/* Subtle background glow */}
+          <div className="absolute top-[30%] left-[5%] w-[400px] h-[400px] rounded-full bg-secondary/3 blur-[110px] pointer-events-none z-[2]"></div>
 
+          {/* Floating Glass Story Card (max-width 500px) */}
+          <div className="relative z-10 px-margin-mobile md:pl-[12vw] max-w-full md:max-w-[500px] mt-[8vh] md:mt-[6vh]">
+            <div className="backdrop-blur-[28px] bg-[#161817]/85 border border-[#e9c349]/20 rounded-[24px] p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.6)] flex flex-col items-start w-full">
               {/* Premium Legacy Indicator */}
               <div className="flex items-center gap-2 mb-5">
                 <span className="relative flex h-2.5 w-2.5">
@@ -226,8 +208,12 @@ export default function Page() {
                 </span>
               </div>
 
-              <p className="font-body-lg text-[16px] md:text-[18px] text-on-surface-variant/80 mb-8 leading-[1.7] text-left">
-                For over four decades, Ejike Ebidilo has been the resonance behind Nigeria's most iconic broadcasts, shaping the cultural conversation and mentoring the architects of modern media.
+              <h1 className="font-display-lg text-[36px] md:text-[44px] font-medium text-on-background mb-4 leading-[1.1] tracking-tight text-left">
+                THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
+              </h1>
+              
+              <p className="font-headline-md text-[18px] md:text-[22px] text-on-surface-variant/90 mb-8 leading-[1.4] text-left font-medium">
+                Broadcaster. Storyteller. Mentor. Voice of Generations.
               </p>
 
               <div className="flex flex-wrap gap-4 w-full">
@@ -247,28 +233,6 @@ export default function Page() {
                   Watch Legacy Reel
                 </Link>
               </div>
-            </div>
-          </div>
-
-          {/* Animated gold audio-wave motif */}
-          <div className="absolute bottom-12 right-12 z-10 flex items-end gap-1.5 h-[60px] opacity-20 pointer-events-none select-none">
-            {[20, 45, 30, 60, 40, 25, 50, 35, 55, 30].map((height, i) => (
-              <div 
-                key={i} 
-                className="w-[3px] bg-secondary rounded-full"
-                style={{
-                  height: `${height}px`,
-                  animation: `slow-wave-${i % 3} ${4 + (i % 3) * 1.2}s ease-in-out infinite alternate`,
-                  animationDelay: `${i * 0.15}s`
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Vertical Text */}
-          <div className="absolute right-margin-desktop bottom-1/4 hidden xl:block">
-            <div className="vertical-text font-label-sm text-secondary/40 tracking-[0.6em] uppercase pointer-events-none select-none">
-              EJIKE EBIDILO • SINCE 1978
             </div>
           </div>
         </section>
