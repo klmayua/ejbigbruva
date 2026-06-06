@@ -44,7 +44,7 @@ export default function Page() {
             scroll-behavior: smooth;
         }
         .hero-gradient-overlay {
-            background: linear-gradient(to right, #000000 0%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 100%) !important;
+            background: linear-gradient(to right, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%) !important;
         }
         ::-webkit-scrollbar {
             width: 8px;
@@ -59,37 +59,67 @@ export default function Page() {
         ::-webkit-scrollbar-thumb:hover {
             background: #444651;
         }
+        @keyframes mic-pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+            transform: scale(1);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            transform: scale(1.05);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            transform: scale(1);
+          }
+        }
+        .mic-pulse-glow {
+          animation: mic-pulse 2.4s infinite ease-in-out;
+        }
       `}} />
 
       {/* Floating Pill TopNavBar */}
-      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[1120px] h-[72px] px-8 rounded-full flex justify-between items-center bg-surface/85 backdrop-blur-md border border-outline-variant/15 shadow-[0_12px_40px_rgba(0,0,0,0.5)]">
+      <nav 
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[1080px] h-[70px] px-8 rounded-full flex justify-between items-center transition-all duration-300"
+        style={{
+          backgroundColor: 'rgba(8,8,8,0.78)',
+          backdropFilter: 'blur(22px)',
+          WebkitBackdropFilter: 'blur(22px)',
+          border: '1px solid rgba(212,175,55,0.15)',
+          boxShadow: '0 12px 40px rgba(0,0,0,0.5)'
+        }}
+      >
         <div className="flex items-center">
           <Link href="/">
             <img 
               alt="BIGBRUVA Logo" 
-              className="h-10 w-auto object-contain cursor-pointer" 
+              className="h-[46px] w-auto object-contain cursor-pointer" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
             />
           </Link>
         </div>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link className="font-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/">Home</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
+        <div className="hidden md:flex gap-10 items-center">
+          <Link className="font-sans text-[16px] font-medium text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/">Home</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
+          <Link className="font-sans text-[16px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
         </div>
-        <div className="flex items-center gap-4">
-          <Link href="/contact" className="px-6 py-2 bg-secondary text-on-secondary font-label-md rounded-lg hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg inline-block text-center">
-            Contact
-          </Link>
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            className="material-symbols-outlined text-secondary cursor-pointer md:hidden select-none bg-transparent border-none outline-none"
+        <div className="flex items-center">
+          <Link 
+            href="/contact" 
+            className="h-[50px] px-[28px] text-[#121413] font-semibold rounded-full flex items-center justify-center gap-2 hover:-translate-y-[2px] hover:brightness-105 active:scale-95 transition-all duration-300"
+            style={{
+              backgroundColor: '#d4af37',
+              boxShadow: '0 10px 30px rgba(212,175,55,0.22)'
+            }}
           >
-            {mobileMenuOpen ? 'close' : 'menu'}
-          </button>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            ENGAGE NOW
+          </Link>
         </div>
       </nav>
 
@@ -115,43 +145,83 @@ export default function Page() {
       <main>
         {/* Full-Bleed Editorial Hero Section */}
         <section className="relative h-screen w-full overflow-hidden bg-black flex items-end">
-          {/* Portrait Image (z-0) */}
-          <img 
-            alt="Ejike Ebidilo Portrait" 
-            className="absolute right-[6%] bottom-0 w-[52%] max-w-[760px] h-full object-contain object-bottom select-none pointer-events-none filter contrast-[1.05] brightness-[0.95]" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
-          />
+          {/* Portrait Image Container (z-0) with mask fades */}
+          <div className="absolute right-[6%] bottom-0 w-[46%] max-w-[680px] h-full pointer-events-none z-0 translate-x-[80px] translate-y-[20px]">
+            <img 
+              alt="Ejike Ebidilo Portrait" 
+              className="w-full h-full object-contain object-bottom select-none pointer-events-none filter contrast-[1.13] brightness-[0.93]" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
+            />
+            {/* Left fade: 260px wide, black to transparent */}
+            <div 
+              className="absolute left-0 top-0 bottom-0 z-10 pointer-events-none" 
+              style={{
+                width: '260px',
+                background: 'linear-gradient(to right, #000000 0%, transparent 100%)'
+              }}
+            />
+            {/* Bottom fade: 280px high, transparent to black */}
+            <div 
+              className="absolute left-0 right-0 bottom-0 z-10 pointer-events-none" 
+              style={{
+                height: '280px',
+                background: 'linear-gradient(to top, #000000 0%, transparent 100%)'
+              }}
+            />
+            {/* Right fade: 140px wide, transparent to black */}
+            <div 
+              className="absolute right-0 top-0 bottom-0 z-10 pointer-events-none" 
+              style={{
+                width: '140px',
+                background: 'linear-gradient(to left, #000000 0%, transparent 100%)'
+              }}
+            />
+          </div>
+
           {/* Left-to-Right Linear Blend Overlay (z-10) */}
           <div className="absolute inset-0 z-10 hero-gradient-overlay pointer-events-none"></div>
           
           {/* Content Block (z-20) */}
-          <div className="absolute left-[8%] top-[50%] -translate-y-[50%] -mt-[120px] w-full max-w-[560px] z-20 px-margin-mobile md:px-0 pb-[80px]">
-            {/* Credibility Tag */}
-            <div className="flex items-center gap-3 mb-6">
-              <span className="w-2.5 h-2.5 rounded-full bg-secondary"></span>
-              <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-[0.18em]">
-                40+ Years Broadcasting Excellence
+          <div className="absolute left-[8%] top-[50%] -translate-y-[50%] -mt-[170px] w-full max-w-[700px] z-20 px-margin-mobile md:px-0 pb-[80px]">
+            {/* Trust Indicator replaces existing dot */}
+            <div className="flex items-center gap-3 mb-6 max-w-[560px]">
+              <div 
+                className="flex items-center justify-center w-[30px] h-[30px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
+                style={{ flexShrink: 0 }}
+              >
+                <svg className="w-[18px] h-[18px]" style={{ color: '#22C55E' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5.5 10a.5.5 0 0 0-1 0 4.5 4.5 0 0 1-9 0 .5.5 0 0 0-1 0 5.5 5.5 0 0 0 5 5.48V19h-3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-3v-1.52a5.5 5.5 0 0 0 5-5.48z"/>
+                </svg>
+              </div>
+              <span className="font-sans text-[14px] font-semibold text-on-surface-variant uppercase tracking-[0.18em] leading-none">
+                40+ YEARS VOICING EXCELLENCE
               </span>
             </div>
             
             {/* Headline */}
-            <h1 className="font-display-lg text-[48px] md:text-[72px] lg:text-[92px] leading-[0.95] tracking-[-0.03em] font-medium mb-6">
+            <h1 
+              className="relative -top-[40px] font-display-lg text-[42px] md:text-[60px] lg:text-[78px] font-medium max-w-[700px] mb-6"
+              style={{
+                lineHeight: '0.92',
+                letterSpacing: '-0.04em',
+              }}
+            >
               <span className="text-white block">THE ORIGINAL</span>
               <span className="text-secondary block">BIG BROTHER.</span>
             </h1>
             
             {/* Descriptor */}
-            <p className="font-body-md text-[20px] md:text-[26px] text-on-background mt-6 leading-relaxed">
+            <p className="font-sans text-[18px] md:text-[22px] lg:text-[26px] font-medium text-on-background mt-[24px] leading-relaxed max-w-[560px]">
               Broadcaster • Storyteller • Mentor
             </p>
             
-            {/* Legacy Line */}
-            <p className="font-body-lg text-[24px] md:text-[32px] font-semibold text-secondary mt-3 leading-snug">
+            {/* Voice of Generations */}
+            <p className="font-sans text-[24px] md:text-[32px] lg:text-[42px] font-bold text-secondary mt-[16px] leading-tight max-w-[560px]">
               Voice of Generations
             </p>
             
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mt-10">
+            <div className="flex flex-wrap gap-[18px] mt-[40px] max-w-[560px]">
               <Link href="/contact" className="h-[56px] px-8 bg-secondary text-on-secondary font-label-md text-label-md rounded-full flex items-center justify-center gap-3 hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-secondary/20">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
