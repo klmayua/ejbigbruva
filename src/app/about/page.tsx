@@ -103,41 +103,67 @@ export default function Page() {
         }
       `}} />
 
-      {/* TopNavBar */}
-      <nav className="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-[#121413]/80 backdrop-blur-md border-b border-outline-variant/10">
-        <div className="flex items-center">
+      {/* Desktop Side Navigation */}
+      <aside className="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col w-80 bg-surface-container-lowest border-r border-outline-variant/10">
+        <div className="px-8 py-10">
+          <div className="w-full mb-8">
+            <Link href="/">
+              <img alt="BIGBRUVA Crest" className="h-24 w-auto object-contain cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
+            </Link>
+          </div>
+          <p className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-[0.25em] opacity-60">Ejike Ebidilo Institutional</p>
+        </div>
+        <nav className="flex-1 px-4 space-y-1">
+          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">home</span>
+            <span className="font-label-md">Home</span>
+          </Link>
+          <Link className="flex items-center px-4 py-3 bg-primary-container/40 text-secondary rounded-xl font-bold transition-all duration-200 ease-in-out" href="/about">
+            <span className="material-symbols-outlined mr-4">person_celebrate</span>
+            <span className="font-label-md">About</span>
+          </Link>
+          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/legacy">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">history_edu</span>
+            <span className="font-label-md">Legacy</span>
+          </Link>
+          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/media">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">video_library</span>
+            <span className="font-label-md">Media</span>
+          </Link>
+          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/voice">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">record_voice_over</span>
+            <span className="font-label-md">Voice</span>
+          </Link>
+          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/events">
+            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">event</span>
+            <span className="font-label-md">Events</span>
+          </Link>
+        </nav>
+        <div className="p-8">
+          <Link href="/community" className="w-full py-4 bg-secondary text-on-secondary-fixed font-bold rounded-xl active:scale-95 transition-all shadow-lg shadow-secondary/10 flex items-center justify-center">
+            Join Community
+          </Link>
+        </div>
+      </aside>
+
+      {/* Mobile Header */}
+      <header className="lg:hidden fixed top-0 w-full z-50 glass-header border-b border-outline-variant/10 bg-surface-container-lowest/80 flex justify-between items-center px-margin-mobile py-4">
+        <div className="h-10">
           <Link href="/">
-            <img 
-              alt="BIGBRUVA Logo" 
-              className="h-12 md:h-16 w-auto object-contain cursor-pointer" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
-            />
+            <img alt="BIGBRUVA Crest" className="h-full w-auto object-contain cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
           </Link>
         </div>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/">Home</Link>
-          <Link className="font-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all" href="/about">About</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link href="/contact" className="px-6 py-2 bg-secondary text-on-secondary font-label-md rounded-lg hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg inline-block text-center">
-            Contact
-          </Link>
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            className="material-symbols-outlined text-secondary cursor-pointer md:hidden select-none bg-transparent border-none outline-none"
-          >
-            {mobileMenuOpen ? 'close' : 'menu'}
-          </button>
-        </div>
-      </nav>
+        <button 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="material-symbols-outlined text-secondary text-3xl bg-transparent border-none outline-none select-none cursor-pointer"
+        >
+          {mobileMenuOpen ? 'close' : 'menu'}
+        </button>
+      </header>
 
       {/* Mobile Menu Slide-down Overlay */}
       <div 
-        className={`fixed inset-0 z-40 bg-surface/98 backdrop-blur-2xl transition-all duration-500 ease-in-out flex flex-col justify-center items-center md:hidden ${
+        className={`fixed inset-0 z-40 bg-surface-container-lowest/98 backdrop-blur-2xl transition-all duration-500 ease-in-out flex flex-col justify-center items-center lg:hidden ${
           mobileMenuOpen 
             ? 'opacity-100 translate-y-0 pointer-events-auto' 
             : 'opacity-0 -translate-y-full pointer-events-none'
@@ -154,7 +180,7 @@ export default function Page() {
         </div>
       </div>
 
-      <main className="min-h-screen">
+      <main className="lg:ml-80 min-h-screen">
         {/* Hero Section */}
         <section className="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
           <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">

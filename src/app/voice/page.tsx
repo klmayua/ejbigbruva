@@ -103,7 +103,7 @@ export default function Page() {
           <img 
             alt="Reflective portrait for Voice editorial section" 
             className="w-full h-full object-cover object-center opacity-60 scale-105 transition-transform duration-[10000ms] hover:scale-100" 
-            src="/images/EJ_casual_03.jpeg" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDndsixHjhANHIuI883kfVDOBOzVqzWn_A9sdtc-aj_q1WzwtctGPBKKuAfxkQVDZSRLDEHXjYE3aHca4sQoGIMexkXZkAyieY7rWzBgrm43lAywRyonTh9lb1cGM4yKOje3hRGmkV8AQZqfY8D849XDxg4s37Ehfkkm1JocASoFnfUv06gUUjvw-VuAXDPtnO0H0Jv_lCXYwba1mKXdS2jcToqV2mo3WXJjkqaLbXaH08qIoe_ukGiqEAiLtqKfjpWJxRsgiCYL5k" 
           />
         </div>
         <div className="container mx-auto px-margin-desktop relative z-20">
