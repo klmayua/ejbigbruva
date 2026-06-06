@@ -13,6 +13,40 @@ export default function Page() {
 
   return (
     <>
+      {/* Page specific overrides to hide global nav/footer */}
+      <style dangerouslySetInnerHTML={{__html: `
+        body > nav { display: none !important; }
+        body > footer { display: none !important; }
+      `}} />
+
+      {/* TopNavBar (Homepage Specific) */}
+      <nav className="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
+        <div className="flex items-center">
+          <div className="relative h-12 md:h-16 w-32 md:w-48 shrink-0">
+            <Image 
+              alt="BIGBRUVA Logo" 
+              src="/images/EjBigBruva_Logo_Full_No_bg.png" 
+              fill
+              className="object-contain object-left"
+              sizes="(max-width: 768px) 128px, 192px"
+              priority
+            />
+          </div>
+        </div>
+        <div className="hidden md:flex gap-8 items-center">
+          <Link href="/" className="font-label-md text-secondary border-b-2 border-secondary pb-1 cursor-pointer transition-all">Home</Link>
+          <Link href="/about" className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300">About</Link>
+          <Link href="/legacy" className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300">Legacy</Link>
+          <Link href="/media" className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300">Media</Link>
+          <Link href="/voice" className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300">Voice</Link>
+          <Link href="/events" className="font-label-md text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300">Events</Link>
+        </div>
+        <div className="flex items-center gap-4">
+          <Link href="/contact" className="px-6 py-2 bg-secondary text-on-secondary font-label-md rounded-lg hover:brightness-110 transition-all cursor-pointer active:scale-95 shadow-lg">Contact</Link>
+          <span className="material-symbols-outlined text-secondary cursor-pointer md:hidden select-none">menu</span>
+        </div>
+      </nav>
+
       {/* SideNavBar (Hidden on Mobile/Tablet) */}
       <aside className="fixed left-0 top-0 h-full w-72 z-40 hidden xl:flex flex-col bg-surface-container-lowest border-r border-outline-variant/10 shadow-2xl">
         <div className="p-8 border-b border-outline-variant/10">
@@ -60,11 +94,11 @@ export default function Page() {
         </div>
       </aside>
 
-      <main className="xl:pl-72 pt-16">
+      <main className="xl:pl-72">
 
 <section className="relative min-h-[90vh] flex items-center overflow-hidden">
 <div className="absolute inset-0 z-0">
-<Image src="/images/EJ_Agbada_01.jpeg" alt="Ejike Ebidilo in traditional Agbada" className="w-full h-full object-cover object-center" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 20%' }} />
+<Image src="/images/EJ_Agbada_01.jpeg" alt="Ejike Ebidilo in traditional Agbada" className="w-full h-full object-cover object-center" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 hero-gradient"></div>
 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 </div>
@@ -138,8 +172,8 @@ export default function Page() {
 </div>
 <div className="md:col-span-5 relative">
 <div className="aspect-[3/4] bg-surface-container overflow-hidden rounded shadow-2xl relative">
-<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo in a casual portrait" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 20%' }} />
-<div className="absolute bottom-6 left-6 p-6 glass-01 max-w-[260px] rounded shadow-xl">
+<Image src="/images/EJ_casual_01.jpeg" alt="Ejike Ebidilo in a casual portrait" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" fill sizes="(max-width: 768px) 100vw, 50vw" />
+<div className="absolute bottom-6 left-6 p-6 glass-panel max-w-[260px] rounded shadow-xl">
 <p className="font-label-sm text-secondary italic mb-2 tracking-tight">Internal Monologue</p>
 <p className="font-body-md text-on-surface">"The voice is the soul's first draft of reality."</p>
 </div>
@@ -171,7 +205,7 @@ export default function Page() {
 
 <div className="group cursor-pointer">
 <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
-<Image src="/images/EJ_Agbada_01.jpeg" alt="Vintage portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 20%' }} />
+<Image src="/images/EJ_Agbada_01.jpeg" alt="Vintage portrait" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
 <span className="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
 </div>
@@ -193,7 +227,7 @@ export default function Page() {
 
 <div className="group cursor-pointer">
 <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
-<Image src="/images/EJ_casual_01.jpeg" alt="Creative session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw"  style={{ objectPosition: 'center 20%' }} />
+<Image src="/images/EJ_casual_01.jpeg" alt="Creative session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" fill sizes="(max-width: 768px) 100vw, 50vw" />
 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
 <span className="material-symbols-outlined text-white text-5xl" data-icon="auto_stories">auto_stories</span>
 </div>
@@ -204,7 +238,30 @@ export default function Page() {
 </div>
 </section>
 
-
+      {/* Footer Section */}
+      <footer className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10 text-center">
+        <div className="mb-12">
+          <img 
+            alt="BIGBRUVA Crest" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
+            className="h-40 md:h-56 w-auto mx-auto object-contain mb-8" 
+          />
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
+            <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
+            <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press</Link>
+            <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</Link>
+            <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</Link>
+          </div>
+          <div className="flex justify-center gap-10 mb-10">
+            <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110">public</span>
+            <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110">podcasts</span>
+            <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110">video_library</span>
+          </div>
+          <p className="font-label-sm text-on-surface-variant/40 tracking-widest uppercase">
+            © 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
 </main>
 
     </>
