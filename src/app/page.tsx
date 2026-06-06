@@ -20,8 +20,8 @@ export default function Page() {
       `}} />
 
       {/* TopNavBar (Homepage Specific) */}
-      <nav className="fixed top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
-        <div className="flex items-center">
+      <nav className="fixed top-0 left-0 xl:left-72 w-full xl:w-[calc(100%-18rem)] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/10">
+        <div className="flex items-center xl:hidden">
           <div className="relative h-12 md:h-16 w-32 md:w-48 shrink-0">
             <Image 
               alt="BIGBRUVA Logo" 
