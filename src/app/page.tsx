@@ -76,13 +76,13 @@ export default function Page() {
         
         .portrait-mask-final {
           -webkit-mask-image: 
-            linear-gradient(to right, transparent 0px, black 340px),
+            linear-gradient(to right, transparent 0px, black 320px, black calc(100% - 100px), transparent 100%),
             linear-gradient(to top, transparent 0px, black 260px),
             linear-gradient(to bottom, transparent 0px, black 60px);
           -webkit-mask-composite: source-in;
           
           mask-image: 
-            linear-gradient(to right, transparent 0px, black 340px),
+            linear-gradient(to right, transparent 0px, black 320px, black calc(100% - 100px), transparent 100%),
             linear-gradient(to top, transparent 0px, black 260px),
             linear-gradient(to bottom, transparent 0px, black 60px);
           mask-composite: intersect;
@@ -172,25 +172,33 @@ export default function Page() {
               width: '900px',
               height: '900px',
               backgroundColor: '#0077FF',
-              opacity: 0.28,
-              filter: 'blur(140px)',
+              opacity: 0.22,
+              filter: 'blur(160px)',
               zIndex: 1
             }}
           />
 
           {/* Portrait Image Container (z-10) with mask fades */}
-          <div className="absolute right-0 bottom-0 w-[48%] max-w-[760px] pointer-events-none z-10 portrait-mask-final">
+          <div 
+            className="absolute bottom-0 pointer-events-none z-10 portrait-mask-final"
+            style={{
+              width: '52%',
+              maxWidth: '840px',
+              right: '-120px',
+              height: 'auto'
+            }}
+          >
             <img 
               alt="Ejike Ebidilo Portrait" 
-              className="w-full h-auto object-contain select-none pointer-events-none filter contrast-[1.08] brightness-[1.02]" 
+              className="w-full h-auto object-contain select-none pointer-events-none filter contrast-[1.10] brightness-[1.02]" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
             {/* Fallback overlays to ensure seamless blend even without mask compositing */}
-            {/* Left fade: 340px wide */}
+            {/* Left fade: 320px wide */}
             <div 
               className="absolute left-0 top-0 bottom-0 z-20 pointer-events-none" 
               style={{
-                width: '340px',
+                width: '320px',
                 background: 'linear-gradient(to right, #050505 0%, transparent 100%)'
               }}
             />
@@ -200,6 +208,14 @@ export default function Page() {
               style={{
                 height: '260px',
                 background: 'linear-gradient(to top, #050505 0%, transparent 100%)'
+              }}
+            />
+            {/* Right fade: 100px wide */}
+            <div 
+              className="absolute right-0 top-0 bottom-0 z-20 pointer-events-none" 
+              style={{
+                width: '100px',
+                background: 'linear-gradient(to left, #050505 0%, transparent 100%)'
               }}
             />
             {/* Top fade: 60px high */}
@@ -231,17 +247,17 @@ export default function Page() {
           />
           
           {/* Content Block (z-20) */}
-          <div className="absolute left-4 md:left-[85px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[700px] z-20 px-margin-mobile md:px-0">
-            {/* Trust Indicator replaces existing dot */}
-            <div className="flex items-center gap-[18px] mb-[30px]">
+          <div className="absolute left-4 md:left-[185px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
+            {/* Trust Indicator above headline */}
+            <div className="flex items-center gap-[18px] mb-[28px] max-w-[560px]">
               <div 
-                className="flex items-center justify-center w-[38px] h-[38px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
+                className="flex items-center justify-center w-[36px] h-[36px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
                 style={{ 
                   flexShrink: 0,
                   boxShadow: '0 0 30px rgba(34,197,94,0.45)'
                 }}
               >
-                <svg className="w-[22px] h-[22px]" style={{ color: '#22C55E' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-[20px] h-[20px]" style={{ color: '#22C55E' }} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3zm5.5 10a.5.5 0 0 0-1 0 4.5 4.5 0 0 1-9 0 .5.5 0 0 0-1 0 5.5 5.5 0 0 0 5 5.48V19h-3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-3v-1.52a5.5 5.5 0 0 0 5-5.48z"/>
                 </svg>
               </div>
@@ -256,7 +272,7 @@ export default function Page() {
                 <rect x="42" y="7" width="3" height="8" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
               </svg>
 
-              <span className="font-sans text-[16px] font-semibold text-white uppercase tracking-[0.18em] leading-none">
+              <span className="font-sans text-[16px] font-bold text-white uppercase tracking-[0.18em] leading-none">
                 <span className="text-[#22C55E]">20+ YEARS </span>
                 VOICING EXCELLENCE
               </span>
@@ -264,7 +280,7 @@ export default function Page() {
             
             {/* Headline */}
             <h1 
-              className="font-serif font-medium max-w-[700px] mb-0 mt-0 leading-[0.9] tracking-[-0.04em]"
+              className="font-serif font-medium max-w-[560px] mb-[42px] mt-0 leading-[0.88] tracking-[-0.04em]"
               style={{
                 fontFamily: "'Libre Caslon Text', serif"
               }}
@@ -275,21 +291,8 @@ export default function Page() {
               <span className="text-secondary block text-[48px] md:text-[80px] lg:text-[108px]">BROTHER.</span>
             </h1>
             
-            {/* Descriptor */}
-            <p className="font-sans text-[18px] md:text-[22px] lg:text-[26px] font-medium text-white mt-[28px] leading-relaxed">
-              Broadcaster <span className="text-secondary">•</span> Storyteller <span className="text-secondary">•</span> Mentor
-            </p>
-            
-            {/* Voice of Generations */}
-            <p className="font-sans text-[20px] md:text-[24px] lg:text-[28px] font-bold text-secondary mt-[22px] leading-tight">
-              Voice of Generations
-            </p>
-
-            {/* Divider */}
-            <div className="w-[42px] h-[2px] bg-secondary mt-[18px] mb-[28px]" />
-            
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-[18px] mt-[34px]">
+            {/* CTAs directly below headline */}
+            <div className="flex flex-wrap gap-[18px] mt-0 max-w-[560px]">
               <Link 
                 href="/contact" 
                 className="h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-[#0A0A0A] font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg"
