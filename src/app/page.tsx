@@ -91,55 +91,15 @@ export default function Page() {
         </div>
       </nav>
 
-      {/* SideNavBar (Hidden on Mobile/Tablet) */}
-      <aside className="fixed left-0 top-0 h-full w-72 z-40 hidden xl:flex flex-col bg-surface-container-lowest border-r border-outline-variant/10 shadow-2xl">
-        <div className="p-8 border-b border-outline-variant/10">
-          <img 
-            alt="BIGBRUVA Logo" 
-            className="w-32 h-auto mb-4" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
-          />
-          <p className="font-label-sm text-on-surface-variant tracking-wider uppercase opacity-70">Ejike Ebidilo Institutional</p>
-        </div>
-        <div className="flex-1 overflow-y-auto py-6 px-4 space-y-2">
-          <Link href="/" className="flex items-center gap-4 p-3 bg-secondary/10 text-secondary rounded-lg font-semibold transition-all duration-200">
-            <span className="material-symbols-outlined" data-icon="home">home</span>
-            <span className="font-label-md">Home</span>
-          </Link>
-          <Link href="/about" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined" data-icon="person_celebration">person_celebrate</span>
-            <span className="font-label-md">About</span>
-          </Link>
-          <Link href="/legacy" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined" data-icon="history_edu">history_edu</span>
-            <span className="font-label-md">Legacy</span>
-          </Link>
-          <Link href="/media" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined" data-icon="video_library">video_library</span>
-            <span className="font-label-md">Media</span>
-          </Link>
-          <Link href="/voice" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined" data-icon="record_voice_over">record_voice_over</span>
-            <span className="font-label-md">Voice</span>
-          </Link>
-          <Link href="/events" className="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-lg transition-all duration-200 cursor-pointer">
-            <span className="material-symbols-outlined" data-icon="event">event</span>
-            <span className="font-label-md">Events</span>
-          </Link>
-        </div>
-        <div className="p-8">
-          <Link href="/community" className="w-full py-3 bg-secondary text-on-secondary font-bold rounded-lg transition-transform hover:brightness-110 active:scale-95 shadow-xl block text-center">Join Community</Link>
-        </div>
-      </aside>
-
-      <main className="xl:pl-72 pt-16">
+      <main className="w-full pt-16">
         {/* Hero Section */}
         <section className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img 
               alt="Ejike Ebidilo in traditional Agbada" 
-              className="w-full h-full object-cover object-center" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioAxOCtb2-qp6zChX8Z-QBswqAv35CSL1gIfCgs0QO6d84m1xGsf3wVoUqOUIKuez69eIrkos3_SiqVF37TfJ1zPeqHDFQ-x2iEQx0jlWZ_-f1ne5-OPWiIsBpSmUzQHo8kL3e9YkmxDJlOohajdDa0hQVVkJZAo6WqZcTtVuF_SjaX_qZ9gVxj3H7sjytVVEbV3hB4lbPJW-MV5J0fCMyt622sOvAlPRPm3o3cq1FYPADrXGMCMp9z2IYkbScV9ls9LhwRNWR6s" 
+              className="w-full h-full object-cover" 
+              src="/images/EJ_Agbada_01.jpeg" 
+              style={{ objectPosition: 'center 20%' }}
             />
             <div className="absolute inset-0 hero-gradient"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
@@ -219,7 +179,7 @@ export default function Page() {
                 <img 
                   alt="Ejike Ebidilo in a casual portrait" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
+                  src="/images/EJ_casual_01.jpeg" 
                 />
                 <div className="absolute bottom-6 left-6 p-6 glass-panel max-w-[260px] rounded shadow-xl">
                   <p className="font-label-sm text-secondary italic mb-2 tracking-tight">Internal Monologue</p>
@@ -258,7 +218,7 @@ export default function Page() {
                 <img 
                   alt="Vintage portrait" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDioAxOCtb2-qp6zChX8Z-QBswqAv35CSL1gIfCgs0QO6d84m1xGsf3wVoUqOUIKuez69eIrkos3_SiqVF37TfJ1zPeqHDFQ-x2iEQx0jlWZ_-f1ne5-OPWiIsBpSmUzQHo8kL3e9YkmxDJlOohajdDa0hQVVkJZAo6WqZcTtVuF_SjaX_qZ9gVxj3H7sjytVVEbV3hB4lbPJW-MV5J0fCMyt622sOvAlPRPm3o3cq1FYPADrXGMCMp9z2IYkbScV9ls9LhwRNWR6s" 
+                  src="/images/EJ_Agbada_01.jpeg" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
@@ -284,7 +244,7 @@ export default function Page() {
                 <img 
                   alt="Creative session" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
+                  src="/images/EJ_casual_01.jpeg" 
                 />
                 <div className="absolute inset-0 bg-primary-container/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span className="material-symbols-outlined text-white text-5xl" data-icon="auto_stories">auto_stories</span>
