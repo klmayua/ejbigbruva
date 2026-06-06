@@ -102,32 +102,38 @@ export default function Page() {
  
       <main className="w-full relative">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        <section className="relative min-h-[95vh] flex items-start pt-[18vh] md:pt-[22vh] pb-20 overflow-hidden">
+          <div className="absolute inset-0 z-[1]">
             <img 
               alt="Ejike Ebidilo in traditional Agbada" 
               className="w-full h-full object-cover" 
               src="/images/EJ_Agbada_01.jpeg" 
-              style={{ objectPosition: 'center 20%' }}
+              style={{ objectPosition: 'center 20%', filter: 'contrast(1.12) saturate(1.04) brightness(0.96)' }}
             />
-            <div className="absolute inset-0 hero-gradient"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            <div className="absolute inset-0 z-[2]" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 50%, transparent 100%)' }}></div>
+            <div className="absolute inset-0 z-[3]" style={{ background: 'radial-gradient(circle at 60% 40%, rgba(214,170,56,0.08) 0%, transparent 70%)' }}></div>
+            <div className="absolute inset-0 z-[4] bg-gradient-to-t from-background via-transparent to-transparent"></div>
           </div>
-          <div className="relative z-10 px-margin-mobile md:px-margin-desktop max-w-4xl py-20">
-            <span className="font-label-md text-secondary tracking-[0.2em] uppercase mb-6 block">Institutional Identity</span>
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-8 leading-tight">
-              THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
-            </h1>
-            <p className="font-headline-md text-headline-md text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
-              Broadcaster. Storyteller. Mentor. <br/>
-              <span className="text-on-background font-bold">Voice of Generations.</span>
-            </p>
-            <p className="font-body-lg text-body-lg text-on-surface-variant/80 max-w-xl mb-12">
-              For over four decades, Ejike Ebidilo has been the resonance behind Nigeria's most iconic broadcasts, shaping the cultural conversation and mentoring the architects of modern media.
-            </p>
-            <div className="flex flex-wrap gap-6">
-              <button className="px-8 py-4 bg-secondary text-on-secondary font-bold rounded hover:-translate-y-1 transition-all shadow-xl">The Legacy</button>
-              <button className="px-8 py-4 border border-secondary/40 text-secondary font-bold rounded hover:bg-secondary/10 transition-all">Latest Media</button>
+          <div className="relative z-10 px-margin-mobile md:px-margin-desktop max-w-[720px]">
+            <div className="backdrop-blur-[18px] bg-black/18 border border-[#ffd700]/08 rounded-[32px] p-8 md:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
+              <h1 className="font-display-lg text-[40px] md:text-[56px] font-medium text-on-background mb-10 leading-[1.1] tracking-tight">
+                THE ORIGINAL <br/> <span className="text-secondary italic">BIG BROTHER.</span>
+              </h1>
+              <p className="font-headline-md text-[20px] md:text-[26px] text-on-surface-variant mb-8 leading-[1.4]">
+                Broadcaster. Storyteller. Mentor. <br/>
+                <span className="text-on-background font-bold">Voice of Generations.</span>
+              </p>
+              <p className="font-body-lg text-[17px] md:text-[20px] text-on-surface-variant/80 max-w-[520px] mb-10 leading-[1.8]">
+                For over four decades, Ejike Ebidilo has been the resonance behind Nigeria's most iconic broadcasts, shaping the cultural conversation and mentoring the architects of modern media.
+              </p>
+              <div className="flex flex-wrap gap-6">
+                <button className="h-[58px] px-8 bg-secondary text-on-secondary font-bold rounded-[16px] hover:brightness-110 hover:-translate-y-[2px] active:translate-y-0 active:scale-95 transition-all shadow-xl flex items-center justify-center">
+                  The Legacy
+                </button>
+                <button className="h-[58px] px-8 border border-secondary/40 text-secondary bg-black/20 backdrop-blur-md font-bold rounded-[16px] hover:bg-secondary/10 hover:-translate-y-[2px] active:translate-y-0 active:scale-95 transition-all flex items-center justify-center">
+                  Latest Media
+                </button>
+              </div>
             </div>
           </div>
           {/* Vertical Text */}
