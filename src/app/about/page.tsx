@@ -63,9 +63,6 @@ export default function Page() {
     <>
       {/* Page specific overrides to hide global nav/footer and define local classes */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #0c0f0e !important;
             color: #e2e3e1;
@@ -103,84 +100,7 @@ export default function Page() {
         }
       `}} />
 
-      {/* Desktop Side Navigation */}
-      <aside className="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col w-80 bg-surface-container-lowest border-r border-outline-variant/10">
-        <div className="px-8 py-10">
-          <div className="w-full mb-8">
-            <Link href="/">
-              <img alt="BIGBRUVA Crest" className="h-24 w-auto object-contain cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-            </Link>
-          </div>
-          <p className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-[0.25em] opacity-60">Ejike Ebidilo Institutional</p>
-        </div>
-        <nav className="flex-1 px-4 space-y-1">
-          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/">
-            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">home</span>
-            <span className="font-label-md">Home</span>
-          </Link>
-          <Link className="flex items-center px-4 py-3 bg-primary-container/40 text-secondary rounded-xl font-bold transition-all duration-200 ease-in-out" href="/about">
-            <span className="material-symbols-outlined mr-4">person_celebrate</span>
-            <span className="font-label-md">About</span>
-          </Link>
-          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/legacy">
-            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">history_edu</span>
-            <span className="font-label-md">Legacy</span>
-          </Link>
-          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/media">
-            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">video_library</span>
-            <span className="font-label-md">Media</span>
-          </Link>
-          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/voice">
-            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">record_voice_over</span>
-            <span className="font-label-md">Voice</span>
-          </Link>
-          <Link className="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="/events">
-            <span className="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">event</span>
-            <span className="font-label-md">Events</span>
-          </Link>
-        </nav>
-        <div className="p-8">
-          <Link href="/community" className="w-full py-4 bg-secondary text-on-secondary-fixed font-bold rounded-xl active:scale-95 transition-all shadow-lg shadow-secondary/10 flex items-center justify-center">
-            Join Community
-          </Link>
-        </div>
-      </aside>
-
-      {/* Mobile Header */}
-      <header className="lg:hidden fixed top-0 w-full z-50 glass-header border-b border-outline-variant/10 bg-surface-container-lowest/80 flex justify-between items-center px-margin-mobile py-4">
-        <div className="h-10">
-          <Link href="/">
-            <img alt="BIGBRUVA Crest" className="h-full w-auto object-contain cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-          </Link>
-        </div>
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="material-symbols-outlined text-secondary text-3xl bg-transparent border-none outline-none select-none cursor-pointer"
-        >
-          {mobileMenuOpen ? 'close' : 'menu'}
-        </button>
-      </header>
-
-      {/* Mobile Menu Slide-down Overlay */}
-      <div 
-        className={`fixed inset-0 z-40 bg-surface-container-lowest/98 backdrop-blur-2xl transition-all duration-500 ease-in-out flex flex-col justify-center items-center lg:hidden ${
-          mobileMenuOpen 
-            ? 'opacity-100 translate-y-0 pointer-events-auto' 
-            : 'opacity-0 -translate-y-full pointer-events-none'
-        }`}
-      >
-        <div className="flex flex-col gap-6 text-center">
-          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Home</Link>
-          <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-secondary font-bold">About</Link>
-          <Link href="/legacy" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Legacy</Link>
-          <Link href="/media" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Media</Link>
-          <Link href="/voice" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Voice</Link>
-          <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Events</Link>
-          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="mt-8 bg-secondary text-on-secondary px-8 py-3 font-label-md text-label-md rounded-lg hover:brightness-110 active:scale-95 inline-block">Contact</Link>
-        </div>
-      </div>
-
-      <main className="lg:ml-80 min-h-screen">
+      <main className="min-h-screen">
         {/* Hero Section */}
         <section className="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
           <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
@@ -205,7 +125,7 @@ export default function Page() {
 
         {/* Biography Grid */}
         <section className="px-margin-mobile md:px-margin-desktop py-32 bg-surface-container-lowest">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
             {/* Left Column */}
             <div className="lg:col-span-7 space-y-32">
               {/* Early Years */}
@@ -274,7 +194,7 @@ export default function Page() {
 
         {/* Leadership & Legacy */}
         <section className="px-margin-mobile md:px-margin-desktop py-32 bg-surface">
-          <div className="max-w-7xl mx-auto transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
             <div className="text-center mb-24 opacity-0 translate-y-8 transition-all duration-1000">
               <h2 className="font-serif text-display-lg-mobile md:text-display-lg text-on-background mb-4">Leadership &amp; <span className="italic royal-gradient-text">Legacy</span></h2>
               <p className="font-body-lg text-on-surface-variant max-w-xl mx-auto">Creating a blueprint for the next generation of African creators and institutional leaders.</p>
@@ -312,47 +232,10 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="flex flex-col items-center justify-center py-24 px-margin-desktop text-center w-full border-t border-outline-variant/10 bg-surface-container-lowest">
-          <div className="mb-12">
-            <img 
-              alt="BIGBRUVA Crest" 
-              className="h-32 w-auto object-contain" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
-            />
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <Link className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
-            <Link className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press</Link>
-            <Link className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Privacy Policy</Link>
-            <Link className="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Terms</Link>
-          </div>
-          <p className="font-body-md text-on-surface-variant/40">© 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.</p>
-          <div className="mt-8 flex gap-4">
-            <a className="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
-              <span className="material-symbols-outlined text-lg">public</span>
-            </a>
-            <a className="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
-              <span className="material-symbols-outlined text-lg">play_circle</span>
-            </a>
-            <a className="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
-              <span className="material-symbols-outlined text-lg">podcasts</span>
-            </a>
-          </div>
-        </footer>
+
       </main>
 
-      {/* FAB */}
-      <Link 
-        href="/contact" 
-        className="fixed bottom-8 right-8 lg:right-12 z-50 w-16 h-16 bg-secondary text-on-secondary-fixed rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-all group overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <span className="material-symbols-outlined text-3xl">mail</span>
-        <span className="absolute right-20 bg-surface-container-highest text-on-surface text-sm font-bold py-2.5 px-5 rounded-xl opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0 pointer-events-none whitespace-nowrap border border-outline-variant/30 shadow-2xl">
-          Inquire Now
-        </span>
-      </Link>
+
     </>
   );
 }

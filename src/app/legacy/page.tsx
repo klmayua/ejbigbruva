@@ -37,9 +37,6 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #0c0f0e;
             color: #e2e3e1;
@@ -65,52 +62,7 @@ export default function Page() {
         }
       `}} />
 
-      {/* Top Navigation Bar */}
-      <nav className="fixed top-0 w-full bg-surface-container-lowest/80 backdrop-blur-md flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 border-b border-white/5">
-        <div className="h-12 w-auto flex items-center justify-center">
-          <Link href="/" className="h-full flex items-center">
-            <img alt="BIGBRUVA Crest" className="h-full w-auto object-contain cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-          </Link>
-        </div>
-        <div className="hidden lg:flex gap-8 items-center">
-          <Link className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/">Home</Link>
-          <Link className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/about">About</Link>
-          <Link className="font-label-md text-label-md text-secondary border-b border-secondary pb-1" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/media">Media</Link>
-          <Link className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/voice">Voice</Link>
-          <Link className="font-label-md text-label-md text-on-surface/70 hover:text-secondary transition-colors" href="/events">Events</Link>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link href="/contact" className="bg-secondary text-on-secondary px-6 py-2 font-label-md text-label-md rounded hover:opacity-90 transition-all cursor-pointer">
-            Contact
-          </Link>
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="material-symbols-outlined text-on-surface cursor-pointer lg:hidden flex items-center justify-center bg-transparent border-none outline-none select-none"
-          >
-            {mobileMenuOpen ? 'close' : 'menu'}
-          </button>
-        </div>
-      </nav>
 
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-40 bg-surface-container-lowest/98 backdrop-blur-2xl transition-all duration-500 ease-in-out flex flex-col justify-center items-center lg:hidden ${
-          mobileMenuOpen 
-            ? 'opacity-100 translate-y-0 pointer-events-auto' 
-            : 'opacity-0 -translate-y-full pointer-events-none'
-        }`}
-      >
-        <div className="flex flex-col gap-6 text-center">
-          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="font-serif text-display-lg text-on-surface-variant hover:text-secondary">Home</Link>
-          <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="font-serif text-display-lg text-on-surface-variant hover:text-secondary">About</Link>
-          <Link href="/legacy" onClick={() => setMobileMenuOpen(false)} className="font-serif text-display-lg text-secondary font-bold">Legacy</Link>
-          <Link href="/media" onClick={() => setMobileMenuOpen(false)} className="font-serif text-display-lg text-on-surface-variant hover:text-secondary">Media</Link>
-          <Link href="/voice" onClick={() => setMobileMenuOpen(false)} className="font-serif text-display-lg text-on-surface-variant hover:text-secondary">Voice</Link>
-          <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="font-serif text-display-lg text-on-surface-variant hover:text-secondary">Events</Link>
-          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="mt-8 bg-secondary text-on-secondary px-8 py-3 font-label-md text-label-md rounded hover:brightness-110 active:scale-95 inline-block">Contact</Link>
-        </div>
-      </div>
 
       {/* Hero Section */}
       <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -282,24 +234,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-surface-container-lowest border-t border-white/5 py-24 px-margin-mobile md:px-margin-desktop text-center">
-        <div className="mb-12 flex justify-center">
-          <img alt="BIGBRUVA Official Crest" className="h-40 w-auto object-contain brightness-90 grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-        </div>
-        <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
-          <Link className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="/legacy">LEGACY</Link>
-          <Link className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="/press">PRESS</Link>
-          <Link className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="#">PRIVACY</Link>
-          <Link className="font-label-md text-label-md text-on-surface/50 hover:text-secondary transition-colors" href="#">TERMS</Link>
-        </div>
-        <p className="font-label-sm text-label-sm text-on-surface/30 uppercase tracking-widest">© 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.</p>
-      </footer>
 
-      {/* FAB */}
-      <button className="fixed bottom-8 right-8 bg-secondary text-on-secondary w-14 h-14 rounded shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[100] group cursor-pointer border-none outline-none">
-        <span className="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform flex items-center justify-center" style={{ fontVariationSettings: "'FILL' 1" }}>chat_bubble</span>
-      </button>
+
+
     </>
   );
 }

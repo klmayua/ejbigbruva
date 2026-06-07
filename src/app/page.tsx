@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Page() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -35,9 +34,6 @@ export default function Page() {
     <>
       {/* Page specific overrides to hide global nav/footer and define local classes */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #050505 !important;
             color: #e2e3e1;
@@ -89,78 +85,6 @@ export default function Page() {
         }
       `}} />
 
-      {/* Floating Pill TopNavBar */}
-      <nav 
-        className="absolute top-[28px] left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-[1120px] h-[88px] rounded-full flex justify-between items-center transition-all duration-300"
-        style={{
-          backgroundColor: 'rgba(8,8,8,0.82)',
-          backdropFilter: 'blur(24px)',
-          WebkitBackdropFilter: 'blur(24px)',
-          border: '1px solid rgba(212,175,55,0.22)',
-          boxShadow: '0 0 40px rgba(212,175,55,0.08), inset 0 1px 0 rgba(255,255,255,0.04)'
-        }}
-      >
-        {/* Logo left positioned */}
-        <div className="flex items-center pl-[34px]">
-          <Link href="/">
-            <img 
-              alt="BIGBRUVA Logo" 
-              className="w-[62px] h-auto object-contain cursor-pointer" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
-            />
-          </Link>
-        </div>
-        
-        {/* Center Navigation Links */}
-        <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-[42px]">
-          <div className="flex flex-col items-center">
-            <Link className="font-sans text-[18px] font-medium text-secondary cursor-pointer transition-all" href="/">Home</Link>
-            <div className="w-[32px] h-[2px] bg-secondary mt-1 rounded-full" />
-          </div>
-          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/media">Media</Link>
-          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-sans text-[18px] font-medium text-on-surface-variant hover:text-secondary cursor-pointer transition-colors duration-300" href="/events">Events</Link>
-        </div>
-
-        {/* Right CTA */}
-        <div className="flex items-center pr-[18px]">
-          <Link 
-            href="/contact" 
-            className="h-[56px] px-[30px] text-[#0A0A0A] font-bold rounded-full flex items-center justify-center gap-2 hover:-translate-y-[2px] hover:brightness-105 active:scale-95 transition-all duration-300"
-            style={{
-              background: 'linear-gradient(to right, #D4AF37, #E8C85A)',
-              boxShadow: '0 0 25px rgba(212,175,55,0.25)',
-              letterSpacing: '0.04em'
-            }}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            ENGAGE NOW
-          </Link>
-        </div>
-      </nav>
-
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-40 bg-surface/98 backdrop-blur-2xl transition-all duration-500 ease-in-out flex flex-col justify-center items-center md:hidden ${
-          mobileMenuOpen 
-            ? 'opacity-100 translate-y-0 pointer-events-auto' 
-            : 'opacity-0 -translate-y-full pointer-events-none'
-        }`}
-      >
-        <div className="flex flex-col gap-6 text-center">
-          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-secondary font-bold">Home</Link>
-          <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">About</Link>
-          <Link href="/legacy" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Legacy</Link>
-          <Link href="/media" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Media</Link>
-          <Link href="/voice" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Voice</Link>
-          <Link href="/events" onClick={() => setMobileMenuOpen(false)} className="font-display-lg text-headline-lg text-on-surface-variant hover:text-secondary">Events</Link>
-          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="mt-8 bg-secondary text-on-secondary px-8 py-3 font-label-md text-label-md rounded-lg hover:brightness-110 active:scale-95 inline-block">Contact</Link>
-        </div>
-      </div>
 
       <main>
         {/* Full-Bleed Editorial Hero Section */}
@@ -324,7 +248,7 @@ export default function Page() {
 
         {/* Featured Story Section (Moved Biography/Long Copy directly here below Hero) */}
         <section className="py-32 px-margin-mobile md:px-margin-desktop bg-surface border-t border-outline-variant/10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-7 flex flex-col justify-center">
               <span className="font-label-md text-secondary mb-6 block uppercase tracking-widest">Featured Chronicle</span>
               <h2 className="font-display-lg text-headline-lg md:text-display-lg text-on-background mb-10 leading-tight">
@@ -363,7 +287,7 @@ export default function Page() {
 
         {/* Legacy Numbers Section */}
         <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-gutter border-y border-outline-variant/20 py-20">
+          <div className="max-w-container-max mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-gutter border-y border-outline-variant/20 py-20">
             <div className="text-center group">
               <div className="font-display-lg text-headline-lg md:text-display-lg text-secondary mb-2 group-hover:scale-110 transition-transform duration-500">45+</div>
               <div className="font-label-sm text-on-surface-variant uppercase tracking-widest">Years of Excellence</div>
@@ -384,7 +308,7 @@ export default function Page() {
         </section>
 
         {/* Quote Section */}
-        <section className="py-40 bg-surface-container-low overflow-hidden relative">
+        <section className="py-32 bg-surface-container-low overflow-hidden relative">
           <div className="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
             <span className="material-symbols-outlined text-secondary text-7xl mb-12 opacity-50">format_quote</span>
             <blockquote className="font-display-lg text-headline-lg md:text-display-lg text-on-background mb-12 italic leading-tight">
@@ -397,16 +321,17 @@ export default function Page() {
 
         {/* Legacy Media Grid */}
         <section className="py-32 px-margin-mobile md:px-margin-desktop">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-            <div>
-              <span className="font-label-md text-secondary mb-4 block uppercase tracking-widest">Media Repository</span>
-              <h2 className="font-headline-lg text-on-background">Echoes of Influence</h2>
+          <div className="max-w-container-max mx-auto w-full">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+              <div>
+                <span className="font-label-md text-secondary mb-4 block uppercase tracking-widest">Media Repository</span>
+                <h2 className="font-headline-lg text-on-background">Echoes of Influence</h2>
+              </div>
+              <Link href="/media" className="font-label-md text-on-surface-variant hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1 uppercase tracking-widest">
+                View All Archives
+              </Link>
             </div>
-            <Link href="/media" className="font-label-md text-on-surface-variant hover:text-secondary transition-colors border-b border-transparent hover:border-secondary pb-1 uppercase tracking-widest">
-              View All Archives
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Media Item 1 */}
             <Link href="/media" className="group cursor-pointer block">
               <div className="aspect-[4/5] bg-surface-container mb-6 overflow-hidden relative rounded-lg">
@@ -449,32 +374,10 @@ export default function Page() {
               <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Masterclass • Ongoing</p>
             </Link>
           </div>
+          </div>
         </section>
 
-        {/* Footer Section */}
-        <footer className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant/10 text-center">
-          <div className="mb-12">
-            <img 
-              alt="BIGBRUVA Crest" 
-              className="h-40 md:h-56 w-auto mx-auto object-contain mb-8" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" 
-            />
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 mb-12">
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press</Link>
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Privacy Policy</Link>
-              <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Terms of Service</Link>
-            </div>
-            <div className="flex justify-center gap-10 mb-10">
-              <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110">public</span>
-              <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110">podcasts</span>
-              <span className="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer transition-all hover:scale-110">video_library</span>
-            </div>
-            <p className="font-label-sm text-on-surface-variant/40 tracking-widest uppercase">
-              © 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved.
-            </p>
-          </div>
-        </footer>
+
       </main>
     </>
   );

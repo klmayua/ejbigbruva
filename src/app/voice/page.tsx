@@ -40,9 +40,6 @@ export default function Page() {
     <>
       {/* Page-specific overrides to hide the global navbar and footer */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #0c0f0e !important; /* Background Navy */
             color: #e2e3e1;
@@ -64,37 +61,7 @@ export default function Page() {
         }
       `}} />
 
-      {/* Top Navigation Bar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#b2c5ff]/70 backdrop-blur-md dark:bg-[#b2c5ff]/70 border-b border-[#ffe088]/10 flex justify-between items-center px-margin-desktop py-base">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-4 cursor-pointer">
-            <img 
-              alt="Official Crest Logo" 
-              className="w-12 h-12 object-contain" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" 
-            />
-            <span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-          </Link>
-        </div>
-        
-        <div className="hidden lg:flex items-center gap-8">
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/">Home</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/about">About</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/media">Media</Link>
-          <Link className="text-secondary border-b-2 border-secondary pb-1 font-bold" href="/voice">Voice</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/events">Events</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/gallery">Gallery</Link>
-        </div>
 
-        <div className="flex items-center gap-6">
-          <Link className="text-on-surface-variant hover:text-secondary transition-all" href="/community">Community</Link>
-          <Link href="/contact" className="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-md hover:bg-secondary-fixed transition-all uppercase tracking-wider text-center">
-            Contact
-          </Link>
-          <span className="material-symbols-outlined text-secondary cursor-pointer">newspaper</span>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <header className="relative min-h-screen flex items-center pt-24 overflow-hidden">
@@ -139,8 +106,8 @@ export default function Page() {
       </section>
 
       {/* Main Editorial Feed */}
-      <main id="dossier" className="py-32 px-margin-desktop bg-background">
-        <div className="container mx-auto">
+      <main id="dossier" className="py-32 bg-background">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="flex justify-between items-end mb-16">
             <div>
               <div className="gold-underline mb-4"></div>
@@ -241,7 +208,7 @@ export default function Page() {
 
       {/* Subscription Section */}
       <section className="py-24 bg-surface-container-high relative overflow-hidden">
-        <div className="container mx-auto px-margin-desktop relative z-10 text-center">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
           <h2 className="font-display-lg text-headline-lg mb-6">Join the Internal Dialogue</h2>
           <p className="text-on-surface-variant mb-12 max-w-xl mx-auto">Receive quarterly reflections, exclusive media releases, and invitations to private institutional gatherings.</p>
           <form className="max-w-md mx-auto flex gap-0 border-b-2 border-secondary/50 focus-within:border-secondary transition-all" onSubmit={(e) => e.preventDefault()}>
@@ -253,27 +220,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-16 px-margin-desktop border-t border-secondary/20">
-        <div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-          <div className="mb-12">
-            <img 
-              alt="BIGBRUVA Official Crest" 
-              className="w-32 h-32 object-contain mx-auto mb-4 filter brightness-110" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" 
-            />
-            <h2 className="font-display-lg text-headline-lg text-secondary opacity-40 text-center uppercase tracking-[0.2em]">BIGBRUVA</h2>
-          </div>
-          <p className="text-secondary font-label-md tracking-widest uppercase">
-            © 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.
-          </p>
-          <div className="mt-8 flex gap-6">
-            <span className="material-symbols-outlined text-secondary opacity-50 cursor-pointer hover:opacity-100 transition-opacity">public</span>
-            <span className="material-symbols-outlined text-secondary opacity-50 cursor-pointer hover:opacity-100 transition-opacity">podcasts</span>
-            <span className="material-symbols-outlined text-secondary opacity-50 cursor-pointer hover:opacity-100 transition-opacity">rss_feed</span>
-          </div>
-        </div>
-      </footer>
+
     </>
   );
 }

@@ -24,9 +24,6 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #0c0f0e; /* Deepest foundation */
             color: #e2e3e1;
@@ -54,31 +51,7 @@ export default function Page() {
         }
       `}} />
 
-      {/* TopNavBar */}
-      <nav className={`fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/10 transition-all duration-300 ${
-        scrolled ? 'bg-surface-container/95 shadow-2xl' : 'bg-surface-container/80'
-      }`}>
-        <div className="flex items-center h-12 w-auto">
-          <Link href="/" className="h-full flex items-center">
-            <img alt="BIGBRUVA Logo" className="h-full w-auto object-contain cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-          </Link>
-        </div>
-        <div className="hidden md:flex items-center gap-8">
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/">Home</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-secondary relative" href="/media">
-            Media
-            <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-secondary rounded-full"></span>
-          </Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-label-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="/events">Events</Link>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link href="/contact" className="hidden md:block px-6 py-2 bg-secondary text-on-secondary font-label-md rounded hover:brightness-110 active:scale-95 transition-all">Contact</Link>
-          <span className="material-symbols-outlined text-secondary cursor-pointer p-2 hover:bg-surface-container-high rounded-full flex items-center justify-center">menu</span>
-        </div>
-      </nav>
+
 
       {/* Main Content */}
       <main>
@@ -157,8 +130,9 @@ export default function Page() {
 
           {/* Category 2: Editorials (Bento) */}
           <section className="px-margin-mobile md:px-margin-desktop">
-            <h2 className="font-headline-md text-secondary mb-10 font-serif">Featured Editorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 min-h-[500px]">
+            <div className="max-w-container-max mx-auto w-full">
+              <h2 className="font-headline-md text-secondary mb-10 font-serif">Featured Editorials</h2>
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 min-h-[500px]">
               {/* Large Feature */}
               <div className="md:col-span-7 group relative overflow-hidden rounded premium-border cursor-pointer">
                 <img alt="Library Feature" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHS5dI30MbAMyazxJXru2_46iJ6NIZbCjOGpzi_Cn922yrGG3p0CKdWQ_sC_rXa4PbDuvjTVwGeNYjdqMZZ9qixMS2V_LqRFex8k--1Q_qBVRWvRaqNlvhI9KWP0w-gARj34FHwNVlr3oENAUN5hdEEpFljdpODAYJu7S6qiuEPRe3Zw8WxEZ59kRGIfqDcSSFfUJ5ROd8wHAjPFwFj9Oqu61wubdDXEAXm51P0sH19IvqXqnh1svXCFOh15u0bFdnLpvm_W1Il5g"/>
@@ -186,6 +160,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
           </section>
 
@@ -231,8 +206,9 @@ export default function Page() {
 
           {/* Category 4: Documentaries */}
           <section className="px-margin-mobile md:px-margin-desktop">
-            <h2 className="font-headline-md text-secondary mb-10 font-serif">Documentaries</h2>
-            <div className="flex flex-col md:flex-row gap-10 group cursor-pointer premium-border p-8 md:p-12 rounded bg-surface-container/30 hover:bg-surface-container/50 transition-all">
+            <div className="max-w-container-max mx-auto w-full">
+              <h2 className="font-headline-md text-secondary mb-10 font-serif">Documentaries</h2>
+              <div className="flex flex-col md:flex-row gap-10 group cursor-pointer premium-border p-8 md:p-12 rounded bg-surface-container/30 hover:bg-surface-container/50 transition-all">
               <div className="md:w-5/12 aspect-video rounded overflow-hidden relative">
                 <img alt="Origins Documentary" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31tBalBzghmiLrchsQk4hLgFJHqxOPMWvWN7E39Ffzihecei0uGInFL5HtHIlIWHk6dRq5K6HBjlyeYn0lwBqTcLKtaSDTUysxHu4TzV3UX_GIyxhHMAqCwtlcefH4OAbjmDTg9rojcRQuX_73YI5EW_PWYYCpt2zFXJ75T5yBg4joC8-g1Or8sDBqbJ1UUdbccDLiwmUtO-swEEWf3vce8j9RgwhY0VaQTosPvWNv_rDY9tUhjvyM-ZhjIibH6d4iGgpZosfexY"/>
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/0 transition-colors">
@@ -252,24 +228,12 @@ export default function Page() {
                 </div>
               </div>
             </div>
+            </div>
           </section>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="flex flex-col items-center py-24 px-margin-mobile md:px-margin-desktop text-center bg-surface-container-lowest border-t border-outline-variant/10">
-        <div className="mb-12">
-          <img alt="BIGBRUVA Official Crest" className="h-40 md:h-56 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
-        </div>
-        <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-12">
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/legacy">Legacy</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/press">Press Room</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/media">Archives</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="#">Privacy Policy</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="#">Terms of Service</Link>
-        </div>
-        <p className="font-body-md text-on-surface-variant opacity-40 text-sm tracking-wide">© 2024 BIGBRUVA - EJIKE EBIDILO INSTITUTIONAL. ALL RIGHTS RESERVED.</p>
-      </footer>
+
     </>
   );
 }
