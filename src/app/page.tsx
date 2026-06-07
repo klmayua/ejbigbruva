@@ -189,9 +189,9 @@ export default function Page() {
                 <rect x="42" y="7" width="3" height="8" rx="1.5" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
               </svg>
 
-              <span className="font-sans text-[16px] font-bold text-white uppercase tracking-[0.18em] leading-none">
-                <span className="text-[#22C55E]">20+ YEARS </span>
-                VOICING EXCELLENCE
+              <span className="font-sans text-[16px] font-bold text-white uppercase tracking-[0.18em] leading-[1.2] block">
+                <span className="text-[#22C55E] block">20+ YEARS</span>
+                <span className="text-[12px] block">VOICING EXCELLENCE</span>
               </span>
             </div>
             
