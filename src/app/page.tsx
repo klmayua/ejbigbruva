@@ -88,7 +88,7 @@ export default function Page() {
 
       <main>
         {/* Full-Bleed Editorial Hero Section */}
-        <section className="relative h-screen min-h-[640px] md:min-h-[900px] w-full overflow-hidden bg-[#050505]">
+        <section className="relative h-[calc(100vh-16px)] md:h-screen min-h-[624px] md:min-h-[900px] w-full overflow-hidden bg-[#050505]">
           {/* Blue Glow Backlight (z-1, behind portrait) */}
           <div 
             className="absolute right-[-100px] bottom-[-200px] pointer-events-none rounded-full"
