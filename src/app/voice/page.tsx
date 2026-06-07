@@ -63,8 +63,8 @@ export default function Page() {
 
 
 
-      {/* Hero Section */}
-      <header className="relative min-h-screen flex items-center pt-24 overflow-hidden">
+       {/* Hero Section */}
+       <header className="relative min-h-screen flex items-center pt-16 md:pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
           <img 

@@ -180,13 +180,6 @@ export default function Page() {
 </div>
 </section>
 </main>
-
-
-
-
-<button className="fixed bottom-8 right-8 w-16 h-16 bg-secondary text-on-secondary-fixed rounded-full shadow-2xl flex items-center justify-center group hover:scale-110 active:scale-90 transition-all z-40">
-<span className="material-symbols-outlined text-3xl">edit_note</span>
-</button>
     </>
   );
 }

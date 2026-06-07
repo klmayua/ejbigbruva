@@ -32,8 +32,6 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
         
         body {
             background-color: #121413;
@@ -74,28 +72,6 @@ export default function Page() {
             background: #e9c349;
         }
       `}} />
-
-      {/* Top Navigation Bar */}
-      <nav className="fixed top-0 z-50 w-full glass-panel border-b border-outline-variant dark:border-secondary-fixed-dim/20">
-        <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-4 cursor-pointer">
-              <img alt="BIGBRUVA Logo" className="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTKWSJRZMFnqnbwKMtnZEh_XVb44eSKBhpKQPAUw2l7b6cuQrQCyuaDC0r-jmsu_CyhfEkGwhsFr_elhV-oGDzvp_h3SszRZGbduftD6js3dYo-NOufBxJVLQLsDsh4mwqNXx8irdMzj61YhconXxX9iUIKlix9w2R055nJjd1_U1ub30rSP3CbuUkFj57blXLX8jQ2VSTuGx5i30vVkn0UG-Ya9xcfALiUILDvyeH4kpH4RU8L2lA6tPGk4IZbI8rav1ENNtVOOU"/>
-              <span className="font-display-lg text-headline-md tracking-tighter text-secondary dark:text-secondary-fixed">BIGBRUVA</span>
-            </Link>
-          </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <Link className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/">Home</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/about">About</Link>
-            <Link className="font-label-sm text-label-sm text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary" href="/media">Media</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/legacy">Legacy</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant dark:text-tertiary-fixed-dim font-medium hover:text-primary transition-colors" href="/events">Events</Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/legacy" className="hidden lg:block bg-secondary text-on-secondary px-6 py-2 font-label-md text-label-md rounded-lg hover:brightness-110 transition-all active:scale-95 text-center">Explore Legacy</Link>
-          </div>
-        </div>
-      </nav>
 
       <main className="relative pt-20">
         {/* Hero Section: Featured Documentary */}
@@ -317,53 +293,6 @@ export default function Page() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-primary dark:bg-surface-container-highest border-t border-secondary-fixed/30 pt-20 pb-12">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-gutter mb-20">
-            <div className="max-w-md animate-none">
-              <div className="mb-6 flex items-center gap-4">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="BIGBRUVA Crest" className="h-16 w-16 object-contain brightness-110 filter" />
-                <span className="font-display-lg text-headline-xl text-secondary-fixed dark:text-secondary tracking-tighter font-serif">BIGBRUVA</span>
-              </div>
-              <p className="text-on-primary dark:text-on-surface-variant font-body-md">Dedicated to curating intellectual depth and the ongoing evolution of cultural influence through the power of cinematic storytelling.</p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
-              <div className="space-y-4">
-                <h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Navigation</h5>
-                <ul className="space-y-2">
-                  <li><Link className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/press">Press</Link></li>
-                  <li><Link className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/contact">Contact</Link></li>
-                  <li><Link className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="/media">Archive Access</Link></li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Legal</h5>
-                <ul className="space-y-2">
-                  <li><Link className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</Link></li>
-                  <li><Link className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant hover:text-secondary-fixed transition-colors" href="#">Terms of Service</Link></li>
-                </ul>
-              </div>
-              <div className="space-y-4 col-span-2 md:col-span-1">
-                <h5 className="text-secondary font-bold uppercase text-xs tracking-widest">Connect</h5>
-                <div className="flex gap-4">
-                  <span className="material-symbols-outlined text-secondary-fixed cursor-pointer hover:scale-110 transition-transform">public</span>
-                  <span className="material-symbols-outlined text-secondary-fixed cursor-pointer hover:scale-110 transition-transform">play_circle</span>
-                  <span className="material-symbols-outlined text-secondary-fixed cursor-pointer hover:scale-110 transition-transform">podcasts</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-outline-variant/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-label-sm font-label-sm text-tertiary-fixed dark:text-on-surface-variant text-center md:text-left">© 2024 BIGBRUVA. All Rights Reserved. Curating Intellectual Depth and Cultural Influence.</p>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] text-on-surface-variant">THE SOVEREIGN SERIES</span>
-              <div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

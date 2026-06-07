@@ -64,8 +64,8 @@ export default function Page() {
 
 
 
-      {/* Hero Section */}
-      <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+       {/* Hero Section */}
+       <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <div className="absolute inset-0 z-0">
           <img alt="Ejike Ebidilo in Agbada" className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthJtVmtofKYEHiaLHXe2WuFYXRvbF-yJ_sWL6edRJEmQt6AW-fNIFLuEZxdLuChdV0p8B_5PdYp4j9hIGPiPZDVHDFVksazvBII0mlm3SqT-cMyYdlcOAfnt7Rv5NYHMvYeSXGrQSolKAifjlAGYHyimhL3GzISJv1TGF7D8R-BWYgT8EdCBdh_zCKR2X5gWZcEuFOQ4yxqMIQKSdcPcsuy6jwona-4t6YGIKXFaHfelPH0JozaUsydwcLxQbMWthFNssoldWN1c"/>
           <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest"></div>

@@ -28,8 +28,6 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
         
         body {
             background-color: #121413;
@@ -54,28 +52,6 @@ export default function Page() {
             -webkit-text-fill-color: transparent;
         }
       `}} />
-
-      {/* Top Navigation Bar */}
-      <header className="fixed top-0 w-full z-50 bg-[#082e73]/70 backdrop-blur-md border-b border-secondary/15 h-20 flex justify-between items-center px-margin-desktop">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-4 cursor-pointer">
-            <img alt="BIGBRUVA Crest" className="w-12 h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM"/>
-            <span className="font-display-lg text-display-lg text-secondary dark:text-secondary uppercase tracking-widest hidden lg:block">BIGBRUVA</span>
-          </Link>
-        </div>
-        <nav className="hidden md:flex items-center gap-8">
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/">Home</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/about">About</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media</Link>
-          <Link className="font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary pb-1" href="/marketplace">Marketplace</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Contact</Link>
-        </nav>
-        <div className="flex items-center gap-6">
-          <button className="material-symbols-outlined text-secondary text-2xl bg-transparent border-none outline-none cursor-pointer select-none">search</button>
-          <button className="font-label-md text-label-md bg-secondary text-on-secondary px-6 py-2 rounded-sm font-bold uppercase tracking-wider hover:opacity-90 transition-opacity cursor-pointer">Account</button>
-        </div>
-      </header>
 
       <main className="pt-20">
         {/* Hero Section */}
@@ -262,22 +238,6 @@ export default function Page() {
           </aside>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="relative w-full py-16 bg-background dark:bg-background border-t border-secondary/10 mt-20">
-        <div className="flex flex-col items-center gap-base max-w-container-max mx-auto px-margin-desktop animate-none">
-          <img alt="BIGBRUVA Footer Crest" className="w-24 h-24 opacity-20 mb-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRvSa_kb5jU2Ls7WpBSvV2HfQo6EkEJ5Nr_TVfFfUbmuDJ7eRMrrkPOp233f4HnQK_HrEO3Mfqae8r7oOEZ15B-VvK4Dd1xTR6vPAeVL49ZfQVmzjDxtsLlOOexjrg2BM0qR9Mxv_LnS-2DbisQEAGJ5X-NtOlzgoiGUt41KnFJEMUxNkSJZjLXM1cY1H6PEF9KXy2Oc1OL_fURiO6hBFICG6mppSK8oMywXAwS_BRayPEoDo-qG4J-06XdEoLfRuVk-Uf-8aVmM"/>
-          <nav className="flex flex-wrap justify-center gap-8 mb-8">
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="#">Privacy Policy</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="#">Terms of Service</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="#">Licensing</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors uppercase tracking-widest" href="#">Archive Access</Link>
-          </nav>
-          <p className="font-body-md text-body-md text-on-surface-variant opacity-60 text-center max-w-2xl">
-            © 2024 BIGBRUVA (Ejike Ebidilo). All Rights Reserved. Institutional Seal of Legacy. Our audio assets are protected by cryptographic provenance and international copyright law.
-          </p>
-        </div>
-      </footer>
     </>
   );
 }

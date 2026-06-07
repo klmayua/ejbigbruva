@@ -45,8 +45,6 @@ export default function Page() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
         
         body {
             background-color: #0c0f0e;
@@ -74,32 +72,7 @@ export default function Page() {
         }
       `}} />
 
-      {/* TopNavBar */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-surface/70 dark:bg-surface/70 backdrop-blur-md border-b border-on-surface/10 ${
-        scrolled ? 'py-2 shadow-2xl' : 'py-4'
-      }`}>
-        <div className="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-4 cursor-pointer">
-              <img alt="BIGBRUVA Logo" className="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKDUJTaZQMpdDOC2D3t7osqjlQOQxKaophIXE6loxPxOQzHL14Sd6mRLxwQH_9wp6_MTNIAld3Xgqf8WEUqZjJEP2ew47rJcn1W7j3XliCqL3Fn3nGotPP4sc6NKw2m6wiUN3oE4CbxLvR5wAX3wNA4iv-pu2LVJamUp_O8z3KIQBmsubc1yvrcxtRynp2YgtxKFsaRKSPfBoJKsBmfsW0yVSW36cxWu8dHK4dqv3dWYjL7WHkBo2ralFMQ69j_6eKNeKEj1x9lrc"/>
-              <span className="font-display-lg text-headline-md uppercase tracking-widest text-on-surface dark:text-on-surface">BIGBRUVA</span>
-            </Link>
-          </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <Link className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/">Home</Link>
-            <Link className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/about">About</Link>
-            <Link className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/legacy">Legacy</Link>
-            <Link className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/media">Media</Link>
-            <Link className="text-on-surface-variant hover:text-on-surface transition-colors duration-300 font-label-md text-label-md" href="/voice">Voice</Link>
-            <Link className="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="/press">Press</Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <button className="font-label-md text-label-md text-secondary border border-secondary px-6 py-2 hover:bg-secondary hover:text-background transition-all cursor-pointer">Media Kit</button>
-          </div>
-        </div>
-      </nav>
-
-      <main className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+       <main className="pt-20 md:pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         {/* Header Section */}
         <header className="mb-20 text-center animate-none">
           <span className="font-label-md text-label-md text-secondary tracking-[0.3em] uppercase block mb-4">Official Newsroom</span>
@@ -301,22 +274,6 @@ export default function Page() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-surface-container-lowest border-t border-secondary/20 py-16 px-margin-desktop">
-        <div className="flex flex-col items-center justify-center space-y-8 w-full max-w-container-max mx-auto animate-none">
-          <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4">
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/legacy">Legacy Archive</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">Privacy Policy</Link>
-            <Link className="text-secondary hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/press">Press Kit</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="/contact">Media Inquiries</Link>
-          </nav>
-          <div className="editorial-line w-24"></div>
-          <p className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant text-center opacity-60">
-            © 2024 BIGBRUVA. THE ORIGINAL BIG BROTHER. ALL RIGHTS RESERVED.
-          </p>
-        </div>
-      </footer>
     </>
   );
 }

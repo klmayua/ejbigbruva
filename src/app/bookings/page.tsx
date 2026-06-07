@@ -29,11 +29,8 @@ export default function Page() {
 
   return (
     <>
-      {/* Page specific overrides to hide global nav/footer and define local classes */}
+      {/* Page specific overrides to define local classes */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #121413 !important;
             color: #e2e3e1;
@@ -53,37 +50,8 @@ export default function Page() {
         }
       `}} />
 
-      {/* TopNavBar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#121413]/70 backdrop-blur-md border-b border-outline-variant/20">
-        <div className="flex justify-between items-center w-full px-margin-desktop py-unit-3 max-w-container-max mx-auto">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="flex items-center gap-4 cursor-pointer">
-              <img 
-                alt="BIGBRUVA Institutional Logo" 
-                className="h-10 w-10 object-contain" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTKWSJRZMFnqnbwKMtnZEh_XVb44eSKBhpKQPAUw2l7b6cuQrQCyuaDC0r-jmsu_CyhfEkGwhsFr_elhV-oGDzvp_h3SszRZGbduftD6js3dYo-NOufBxJVLQLsDsh4mwqNXx8irdMzj61YhconXxX9iUIKlix9w2R055nJjd1_U1ub30rSP3CbuUkFj57blXLX8jQ2VSTuGx5i30vVkn0UG-Ya9xcfALiUILDvyeH4kpH4RU8L2lA6tPGk4IZbI8rav1ENNtVOOU"
-              />
-              <span className="font-display-lg text-headline-md tracking-tighter text-primary">BIGBRUVA</span>
-            </Link>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/">Home</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/about">About</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy</Link>
-            <Link className="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media</Link>
-            <Link className="font-label-sm text-label-sm text-secondary font-bold border-b-2 border-secondary" href="/bookings">Inquiries</Link>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link href="/legacy" className="hidden md:block px-6 py-2 bg-secondary text-on-secondary text-label-md font-label-md rounded-lg hover:bg-secondary-container transition-all active:scale-95 text-center">
-              Explore Legacy
-            </Link>
-            <span className="material-symbols-outlined text-primary cursor-pointer md:hidden">menu</span>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <header className="relative min-h-[85vh] flex items-end pt-32 pb-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
+       {/* Hero Section */}
+       <header className="relative min-h-[85vh] flex items-end pt-20 md:pt-32 pb-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             alt="BIGBRUVA Portrait" 
@@ -367,49 +335,6 @@ export default function Page() {
             </form>
           </div>
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-primary-container pt-24 pb-12 border-t border-secondary/20">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
-            <div className="max-w-md">
-              <img 
-                alt="BIGBRUVA Official Crest" 
-                className="h-24 w-24 mb-8 object-contain filter brightness-110" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA"
-              />
-              <p className="text-on-primary-container text-body-md">Curating Intellectual Depth and Cultural Influence across the global landscape. A voice for legacy, a vision for the future.</p>
-            </div>
-            <div className="grid grid-cols-2 gap-16">
-              <div className="space-y-4">
-                <h4 className="text-primary font-bold uppercase tracking-widest text-label-sm">Navigation</h4>
-                <ul className="space-y-3">
-                  <li><Link className="text-tertiary-fixed hover:text-secondary transition-colors" href="/press">Press</Link></li>
-                  <li><Link className="text-tertiary-fixed hover:text-secondary transition-colors" href="/legacy">Archive Access</Link></li>
-                  <li><Link className="text-tertiary-fixed hover:text-secondary transition-colors" href="/media">Media</Link></li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <h4 className="text-primary font-bold uppercase tracking-widest text-label-sm">Legal</h4>
-                <ul className="space-y-3">
-                  <li><Link className="text-tertiary-fixed hover:text-secondary transition-colors" href="/contact">Privacy Policy</Link></li>
-                  <li><Link className="text-tertiary-fixed hover:text-secondary transition-colors" href="/contact">Terms of Service</Link></li>
-                  <li><Link className="text-tertiary-fixed hover:text-secondary transition-colors" href="/contact">Contact</Link></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-secondary/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-label-sm text-tertiary-fixed-dim">© 2024 BIGBRUVA. All Rights Reserved. Curating Intellectual Depth and Cultural Influence.</p>
-            <div className="flex gap-8">
-              <a className="material-symbols-outlined text-primary hover:text-secondary transition-all" href="#">public</a>
-              <a className="material-symbols-outlined text-primary hover:text-secondary transition-all" href="#">hub</a>
-              <a className="material-symbols-outlined text-primary hover:text-secondary transition-all" href="#">podcasts</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </>
+      </main>    </>
   );
 }

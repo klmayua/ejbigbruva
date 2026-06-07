@@ -28,11 +28,8 @@ export default function Page() {
 
   return (
     <>
-      {/* Page specific overrides to hide global nav/footer and define local classes */}
+      {/* Page specific overrides to define local classes */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #121413 !important;
             color: #e2e3e1;
@@ -51,36 +48,6 @@ export default function Page() {
             text-shadow: 0 4px 12px rgba(0,0,0,0.5);
         }
       `}} />
-
-      {/* TopNavBar */}
-      <nav className="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-md border-b border-on-surface/10 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto left-1/2 -translate-x-1/2">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-4 cursor-pointer">
-            <img 
-              alt="BIGBRUVA Crest" 
-              className="h-12 w-12 object-contain" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcn11yaDzPsDiJx8AvmDfeEDvMGh-O9gkGeo5iieJz8OvTK_PzPIJPRvz3KxHFJ0FcF2dQsFIsxyFFrw8M3srAILL1V6MUzZGRkAYMKqJQd9J0miyZOFDiAOgl_SkmQphtMopPfkMhWIo7j7wrshnCCv2dz-5c6Gg0Hsyz_ijhP9RRNMBCZGJ4kFzvMOOdVxkTYZbvDkzEmiBMAosomGr0iNSTtB1UE_99aUL84qLOULtanh4Y6iBtMHA2yaLw6hbMNjF9Mm9pOf4"
-            />
-            <span className="font-headline-md text-headline-md uppercase tracking-widest text-on-surface">BIGBRUVA</span>
-          </Link>
-        </div>
-        <div className="hidden md:flex items-center space-x-8">
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/">Home</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/about">About</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/legacy">Legacy</Link>
-          <Link className="font-label-md text-label-md text-secondary font-bold border-b-2 border-secondary pb-1" href="/media">Media</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/voice">Voice</Link>
-          <Link className="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="/events">Events</Link>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link href="/gallery" className="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all">
-            Gallery
-          </Link>
-          <Link href="/contact" className="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-bold hover:scale-95 transition-all text-center block">
-            Contact
-          </Link>
-        </div>
-      </nav>
 
       <main className="pt-24">
         {/* Hero Section */}
@@ -202,27 +169,6 @@ export default function Page() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
         </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-surface-container-lowest border-t border-secondary/20 w-full py-16 px-margin-desktop flex flex-col items-center justify-center space-y-8">
-        <div className="mb-8">
-          <img 
-            alt="BIGBRUVA Official Crest" 
-            className="h-32 w-32 object-contain brightness-125" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs"
-          />
-        </div>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
-          <Link className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/legacy">Legacy Archive</Link>
-          <Link className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/contact">Privacy Policy</Link>
-          <Link className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/press">Press Kit</Link>
-          <Link className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-secondary transition-colors" href="/media">Media Inquiries</Link>
-        </div>
-        <div className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant text-center opacity-50">
-          © 2024 BIGBRUVA. THE ORIGINAL BIG BROTHER. ALL RIGHTS RESERVED.
-        </div>
-      </footer>
-    </>
+      </main>    </>
   );
 }

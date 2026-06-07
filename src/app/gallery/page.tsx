@@ -98,10 +98,8 @@ export default function Page() {
 
   return (
     <>
+      {/* Page specific overrides to define local classes */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #041635; /* Midnight Sovereign Navy Base */
             color: #e2e3e1;
@@ -138,34 +136,7 @@ export default function Page() {
         }
       `}} />
 
-      {/* TopNavBar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#b2c5ff]/70 backdrop-blur-md dark:bg-[#b2c5ff]/70 border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-4 cursor-pointer">
-            <img alt="Official Crest Logo" className="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754" />
-            <span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-          </Link>
-        </div>
-        <div className="hidden md:flex items-center gap-8">
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/">Home</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/about">About</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/legacy">Legacy</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/media">Media</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/voice">Voice</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/events">Events</Link>
-          <Link className="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md" href="/gallery">Gallery</Link>
-        </div>
-        <div className="flex items-center gap-6">
-          <div className="hidden lg:flex gap-6 items-center">
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/community">Community</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/press">Press</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/contact">Contact</Link>
-          </div>
-          <Link href="/press" className="material-symbols-outlined text-secondary cursor-pointer flex items-center">newspaper</Link>
-        </div>
-      </nav>
-
-      <main className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+       <main className="pt-20 md:pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         {/* Header Section */}
         <header className="mb-16 text-center md:text-left">
           <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-4 uppercase tracking-tighter">The Visual Archive</h1>
@@ -244,26 +215,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/20 w-full py-16 px-margin-desktop">
-        <div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-          <div className="mb-12 w-64 h-64 mx-auto transition-all duration-700 hover:scale-105">
-            <img alt="BIGBRUVA Official Crest" className="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WdFJlD557NG1rjXjDo-d7qR5erFaA-cBmArXCvURIRozCAqFglCoCRtIDt6qYexzdJLve0GkxfaOp0fS0s2Z895B-wzYPSAb7uF1InR9g-H1FNWtQxUVBN8bl9jwc8vTEvVTXy0mgDZZUqukRlYYxNIHvHLM5_BiIony1nnVtb_78YezpJF8eql5hOOQvtChzsTi0hy6udWqH0ndHiePZbWH6cOBNkCNu8QguUbgwn7z0G9XEeI_OOCMV9fUsfttHZcMGJ7GCRA" />
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-12 gap-y-4 mb-12">
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="/community">Community</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="/press">Press</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="/contact">Contact</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Privacy Policy</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Terms of Service</Link>
-          </div>
-          <p className="font-body-md text-label-md text-on-surface-variant tracking-widest opacity-50 uppercase">
-            © 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.
-          </p>
-        </div>
-      </footer>
-    </>
+      </main>    </>
   );
 }

@@ -16,7 +16,7 @@ export default function Page() {
       
 
 
-<header className="relative min-h-[90vh] flex flex-col justify-end pt-32 pb-20 px-margin-desktop">
+<header className="relative min-h-[90vh] flex flex-col justify-end pt-20 md:pt-32 pb-20 px-margin-desktop">
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyTNQhzYW6z08KigKIXf2R0SHlJjtCSndnLWqTC3IVJa57-SgIlWpdOTolNK6DYTgtKQHofxkTEEYsHClr3LlmyH3Ls2aNaKr_oQP6Q3OtJZQAEA-C8neU7U0dd6MwRTsSggKxbx9vSakmrukw9lH8OCZV5Tl9zTgJSnDt9q1lRCZTlpPLqnA4evtJY3rL7ylwMMPMxiZwA7IpGZ1OTTzVtv2BbrArQdE5YRh8OlEIsOll2l84ZPMbPfAyvL_4I5wZXvllSnlRiU" alt="EJ official portrait" className="w-full h-full object-cover object-top" fill sizes="(max-width: 768px) 100vw, 50vw" />

@@ -32,11 +32,8 @@ export default function Page() {
 
   return (
     <>
-      {/* Page specific overrides to hide global nav/footer and define local classes */}
+      {/* Page specific overrides to define local classes */}
       <style dangerouslySetInnerHTML={{__html: `
-        body > nav { display: none !important; }
-        body > footer { display: none !important; }
-        
         body {
             background-color: #121413 !important;
             color: #e2e3e1;
@@ -62,37 +59,6 @@ export default function Page() {
             transform: translateY(-4px);
         }
       `}} />
-
-      {/* TopNavBar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#b2c5ff]/70 backdrop-blur-md dark:bg-[#b2c5ff]/70 border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-4 cursor-pointer">
-            <img 
-              alt="Official Crest Logo" 
-              className="h-12 w-12 object-contain" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754"
-            />
-            <span className="font-display-lg text-headline-md text-secondary tracking-widest uppercase">BIGBRUVA</span>
-          </Link>
-        </div>
-        <div className="hidden md:flex items-center gap-8">
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/">Home</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/about">About</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/legacy">Legacy</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/media">Media</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/voice">Voice</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/events">Events</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/gallery">Gallery</Link>
-        </div>
-        <div className="flex items-center gap-6">
-          <span className="material-symbols-outlined text-secondary cursor-pointer">newspaper</span>
-          <Link className="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md" href="/community">Community</Link>
-          <Link className="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="/press">Press</Link>
-          <Link href="/contact" className="bg-secondary text-on-secondary px-6 py-2 rounded-DEFAULT font-label-md hover:bg-secondary-fixed transition-all uppercase tracking-widest inline-block text-center">
-            Contact
-          </Link>
-        </div>
-      </nav>
 
       <main className="pt-32">
         {/* Hero Section */}
@@ -277,28 +243,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-      </main>
-
-      {/* Footer Shell */}
-      <footer className="w-full py-16 px-margin-desktop bg-surface-container-lowest border-t border-secondary/20">
-        <div className="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
-          <div className="mb-8 flex justify-center">
-            <img 
-              alt="BIGBRUVA Official Crest" 
-              className="h-32 md:h-48 w-auto object-contain transition-all duration-700 hover:scale-105" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs"
-            />
-          </div>
-          <div className="flex flex-wrap justify-center gap-10 mb-12">
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/community">Community</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/press">Press</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/contact">Contact</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/contact">Privacy Policy</Link>
-            <Link className="text-on-surface-variant hover:text-secondary transition-colors font-label-md" href="/contact">Terms of Service</Link>
-          </div>
-          <p className="font-body-md text-label-md text-on-surface-variant">© 2024 EJIKE EBIDILO - BIGBRUVA INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.</p>
-        </div>
-      </footer>
-    </>
+      </main>    </>
   );
 }
