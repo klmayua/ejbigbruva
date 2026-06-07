@@ -65,7 +65,7 @@ export default function Page() {
 
 
        {/* Hero Section */}
-       <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
+       <header className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <div className="absolute inset-0 z-0">
           <img alt="Ejike Ebidilo in Agbada" className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthJtVmtofKYEHiaLHXe2WuFYXRvbF-yJ_sWL6edRJEmQt6AW-fNIFLuEZxdLuChdV0p8B_5PdYp4j9hIGPiPZDVHDFVksazvBII0mlm3SqT-cMyYdlcOAfnt7Rv5NYHMvYeSXGrQSolKAifjlAGYHyimhL3GzISJv1TGF7D8R-BWYgT8EdCBdh_zCKR2X5gWZcEuFOQ4yxqMIQKSdcPcsuy6jwona-4t6YGIKXFaHfelPH0JozaUsydwcLxQbMWthFNssoldWN1c"/>
           <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest"></div>
@@ -89,7 +89,7 @@ export default function Page() {
       </header>
 
       {/* Digital Museum Grid */}
-      <section className="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+      <section className="py-16 md:py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="mb-16">
           <h2 className="font-display-lg text-headline-lg text-secondary mb-4">Recognition &amp; Distinction</h2>
           <div className="h-0.5 w-16 bg-secondary"></div>
@@ -148,7 +148,7 @@ export default function Page() {
       </section>
 
       {/* Timeline Section */}
-      <section className="bg-surface-container-low py-32 relative overflow-hidden">
+      <section className="bg-surface-container-low py-16 md:py-32 relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
           <div className="text-center mb-24">
             <h2 className="font-display-lg text-display-lg-mobile md:text-headline-lg text-secondary mb-4 italic">Chronicle of Influence</h2>
@@ -206,7 +206,7 @@ export default function Page() {
       </section>
 
       {/* Quote Section */}
-      <section className="py-32 px-margin-mobile md:px-margin-desktop border-y border-white/5">
+      <section className="py-16 md:py-32 px-margin-mobile md:px-margin-desktop border-y border-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <span className="material-symbols-outlined text-secondary text-5xl mb-12 block" style={{ fontVariationSettings: "'FILL' 0" }}>format_quote</span>
           <blockquote className="font-display-lg text-headline-lg text-on-surface mb-12 italic leading-relaxed md:text-4xl">
@@ -217,7 +217,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-margin-mobile md:px-margin-desktop text-center bg-surface">
+      <section className="py-16 md:py-32 px-margin-mobile md:px-margin-desktop text-center bg-surface">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display-lg text-headline-lg text-on-surface mb-6">Contribute to the Narrative</h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">Have a story or artifact related to the BIGBRUVA journey? We invite you to be part of our growing institutional history.</p>

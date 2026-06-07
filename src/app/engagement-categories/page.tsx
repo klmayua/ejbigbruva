@@ -51,7 +51,7 @@ export default function Page() {
 
       <main className="pt-24">
         {/* Hero Section */}
-        <section className="relative h-[80vh] flex items-center px-margin-desktop overflow-hidden">
+        <section className="relative h-[80vh] flex items-center px-margin-mobile md:px-margin-desktop overflow-hidden">
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-gradient-to-r from-[#121413] via-[#121413]/60 to-transparent z-10"></div>
             <img 
@@ -78,7 +78,7 @@ export default function Page() {
         </section>
 
         {/* Service Selection */}
-        <section className="py-24 px-margin-desktop max-w-container-max mx-auto" id="services">
+        <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
               <h2 className="font-headline-lg text-headline-lg mb-4 underline decoration-secondary/30 underline-offset-8">Engagement Models</h2>
@@ -133,7 +133,7 @@ export default function Page() {
         </section>
 
         {/* Protocol Steps */}
-        <section className="py-24 px-margin-desktop max-w-container-max mx-auto">
+        <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
           <h2 className="font-headline-lg text-headline-lg text-center mb-16">The Path to Engagement</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             <div className="text-center space-y-4">

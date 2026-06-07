@@ -15,7 +15,7 @@ export default function Page() {
         <main className="relative min-h-screen overflow-y-auto bg-surface-container-lowest">
 
 
-<div className="px-margin-desktop py-10 max-w-7xl mx-auto">
+<div className="px-margin-mobile md:px-margin-desktop py-10 max-w-7xl mx-auto">
 
 <section className="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-12">
 

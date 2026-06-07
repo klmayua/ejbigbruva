@@ -88,7 +88,7 @@ export default function Page() {
 
       <main>
         {/* Full-Bleed Editorial Hero Section */}
-        <section className="relative h-screen min-h-[900px] w-full overflow-hidden bg-[#050505]">
+        <section className="relative h-screen min-h-[640px] md:min-h-[900px] w-full overflow-hidden bg-[#050505]">
           {/* Blue Glow Backlight (z-1, behind portrait) */}
           <div 
             className="absolute right-[-100px] bottom-[-200px] pointer-events-none rounded-full"
@@ -104,10 +104,8 @@ export default function Page() {
 
           {/* Portrait Image Container (z-10) with mask fades */}
           <div 
-            className="absolute bottom-0 pointer-events-none z-10 portrait-mask-final"
+            className="absolute bottom-0 pointer-events-none z-10 portrait-mask-final w-[340px] sm:w-[450px] md:w-[820px] right-[-60px] sm:right-0 md:right-[140px] opacity-25 md:opacity-100"
             style={{
-              width: '820px',
-              right: '140px',
               height: '113%'
             }}
           >
@@ -208,17 +206,17 @@ export default function Page() {
                 fontFamily: "'Libre Caslon Text', serif"
               }}
             >
-              <span className="text-white block text-[48px] md:text-[80px] lg:text-[108px]">THE</span>
-              <span className="text-white block text-[48px] md:text-[80px] lg:text-[108px]">ORIGINAL</span>
-              <span className="text-secondary block text-[48px] md:text-[80px] lg:text-[108px]">BIG</span>
-              <span className="text-secondary block text-[48px] md:text-[80px] lg:text-[108px]">BROTHER.</span>
+              <span className="text-white block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">THE</span>
+              <span className="text-white block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">ORIGINAL</span>
+              <span className="text-secondary block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">BIG</span>
+              <span className="text-secondary block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">BROTHER.</span>
             </h1>
             
             {/* CTAs directly below headline */}
             <div className="flex flex-wrap gap-[18px] mt-0 max-w-[560px]">
               <Link 
                 href="/contact" 
-                className="h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-[#0A0A0A] font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg"
+                className="w-full sm:w-auto h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-[#0A0A0A] font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg"
                 style={{
                   background: 'linear-gradient(to right, #D4AF37, #E8C85A)',
                   boxShadow: '0 0 35px rgba(212,175,55,0.30)'
@@ -231,7 +229,7 @@ export default function Page() {
               </Link>
               <Link 
                 href="/media" 
-                className="h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-white font-semibold border transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37]/8 active:scale-95"
+                className="w-full sm:w-auto h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-white font-semibold border transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37]/8 active:scale-95"
                 style={{
                   border: '1px solid rgba(212,175,55,0.70)',
                   backgroundColor: 'transparent'
@@ -247,7 +245,7 @@ export default function Page() {
         </section>
 
         {/* Featured Story Section (Moved Biography/Long Copy directly here below Hero) */}
-        <section className="py-32 px-margin-mobile md:px-margin-desktop bg-surface border-t border-outline-variant/10">
+        <section className="py-16 md:py-32 px-margin-mobile md:px-margin-desktop bg-surface border-t border-outline-variant/10">
           <div className="max-w-container-max mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <div className="md:col-span-7 flex flex-col justify-center">
               <span className="font-label-md text-secondary mb-6 block uppercase tracking-widest">Featured Chronicle</span>
@@ -286,8 +284,8 @@ export default function Page() {
         </section>
 
         {/* Legacy Numbers Section */}
-        <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
-          <div className="max-w-container-max mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-gutter border-y border-outline-variant/20 py-20">
+        <section className="py-12 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+          <div className="max-w-container-max mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-gutter border-y border-outline-variant/20 py-10 md:py-20">
             <div className="text-center group">
               <div className="font-display-lg text-headline-lg md:text-display-lg text-secondary mb-2 group-hover:scale-110 transition-transform duration-500">45+</div>
               <div className="font-label-sm text-on-surface-variant uppercase tracking-widest">Years of Excellence</div>
@@ -308,7 +306,7 @@ export default function Page() {
         </section>
 
         {/* Quote Section */}
-        <section className="py-32 bg-surface-container-low overflow-hidden relative">
+        <section className="py-16 md:py-32 bg-surface-container-low overflow-hidden relative">
           <div className="max-w-5xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
             <span className="material-symbols-outlined text-secondary text-7xl mb-12 opacity-50">format_quote</span>
             <blockquote className="font-display-lg text-headline-lg md:text-display-lg text-on-background mb-12 italic leading-tight">
@@ -320,7 +318,7 @@ export default function Page() {
         </section>
 
         {/* Legacy Media Grid */}
-        <section className="py-32 px-margin-mobile md:px-margin-desktop">
+        <section className="py-16 md:py-32 px-margin-mobile md:px-margin-desktop">
           <div className="max-w-container-max mx-auto w-full">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
               <div>

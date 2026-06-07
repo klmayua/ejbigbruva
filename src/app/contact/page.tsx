@@ -70,14 +70,14 @@ export default function Page() {
       `}} />
 
        {/* Hero Header */}
-       <header className="pt-24 md:pt-40 pb-20 px-margin-desktop max-w-container-max mx-auto">
+       <header className="pt-16 md:pt-32 pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="max-w-3xl">
           <h1 className="font-display-lg text-display-lg mb-4 text-on-surface leading-tight">Institutional Inquiries</h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant">The office of BIGBRUVA manages all global media, speaking engagements, and official partnerships for Ejike Ebidilo.</p>
         </div>
       </header>
 
-      <main className="px-margin-desktop max-w-container-max mx-auto pb-32">
+      <main className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-16 md:pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
           {/* Contact Cards Column (5 Cols) */}
           <div className="lg:col-span-5 space-y-gutter">

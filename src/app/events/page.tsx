@@ -51,7 +51,7 @@ export default function Page() {
             <img alt="Hero" className="w-full h-full object-cover grayscale opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU" />
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
           </div>
-          <div className="relative z-10 px-margin-desktop max-w-4xl">
+          <div className="relative z-10 px-margin-mobile md:px-margin-desktop max-w-4xl">
             <span className="text-secondary font-label-md tracking-[0.3em] uppercase mb-6 block">Institutional Archive</span>
             <h1 className="font-display-lg text-display-lg leading-none mb-8">Convening <br /><span className="italic text-secondary">The Cultural Vanguard</span></h1>
             <p className="font-body-lg text-on-surface-variant max-w-xl mb-12">
@@ -65,7 +65,7 @@ export default function Page() {
         </section>
 
         {/* Upcoming Events - Bento Grid */}
-        <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface">
+        <section className="py-12 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface">
           <div className="max-w-container-max mx-auto w-full">
             <div className="flex justify-between items-end mb-16">
               <div>
@@ -145,7 +145,7 @@ export default function Page() {
         </section>
 
         {/* Past Events & Speaking Engagements Section */}
-        <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
+        <section className="py-12 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
           <div className="absolute -right-20 top-0 opacity-5">
             <img alt="Logo Watermark" className="w-[800px] h-[800px] object-contain rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU" />
           </div>
@@ -201,7 +201,7 @@ export default function Page() {
     </section>
 
         {/* Media Gallery */}
-        <section className="py-24 bg-surface">
+        <section className="py-12 md:py-24 bg-surface">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div className="mb-12">
               <h2 className="font-headline-lg text-secondary text-center">Moments in History</h2>
@@ -237,7 +237,7 @@ export default function Page() {
         </section>
 
         {/* Booking & Inquiry Information */}
-        <section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-secondary/10">
+        <section className="py-12 md:py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-secondary/10">
           <div className="max-w-container-max mx-auto glass-card p-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="font-headline-lg text-secondary mb-6">Booking Information</h2>

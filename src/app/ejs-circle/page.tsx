@@ -17,7 +17,7 @@ export default function Page() {
 
 <main className="pt-32 pb-24">
 
-<section className="relative px-margin-desktop max-w-container-max mx-auto mb-32">
+<section className="relative px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <div className="flex flex-col lg:flex-row items-center gap-16">
 <div className="lg:w-1/2 space-y-8 z-10">
 <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5">
@@ -52,7 +52,7 @@ export default function Page() {
 </section>
 
 <section className="bg-surface-container-low py-32 mb-32">
-<div className="px-margin-desktop max-w-container-max mx-auto">
+<div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div className="text-center mb-20 space-y-4">
 <h2 className="font-headline-lg text-headline-lg text-secondary">The Foundational Pillars</h2>
 <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
@@ -94,7 +94,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="px-margin-desktop max-w-container-max mx-auto mb-32">
+<section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <div className="flex flex-col lg:flex-row justify-between items-end gap-8 mb-16">
 <div>
 <span className="font-label-md text-label-md text-secondary tracking-[0.2em] uppercase">Selection</span>
@@ -172,7 +172,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="px-margin-desktop max-w-container-max mx-auto mb-32">
+<section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32">
 <div className="bg-surface-container rounded-3xl p-12 lg:p-20 relative overflow-hidden">
 <div className="relative z-10">
 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
@@ -219,7 +219,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="px-margin-desktop max-w-container-max mx-auto">
+<section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div className="relative rounded-3xl overflow-hidden py-24 text-center">
 <div className="absolute inset-0 bg-[#082e73] opacity-90"></div>
 <div className="absolute inset-0">

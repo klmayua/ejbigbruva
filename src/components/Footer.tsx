@@ -10,7 +10,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="glass-02 border-t border-outline-variant/10 pt-20 pb-12 w-full mt-auto relative z-10">
+    <footer className="glass-02 border-t border-outline-variant/10 pt-20 pb-[calc(48px+56px+env(safe-area-inset-bottom))] md:pb-12 w-full mt-auto relative z-10">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-gutter mb-16">
           

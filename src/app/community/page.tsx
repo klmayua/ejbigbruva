@@ -62,7 +62,7 @@ export default function Page() {
 
       <main className="pt-32">
         {/* Hero Section */}
-        <section className="px-margin-desktop py-20 relative overflow-hidden">
+        <section className="px-margin-mobile md:px-margin-desktop py-20 relative overflow-hidden">
           <div className="max-w-container-max mx-auto relative z-10">
             <div className="flex flex-col gap-6 max-w-3xl">
               <span className="text-secondary font-label-md tracking-[0.2em] uppercase">The Global Network</span>
@@ -81,7 +81,7 @@ export default function Page() {
         </section>
 
         {/* Mentorship Stories (Bento Grid) */}
-        <section className="px-margin-desktop py-16 bg-surface-container-lowest">
+        <section className="px-margin-mobile md:px-margin-desktop py-16 bg-surface-container-lowest">
           <div className="max-w-container-max mx-auto">
             <div className="mb-12 flex justify-between items-end">
               <div>
@@ -124,7 +124,7 @@ export default function Page() {
         </section>
 
         {/* Testimonials (Glassmorphism Cards) */}
-        <section className="px-margin-desktop py-24 relative">
+        <section className="px-margin-mobile md:px-margin-desktop py-24 relative">
           <div className="max-w-container-max mx-auto relative z-10">
             <h2 className="font-headline-lg text-center mb-16 uppercase tracking-widest text-secondary">Audience Voices</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -169,7 +169,7 @@ export default function Page() {
         </section>
 
         {/* Community Projects */}
-        <section className="px-margin-desktop py-16">
+        <section className="px-margin-mobile md:px-margin-desktop py-16">
           <div className="max-w-container-max mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div>
@@ -215,7 +215,7 @@ export default function Page() {
         </section>
 
         {/* Featured Supporters */}
-        <section className="px-margin-desktop py-24 bg-surface-container-low border-y border-secondary/5">
+        <section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-low border-y border-secondary/5">
           <div className="max-w-container-max mx-auto text-center">
             <h2 className="font-headline-md text-on-surface-variant uppercase tracking-[0.3em] mb-12">Featured Supporters</h2>
             <div className="flex flex-wrap justify-center items-center gap-16 grayscale opacity-50 hover:grayscale-0 transition-all duration-700">
@@ -229,7 +229,7 @@ export default function Page() {
         </section>
 
         {/* CTA Section */}
-        <section className="px-margin-desktop py-20 text-center">
+        <section className="px-margin-mobile md:px-margin-desktop py-20 text-center">
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-8">
             <h2 className="font-display-lg text-headline-lg">Lend Your Voice to History</h2>
             <p className="text-on-surface-variant font-body-lg">The BIGBRUVA community is built on the contributions of those who value truth and legacy. Apply for membership or start a project today.</p>

@@ -184,7 +184,7 @@ export default function Page() {
         </div>
 
         {/* Featured Section: BENTO GRID STYLE */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[600px]">
+        <div className="mt-16 md:mt-32 grid grid-cols-1 md:grid-cols-4 gap-gutter h-auto md:h-[600px]">
           <div className="md:col-span-2 bg-primary-container/30 relative overflow-hidden p-12 flex flex-col justify-between border border-secondary/10 group">
             <div className="relative z-10">
               <span className="font-label-sm text-secondary uppercase tracking-widest">Documentary Feature</span>

@@ -16,7 +16,7 @@ export default function Page() {
       
 
 
-<header className="relative min-h-[90vh] flex flex-col justify-end pt-20 md:pt-32 pb-20 px-margin-desktop">
+<header className="relative min-h-[90vh] flex flex-col justify-end pt-20 md:pt-32 pb-20 px-margin-mobile md:px-margin-desktop">
 <div className="absolute inset-0 z-0">
 <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
 <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyTNQhzYW6z08KigKIXf2R0SHlJjtCSndnLWqTC3IVJa57-SgIlWpdOTolNK6DYTgtKQHofxkTEEYsHClr3LlmyH3Ls2aNaKr_oQP6Q3OtJZQAEA-C8neU7U0dd6MwRTsSggKxbx9vSakmrukw9lH8OCZV5Tl9zTgJSnDt9q1lRCZTlpPLqnA4evtJY3rL7ylwMMPMxiZwA7IpGZ1OTTzVtv2BbrArQdE5YRh8OlEIsOll2l84ZPMbPfAyvL_4I5wZXvllSnlRiU" alt="EJ official portrait" className="w-full h-full object-cover object-top" fill sizes="(max-width: 768px) 100vw, 50vw" />
@@ -43,7 +43,7 @@ export default function Page() {
 </div>
 </header>
 
-<section className="py-24 px-margin-desktop bg-surface-container-lowest">
+<section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
 <div className="max-w-container-max mx-auto">
 <div className="mb-12">
 <h2 className="font-headline-lg text-headline-lg text-on-surface mb-2">The Pillars of Sovereignty</h2>
@@ -96,7 +96,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="py-24 px-margin-desktop bg-background">
+<section className="py-24 px-margin-mobile md:px-margin-desktop bg-background">
 <div className="max-w-container-max mx-auto">
 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
 <div>
@@ -194,7 +194,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="py-24 px-margin-desktop bg-surface-container-lowest overflow-hidden relative">
+<section className="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest overflow-hidden relative">
 <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
 <span className="font-headline-lg text-[400px] text-secondary leading-none select-none">EJ</span>
 </div>
@@ -213,7 +213,7 @@ export default function Page() {
 </div>
 </section>
 
-<section className="py-20 px-margin-desktop bg-primary-container border-y border-outline-variant/10">
+<section className="py-20 px-margin-mobile md:px-margin-desktop bg-primary-container border-y border-outline-variant/10">
 <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
 <h3 className="font-headline-lg text-headline-lg text-on-surface mb-4">Secure Your Dispatch</h3>
 <p className="text-on-surface-variant font-body-md mb-10">Receive weekly sovereign insights on health, wealth, and high-performance living directly to your private terminal.</p>

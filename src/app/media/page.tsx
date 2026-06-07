@@ -84,7 +84,7 @@ export default function Page() {
         </section>
 
         {/* Media Shelves */}
-        <div className="space-y-24 pb-32 -mt-10 relative z-20">
+        <div className="space-y-12 md:space-y-24 pb-16 md:pb-32 -mt-10 relative z-20">
           {/* Category 1: Interviews */}
           <section className="pl-margin-mobile md:pl-margin-desktop">
             <div className="flex justify-between items-end mb-8 pr-margin-mobile md:pr-margin-desktop">

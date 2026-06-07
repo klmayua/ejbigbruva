@@ -64,7 +64,7 @@ export default function Page() {
 
 
        {/* Hero Section */}
-       <header className="relative min-h-screen flex items-center pt-16 md:pt-24 overflow-hidden">
+       <header className="relative min-h-[70vh] md:min-h-screen flex items-center pt-16 md:pt-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
           <img 
@@ -73,7 +73,7 @@ export default function Page() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDndsixHjhANHIuI883kfVDOBOzVqzWn_A9sdtc-aj_q1WzwtctGPBKKuAfxkQVDZSRLDEHXjYE3aHca4sQoGIMexkXZkAyieY7rWzBgrm43lAywRyonTh9lb1cGM4yKOje3hRGmkV8AQZqfY8D849XDxg4s37Ehfkkm1JocASoFnfUv06gUUjvw-VuAXDPtnO0H0Jv_lCXYwba1mKXdS2jcToqV2mo3WXJjkqaLbXaH08qIoe_ukGiqEAiLtqKfjpWJxRsgiCYL5k" 
           />
         </div>
-        <div className="container mx-auto px-margin-desktop relative z-20">
+        <div className="container mx-auto px-margin-mobile md:px-margin-desktop relative z-20">
           <div className="max-w-3xl">
             <span className="font-label-md text-secondary uppercase tracking-[0.3em] mb-4 block">Editorial Reflections</span>
             <h1 className="font-display-lg text-display-lg text-on-surface mb-8 leading-tight">Thoughts Worth Sharing</h1>
@@ -93,8 +93,8 @@ export default function Page() {
       </header>
 
       {/* Featured Quote */}
-      <section className="py-24 bg-surface-container-lowest border-y border-secondary/10">
-        <div className="container mx-auto px-margin-desktop text-center">
+      <section className="py-12 md:py-24 bg-surface-container-lowest border-y border-secondary/10">
+        <div className="container mx-auto px-margin-mobile md:px-margin-desktop text-center">
           <div className="max-w-4xl mx-auto italic">
             <span className="material-symbols-outlined text-6xl text-secondary/30 mb-8" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
             <blockquote className="font-headline-lg text-on-surface mb-8">
@@ -106,7 +106,7 @@ export default function Page() {
       </section>
 
       {/* Main Editorial Feed */}
-      <main id="dossier" className="py-32 bg-background">
+      <main id="dossier" className="py-16 md:py-32 bg-background">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="flex justify-between items-end mb-16">
             <div>
@@ -207,7 +207,7 @@ export default function Page() {
       </main>
 
       {/* Subscription Section */}
-      <section className="py-24 bg-surface-container-high relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-surface-container-high relative overflow-hidden">
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
           <h2 className="font-display-lg text-headline-lg mb-6">Join the Internal Dialogue</h2>
           <p className="text-on-surface-variant mb-12 max-w-xl mx-auto">Receive quarterly reflections, exclusive media releases, and invitations to private institutional gatherings.</p>

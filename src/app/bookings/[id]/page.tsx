@@ -48,14 +48,14 @@ export default function Page() {
           style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuByR6q7B6FxUSqJyoe9E-b2srvyFqwBVOSbn8el9t-bzq3cw5wZqgUIe5hr_hXmwam24drT0ArYs4a2CWlNZrpC1OZ2di7SVakHbBDGS6ktMBL1unIPc0CJQ5xC1Tz7ClRV_g-sOsx6m4mkrL8evEL9aWGylPzkTEQJtJ4RvhpZSGnGIvsSZDT2Ly75rFKKRXC3MZceYKEL2Vpp4Y3wOEL7RzTpMA4f_eJoCs6jPCZGEIwFHfWkxy39ZgDxKSsfGn6MO6YpCfDgCMY')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
-        <div className="relative w-full px-margin-desktop pb-16 max-w-container-max mx-auto">
+        <div className="relative w-full px-margin-mobile md:px-margin-desktop pb-16 max-w-container-max mx-auto">
           <span className="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] mb-4 block">Institutional Engagement</span>
           <h1 className="text-display-lg font-display-lg text-on-surface leading-tight max-w-2xl">Tailor Your Engagement</h1>
         </div>
       </header>
 
       {/* Main Content Grid */}
-      <main className="max-w-container-max mx-auto px-margin-desktop py-20">
+      <main className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Form Section */}
           <div className="lg:col-span-8 space-y-16">

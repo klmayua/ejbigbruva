@@ -60,14 +60,14 @@ export default function Page() {
             <img className="w-full h-full object-cover grayscale-[0.5] opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdOl4GyMmM_JkfqSlFXlSTEx0bCKx_09edrXDhNvm6wht6rSsKFht94RjG0xZ_0IPdGgn1QOYzmLQTVCd7XWiP453s9Eeb_zA2TVFMAeyZ6f7OitHmY2c9D2KUhJtCwJ5WToQchetjIFC_07sWByw8_ZdsgEgyWC6_Z7UuMDbdkeCNZl6aj_VlWEvaAgfwC6Elr8gku4qBEWVm5dMBOX6LHNKsAaVxUvn_kDHwkRY8TgCkrfkU4QhCI79AIGN6gHZLEkC0B_7nH1U"/>
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
           </div>
-          <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop pb-16">
+          <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-16">
             <span className="font-label-md text-label-md text-secondary tracking-[0.3em] uppercase mb-4 block">Institutional Series</span>
             <h1 className="font-display-lg text-display-lg lg:text-[80px] text-white leading-tight mb-6 font-serif">The Legacy Voice Pack<br/><span className="italic font-normal gold-gradient-text">— Volume I</span></h1>
           </div>
         </section>
 
         {/* Product Content Grid */}
-        <section className="max-w-container-max mx-auto px-margin-desktop py-20 grid grid-cols-12 gap-gutter">
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 grid grid-cols-12 gap-gutter">
           {/* Left Column: Product Details */}
           <div className="col-span-12 lg:col-span-8 space-y-16">
             {/* Audio Sample Player */}

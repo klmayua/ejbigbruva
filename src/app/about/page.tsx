@@ -102,7 +102,7 @@ export default function Page() {
 
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
+        <section className="relative min-h-[70vh] md:min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
           <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
             <img 
               alt="Ejike Ebidilo Casual Portrait" 
@@ -124,7 +124,7 @@ export default function Page() {
         </section>
 
         {/* Biography Grid */}
-        <section className="px-margin-mobile md:px-margin-desktop py-32 bg-surface-container-lowest">
+        <section className="px-margin-mobile md:px-margin-desktop py-16 md:py-32 bg-surface-container-lowest">
           <div className="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
             {/* Left Column */}
             <div className="lg:col-span-7 space-y-32">
@@ -150,7 +150,7 @@ export default function Page() {
                 <p className="font-body-lg text-on-surface-variant leading-relaxed">
                   At the core of the BIGBRUVA identity is a commitment to 'Institutional Intimacy.' This philosophy dictates that while the scale of delivery remains global and authoritative, the connection with every individual listener remains personal and profound.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-4 md:pt-8">
                   <div className="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-secondary/20 transition-colors">
                     <h4 className="font-label-md text-secondary uppercase mb-4">Authenticity</h4>
                     <p className="font-body-md text-on-surface-variant">The refusal to perform a character, choosing instead to reveal the man.</p>
@@ -193,13 +193,13 @@ export default function Page() {
         </section>
 
         {/* Leadership & Legacy */}
-        <section className="px-margin-mobile md:px-margin-desktop py-32 bg-surface">
+        <section className="px-margin-mobile md:px-margin-desktop py-16 md:py-32 bg-surface">
           <div className="max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
             <div className="text-center mb-24 opacity-0 translate-y-8 transition-all duration-1000">
               <h2 className="font-serif text-display-lg-mobile md:text-display-lg text-on-background mb-4">Leadership &amp; <span className="italic royal-gradient-text">Legacy</span></h2>
               <p className="font-body-lg text-on-surface-variant max-w-xl mx-auto">Creating a blueprint for the next generation of African creators and institutional leaders.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
               <div className="col-span-1 md:col-span-2 p-12 bg-surface-container-low rounded-3xl border border-outline-variant/10 flex flex-col justify-between group hover:border-secondary/30 transition-all duration-500">
                 <div className="space-y-6">
                   <span className="material-symbols-outlined text-secondary text-5xl font-light">diversity_3</span>
