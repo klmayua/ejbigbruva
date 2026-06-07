@@ -111,39 +111,35 @@ export default function Page() {
           >
             <img 
               alt="Ejike Ebidilo Portrait" 
-              className="w-full h-auto object-contain select-none pointer-events-none filter contrast-[1.10] brightness-[1.02]" 
+              className="absolute bottom-0 w-full h-full object-cover object-[center_17%] md:relative md:h-auto md:object-contain select-none pointer-events-none filter contrast-[1.10] brightness-[1.02]" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
             {/* Fallback overlays to ensure seamless blend even without mask compositing */}
-            {/* Left fade: 300px wide */}
+            {/* Left fade */}
             <div 
-              className="absolute left-0 top-0 bottom-0 z-20 pointer-events-none" 
+              className="absolute left-0 top-0 bottom-0 z-20 pointer-events-none w-[100px] md:w-[300px]" 
               style={{
-                width: '300px',
                 background: 'linear-gradient(to right, #050505 0%, transparent 100%)'
               }}
             />
-            {/* Bottom fade: 240px high */}
+            {/* Bottom fade */}
             <div 
-              className="absolute left-0 right-0 bottom-0 z-20 pointer-events-none" 
+              className="absolute left-0 right-0 bottom-0 z-20 pointer-events-none h-[120px] md:h-[240px]" 
               style={{
-                height: '240px',
                 background: 'linear-gradient(to top, #050505 0%, transparent 100%)'
               }}
             />
-            {/* Right fade: 100px wide */}
+            {/* Right fade */}
             <div 
-              className="absolute right-0 top-0 bottom-0 z-20 pointer-events-none" 
+              className="absolute right-0 top-0 bottom-0 z-20 pointer-events-none w-[40px] md:w-[100px]" 
               style={{
-                width: '100px',
                 background: 'linear-gradient(to left, #050505 0%, transparent 100%)'
               }}
             />
-            {/* Top fade: 60px high */}
+            {/* Top fade */}
             <div 
-              className="absolute left-0 right-0 top-0 z-20 pointer-events-none" 
+              className="absolute left-0 right-0 top-0 z-20 pointer-events-none h-[40px] md:h-[60px]" 
               style={{
-                height: '60px',
                 background: 'linear-gradient(to bottom, #050505 0%, transparent 100%)'
               }}
             />
@@ -168,9 +164,9 @@ export default function Page() {
           />
           
           {/* Content Block (z-20) */}
-          <div className="absolute left-4 md:left-[300px] top-[50%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
+          <div className="absolute left-4 md:left-[300px] top-[42%] md:top-[52%] -translate-y-1/2 w-[calc(100%-32px)] md:w-[620px] z-20 px-margin-mobile md:px-0">
             {/* Trust Indicator above headline */}
-            <div className="flex items-center gap-[18px] mb-[24px] max-w-[560px]">
+            <div className="flex items-center gap-[18px] mb-[16px] md:mb-[24px] max-w-[560px]">
               <div 
                 className="flex items-center justify-center w-[36px] h-[36px] bg-[#22C55E]/10 rounded-full mic-pulse-glow"
                 style={{ 
@@ -201,7 +197,7 @@ export default function Page() {
             
             {/* Headline */}
             <h1 
-              className="font-serif font-medium max-w-[560px] mb-[42px] mt-0 leading-[0.88] tracking-[-0.04em]"
+              className="font-serif font-medium max-w-[560px] mb-[20px] md:mb-[42px] mt-0 leading-[0.88] tracking-[-0.04em]"
               style={{
                 fontFamily: "'Libre Caslon Text', serif"
               }}
@@ -216,7 +212,7 @@ export default function Page() {
             <div className="flex flex-wrap gap-[18px] mt-0 max-w-[560px]">
               <Link 
                 href="/contact" 
-                className="w-full sm:w-auto h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-[#0A0A0A] font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg"
+                className="w-full sm:w-auto h-[50px] md:h-[64px] px-[26px] md:px-[34px] rounded-full flex items-center justify-center gap-3 text-[#0A0A0A] font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105 active:scale-95 shadow-lg text-[13px] md:text-[14px]"
                 style={{
                   background: 'linear-gradient(to right, #D4AF37, #E8C85A)',
                   boxShadow: '0 0 35px rgba(212,175,55,0.30)'
@@ -229,7 +225,7 @@ export default function Page() {
               </Link>
               <Link 
                 href="/media" 
-                className="w-full sm:w-auto h-[64px] px-[34px] rounded-full flex items-center justify-center gap-3 text-white font-semibold border transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37]/8 active:scale-95"
+                className="w-full sm:w-auto h-[50px] md:h-[64px] px-[26px] md:px-[34px] rounded-full flex items-center justify-center gap-3 text-white font-semibold border transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#D4AF37]/8 active:scale-95 text-[13px] md:text-[14px]"
                 style={{
                   border: '1px solid rgba(212,175,55,0.70)',
                   backgroundColor: 'transparent'
