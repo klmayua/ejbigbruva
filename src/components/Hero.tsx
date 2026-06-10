@@ -18,7 +18,7 @@ export default function Hero({
   subtitle,
   description,
   imageSrc,
-  imageAlt = 'BIGBRUVA Hero image',
+  imageAlt = 'EJTheVoice Hero image',
   focalPoint = 'center 20%', // Default focal point to avoid cropping faces
   ctas,
   verticalText = 'EJIKE EBIDILO • SINCE 1978',

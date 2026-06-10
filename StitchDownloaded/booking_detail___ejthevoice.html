@@ -1,0 +1,332 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>EJTheVoice | Tailor Your Engagement</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(8, 46, 115, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(233, 195, 73, 0.1);
+        }
+        .royal-gradient-border {
+            border-image: linear-gradient(to right, transparent, #e9c349, transparent) 1;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0c0f0e; }
+        ::-webkit-scrollbar-thumb { background: #af8d11; border-radius: 10px; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#b2c5ff",
+                        "on-primary": "#042c71",
+                        "primary-container": "#082e73",
+                        "inverse-primary": "#3f5ca2",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2f3130",
+                        "on-tertiary-fixed-variant": "#314576",
+                        "surface-tint": "#b2c5ff",
+                        "secondary-container": "#af8d11",
+                        "outline-variant": "#444651",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-primary-fixed-variant": "#254388",
+                        "on-tertiary": "#192e5e",
+                        "inverse-surface": "#e2e3e1",
+                        "error-container": "#93000a",
+                        "secondary": "#e9c349",
+                        "surface-container-high": "#282a29",
+                        "on-secondary-fixed": "#241a00",
+                        "on-primary-fixed": "#001848",
+                        "primary-fixed": "#dae2ff",
+                        "on-tertiary-fixed": "#001847",
+                        "on-primary-container": "#7d99e3",
+                        "background": "#121413",
+                        "secondary-fixed": "#ffe088",
+                        "surface": "#121413",
+                        "on-surface": "#e2e3e1",
+                        "on-error": "#690005",
+                        "primary": "#b2c5ff",
+                        "surface-container-highest": "#333534",
+                        "surface-container": "#1e201f",
+                        "tertiary": "#b2c5ff",
+                        "surface-bright": "#383a38",
+                        "outline": "#8e909c",
+                        "tertiary-fixed": "#dae2ff",
+                        "surface-container-lowest": "#0c0f0e",
+                        "on-secondary-container": "#342800",
+                        "on-tertiary-container": "#8699d0",
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface-container-low": "#1a1c1b",
+                        "secondary-fixed-dim": "#e9c349",
+                        "surface-variant": "#333534",
+                        "on-surface-variant": "#c4c6d2",
+                        "tertiary-container": "#1b3060",
+                        "surface-dim": "#121413",
+                        "on-secondary": "#3c2f00",
+                        "on-background": "#e2e3e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "display-lg-mobile": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/70 backdrop-blur-md dark:bg-surface/70 docked full-width top-0 sticky z-50 border-b border-on-surface/10">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="EJTheVoice Crest" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP7m8tXkL6i-7U39wR4eePQJ8OyU6HHEsPhAIfa7qzQj-kNl4_V-ytJBVglKsgVHHZTB7phx4IlHQNFvjVNupVAcLFLpAKQ-gpbsO1YZN5yxdmsrV1D_12mYmu31awVigQJ9GYWHWlMnFY46MO52Xanhj-iZbypzkdEy9-D-edZVEyXST5CmE1RoCpxKsVozBlLvwUyPgyWy5Hr80cOI1PuFPgSm4o7Rn8no19AldyA0sC5YiPZT3LuK1w7TO8dj_0b4MUdLiq-3Y">
+<span class="text-headline-md font-headline-md font-bold text-secondary dark:text-secondary tracking-tighter">EJTheVoice</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Institutional</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-md font-label-md" href="#">Management</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block text-on-surface-variant hover:text-secondary transition-colors text-label-md font-label-md">Consult with Management</button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-DEFAULT text-label-md font-label-md hover:bg-secondary transition-all duration-300">Proceed to Booking</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[60vh] min-h-[500px] w-full overflow-hidden flex items-end">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 hover:scale-105" data-alt="A dignified portrait of a prominent leader in traditional Agbada attire, exuding authority and wisdom. The lighting is dramatic and moody, with deep shadows and warm highlights reflecting a high-end editorial style. The atmosphere is quiet, powerful, and deeply institutional, set against a rich, dark background that emphasizes the statesman's presence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByR6q7B6FxUSqJyoe9E-b2srvyFqwBVOSbn8el9t-bzq3cw5wZqgUIe5hr_hXmwam24drT0ArYs4a2CWlNZrpC1OZ2di7SVakHbBDGS6ktMBL1unIPc0CJQ5xC1Tz7ClRV_g-sOsx6m4mkrL8evEL9aWGylPzkTEQJtJ4RvhpZSGnGIvsSZDT2Ly75rFKKRXC3MZceYKEL2Vpp4Y3wOEL7RzTpMA4f_eJoCs6jPCZGEIwFHfWkxy39ZgDxKSsfGn6MO6YpCfDgCMY');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="relative w-full px-margin-desktop pb-16 max-w-container-max mx-auto">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-[0.2em] mb-4 block">Institutional Engagement</span>
+<h1 class="text-display-lg font-display-lg text-on-surface leading-tight max-w-2xl">Tailor Your Engagement</h1>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="max-w-container-max mx-auto px-margin-desktop py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Form Section -->
+<div class="lg:col-span-8 space-y-16">
+<!-- 1. Core Service Selection -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="text-secondary text-headline-md font-headline-md">01</span>
+<h2 class="text-headline-lg font-headline-lg">Core Service Selection</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="group relative flex items-center p-6 glass-card cursor-pointer hover:border-secondary transition-all">
+<input checked="" class="hidden peer" name="service" type="radio">
+<div class="w-full">
+<span class="block text-secondary text-label-md mb-1">Strategic</span>
+<span class="block text-on-surface font-headline-md text-headline-md">Keynote Speaking</span>
+<p class="text-on-surface-variant text-label-sm mt-2">Global insights and transformative leadership narratives for high-level summits.</p>
+</div>
+<div class="opacity-0 peer-checked:opacity-100 absolute top-4 right-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</label>
+<label class="group relative flex items-center p-6 glass-card cursor-pointer hover:border-secondary transition-all">
+<input class="hidden peer" name="service" type="radio">
+<div class="w-full">
+<span class="block text-secondary text-label-md mb-1">Institutional</span>
+<span class="block text-on-surface font-headline-md text-headline-md">Strategic Advisory</span>
+<p class="text-on-surface-variant text-label-sm mt-2">Private counsel for boards, ministries, and executive committees.</p>
+</div>
+<div class="opacity-0 peer-checked:opacity-100 absolute top-4 right-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</label>
+</div>
+</section>
+<!-- 2. Optional Institutional Enhancements -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="text-secondary text-headline-md font-headline-md">02</span>
+<h2 class="text-headline-lg font-headline-lg">Institutional Enhancements</h2>
+</div>
+<div class="space-y-4">
+<label class="flex items-center justify-between p-4 bg-surface-container-low border-b-2 border-on-surface/10 hover:border-secondary transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input class="w-5 h-5 border-secondary text-secondary focus:ring-secondary bg-transparent" type="checkbox">
+<span class="text-on-surface font-body-lg text-body-lg">Social Media Amplification</span>
+</div>
+<span class="text-secondary font-label-md">+$5,000</span>
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container-low border-b-2 border-on-surface/10 hover:border-secondary transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input class="w-5 h-5 border-secondary text-secondary focus:ring-secondary bg-transparent" type="checkbox">
+<span class="text-on-surface font-body-lg text-body-lg">Archive Content Licensing</span>
+</div>
+<span class="text-secondary font-label-md">+$12,500</span>
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container-low border-b-2 border-on-surface/10 hover:border-secondary transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input class="w-5 h-5 border-secondary text-secondary focus:ring-secondary bg-transparent" type="checkbox">
+<span class="text-on-surface font-body-lg text-body-lg">Pre-Event Strategy Session</span>
+</div>
+<span class="text-secondary font-label-md">+$8,000</span>
+</label>
+<label class="flex items-center justify-between p-4 bg-surface-container-low border-b-2 border-on-surface/10 hover:border-secondary transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<input class="w-5 h-5 border-secondary text-secondary focus:ring-secondary bg-transparent" type="checkbox">
+<span class="text-on-surface font-body-lg text-body-lg">VIP Reception Appearance</span>
+</div>
+<span class="text-secondary font-label-md">+$15,000</span>
+</label>
+</div>
+</section>
+<!-- 3. Logistical Particulars -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="text-secondary text-headline-md font-headline-md">03</span>
+<h2 class="text-headline-lg font-headline-lg">Logistical Particulars</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+<div class="relative">
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Audience Scale</label>
+<select class="w-full bg-surface-container-low border-b-2 border-on-surface/20 py-4 px-2 focus:border-secondary outline-none transition-colors appearance-none">
+<option>Small Group (1-50)</option>
+<option>Corporate Hall (51-500)</option>
+<option>National Stadium (1000+)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 bottom-4 pointer-events-none">expand_more</span>
+</div>
+<div class="relative">
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Technical Requirements</label>
+<select class="w-full bg-surface-container-low border-b-2 border-on-surface/20 py-4 px-2 focus:border-secondary outline-none transition-colors appearance-none">
+<option>Full AV Suite (4K, Stereo Surround)</option>
+<option>Standard Mic (Podium Only)</option>
+<option>No Recording Permitted</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 bottom-4 pointer-events-none">expand_more</span>
+</div>
+<div class="md:col-span-2 relative">
+<label class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-2">Venue Location</label>
+<input class="w-full bg-surface-container-low border-b-2 border-on-surface/20 py-4 px-2 focus:border-secondary outline-none transition-colors" placeholder="City, Country" type="text">
+</div>
+</div>
+</section>
+</div>
+<!-- 4. Strategic Investment Summary (Sidebar) -->
+<aside class="lg:col-span-4 h-fit sticky top-24">
+<div class="glass-card p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[80px]" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<h3 class="text-headline-md font-headline-md border-b border-on-surface/10 pb-4 mb-6">Investment Summary</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface-variant">Base Engagement</span>
+<span class="font-bold text-on-surface">$45,000</span>
+</div>
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface-variant">Technical Logistics</span>
+<span class="font-bold text-on-surface">$2,500</span>
+</div>
+<div class="flex justify-between items-center text-body-md">
+<span class="text-on-surface-variant">Regional Premium</span>
+<span class="font-bold text-on-surface">$5,000</span>
+</div>
+</div>
+<div class="border-t-2 border-secondary/30 pt-6 mb-10">
+<span class="block text-label-sm font-label-sm text-on-surface-variant uppercase tracking-widest mb-2">Total Estimated Investment</span>
+<div class="text-[40px] font-headline-lg text-secondary">$52,500</div>
+<p class="text-on-surface-variant text-label-sm mt-2">Subject to final contract negotiation and board approval.</p>
+</div>
+<!-- Action Bar -->
+<div class="space-y-4">
+<button class="w-full bg-secondary text-on-secondary py-5 font-label-md text-label-md uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-secondary/20">
+                            Secure Engagement
+                        </button>
+<button class="w-full border-2 border-secondary text-secondary py-5 font-label-md text-label-md uppercase tracking-widest hover:bg-secondary/10 transition-all">
+                            Consult with Management
+                        </button>
+</div>
+</div>
+<p class="text-on-surface-variant text-label-sm mt-6 text-center italic">
+                    All engagements are governed by the EJTheVoice Institutional Protocol v4.2.
+                </p>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest full-width border-t border-secondary/10">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="EJTheVoice Official Crest" class="h-16 w-auto object-contain mb-2">
+<p class="text-body-md font-body-md text-secondary-fixed-dim max-w-xs text-center md:text-left">Architecting institutional influence through strategic excellence and narrative authority.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-label-sm font-label-sm" href="#">Privacy Protocol</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-label-sm font-label-sm" href="#">Terms of Engagement</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-label-sm font-label-sm" href="#">Strategic Partnerships</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-label-sm font-label-sm" href="#">Media Kit</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors text-label-sm font-label-sm" href="#">Contact Registry</a>
+</div>
+<p class="text-label-sm font-label-sm text-secondary-fixed-dim opacity-60 mt-8 md:mt-0">© 2024 EJTheVoice Institutional. All Rights Reserved. Part of the Ebidilo Group.</p>
+</div>
+</footer>
+<script>
+        // Simple interactivity for demonstration
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const sidebarTotal = document.querySelector('.text-\\[40px\\]');
+                let currentVal = parseInt(sidebarTotal.innerText.replace('$', '').replace(',', ''));
+                const cost = parseInt(this.closest('label').querySelector('.text-secondary').innerText.replace('+$', '').replace(',', ''));
+                
+                if (this.checked) {
+                    currentVal += cost;
+                } else {
+                    currentVal -= cost;
+                }
+                
+                sidebarTotal.innerText = '$' + currentVal.toLocaleString();
+            });
+        });
+    </script>
+
+
+</body></html>

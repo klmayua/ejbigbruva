@@ -1,0 +1,403 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Events | EJTheVoice INSTITUTIONAL ARCHIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b2c5ff",
+                        "surface-tint": "#b2c5ff",
+                        "surface-container-low": "#1a1c1b",
+                        "on-primary-fixed-variant": "#254388",
+                        "inverse-surface": "#e2e3e1",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#dae2ff",
+                        "outline": "#8e909c",
+                        "on-primary-container": "#7d99e3",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#333534",
+                        "tertiary-container": "#1b3060",
+                        "on-surface": "#e2e3e1",
+                        "tertiary-fixed-dim": "#b2c5ff",
+                        "secondary-fixed": "#ffe088",
+                        "primary-container": "#082e73",
+                        "surface-bright": "#383a38",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-variant": "#333534",
+                        "on-primary": "#042c71",
+                        "on-secondary-container": "#342800",
+                        "inverse-on-surface": "#2f3130",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-primary-fixed": "#001848",
+                        "surface-container-high": "#282a29",
+                        "on-tertiary-fixed": "#001847",
+                        "on-secondary-fixed-variant": "#574500",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#8699d0",
+                        "primary-fixed": "#dae2ff",
+                        "surface-container": "#1e201f",
+                        "surface-container-lowest": "#0c0f0e",
+                        "tertiary": "#b2c5ff",
+                        "surface": "#121413",
+                        "inverse-primary": "#3f5ca2",
+                        "surface-dim": "#121413",
+                        "outline-variant": "#444651",
+                        "on-secondary": "#3c2f00",
+                        "secondary-container": "#af8d11",
+                        "on-background": "#e2e3e1",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary-fixed-variant": "#314576",
+                        "on-tertiary": "#192e5e",
+                        "on-surface-variant": "#c4c6d2",
+                        "background": "#121413",
+                        "secondary": "#e9c349",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0c0f0e; /* surface-container-lowest for deep navy vibe */
+            color: #e2e3e1;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(18, 20, 19, 0.7);
+            backdrop-filter: blur(12px);
+            border: 0.5px solid rgba(233, 195, 73, 0.15);
+        }
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(233, 195, 73, 0.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-primary/70 backdrop-blur-md dark:bg-primary/70 border-b border-soft-ivory/10 flex justify-between items-center px-margin-desktop py-base">
+<div class="flex items-center gap-4">
+<img alt="EJTheVoice Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754">
+<span class="font-display-lg text-headline-md text-secondary tracking-widest uppercase">EJTheVoice</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Legacy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Media</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Voice</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-bold font-label-md" href="#">Events</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-300 font-label-md" href="#">Gallery</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-secondary cursor-pointer">newspaper</span>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary font-label-md uppercase tracking-wider" href="#">Community</a>
+<a class="bg-secondary text-on-secondary px-6 py-2 font-label-md uppercase tracking-widest hover:bg-secondary-fixed transition-all" href="#">Contact</a>
+</div>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero" class="w-full h-full object-cover grayscale opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-4xl">
+<span class="text-secondary font-label-md tracking-[0.3em] uppercase mb-6 block">Institutional Archive</span>
+<h1 class="font-display-lg text-display-lg leading-none mb-8">Convening <br><span class="italic text-secondary">The Cultural Vanguard</span></h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl mb-12">
+                    A curated calendar of high-level discourse, private viewings, and legacy-shaping engagements hosted by EJTheVoice. Join the conversation that defines the next decade.
+                </p>
+<div class="flex gap-6">
+<button class="bg-secondary text-on-secondary px-10 py-4 font-label-md uppercase tracking-[0.2em] hover:scale-105 transition-transform">View Schedule</button>
+<button class="border border-secondary/30 text-secondary px-10 py-4 font-label-md uppercase tracking-[0.2em] hover:bg-secondary/10 transition-colors">Inquiry</button>
+</div>
+</div>
+</section>
+<!-- Upcoming Events - Bento Grid -->
+<section class="py-24 px-margin-desktop bg-surface">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-secondary mb-2">Upcoming Events</h2>
+<p class="text-on-surface-variant font-body-md uppercase tracking-widest">The Academic &amp; Cultural Quarter</p>
+</div>
+<div class="h-[1px] flex-grow mx-12 bg-secondary/20"></div>
+<button class="text-secondary font-label-md uppercase tracking-widest flex items-center gap-2">View All <span class="material-symbols-outlined">trending_flat</span></button>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Main Featured Event -->
+<div class="col-span-12 lg:col-span-7 group relative overflow-hidden glass-card p-12 flex flex-col justify-end min-h-[500px]">
+<div class="absolute top-0 right-0 p-8">
+<span class="text-secondary font-display-lg text-headline-lg opacity-20">01</span>
+</div>
+<div class="mb-4">
+<span class="bg-primary-container text-primary px-3 py-1 text-label-sm font-bold uppercase tracking-tighter">Symposium</span>
+</div>
+<h3 class="font-headline-lg mb-6 group-hover:text-secondary transition-colors">The Legacy of Digital Sovereignism</h3>
+<div class="flex gap-12 text-on-surface-variant font-label-md uppercase tracking-widest">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">calendar_today</span> Oct 14, 2024</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">location_on</span> Lagos, Nigeria</div>
+</div>
+<div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">
+<p class="text-on-surface-variant mb-6 max-w-md">An exclusive roundtable session discussing the intersection of indigenous legacy and the future of web sovereignty.</p>
+<button class="text-secondary underline underline-offset-8 font-bold">Request Invite</button>
+</div>
+</div>
+<!-- Secondary Event 1 -->
+<div class="col-span-12 lg:col-span-5 glass-card p-8 flex flex-col justify-between group hover:border-secondary/40 transition-colors">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="text-secondary font-label-md uppercase tracking-widest">Private Viewing</span>
+<span class="material-symbols-outlined text-secondary">north_east</span>
+</div>
+<h3 class="font-headline-md mb-4">Midnight Sovereign: Art &amp; Identity</h3>
+<p class="text-on-surface-variant text-label-md">Gallery Opening &amp; Gala Dinner</p>
+</div>
+<div class="pt-8 border-t border-secondary/10 flex justify-between items-center">
+<span class="font-label-md text-secondary">Nov 02</span>
+<span class="text-label-sm uppercase tracking-widest opacity-60">London, UK</span>
+</div>
+</div>
+<!-- Secondary Event 2 -->
+<div class="col-span-12 lg:col-span-5 glass-card p-8 flex flex-col justify-between group hover:border-secondary/40 transition-colors">
+<div>
+<div class="flex justify-between items-start mb-8">
+<span class="text-secondary font-label-md uppercase tracking-widest">Legacy Lecture</span>
+<span class="material-symbols-outlined text-secondary">north_east</span>
+</div>
+<h3 class="font-headline-md mb-4">The EJTheVoice Philosophical Framework</h3>
+<p class="text-on-surface-variant text-label-md">Institutional Archives Series</p>
+</div>
+<div class="pt-8 border-t border-secondary/10 flex justify-between items-center">
+<span class="font-label-md text-secondary">Dec 12</span>
+<span class="text-label-sm uppercase tracking-widest opacity-60">New York, US</span>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="col-span-6 lg:col-span-2 glass-card p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">school</span>
+<span class="font-headline-md block">12</span>
+<span class="text-label-sm uppercase text-on-surface-variant">Workshops</span>
+</div>
+<div class="col-span-6 lg:col-span-2 glass-card p-6 flex flex-col items-center justify-center text-center border-secondary/40 bg-secondary/5">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">groups</span>
+<span class="font-headline-md block">5k+</span>
+<span class="text-label-sm uppercase text-on-surface-variant">Attendees</span>
+</div>
+<div class="col-span-12 lg:col-span-3 bg-secondary p-8 flex flex-col justify-center">
+<h4 class="text-on-secondary font-headline-md mb-2">Host an Event</h4>
+<p class="text-on-secondary/80 text-label-sm mb-6">Partner with EJTheVoice for your next high-impact symposium.</p>
+<button class="bg-on-secondary text-secondary px-4 py-2 text-label-sm font-bold uppercase">Learn More</button>
+</div>
+</div>
+</section>
+<!-- Past Events & Speaking Engagements Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute -right-20 top-0 opacity-5">
+<img alt="Logo Watermark" class="w-[800px] h-[800px] object-contain rotate-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_9RAnNPaThFbDC9iMvDA8uOr07jICBY7uGu__cFV8jxBzQO8-Tm3ebSes-ThFZ8AKYJimewJjveK0G5ls4ZGYP5zKw4bmFIvzD2fk8dWvSQ5czhfyY_wZz26nrNvoq0cjmOSZ50z0RrcjZ1-60wFLKhQi-FaySXW2mByFNxJb5sDdJ7A25SmAl6Epehet_ttWF0nOiJAJ7W7qpYZHJZaWhADCKgpDlUqgQxeRRQvzyuFTWsDwhJevSezlSCvvnqQtWmBKq7PV754">
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 relative z-10">
+<!-- Past Events -->
+<div>
+<h2 class="font-headline-lg text-secondary mb-12 border-l-4 border-secondary pl-6">Past Milestones</h2>
+<div class="space-y-12">
+<div class="group cursor-pointer">
+<span class="text-secondary font-label-md">2023 RECAP</span>
+<h3 class="text-headline-md mt-2 group-hover:translate-x-4 transition-transform duration-300 flex items-center gap-4">The Inaugural Archive Launch <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span></h3>
+<p class="text-on-surface-variant mt-4 font-body-md border-b border-soft-ivory/10 pb-6">A landmark gathering at the National Museum celebrating the first 50 years of legacy preservation.</p>
+</div>
+<div class="group cursor-pointer">
+<span class="text-secondary font-label-md">2022 SUMMIT</span>
+<h3 class="text-headline-md mt-2 group-hover:translate-x-4 transition-transform duration-300 flex items-center gap-4">Global Voices: Pan-Africanism Today <span class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span></h3>
+<p class="text-on-surface-variant mt-4 font-body-md border-b border-soft-ivory/10 pb-6">International experts convened to discuss the export of cultural capital through digital archives.</p>
+</div>
+</div>
+</div>
+<!-- Speaking Engagements -->
+<div>
+<h2 class="font-headline-lg text-secondary mb-12 border-l-4 border-secondary pl-6">Speaking Engagements</h2>
+<div class="glass-card p-10">
+<div class="space-y-10">
+<div class="flex gap-6 items-start">
+<div class="bg-secondary/10 p-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+<div>
+<h4 class="font-label-md uppercase text-secondary tracking-widest mb-1">Keynote</h4>
+<p class="font-headline-md mb-2">World Economic Forum</p>
+<p class="text-on-surface-variant text-label-sm italic">"The Future of Institutional Memory"</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-secondary/10 p-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">forum</span>
+</div>
+<div>
+<h4 class="font-label-md uppercase text-secondary tracking-widest mb-1">Panelist</h4>
+<p class="font-headline-md mb-2">Digital Heritage Expo</p>
+<p class="text-on-surface-variant text-label-sm italic">"Preserving the Unpreservable"</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-10 py-4 border border-secondary/30 text-secondary font-label-md uppercase tracking-[0.3em] hover:bg-secondary hover:text-on-secondary transition-all">Book Speaker</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Gallery -->
+<section class="py-24 bg-surface">
+<div class="px-margin-desktop mb-12">
+<h2 class="font-headline-lg text-secondary text-center">Moments in History</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+<div class="h-80 overflow-hidden relative group">
+<img alt="Gallery Image" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A black and white high-contrast editorial photograph of a prestigious cultural event in a grand hall. Men in exquisite traditional Agbada attire are engaged in deep intellectual conversation. The lighting is dramatic and moody, emphasizing textures of the fabric and the solemnity of the occasion within a luxury dark navy and gold aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxyECnHvOCHSSYTMlOn50migsKllrCwr_6xsRt6j0bHOO_ua0VDQe1qHHxoex8x8ohCLW28Peevk_yUffBTmPzWaUyf5vwGemiJLSkx3x0KMkX2Br3vnA10sTYIrvq5lLsPThAxsvUcPmxeqjhueMf7Hb5DOmujMSPzEnTxz9yMbjdrH1FRtTTIRZy8qEEvx1Iooy8LEjJfdf5_pEQjDhpFTL7BPt8Rd78Cp8joVpN2GTGvJ5ymtgO8HNJuOb1L7wuto2y2C_5QVU">
+<div class="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+<div class="h-80 overflow-hidden relative group">
+<img alt="Gallery 2" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A wide cinematic shot of a modern academic symposium stage with deep navy backdrops and elegant gold accents. The podium is illuminated by a sharp spotlight, casting soft shadows across the pristine architectural space. The atmosphere is quiet, authoritative, and sophisticated, reflecting a premium institutional brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPaQ4TPeOAZLgywglnZXOW9db--ESN0UdG29J6f-wyMCd9-T1BWZv4HARDM03GWr8YzRhVjAY3U9HJT3e3pBEhAJiEtAr22aPJNFGxW9QGOJKIz-VHaaQapfS24xioRUseFePqPD9v_Iqs0sAo39oEfHbwQDLZxPE9sKDFREqnpB865WMXmqjE98jIaARiZmFUCzibLSxK2G5OGaS1nWVco1n5t_-N1wEaJSsTozg6PEWCwJUuyYAt1gyjSpuS1c6LMwgzMd7V_2U">
+<div class="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+<div class="h-80 overflow-hidden relative group">
+<img alt="Gallery 3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="An intimate close-up of a gala dinner table setting featuring gold-rimmed glassware, navy velvet linens, and soft ivory candlelight. The scene is set in a high-end luxury venue with a historical feel. The composition is elegant and minimalist, focusing on the refined details of a prestigious institutional dinner party." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF-GOXdZH4wLMq3BJ2D_iuqEnNbN_UzfZnvMguWXaAdgGgsOAwqS1vybxSeLKjHt-p7tXjaZGvliiecHlYSS1LQeIObAnLA8yZKK9eV6rNB78EqqC8K-8UxFFW48DbmMES4C6kBH_UngcZddL0grHf5e_GoLeqT2OWcuh-P4TtGkZ2w4CrK1gNPAmo_KpB-K0EPX5SJulUfFrAVZErKDIm8X2Jc8e4uw_ynhH_Kb3x5TGvlLXeuWn62UlkbhrfvlkkHEo16ijhERM">
+<div class="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+<div class="h-80 overflow-hidden relative group">
+<img alt="Gallery 4" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated press conference environment with multiple microphones set on a dark navy table. In the background, a large gold-embossed logo of an institution is visible against a matte black wall. The lighting is professional and focused, capturing a moment of serious cultural and political discourse in a high-fashion digital editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZ7XTZF0ThfRDQrTS8yQ1mWshSz3qdGipldpHgu58NMoMccb9wn_7lQ58GGKB0m0XGUoccbW0HylrTDhzGDs4YyksQG3Fe6MAoCCQm3A_h5IJDvYF-xihSdNyptc7koCjNPmAiSMEHf83vjcHVbJasPvduMZnL0CIiSiOSOYOiR0x8foMc_Jb8w3H4FG2FMy0Ptb85KuUZIzjxj7benOJtqjNa9qaOxpLotrUFbt3794bQXj0d6p0i6cXmNtcrGGVceESH-b0sjY">
+<div class="absolute inset-0 bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking & Inquiry Information -->
+<section class="py-24 px-margin-desktop bg-surface-container-low border-t border-secondary/10">
+<div class="max-w-container-max mx-auto glass-card p-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<h2 class="font-headline-lg text-secondary mb-6">Booking Information</h2>
+<p class="text-on-surface-variant font-body-lg mb-10">We invite institutions, cultural bodies, and educational partners to collaborate on future events. Our team ensures each engagement reflects the prestige of the EJTheVoice legacy.</p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-label-md uppercase tracking-wider">Curated Panel Selection</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-label-md uppercase tracking-wider">Global Logistics Coordination</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="text-label-md uppercase tracking-wider">Multimedia Archive Production</span>
+</li>
+</ul>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col">
+<label class="text-label-sm uppercase text-secondary mb-2">Name</label>
+<input class="bg-surface-container-lowest border-0 border-b-2 border-soft-ivory/20 focus:ring-0 focus:border-secondary transition-colors py-3 text-on-surface" type="text">
+</div>
+<div class="flex flex-col">
+<label class="text-label-sm uppercase text-secondary mb-2">Organization</label>
+<input class="bg-surface-container-lowest border-0 border-b-2 border-soft-ivory/20 focus:ring-0 focus:border-secondary transition-colors py-3 text-on-surface" type="text">
+</div>
+</div>
+<div class="flex flex-col">
+<label class="text-label-sm uppercase text-secondary mb-2">Inquiry Type</label>
+<select class="bg-surface-container-lowest border-0 border-b-2 border-soft-ivory/20 focus:ring-0 focus:border-secondary transition-colors py-3 text-on-surface">
+<option>Event Partnership</option>
+<option>Speaking Engagement</option>
+<option>Media Access</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="text-label-sm uppercase text-secondary mb-2">Details</label>
+<textarea class="bg-surface-container-lowest border-0 border-b-2 border-soft-ivory/20 focus:ring-0 focus:border-secondary transition-colors py-3 text-on-surface resize-none" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary py-5 font-label-md uppercase tracking-[0.4em] hover:bg-secondary-fixed transition-all font-bold" type="submit">Submit Request</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-16 px-margin-desktop border-t border-secondary/20 w-full">
+<div class="flex flex-col items-center gap-base text-center w-full max-w-container-max mx-auto">
+
+<div class="mb-12 flex justify-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWvF-nHdw2xKstGjft8ySDVK94zelb6MpCkEiDtT3PB8YXAgFgSYTRjSILgn5BvsGjb8lQmrgvgruVQDyp5-wOa5NCgbujblFQ_9CiIGu8T-eLVUcjr-FzmkhptVpclIV49zl-7XM7EQFTibf-k2lRoNuCBdPeNi1GNgvX4B7FUwB40bOJud9sWs-2TOB6nXSBiJLWIxGhYfQVUOlsC9jjYDuDknGT_-IGmQMPwL4oGy-3cSjdPWDsU2Cha_B7DU9NEB_kmzHoZSs" alt="EJTheVoice Crest" class="h-32 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-500"></div>
+<nav class="flex flex-wrap justify-center gap-12 mb-12">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Community</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Press</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-label-md uppercase tracking-widest" href="#">Terms of Service</a>
+</nav>
+<p class="text-on-surface-variant font-body-md text-label-md max-w-2xl opacity-60">
+                © 2024 EJIKE EBIDILO - EJTheVoice INSTITUTIONAL ARCHIVE. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for scrolling effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-2xl', 'bg-primary/90');
+            } else {
+                header.classList.remove('shadow-2xl', 'bg-primary/90');
+            }
+        });
+
+        // Simple smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+</body></html>

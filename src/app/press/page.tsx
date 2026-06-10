@@ -79,7 +79,7 @@ export default function Page() {
           <h1 className="font-display-lg text-display-lg mb-6 leading-tight font-serif uppercase">Media &amp; Press Archive</h1>
           <div className="editorial-line w-full max-w-2xl mx-auto mb-8"></div>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-            The authoritative source for news, updates, and official communications from BIGBRUVA. High-resolution brand assets and sanctioned media materials for professional publication.
+            The authoritative source for news, updates, and official communications from EJTheVoice. High-resolution brand assets and sanctioned media materials for professional publication.
           </p>
         </header>
 
@@ -89,7 +89,7 @@ export default function Page() {
             <div>
               <h2 className="font-headline-lg text-headline-lg mb-4 text-secondary font-serif">Official Biography</h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Born from a legacy of charisma and leadership, BIGBRUVA represents the pinnacle of premium entertainment and cultural influence. Known as "The Original Big Brother," Ejike Ebidilo has redefined the intersection of media personality and visionary creator. His career spans decades of groundbreaking voice work, events, and community building, cementing his place as a sovereign figure in the global media landscape.
+                Born from a legacy of charisma and leadership, EJTheVoice represents the pinnacle of premium entertainment and cultural influence. Known as "The Original Big Brother," Ejike Ebidilo has redefined the intersection of media personality and visionary creator. His career spans decades of groundbreaking voice work, events, and community building, cementing his place as a sovereign figure in the global media landscape.
               </p>
             </div>
             <div className="flex gap-4">
@@ -196,7 +196,7 @@ export default function Page() {
                 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Global Event</p>
               </div>
               <div className="flex-grow">
-                <h3 className="font-headline-md text-headline-md mb-3 group-hover:text-secondary transition-colors font-serif">BIGBRUVA Announces Exclusive "Legacy Night" Gala in London</h3>
+                <h3 className="font-headline-md text-headline-md mb-3 group-hover:text-secondary transition-colors font-serif">EJTheVoice Announces Exclusive "Legacy Night" Gala in London</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-4">Official announcement regarding the highly anticipated European debut of the sovereign entertainment icon Ejike Ebidilo.</p>
                 <div className="flex gap-4 text-secondary font-label-md text-label-md">
                   <span className="flex items-center gap-1 hover:underline">Read Release <span className="material-symbols-outlined text-sm flex items-center">chevron_right</span></span>
@@ -211,7 +211,7 @@ export default function Page() {
                 <p className="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Foundation</p>
               </div>
               <div className="flex-grow">
-                <h3 className="font-headline-md text-headline-md mb-3 group-hover:text-secondary transition-colors font-serif">Launch of the BIGBRUVA Creative Arts Scholarship Fund</h3>
+                <h3 className="font-headline-md text-headline-md mb-3 group-hover:text-secondary transition-colors font-serif">Launch of the EJTheVoice Creative Arts Scholarship Fund</h3>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-4">Empowering the next generation of African talent through specialized training in voice, production, and digital media.</p>
                 <div className="flex gap-4 text-secondary font-label-md text-label-md">
                   <span className="flex items-center gap-1 hover:underline">Read Release <span className="material-symbols-outlined text-sm flex items-center">chevron_right</span></span>
@@ -239,7 +239,7 @@ export default function Page() {
                 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Global Media Hub</span>
                 <span className="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity flex items-center">open_in_new</span>
               </div>
-              <h4 className="font-headline-md text-headline-md italic mb-4 font-serif">"The Voice That Built an Empire: An Interview with BIGBRUVA."</h4>
+              <h4 className="font-headline-md text-headline-md italic mb-4 font-serif">"The Voice That Built an Empire: An Interview with EJTheVoice."</h4>
               <p className="font-label-md text-label-md text-secondary">June 2024 Feature</p>
             </Link>
             <Link className="block p-8 border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary transition-colors group" href="#">

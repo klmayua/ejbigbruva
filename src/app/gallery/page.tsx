@@ -140,7 +140,7 @@ export default function Page() {
         {/* Header Section */}
         <header className="mb-16 text-center md:text-left">
           <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-4 uppercase tracking-tighter">The Visual Archive</h1>
-          <p className="font-body-lg text-on-surface-variant max-w-2xl">A curated collection documenting the evolution, cultural impact, and private moments of BIGBRUVA Institutional Archive. From state agbadas to casual editorial portraits.</p>
+          <p className="font-body-lg text-on-surface-variant max-w-2xl">A curated collection documenting the evolution, cultural impact, and private moments of EJTheVoice Institutional Archive. From state agbadas to casual editorial portraits.</p>
         </header>
 
         {/* Category Filter */}

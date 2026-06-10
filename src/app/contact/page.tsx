@@ -73,7 +73,7 @@ export default function Page() {
        <header className="pt-16 md:pt-32 pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="max-w-3xl">
           <h1 className="font-display-lg text-display-lg mb-4 text-on-surface leading-tight">Institutional Inquiries</h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant">The office of BIGBRUVA manages all global media, speaking engagements, and official partnerships for Ejike Ebidilo.</p>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">The office of EJTheVoice manages all global media, speaking engagements, and official partnerships for Ejike Ebidilo.</p>
         </div>
       </header>
 
@@ -109,7 +109,7 @@ export default function Page() {
                 <span className="material-symbols-outlined text-secondary text-4xl">handshake</span>
                 <h3 className="font-headline-md text-headline-md text-on-surface">Partnerships</h3>
               </div>
-              <p className="text-on-surface-variant font-body-md mb-8">Strategic alliances with institutions that align with the BIGBRUVA legacy of excellence and authority.</p>
+              <p className="text-on-surface-variant font-body-md mb-8">Strategic alliances with institutions that align with the EJTheVoice legacy of excellence and authority.</p>
               <a className="text-secondary font-label-md text-label-md uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="mailto:partnerships@bigbruva.com">
                 partnerships@bigbruva.com <span className="material-symbols-outlined">arrow_forward</span>
               </a>
@@ -164,7 +164,7 @@ export default function Page() {
           <div className="glass-card py-12 px-10 flex flex-col md:flex-row justify-between items-center gap-8">
             <div>
               <h4 className="font-headline-md text-headline-md text-on-surface mb-2">Digital Presence</h4>
-              <p className="text-on-surface-variant font-body-md">Connect with the official BIGBRUVA ecosystem across global networks.</p>
+              <p className="text-on-surface-variant font-body-md">Connect with the official EJTheVoice ecosystem across global networks.</p>
             </div>
             <div className="flex gap-10">
               <a className="group" href="#">

@@ -118,7 +118,7 @@ export default function Page() {
             </h2>
             <div className="editorial-line w-32 mb-8"></div>
             <p className="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-              Ejike Ebidilo, known across the continent as BIGBRUVA, has redefined the landscape of modern broadcasting. With a career spanning decades, his journey is a testament to the power of authenticity in the digital age.
+              Ejike Ebidilo, known across the continent as EJTheVoice, has redefined the landscape of modern broadcasting. With a career spanning decades, his journey is a testament to the power of authenticity in the digital age.
             </p>
           </div>
         </section>
@@ -148,7 +148,7 @@ export default function Page() {
                   <h3 className="font-headline-lg text-secondary">Broadcasting Philosophy</h3>
                 </div>
                 <p className="font-body-lg text-on-surface-variant leading-relaxed">
-                  At the core of the BIGBRUVA identity is a commitment to 'Institutional Intimacy.' This philosophy dictates that while the scale of delivery remains global and authoritative, the connection with every individual listener remains personal and profound.
+                  At the core of the EJTheVoice identity is a commitment to 'Institutional Intimacy.' This philosophy dictates that while the scale of delivery remains global and authoritative, the connection with every individual listener remains personal and profound.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-4 md:pt-8">
                   <div className="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-secondary/20 transition-colors">
@@ -180,7 +180,7 @@ export default function Page() {
                   </div>
                   <div className="relative pl-10">
                     <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-low"></div>
-                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2012 — BIGBRUVA Era</span>
+                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2012 — EJTheVoice Era</span>
                     <p className="font-body-md text-on-surface">Launching the global brand, expanding into digital syndication and institutional voice work.</p>
                   </div>
                 </div>

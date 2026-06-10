@@ -19,15 +19,15 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12">
                 <Image 
-                  src="/images/EjBigBruva_Logo_Full_No_bg.png" 
-                  alt="BIGBRUVA Crest" 
+                  src="C:\Users\hp\Desktop\KLM2026\EJBigBruva\Images\EjTheVoice_logo.png" 
+                  alt="EJTheVoice Crest" 
                   fill
                   sizes="48px"
                   className="object-contain brightness-110 filter"
                 />
               </div>
               <span className="font-display-lg text-headline-xl text-secondary dark:text-secondary-fixed tracking-tighter">
-                BIGBRUVA
+                EJTheVoice
               </span>
             </div>
             <p className="text-on-surface-variant font-body-md leading-relaxed">
@@ -88,7 +88,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-label-sm font-label-sm text-on-surface-variant text-center md:text-left">
-            © 2024 BIGBRUVA - Ejike Ebidilo. All Rights Reserved. Curating Intellectual Depth.
+            © 2024 EJTheVoice - Ejike Ebidilo. All Rights Reserved. Curating Intellectual Depth.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-[10px] text-on-surface-variant tracking-[0.2em]">THE SOVEREIGN SERIES</span>

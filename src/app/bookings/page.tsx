@@ -54,7 +54,7 @@ export default function Page() {
        <header className="relative min-h-[85vh] flex items-end pt-20 md:pt-32 pb-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            alt="BIGBRUVA Portrait" 
+            alt="EJTheVoice Portrait" 
             className="w-full h-full object-cover object-top filter brightness-75 contrast-110" 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwZ36V1MFfrIhzLLNscCDWhxxgAk67jp1zDY0TdMvsV5ZtEd-vE-SUE9EkayQMoPMnpbaXTE63ppqyhWQ-zhb9ZohgUj9WM8uPxoKHsPavJUOQG2sebcXC2Kc8fZ8_RSb82DOleVSfwyZRSrDAB6qnrHP2A1wDQVm8-56DenvoaALua7EaO_OnxrenksANkeAL-R_kJ6tvOcioVW5cWuaR2jLUtndHHFftIC2Oiajybx_NqjwIEYBiTdU9Ym-T5Vjg3aesjshYdZI" 
           />
@@ -141,7 +141,7 @@ export default function Page() {
         <section className="bg-surface-container-lowest border border-outline-variant/20 rounded-3xl p-8 md:p-16" id="rate-card">
           <div className="text-center max-w-2xl mx-auto mb-16 transition-all duration-700 opacity-100 translate-y-0">
             <h2 className="font-display-lg text-headline-lg text-secondary mb-4">Engagement Framework</h2>
-            <p className="text-on-surface-variant">BIGBRUVA engagements are structured by impact and reach. We prioritize missions that align with our core intellectual values.</p>
+            <p className="text-on-surface-variant">EJTheVoice engagements are structured by impact and reach. We prioritize missions that align with our core intellectual values.</p>
           </div>
           <div className="overflow-x-auto transition-all duration-700 opacity-100 translate-y-0">
             <table className="w-full text-left border-collapse">
@@ -195,7 +195,7 @@ export default function Page() {
             <div>
               <span className="text-secondary font-label-md tracking-widest uppercase">Protocol</span>
               <h2 className="font-display-lg text-headline-lg mt-4 mb-8">The Path to Engagement</h2>
-              <p className="text-body-lg text-on-surface-variant mb-12">We maintain a rigorous selection process to ensure total alignment between the event's mission and BIGBRUVA's intellectual trajectory.</p>
+              <p className="text-body-lg text-on-surface-variant mb-12">We maintain a rigorous selection process to ensure total alignment between the event's mission and EJTheVoice's intellectual trajectory.</p>
               <div className="space-y-10">
                 <div className="flex gap-6 group">
                   <div className="w-12 h-12 shrink-0 rounded-full border border-secondary flex items-center justify-center font-display-lg text-headline-md text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-all">1</div>
@@ -208,7 +208,7 @@ export default function Page() {
                   <div className="w-12 h-12 shrink-0 rounded-full border border-secondary flex items-center justify-center font-display-lg text-headline-md text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-all">2</div>
                   <div>
                     <h4 className="font-headline-md mb-2">Strategic Alignment</h4>
-                    <p className="text-on-surface-variant">A briefing call with the BIGBRUVA office to refine the deliverable and ensure synergy.</p>
+                    <p className="text-on-surface-variant">A briefing call with the EJTheVoice office to refine the deliverable and ensure synergy.</p>
                   </div>
                 </div>
                 <div className="flex gap-6 group">

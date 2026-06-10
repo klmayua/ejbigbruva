@@ -48,9 +48,9 @@ export default function Navbar() {
         <div className="flex items-center pl-[28px]">
           <Link href="/">
             <img 
-              alt="BIGBRUVA Logo" 
+              alt="EJTheVoice Logo" 
               className="w-[68px] h-auto object-contain cursor-pointer" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
+              src="C:\Users\hp\Desktop\KLM2026\EJBigBruva\Images\EjTheVoice_logo.png"
             />
           </Link>
         </div>
@@ -107,9 +107,9 @@ export default function Navbar() {
       >
         <Link href="/" style={{ minWidth: '44px', minHeight: '44px', display: 'flex', alignItems: 'center' }}>
           <img 
-            alt="BIGBRUVA Logo" 
+            alt="EJTheVoice Logo" 
             className="w-[42px] h-auto object-contain cursor-pointer" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"
+            src="C:\Users\hp\Desktop\KLM2026\EJBigBruva\Images\EjTheVoice_logo.png"
           />
         </Link>
 

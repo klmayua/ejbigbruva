@@ -219,7 +219,7 @@ export default function Page() {
                 <span className="text-secondary font-label-sm mb-4 uppercase tracking-[0.3em]">Feature Documentary</span>
                 <h3 className="font-display-lg text-4xl text-on-background mb-6 font-serif">Origins of Excellence</h3>
                 <p className="font-body-md text-on-surface-variant leading-relaxed mb-8 opacity-80">
-                  A comprehensive look at the foundation and evolution of the BIGBRUVA institutional philosophy. Featuring never-before-seen footage and exclusive commentary from founding members.
+                  A comprehensive look at the foundation and evolution of the EJTheVoice institutional philosophy. Featuring never-before-seen footage and exclusive commentary from founding members.
                 </p>
                 <div className="flex flex-wrap gap-8 items-center text-on-surface-variant/70 font-label-md">
                   <span className="flex items-center gap-2"><span className="material-symbols-outlined text-sm flex items-center">schedule</span> 1h 24m</span>

@@ -76,7 +76,7 @@ export default function Timeline({ items, className = '' }: TimelineProps) {
                     </div>
                   ) : (
                     <p className="text-on-surface-variant/70 text-sm leading-relaxed">
-                      Detailed archives record this milestone as a pivotal phase in the expansion of BIGBRUVA's reach.
+                      Detailed archives record this milestone as a pivotal phase in the expansion of EJTheVoice's reach.
                     </p>
                   )}
                 </div>

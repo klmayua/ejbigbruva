@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import BodyTheme from "@/components/BodyTheme";
 
 export const metadata: Metadata = {
-  title: "BIGBRUVA | Ejike Ebidilo Institutional Portal",
+  title: "EJTheVoice | Ejike Ebidilo Institutional Portal",
   description: "Broadcaster. Storyteller. Mentor. Voice of Generations. Recreating the institutional identity of Ejike Ebidilo.",
   icons: {
     icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"

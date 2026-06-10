@@ -85,7 +85,7 @@ export default function Page() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="bg-secondary/20 text-secondary border border-secondary/40 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Documentary Special</span>
                 <div className="h-px w-12 bg-secondary/40"></div>
-                <span className="text-on-surface-variant text-xs uppercase tracking-widest">A BIGBRUVA Original</span>
+                <span className="text-on-surface-variant text-xs uppercase tracking-widest">A EJTheVoice Original</span>
               </div>
               <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-4 royal-gradient-text leading-none font-serif">The Cinematic Archive</h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Exploring Ejike Ebidilo’s contributions to film, television, and documentary storytelling.</p>

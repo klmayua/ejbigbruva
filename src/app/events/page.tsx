@@ -55,7 +55,7 @@ export default function Page() {
             <span className="text-secondary font-label-md tracking-[0.3em] uppercase mb-6 block">Institutional Archive</span>
             <h1 className="font-display-lg text-display-lg leading-none mb-8">Convening <br /><span className="italic text-secondary">The Cultural Vanguard</span></h1>
             <p className="font-body-lg text-on-surface-variant max-w-xl mb-12">
-              A curated calendar of high-level discourse, private viewings, and legacy-shaping engagements hosted by BIGBRUVA. Join the conversation that defines the next decade.
+              A curated calendar of high-level discourse, private viewings, and legacy-shaping engagements hosted by EJTheVoice. Join the conversation that defines the next decade.
             </p>
             <div className="flex gap-6">
               <button className="bg-secondary text-on-secondary px-10 py-4 font-label-md uppercase tracking-[0.2em] hover:scale-105 transition-transform">View Schedule</button>
@@ -116,7 +116,7 @@ export default function Page() {
                     <span className="text-secondary font-label-md uppercase tracking-widest">Legacy Lecture</span>
                     <span className="material-symbols-outlined text-secondary">north_east</span>
                   </div>
-                  <h3 className="font-headline-md mb-4">The BIGBRUVA Philosophical Framework</h3>
+                  <h3 className="font-headline-md mb-4">The EJTheVoice Philosophical Framework</h3>
                   <p className="text-on-surface-variant text-label-md">Institutional Archives Series</p>
                 </div>
                 <div className="pt-8 border-t border-secondary/10 flex justify-between items-center">
@@ -137,7 +137,7 @@ export default function Page() {
               </div>
               <div className="col-span-12 lg:col-span-3 bg-secondary p-8 flex flex-col justify-center">
                 <h4 className="text-on-secondary font-headline-md mb-2 font-serif">Host an Event</h4>
-                <p className="text-on-secondary/80 text-label-sm mb-6">Partner with BIGBRUVA for your next high-impact symposium.</p>
+                <p className="text-on-secondary/80 text-label-sm mb-6">Partner with EJTheVoice for your next high-impact symposium.</p>
                 <button className="bg-on-secondary text-secondary px-4 py-2 text-label-sm font-bold uppercase cursor-pointer">Learn More</button>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function Page() {
           <div className="max-w-container-max mx-auto glass-card p-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="font-headline-lg text-secondary mb-6">Booking Information</h2>
-              <p className="font-body-lg text-on-surface-variant mb-10">We invite institutions, cultural bodies, and educational partners to collaborate on future events. Our team ensures each engagement reflects the prestige of the BIGBRUVA legacy.</p>
+              <p className="font-body-lg text-on-surface-variant mb-10">We invite institutions, cultural bodies, and educational partners to collaborate on future events. Our team ensures each engagement reflects the prestige of the EJTheVoice legacy.</p>
               <ul className="space-y-6">
                 <li className="flex items-center gap-4">
                   <span className="material-symbols-outlined text-secondary flex items-center">check_circle</span>

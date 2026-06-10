@@ -103,7 +103,7 @@ export default function Page() {
             </div>
             <h3 className="font-display-lg text-headline-lg text-on-surface mb-6">The Continental Proclamation</h3>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mb-10 leading-relaxed">
-              A defining moment where the vision for BIGBRUVA was first unveiled to a pan-African audience, setting the stage for a decade of cultural leadership and institutional growth.
+              A defining moment where the vision for EJTheVoice was first unveiled to a pan-African audience, setting the stage for a decade of cultural leadership and institutional growth.
             </p>
             <div className="flex items-center gap-4 text-secondary group-hover:gap-6 transition-all duration-300 cursor-pointer">
               <span className="font-label-md text-label-md uppercase tracking-wider">Read the Manifesto</span>
@@ -130,7 +130,7 @@ export default function Page() {
             </div>
             <h3 className="font-headline-md text-headline-md text-on-surface mb-4">Impact Stories</h3>
             <p className="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
-              A collection of testimonials from industry leaders on the lasting influence of the BIGBRUVA mission.
+              A collection of testimonials from industry leaders on the lasting influence of the EJTheVoice mission.
             </p>
             <button className="font-label-md text-label-md text-secondary border-b border-secondary/30 hover:border-secondary transition-all cursor-pointer">Explore Archive</button>
           </div>
@@ -191,7 +191,7 @@ export default function Page() {
                 <div className="md:text-right md:pr-16 order-2 md:order-1">
                   <span className="font-display-lg text-headline-md text-secondary mb-2 block font-serif">2024</span>
                   <h4 className="font-headline-md text-headline-md text-on-surface mb-4">The Institutional Legacy</h4>
-                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Formalizing the BIGBRUVA legacy through the creation of this digital archive and the launch of the Excellence Initiative.</p>
+                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Formalizing the EJTheVoice legacy through the creation of this digital archive and the launch of the Excellence Initiative.</p>
                 </div>
                 <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary gold-glow z-20 hidden md:block"></div>
                 <div className="md:pl-16 order-1 md:order-2">
@@ -210,7 +210,7 @@ export default function Page() {
         <div className="max-w-4xl mx-auto text-center">
           <span className="material-symbols-outlined text-secondary text-5xl mb-12 block" style={{ fontVariationSettings: "'FILL' 0" }}>format_quote</span>
           <blockquote className="font-display-lg text-headline-lg text-on-surface mb-12 italic leading-relaxed md:text-4xl">
-            "Legacy is not what we leave behind, but how we teach others to see the future. The BIGBRUVA mission is a testament to the power of a singular voice amplified by collective purpose."
+            "Legacy is not what we leave behind, but how we teach others to see the future. The EJTheVoice mission is a testament to the power of a singular voice amplified by collective purpose."
           </blockquote>
           <cite className="font-label-md text-label-md text-secondary uppercase tracking-[0.4em] not-italic font-serif">— Archive Curatorial Board</cite>
         </div>
@@ -220,7 +220,7 @@ export default function Page() {
       <section className="py-16 md:py-32 px-margin-mobile md:px-margin-desktop text-center bg-surface">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-display-lg text-headline-lg text-on-surface mb-6">Contribute to the Narrative</h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">Have a story or artifact related to the BIGBRUVA journey? We invite you to be part of our growing institutional history.</p>
+          <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 leading-relaxed">Have a story or artifact related to the EJTheVoice journey? We invite you to be part of our growing institutional history.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-secondary text-on-secondary px-8 py-4 font-label-md text-label-md rounded flex items-center justify-center gap-3 hover:opacity-90 transition-all cursor-pointer">
               <span className="material-symbols-outlined flex items-center" style={{ fontVariationSettings: "'FILL' 0" }}>upload_file</span>

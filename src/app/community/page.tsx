@@ -66,7 +66,7 @@ export default function Page() {
           <div className="max-w-container-max mx-auto relative z-10">
             <div className="flex flex-col gap-6 max-w-3xl">
               <span className="text-secondary font-label-md tracking-[0.2em] uppercase">The Global Network</span>
-              <h1 className="font-display-lg text-display-lg gold-gradient-text leading-tight">The BIGBRUVA Community</h1>
+              <h1 className="font-display-lg text-display-lg gold-gradient-text leading-tight">The EJTheVoice Community</h1>
               <p className="font-body-lg text-on-surface-variant leading-relaxed">A sanctuary for critical thought, cultural preservation, and institutional excellence. Explore the collective impact of our members across the globe.</p>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function Page() {
               {/* Testimonial 1 */}
               <div className="glass-panel p-8 flex flex-col gap-6">
                 <span className="material-symbols-outlined text-secondary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-                <p className="italic text-on-surface font-body-lg leading-relaxed">"BIGBRUVA isn't just an archive; it's a living organism of history. The Community projects have redefined how we view our collective legacy in the modern age."</p>
+                <p className="italic text-on-surface font-body-lg leading-relaxed">"EJTheVoice isn't just an archive; it's a living organism of history. The Community projects have redefined how we view our collective legacy in the modern age."</p>
                 <div className="flex items-center gap-4 mt-4">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 border border-secondary/40"></div>
                   <div>
@@ -155,7 +155,7 @@ export default function Page() {
               {/* Testimonial 3 */}
               <div className="glass-panel p-8 flex flex-col gap-6">
                 <span className="material-symbols-outlined text-secondary text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
-                <p className="italic text-on-surface font-body-lg leading-relaxed">"A bastion of truth and a lighthouse for community-led progress. The BIGBRUVA archive serves as our definitive source of historical integrity."</p>
+                <p className="italic text-on-surface font-body-lg leading-relaxed">"A bastion of truth and a lighthouse for community-led progress. The EJTheVoice archive serves as our definitive source of historical integrity."</p>
                 <div className="flex items-center gap-4 mt-4">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 border border-secondary/40"></div>
                   <div>
@@ -232,7 +232,7 @@ export default function Page() {
         <section className="px-margin-mobile md:px-margin-desktop py-20 text-center">
           <div className="max-w-2xl mx-auto flex flex-col items-center gap-8">
             <h2 className="font-display-lg text-headline-lg">Lend Your Voice to History</h2>
-            <p className="text-on-surface-variant font-body-lg">The BIGBRUVA community is built on the contributions of those who value truth and legacy. Apply for membership or start a project today.</p>
+            <p className="text-on-surface-variant font-body-lg">The EJTheVoice community is built on the contributions of those who value truth and legacy. Apply for membership or start a project today.</p>
             <div className="flex gap-4">
               <Link href="/contact" className="bg-secondary text-on-secondary px-10 py-4 rounded-DEFAULT font-label-md hover:scale-105 transition-transform uppercase tracking-widest text-center block">
                 Join the Community

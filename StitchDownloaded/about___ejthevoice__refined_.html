@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | EJTheVoice - Ejike Ebidilo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0c0f0e;
+            color: #e2e3e1;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-serif {
+            font-family: 'Libre Caslon Text', serif;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .royal-gradient-text {
+            background: linear-gradient(to bottom right, #ffe088, #e9c349);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .editorial-line {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(233, 195, 73, 0.5) 0%, rgba(233, 195, 73, 0) 100%);
+        }
+        /* Custom scrollbar for better editorial feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0c0f0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333534;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #444651;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#e2e3e1",
+                      "on-tertiary-fixed": "#001847",
+                      "primary-fixed-dim": "#b2c5ff",
+                      "primary-container": "#082e73",
+                      "on-secondary-fixed": "#241a00",
+                      "on-secondary": "#3c2f00",
+                      "on-primary-container": "#7d99e3",
+                      "outline-variant": "#444651",
+                      "on-primary-fixed-variant": "#254388",
+                      "surface-container-lowest": "#0c0f0e",
+                      "tertiary": "#b2c5ff",
+                      "on-tertiary-container": "#8699d0",
+                      "on-surface-variant": "#c4c6d2",
+                      "error": "#ffb4ab",
+                      "tertiary-container": "#1b3060",
+                      "on-primary": "#042c71",
+                      "outline": "#8e909c",
+                      "surface": "#121413",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-highest": "#333534",
+                      "surface-tint": "#b2c5ff",
+                      "error-container": "#93000a",
+                      "inverse-surface": "#e2e3e1",
+                      "on-error": "#690005",
+                      "primary": "#b2c5ff",
+                      "on-primary-fixed": "#001848",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-surface": "#e2e3e1",
+                      "on-secondary-container": "#342800",
+                      "secondary-container": "#af8d11",
+                      "surface-container-low": "#1a1c1b",
+                      "on-tertiary-fixed-variant": "#314576",
+                      "surface-bright": "#383a38",
+                      "inverse-on-surface": "#2f3130",
+                      "tertiary-fixed-dim": "#b2c5ff",
+                      "surface-dim": "#121413",
+                      "surface-variant": "#333534",
+                      "background": "#121413",
+                      "secondary": "#e9c349",
+                      "on-tertiary": "#192e5e",
+                      "tertiary-fixed": "#dae2ff",
+                      "surface-container-high": "#282a29",
+                      "inverse-primary": "#3f5ca2",
+                      "on-secondary-fixed-variant": "#574500",
+                      "secondary-fixed": "#ffe088",
+                      "surface-container": "#1e201f",
+                      "primary-fixed": "#dae2ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Libre Caslon Text"],
+                      "label-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg-mobile": ["Libre Caslon Text"],
+                      "body-md": ["Inter"],
+                      "headline-lg": ["Libre Caslon Text"],
+                      "label-sm": ["Inter"],
+                      "headline-md": ["Libre Caslon Text"]
+              },
+              "fontSize": {
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface-container-lowest selection:bg-secondary selection:text-on-secondary-fixed">
+<!-- Desktop Side Navigation -->
+<aside class="fixed left-0 top-0 h-full z-40 hidden lg:flex flex-col w-80 bg-surface-container-lowest border-r border-outline-variant/10">
+<div class="px-8 py-10">
+<div class="w-full mb-8">
+<img alt="EJTheVoice Crest" class="h-24 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
+</div>
+<p class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-[0.25em] opacity-60">Ejike Ebidilo Institutional</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="#">
+<span class="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">home</span>
+<span class="font-label-md">Home</span>
+</a>
+<a class="flex items-center px-4 py-3 bg-primary-container/40 text-secondary rounded-xl font-bold transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined mr-4">person_celebrate</span>
+<span class="font-label-md">About</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="#">
+<span class="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">history_edu</span>
+<span class="font-label-md">Legacy</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="#">
+<span class="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">video_library</span>
+<span class="font-label-md">Media</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="#">
+<span class="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">record_voice_over</span>
+<span class="font-label-md">Voice</span>
+</a>
+<a class="flex items-center px-4 py-3 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all duration-200 ease-in-out group rounded-xl" href="#">
+<span class="material-symbols-outlined mr-4 opacity-70 group-hover:text-secondary">event</span>
+<span class="font-label-md">Events</span>
+</a>
+</nav>
+<div class="p-8">
+<button class="w-full py-4 bg-secondary text-on-secondary-fixed font-bold rounded-xl active:scale-95 transition-all shadow-lg shadow-secondary/10">
+            Join Community
+        </button>
+</div>
+</aside>
+<!-- Mobile Header -->
+<header class="lg:hidden fixed top-0 w-full z-50 glass-header border-b border-outline-variant/10 bg-surface-container-lowest/80 flex justify-between items-center px-margin-mobile py-4">
+<div class="h-10">
+<img alt="EJTheVoice Crest" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
+</div>
+<button class="material-symbols-outlined text-secondary text-3xl">menu</button>
+</header>
+<!-- Main Content -->
+<main class="lg:ml-80 min-h-screen">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Ejike Ebidilo Casual Portrait" class="w-full h-full object-cover object-center scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl opacity-0 translate-y-8 transition-all duration-1000" id="hero-content">
+<span class="font-label-md text-secondary uppercase tracking-[0.3em] mb-6 block">The Architect of Sound</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-8 leading-tight">
+                The Man Behind <br/><span class="italic font-normal royal-gradient-text">The Voice.</span>
+</h2>
+<div class="editorial-line w-32 mb-8"></div>
+<p class="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                Ejike Ebidilo, known across the continent as EJTheVoice, has redefined the landscape of modern broadcasting. With a career spanning decades, his journey is a testament to the power of authenticity in the digital age.
+            </p>
+</div>
+</section>
+<!-- Biography Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-32 bg-surface-container-lowest">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column -->
+<div class="lg:col-span-7 space-y-32">
+<!-- Early Years -->
+<div class="space-y-8 opacity-0 translate-y-8 transition-all duration-1000">
+<div class="flex items-center gap-4">
+<span class="font-serif text-display-lg-mobile text-secondary/30">01</span>
+<h3 class="font-headline-lg text-secondary">Early Years</h3>
+</div>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                        Born from a heritage of storytellers, Ejike's fascination with the auditory medium began in the vibrant corridors of Lagos. Before the fame, there was a relentless curiosity about how sound shapes human emotion. This foundational period was defined by an obsession with the nuances of linguistic delivery and the rhythmic cadence of the African narrative.
+                    </p>
+<blockquote class="pl-8 border-l-2 border-secondary/30 italic font-serif text-headline-md text-on-surface py-2">
+                        "A voice isn't just sound; it's a bridge between souls."
+                    </blockquote>
+</div>
+<!-- Philosophy -->
+<div class="space-y-8 opacity-0 translate-y-8 transition-all duration-1000">
+<div class="flex items-center gap-4">
+<span class="font-serif text-display-lg-mobile text-secondary/30">02</span>
+<h3 class="font-headline-lg text-secondary">Broadcasting Philosophy</h3>
+</div>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                        At the core of the EJTheVoice identity is a commitment to 'Institutional Intimacy.' This philosophy dictates that while the scale of delivery remains global and authoritative, the connection with every individual listener remains personal and profound.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+<div class="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-secondary/20 transition-colors">
+<h4 class="font-label-md text-secondary uppercase mb-4">Authenticity</h4>
+<p class="font-body-md text-on-surface-variant">The refusal to perform a character, choosing instead to reveal the man.</p>
+</div>
+<div class="p-8 bg-surface-container rounded-xl border border-outline-variant/10 hover:border-secondary/20 transition-colors">
+<h4 class="font-label-md text-secondary uppercase mb-4">Precision</h4>
+<p class="font-body-md text-on-surface-variant">Every syllable measured for impact and clarity of vision.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Timeline -->
+<div class="lg:col-span-5">
+<div class="sticky top-32 p-10 bg-surface-container-low rounded-2xl border border-outline-variant/10 glass-header shadow-xl">
+<h3 class="font-headline-lg text-on-background mb-12">Career Journey</h3>
+<div class="space-y-12 relative">
+<div class="absolute left-[11px] top-2 bottom-2 w-[1px] bg-outline-variant/30"></div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-secondary border-4 border-surface-container-low"></div>
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-2 block">1998 — Genesis</span>
+<p class="font-body-md text-on-surface">Initial forays into community radio, developing the signature resonance.</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-low"></div>
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2005 — National Impact</span>
+<p class="font-body-md text-on-surface">Transitioning to prime-time terrestrial broadcasting during a transformative era.</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-low"></div>
+<span class="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2012 — EJTheVoice Era</span>
+<p class="font-body-md text-on-surface">Launching the global brand, expanding into digital syndication and institutional voice work.</p>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant/20">
+<p class="font-body-md text-on-surface-variant italic opacity-80">"Success is not a destination, but the consistency of one's evolution."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership & Legacy -->
+<section class="px-margin-mobile md:px-margin-desktop py-32 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24 opacity-0 translate-y-8 transition-all duration-1000">
+<h2 class="font-serif text-display-lg-mobile md:text-display-lg text-on-background mb-4">Leadership &amp; <span class="italic royal-gradient-text">Legacy</span></h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl mx-auto">Creating a blueprint for the next generation of African creators and institutional leaders.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="col-span-1 md:col-span-2 p-12 bg-surface-container-low rounded-3xl border border-outline-variant/10 flex flex-col justify-between group hover:border-secondary/30 transition-all duration-500">
+<div class="space-y-6">
+<span class="material-symbols-outlined text-secondary text-5xl font-light">diversity_3</span>
+<h3 class="font-headline-lg text-on-background">Mentorship Framework</h3>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">Developing the 'Voice Academy' initiative to empower young talent with the technical skills and psychological resilience needed for long-term career sustainability.</p>
+</div>
+<div class="mt-12 flex items-center text-secondary font-bold group-hover:translate-x-2 transition-transform cursor-pointer">
+                        Learn more <span class="material-symbols-outlined ml-2">arrow_right_alt</span>
+</div>
+</div>
+<div class="col-span-1 p-12 bg-primary-container text-on-primary-container rounded-3xl flex flex-col justify-center text-center shadow-inner">
+<h4 class="font-label-md uppercase tracking-[0.2em] mb-4 opacity-70">Core Principle</h4>
+<p class="font-serif text-headline-lg italic">"Ego is the noise that drowns out the impact."</p>
+</div>
+<div class="col-span-1 p-12 bg-surface-container-high rounded-3xl border border-outline-variant/10 hover:bg-surface-container-highest transition-colors">
+<h3 class="font-headline-md text-secondary mb-6">Legacy Vision</h3>
+<p class="font-body-md text-on-surface-variant">To leave behind a centralized digital archive of the African voice—a repository of wisdom and high production standards.</p>
+</div>
+<div class="col-span-1 md:col-span-2 relative p-12 rounded-3xl overflow-hidden group border border-outline-variant/10">
+<div class="absolute inset-0 bg-surface-container-lowest">
+<div class="absolute inset-0 bg-secondary/5 opacity-50"></div>
+<div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<h3 class="font-headline-lg text-on-background">Institutional Authority</h3>
+<p class="font-body-lg text-on-surface-variant max-w-lg">Defining what it means to be a modern icon. It isn't about being seen everywhere; it's about being indispensable where it matters most.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="flex flex-col items-center justify-center py-24 px-margin-desktop text-center w-full border-t border-outline-variant/10 bg-surface-container-lowest">
+<div class="mb-12">
+<img alt="EJTheVoice Crest" class="h-32 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzoQachYWqkheryCjc0oj1MFa-C1ZPMJ7iMTX-2-IDj7U9vodjQkBDg6bzs8DGk-WmboILzxQlYaQcA2aHbUEYZcJRksEek2fr3QWgIrtR-1uivfoHhCgtW90_f6_8W4NQYgsLsKZ0qSQin7U0OqkqxqrlplbfTuEt6pFWYYQmG4aDRV2AFdu5ZJyhZyKPZTRJaMbuic6zpM-OG6I9l73dLr-tV4GAyFoG0xg_-5hrsvTea3SIsK9OnWGI5gPT5RFgnnA0E5N6ZZU"/>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-12">
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Legacy</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Press</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms</a>
+</div>
+<p class="font-body-md text-on-surface-variant/40">© 2024 EJTheVoice - Ejike Ebidilo. All Rights Reserved.</p>
+<div class="mt-8 flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">play_circle</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">podcasts</span>
+</a>
+</div>
+</footer>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-8 right-8 lg:right-12 z-50 w-16 h-16 bg-secondary text-on-secondary-fixed rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-all group overflow-hidden">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="material-symbols-outlined text-3xl">mail</span>
+<span class="absolute right-20 bg-surface-container-highest text-on-surface text-sm font-bold py-2.5 px-5 rounded-xl opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0 pointer-events-none whitespace-nowrap border border-outline-variant/30 shadow-2xl">Inquire Now</span>
+</button>
+<script>
+    // Reveal Observer
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+            }
+        });
+    }, observerOptions);
+
+    // Initial hero reveal
+    setTimeout(() => {
+        const hero = document.getElementById('hero-content');
+        if(hero) {
+            hero.classList.remove('opacity-0', 'translate-y-8');
+            hero.classList.add('opacity-100', 'translate-y-0');
+        }
+    }, 300);
+
+    // Section reveal elements
+    document.querySelectorAll('section > div, .space-y-32 > div').forEach(el => {
+        if (!el.id) {
+            el.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
+            revealObserver.observe(el);
+        }
+    });
+
+    // Parallax logic
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroImage = document.querySelector('section img');
+        if (heroImage) {
+            heroImage.style.transform = `scale(1.05) translateY(${scrolled * 0.1}px)`;
+        }
+    });
+</script>
+</body></html>
