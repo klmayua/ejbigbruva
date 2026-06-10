@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Image from 'next/image';
 
 interface HeroProps {
@@ -21,7 +21,7 @@ export default function Hero({
   imageAlt = 'EJTheVoice Hero image',
   focalPoint = 'center 20%', // Default focal point to avoid cropping faces
   ctas,
-  verticalText = 'EJIKE EBIDILO • SINCE 1978',
+  verticalText = 'EJIKE Ibedilo â€¢ SINCE 1978',
   className = ''
 }: HeroProps) {
   return (

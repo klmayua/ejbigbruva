@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
@@ -100,7 +100,7 @@ export default function Page() {
             <blockquote className="font-headline-lg text-on-surface mb-8">
               "The archive is not a graveyard of documents; it is a living conversation between who we were and who we are becoming. Our voice is the bridge."
             </blockquote>
-            <cite className="font-label-md text-secondary not-italic tracking-widest">— EJ EBIDILO, FOUNDER'S REFLECTION</cite>
+            <cite className="font-label-md text-secondary not-italic tracking-widest">â€” EJ Ibedilo, FOUNDER'S REFLECTION</cite>
           </div>
         </div>
       </section>

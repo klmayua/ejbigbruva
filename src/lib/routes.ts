@@ -1,4 +1,4 @@
-export interface RouteMeta {
+﻿export interface RouteMeta {
   path: string;
   title: string;
   description: string;
@@ -7,17 +7,17 @@ export interface RouteMeta {
 export const routes: Record<string, RouteMeta> = {
   home: {
     path: '/',
-    title: 'EJTheVoice | Ejike Ebidilo Institutional',
+    title: 'EJTheVoice | Ejike Ibedilo Institutional',
     description: 'Broadcaster. Storyteller. Mentor. Voice of Generations.'
   },
   about: {
     path: '/about',
-    title: 'About | EJTheVoice - Ejike Ebidilo',
+    title: 'About | EJTheVoice - Ejike Ibedilo',
     description: 'The Man Behind The Voice. Redefining the landscape of modern broadcasting.'
   },
   legacy: {
     path: '/legacy',
-    title: 'Legacy | EJTheVoice - Ejike Ebidilo',
+    title: 'Legacy | EJTheVoice - Ejike Ibedilo',
     description: 'Over four decades of broadcasting, mentorship, and cultural influence.'
   },
   media: {
@@ -28,7 +28,7 @@ export const routes: Record<string, RouteMeta> = {
   movies: {
     path: '/movies',
     title: 'The Cinematic Archive | EJTheVoice',
-    description: 'Exploring Ejike Ebidilo\'s contributions to film and political thriller storytelling.'
+    description: 'Exploring Ejike Ibedilo\'s contributions to film and political thriller storytelling.'
   },
   voice: {
     path: '/voice',

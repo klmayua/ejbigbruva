@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -73,7 +73,7 @@ export default function Page() {
        <header className="pt-16 md:pt-32 pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="max-w-3xl">
           <h1 className="font-display-lg text-display-lg mb-4 text-on-surface leading-tight">Institutional Inquiries</h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant">The office of EJTheVoice manages all global media, speaking engagements, and official partnerships for Ejike Ebidilo.</p>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">The office of EJTheVoice manages all global media, speaking engagements, and official partnerships for Ejike Ibedilo.</p>
         </div>
       </header>
 

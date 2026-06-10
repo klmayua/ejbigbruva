@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
@@ -88,7 +88,7 @@ export default function Page() {
                 <span className="text-on-surface-variant text-xs uppercase tracking-widest">A EJTheVoice Original</span>
               </div>
               <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-4 royal-gradient-text leading-none font-serif">The Cinematic Archive</h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Exploring Ejike Ebidilo’s contributions to film, television, and documentary storytelling.</p>
+              <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">Exploring Ejike Ibediloâ€™s contributions to film, television, and documentary storytelling.</p>
               <div className="flex flex-wrap gap-4">
                 <button className="flex items-center gap-2 bg-secondary text-on-secondary px-8 py-4 rounded-lg font-bold hover:bg-secondary-fixed transition-all group cursor-pointer border-none outline-none">
                   <span className="material-symbols-outlined flex items-center" style={{ fontVariationSettings: "'FILL' 1" }}>play_arrow</span>
@@ -119,7 +119,7 @@ export default function Page() {
                   <div className="w-full md:w-5/12 text-right hidden md:block">
                     <h3 className="font-headline-md text-secondary font-serif">Echoes of the Sahara</h3>
                     <p className="text-on-surface-variant mb-2 font-body-md">Lead Role: Commander Diallo</p>
-                    <span className="bg-surface-container-high px-3 py-1 rounded text-xs text-on-surface-variant">2023 • Feature Film</span>
+                    <span className="bg-surface-container-high px-3 py-1 rounded text-xs text-on-surface-variant">2023 â€¢ Feature Film</span>
                   </div>
                   <div className="relative z-10 w-12 h-12 rounded-full glass-panel border border-secondary flex items-center justify-center mb-4 md:mb-0">
                     <span className="text-secondary font-bold">23</span>
@@ -127,9 +127,9 @@ export default function Page() {
                   <div className="w-full md:w-5/12 text-left bg-surface-container px-6 py-6 rounded-xl border border-outline-variant group-hover:border-secondary transition-colors">
                     <div className="md:hidden">
                       <h3 className="font-headline-md text-secondary font-serif">Echoes of the Sahara</h3>
-                      <p className="text-on-surface-variant mb-4">2023 • Feature Film</p>
+                      <p className="text-on-surface-variant mb-4">2023 â€¢ Feature Film</p>
                     </div>
-                    <p className="text-on-surface-variant text-sm italic mb-4">"A masterclass in restraint and emotional depth. Ebidilo anchors this desert epic with a presence that rivals the landscape itself." — Global Cinema Weekly</p>
+                    <p className="text-on-surface-variant text-sm italic mb-4">"A masterclass in restraint and emotional depth. Ibedilo anchors this desert epic with a presence that rivals the landscape itself." â€” Global Cinema Weekly</p>
                     <img className="w-full h-32 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBItZIBWnPMku5nUlCmN3juHKEFhgtUyTddIG4h_9hSbjYJXrJA82E0Jo2K7dwStRY83F1IMi-uqbUZC3Ur1yFu7g52I6dQ_ibhDc0s-FBZWEzBksgxDl_ZrJ0-G-gYSjX2kX2CQyHxDlz2iJDBnGEVD8CZKmg8OMEQWOs6K4bPxSuDd_PHYXL8jyb7jEfa166I8xqyb-t2IomyKwQfdZkMNLrAP_Cn_Xw4fXsEb7cv1hqYoW9OILhEiT3ast4OiLyhRfOUXklU7IU"/>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function Page() {
                   <div className="w-full md:w-5/12 text-left hidden md:block">
                     <h3 className="font-headline-md text-secondary font-serif">The Sovereign Debt</h3>
                     <p className="text-on-surface-variant mb-2 font-body-md">Executive Producer / Lead</p>
-                    <span className="bg-surface-container-high px-3 py-1 rounded text-xs text-on-surface-variant">2021 • Political Thriller</span>
+                    <span className="bg-surface-container-high px-3 py-1 rounded text-xs text-on-surface-variant">2021 â€¢ Political Thriller</span>
                   </div>
                   <div className="relative z-10 w-12 h-12 rounded-full glass-panel border border-secondary flex items-center justify-center mb-4 md:mb-0">
                     <span className="text-secondary font-bold">21</span>
@@ -146,7 +146,7 @@ export default function Page() {
                   <div className="w-full md:w-5/12 text-left bg-surface-container px-6 py-6 rounded-xl border border-outline-variant group-hover:border-secondary transition-colors">
                     <div className="md:hidden">
                       <h3 className="font-headline-md text-secondary font-serif">The Sovereign Debt</h3>
-                      <p className="text-on-surface-variant mb-4">2021 • Political Thriller</p>
+                      <p className="text-on-surface-variant mb-4">2021 â€¢ Political Thriller</p>
                     </div>
                     <p className="text-on-surface-variant text-sm italic mb-4">Defining the intersection of global finance and morality through a high-stakes dramatic lens.</p>
                     <img className="w-full h-32 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdStkgSmnC7EIEPB57B5qDtIENTZx_w9QaFUo3XuP7z2ZhZgYy9wLk0zn0a26tILItukiNjTAdp1m10Fgj_lAb7JSzvto8m427TKuKRZyaI74GNVagttEtMdRAOC5GudLsi743tt296VwXD56824l0WaitzVUEOLh4RJknANAbSjCRmFU_3eGFd-hs66uH7-WjpsdYNuPCNQSFo6s_k59eVM5ctRJPiPze96yYLZlvS10pDwBbS8I_aW2g8R0294tPYepT6kKrfNg"/>
@@ -223,7 +223,7 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="font-display-lg text-headline-lg text-secondary mb-6 leading-tight font-serif">The Resonance of Voice</h2>
-                <p className="text-body-lg text-on-surface-variant mb-8 font-body-lg">Beyond the screen, Ejike Ebidilo brings life to characters and narratives through an authoritative and versatile vocal range. From international animation to prestige documentary narration.</p>
+                <p className="text-body-lg text-on-surface-variant mb-8 font-body-lg">Beyond the screen, Ejike Ibedilo brings life to characters and narratives through an authoritative and versatile vocal range. From international animation to prestige documentary narration.</p>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 p-4 rounded-lg bg-surface border border-outline-variant/20">
                     <span className="material-symbols-outlined text-secondary text-3xl flex items-center">mic</span>

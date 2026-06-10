@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect } from 'react';
 import Link from 'next/link';
@@ -110,7 +110,7 @@ export default function Page() {
             }}
           >
             <img 
-              alt="Ejike Ebidilo Portrait" 
+              alt="Ejike Ibedilo Portrait" 
               className="absolute bottom-0 w-full h-full object-cover object-[center_17%] md:relative md:h-auto md:object-contain select-none pointer-events-none filter contrast-[1.10] brightness-[1.02]" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-559P85BIW1Vp8U3rAA_DXLCOB6Cuv_k8nUEPsPB6j1gRYGOyQkwtoqJt8OqbMkc1QcahDC8L52rMXERda9PerZ5UaANs_sdmZ5ARo8eAslvfbuKa9UIY3B2PmhJ-67_UgWdsc50d12bRJogrXpgFXUT703nd8v9kf6fRFHkrkNiwepIRUkqCICu5z6FtCRbsPu_MkX7WNAHyklcbFiwripfDfAyqqTznLLljY-kU7uq7b9-seQTcnLvU_-5cDbHESj5ri6uhwQ" 
             />
@@ -204,8 +204,8 @@ export default function Page() {
             >
               <span className="text-white block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">THE</span>
               <span className="text-white block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">ORIGINAL</span>
-              <span className="text-secondary block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">BIG</span>
-              <span className="text-secondary block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">BROTHER.</span>
+              <span className="text-secondary block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">VOICE</span>
+              <span className="text-secondary block text-[44px] sm:text-[60px] md:text-[80px] lg:text-[108px]">OF AFRICA.</span>
             </h1>
             
             {/* CTAs directly below headline */}
@@ -253,7 +253,7 @@ export default function Page() {
                   From the early days of radio waves reaching across the federation to the digital frontier of global streaming, Ejike's voice has been a constant companion to millions.
                 </p>
                 <p>
-                  His approach to storytelling transcends mere reporting; it is an art form rooted in deep empathy, linguistic precision, and an unwavering commitment to the truth. Whether narrating a nation's history or guiding a new talent, the "Big Brother" archetype is felt in every syllable.
+                  His approach to storytelling transcends mere reporting; it is an art form rooted in deep empathy, linguistic precision, and an unwavering commitment to the truth. Whether narrating a nation's history or guiding a new talent, the "Voice of Africa" archetype is felt in every syllable.
                 </p>
               </div>
               <div className="mt-12">
@@ -266,7 +266,7 @@ export default function Page() {
             <div className="md:col-span-5 relative">
               <div className="aspect-[3/4] bg-surface-container overflow-hidden rounded shadow-2xl relative">
                 <img 
-                  alt="Ejike Ebidilo in a casual portrait" 
+                  alt="Ejike Ibedilo in a casual portrait" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
                 />
@@ -292,7 +292,7 @@ export default function Page() {
             </div>
             <div className="text-center group">
               <div className="font-display-lg text-headline-lg md:text-display-lg text-secondary mb-2 group-hover:scale-110 transition-transform duration-500">120+</div>
-              <div className="font-label-sm text-on-surface-variant uppercase tracking-widest">Protégés Mentored</div>
+              <div className="font-label-sm text-on-surface-variant uppercase tracking-widest">ProtÃ©gÃ©s Mentored</div>
             </div>
             <div className="text-center group">
               <div className="font-display-lg text-headline-lg md:text-display-lg text-secondary mb-2 group-hover:scale-110 transition-transform duration-500">15</div>
@@ -309,7 +309,7 @@ export default function Page() {
               "Great broadcasting isn't about the volume of your voice, but the depth of the silence you command between your words."
             </blockquote>
             <div className="h-1 w-24 bg-secondary mx-auto mb-8"></div>
-            <cite className="font-label-md text-secondary tracking-[0.3em] uppercase not-italic">Ejike Ebidilo, 2024</cite>
+            <cite className="font-label-md text-secondary tracking-[0.3em] uppercase not-italic">Ejike Ibedilo, 2024</cite>
           </div>
         </section>
 
@@ -339,7 +339,7 @@ export default function Page() {
                 </div>
               </div>
               <h3 className="font-headline-md text-on-background mb-2">The Golden Era Interviews</h3>
-              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Archived Audio • 1994</p>
+              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Archived Audio â€¢ 1994</p>
             </Link>
             {/* Media Item 2 */}
             <Link href="/media" className="group cursor-pointer block">
@@ -350,7 +350,7 @@ export default function Page() {
                 </div>
               </div>
               <h3 className="font-headline-md text-on-background mb-2">Voice of Generations</h3>
-              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Monograph • 2023</p>
+              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Monograph â€¢ 2023</p>
             </Link>
             {/* Media Item 3 */}
             <Link href="/media" className="group cursor-pointer block">
@@ -365,7 +365,7 @@ export default function Page() {
                 </div>
               </div>
               <h3 className="font-headline-md text-on-background mb-2">Beyond the Script</h3>
-              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Masterclass • Ongoing</p>
+              <p className="font-label-sm text-on-surface-variant uppercase tracking-widest">Masterclass â€¢ Ongoing</p>
             </Link>
           </div>
           </div>

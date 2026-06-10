@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -105,7 +105,7 @@ export default function Page() {
         <section className="relative min-h-[70vh] md:min-h-screen flex flex-col justify-end p-margin-mobile md:p-margin-desktop overflow-hidden">
           <div className="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
             <img 
-              alt="Ejike Ebidilo Casual Portrait" 
+              alt="Ejike Ibedilo Casual Portrait" 
               className="w-full h-full object-cover object-center scale-105" 
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeInVieQFXF4d8UzMMykXuM5fPy-Mf9CbEKa3-dUuqw_sEUs3tNBHs_Jw8o517789ZUwK6Iczz6gG22MxX0_gqLSW3YYCxfiVkRt352wnzefGKNIPEr-NICF_aAuQlKLaklbJOnFr2CaKHKUpaqB3vyNe0iUWdMC2cK--x49Te4C8sXut7DpR3L8SeeNHB9_EqSkTTjr829edkDu6mzKIIcxy6AR4Fb9ADw-3wX53BftnhTi4hIMsfCLkmVd7x_QJ5rrasq9L-nzo" 
             />
@@ -118,7 +118,7 @@ export default function Page() {
             </h2>
             <div className="editorial-line w-32 mb-8"></div>
             <p className="font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-              Ejike Ebidilo, known across the continent as EJTheVoice, has redefined the landscape of modern broadcasting. With a career spanning decades, his journey is a testament to the power of authenticity in the digital age.
+              Ejike Ibedilo, known across the continent as EJTheVoice, has redefined the landscape of modern broadcasting. With a career spanning decades, his journey is a testament to the power of authenticity in the digital age.
             </p>
           </div>
         </section>
@@ -170,17 +170,17 @@ export default function Page() {
                   <div className="absolute left-[11px] top-2 bottom-2 w-[1px] bg-outline-variant/30"></div>
                   <div className="relative pl-10">
                     <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-secondary border-4 border-surface-container-low"></div>
-                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">1998 — Genesis</span>
+                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">1998 â€” Genesis</span>
                     <p className="font-body-md text-on-surface">Initial forays into community radio, developing the signature resonance.</p>
                   </div>
                   <div className="relative pl-10">
                     <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-low"></div>
-                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2005 — National Impact</span>
+                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2005 â€” National Impact</span>
                     <p className="font-body-md text-on-surface">Transitioning to prime-time terrestrial broadcasting during a transformative era.</p>
                   </div>
                   <div className="relative pl-10">
                     <div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-outline-variant border-4 border-surface-container-low"></div>
-                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2012 — EJTheVoice Era</span>
+                    <span className="font-label-sm text-secondary uppercase tracking-widest mb-2 block">2012 â€” EJTheVoice Era</span>
                     <p className="font-body-md text-on-surface">Launching the global brand, expanding into digital syndication and institutional voice work.</p>
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export default function Page() {
               </div>
               <div className="col-span-1 p-12 bg-surface-container-high rounded-3xl border border-outline-variant/10 hover:bg-surface-container-highest transition-colors">
                 <h3 className="font-headline-md text-secondary mb-6">Legacy Vision</h3>
-                <p className="font-body-md text-on-surface-variant">To leave behind a centralized digital archive of the African voice—a repository of wisdom and high production standards.</p>
+                <p className="font-body-md text-on-surface-variant">To leave behind a centralized digital archive of the African voiceâ€”a repository of wisdom and high production standards.</p>
               </div>
               <div className="col-span-1 md:col-span-2 relative p-12 rounded-3xl overflow-hidden group border border-outline-variant/10">
                 <div className="absolute inset-0 bg-surface-container-lowest">

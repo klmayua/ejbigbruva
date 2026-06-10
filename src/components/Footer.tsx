@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from 'react';
 import Link from 'next/link';
@@ -88,7 +88,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-outline-variant/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-label-sm font-label-sm text-on-surface-variant text-center md:text-left">
-            © 2024 EJTheVoice - Ejike Ebidilo. All Rights Reserved. Curating Intellectual Depth.
+            Â© 2024 EJTheVoice - Ejike Ibedilo. All Rights Reserved. Curating Intellectual Depth.
           </p>
           <div className="flex items-center gap-2">
             <span className="text-[10px] text-on-surface-variant tracking-[0.2em]">THE SOVEREIGN SERIES</span>

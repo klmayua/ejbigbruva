@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -89,7 +89,7 @@ export default function Page() {
             <div>
               <h2 className="font-headline-lg text-headline-lg mb-4 text-secondary font-serif">Official Biography</h2>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                Born from a legacy of charisma and leadership, EJTheVoice represents the pinnacle of premium entertainment and cultural influence. Known as "The Original Big Brother," Ejike Ebidilo has redefined the intersection of media personality and visionary creator. His career spans decades of groundbreaking voice work, events, and community building, cementing his place as a sovereign figure in the global media landscape.
+                Born from a legacy of charisma and leadership, EJTheVoice represents the pinnacle of premium entertainment and cultural influence. Known as "The Original Voice of Africa," Ejike Ibedilo has redefined the intersection of media personality and visionary creator. His career spans decades of groundbreaking voice work, events, and community building, cementing his place as a sovereign figure in the global media landscape.
               </p>
             </div>
             <div className="flex gap-4">
@@ -134,7 +134,7 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
             {/* Photo 1 */}
             <div className="group relative overflow-hidden rounded-lg">
-              <img alt="Ejike Ebidilo in Traditional Attire" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_Agbada_01.jpeg"/>
+              <img alt="Ejike Ibedilo in Traditional Attire" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_Agbada_01.jpeg"/>
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p className="font-label-sm text-label-sm text-secondary mb-1">TRADITIONAL PORTRAIT</p>
                 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2 cursor-pointer">
@@ -144,7 +144,7 @@ export default function Page() {
             </div>
             {/* Photo 2 */}
             <div className="group relative overflow-hidden rounded-lg">
-              <img alt="Ejike Ebidilo Studio Close-up" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_casual_01.jpeg"/>
+              <img alt="Ejike Ibedilo Studio Close-up" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_casual_01.jpeg"/>
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p className="font-label-sm text-label-sm text-secondary mb-1">STUDIO PROFILE</p>
                 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2 cursor-pointer">
@@ -154,7 +154,7 @@ export default function Page() {
             </div>
             {/* Photo 3 */}
             <div className="group relative overflow-hidden rounded-lg">
-              <img alt="Ejike Ebidilo Executive Lounge" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_casual_02.jpeg"/>
+              <img alt="Ejike Ibedilo Executive Lounge" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_casual_02.jpeg"/>
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p className="font-label-sm text-label-sm text-secondary mb-1">EXECUTIVE PORTRAIT</p>
                 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2 cursor-pointer">
@@ -164,7 +164,7 @@ export default function Page() {
             </div>
             {/* Photo 4 */}
             <div className="group relative overflow-hidden rounded-lg">
-              <img alt="Ejike Ebidilo Casual Modern" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_casual_03.jpeg"/>
+              <img alt="Ejike Ibedilo Casual Modern" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-110" src="/images/EJ_casual_03.jpeg"/>
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <p className="font-label-sm text-label-sm text-secondary mb-1">CASUAL SOPHISTICATION</p>
                 <button className="bg-surface text-on-surface px-4 py-2 text-xs rounded border border-secondary/30 flex items-center justify-center gap-2 cursor-pointer">
@@ -197,7 +197,7 @@ export default function Page() {
               </div>
               <div className="flex-grow">
                 <h3 className="font-headline-md text-headline-md mb-3 group-hover:text-secondary transition-colors font-serif">EJTheVoice Announces Exclusive "Legacy Night" Gala in London</h3>
-                <p className="font-body-md text-body-md text-on-surface-variant mb-4">Official announcement regarding the highly anticipated European debut of the sovereign entertainment icon Ejike Ebidilo.</p>
+                <p className="font-body-md text-body-md text-on-surface-variant mb-4">Official announcement regarding the highly anticipated European debut of the sovereign entertainment icon Ejike Ibedilo.</p>
                 <div className="flex gap-4 text-secondary font-label-md text-label-md">
                   <span className="flex items-center gap-1 hover:underline">Read Release <span className="material-symbols-outlined text-sm flex items-center">chevron_right</span></span>
                   <span className="flex items-center gap-1 hover:underline">PDF Version <span className="material-symbols-outlined text-sm flex items-center">picture_as_pdf</span></span>
@@ -231,7 +231,7 @@ export default function Page() {
                 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Vogue Entertainment</span>
                 <span className="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity flex items-center">open_in_new</span>
               </div>
-              <h4 className="font-headline-md text-headline-md italic mb-4 font-serif">"The Quiet Majesty of Ejike Ebidilo: Defining Sovereign Celebrity."</h4>
+              <h4 className="font-headline-md text-headline-md italic mb-4 font-serif">"The Quiet Majesty of Ejike Ibedilo: Defining Sovereign Celebrity."</h4>
               <p className="font-label-md text-label-md text-secondary">May 2024 Issue</p>
             </Link>
             <Link className="block p-8 border border-outline-variant/30 bg-surface-container-lowest hover:border-secondary transition-colors group" href="#">
@@ -247,7 +247,7 @@ export default function Page() {
                 <span className="font-label-sm text-label-sm text-on-surface-variant uppercase">Business Daily</span>
                 <span className="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity flex items-center">open_in_new</span>
               </div>
-              <h4 className="font-headline-md text-headline-md italic mb-4 font-serif">"Media Monetization: How Ejike Ebidilo Revolutionized Talent Branding."</h4>
+              <h4 className="font-headline-md text-headline-md italic mb-4 font-serif">"Media Monetization: How Ejike Ibedilo Revolutionized Talent Branding."</h4>
               <p className="font-label-md text-label-md text-secondary">July 2024 Profile</p>
             </Link>
           </div>

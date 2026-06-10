@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -67,7 +67,7 @@ export default function Page() {
        {/* Hero Section */}
        <header className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
         <div className="absolute inset-0 z-0">
-          <img alt="Ejike Ebidilo in Agbada" className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthJtVmtofKYEHiaLHXe2WuFYXRvbF-yJ_sWL6edRJEmQt6AW-fNIFLuEZxdLuChdV0p8B_5PdYp4j9hIGPiPZDVHDFVksazvBII0mlm3SqT-cMyYdlcOAfnt7Rv5NYHMvYeSXGrQSolKAifjlAGYHyimhL3GzISJv1TGF7D8R-BWYgT8EdCBdh_zCKR2X5gWZcEuFOQ4yxqMIQKSdcPcsuy6jwona-4t6YGIKXFaHfelPH0JozaUsydwcLxQbMWthFNssoldWN1c"/>
+          <img alt="Ejike Ibedilo in Agbada" className="w-full h-full object-cover opacity-30 grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDthJtVmtofKYEHiaLHXe2WuFYXRvbF-yJ_sWL6edRJEmQt6AW-fNIFLuEZxdLuChdV0p8B_5PdYp4j9hIGPiPZDVHDFVksazvBII0mlm3SqT-cMyYdlcOAfnt7Rv5NYHMvYeSXGrQSolKAifjlAGYHyimhL3GzISJv1TGF7D8R-BWYgT8EdCBdh_zCKR2X5gWZcEuFOQ4yxqMIQKSdcPcsuy6jwona-4t6YGIKXFaHfelPH0JozaUsydwcLxQbMWthFNssoldWN1c"/>
           <div className="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 via-transparent to-surface-container-lowest"></div>
         </div>
         <div className="relative z-10 text-center px-margin-mobile md:px-margin-desktop">
@@ -76,7 +76,7 @@ export default function Page() {
             Architecting the <span className="italic text-secondary">Cultural Narrative</span> of a Generation.
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
-            A digital museum honoring the lifelong commitment to excellence, voice, and the institutional legacy of Ejike Ebidilo.
+            A digital museum honoring the lifelong commitment to excellence, voice, and the institutional legacy of Ejike Ibedilo.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <button className="bg-secondary text-on-secondary px-10 py-4 font-label-md text-label-md rounded hover:bg-secondary/90 transition-all cursor-pointer">Enter The Vault</button>
@@ -163,7 +163,7 @@ export default function Page() {
                 <div className="md:text-right md:pr-16 order-2 md:order-1">
                   <span className="font-display-lg text-headline-md text-secondary mb-2 block font-serif">2010</span>
                   <h4 className="font-headline-md text-headline-md text-on-surface mb-4">The Foundation Stones</h4>
-                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">The inaugural broadcast that challenged conventional media norms and introduced the world to the voice of Ejike Ebidilo.</p>
+                  <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">The inaugural broadcast that challenged conventional media norms and introduced the world to the voice of Ejike Ibedilo.</p>
                 </div>
                 <div className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-secondary gold-glow z-20 hidden md:block"></div>
                 <div className="md:pl-16 order-1 md:order-2">
@@ -212,7 +212,7 @@ export default function Page() {
           <blockquote className="font-display-lg text-headline-lg text-on-surface mb-12 italic leading-relaxed md:text-4xl">
             "Legacy is not what we leave behind, but how we teach others to see the future. The EJTheVoice mission is a testament to the power of a singular voice amplified by collective purpose."
           </blockquote>
-          <cite className="font-label-md text-label-md text-secondary uppercase tracking-[0.4em] not-italic font-serif">— Archive Curatorial Board</cite>
+          <cite className="font-label-md text-label-md text-secondary uppercase tracking-[0.4em] not-italic font-serif">â€” Archive Curatorial Board</cite>
         </div>
       </section>
 
