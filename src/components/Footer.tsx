@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12">
                 <Image 
-                  src="C:\Users\hp\Desktop\KLM2026\EJBigBruva\Images\EjTheVoice_logo.png" 
+                  src="/images/EjTheVoice_logo.png" 
                   alt="EJTheVoice Crest" 
                   fill
                   sizes="48px"

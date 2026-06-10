@@ -50,7 +50,7 @@ export default function Navbar() {
             <img 
               alt="EJTheVoice Logo" 
               className="w-[68px] h-auto object-contain cursor-pointer" 
-              src="C:\Users\hp\Desktop\KLM2026\EJBigBruva\Images\EjTheVoice_logo.png"
+              src="/images/EjTheVoice_logo.png"
             />
           </Link>
         </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
           <img 
             alt="EJTheVoice Logo" 
             className="w-[42px] h-auto object-contain cursor-pointer" 
-            src="C:\Users\hp\Desktop\KLM2026\EJBigBruva\Images\EjTheVoice_logo.png"
+            src="/images/EjTheVoice_logo.png"
           />
         </Link>
 
